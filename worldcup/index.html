@@ -258,8 +258,16 @@ function injectReport(report) {
 }
 
 // ===== INIT =====
-// Try loading from JSON, otherwise wait for injection
 loadLatestReport();
+
+// Retry with no-cache if empty after 3s
+setTimeout(() => {
+  if(reports.length===0){
+    fetch('reports.json',{cache:'no-cache'})
+      .then(r=>r.json()).then(d=>{if(d.reports&&d.reports.length){reports=d.reports;renderReports('latest');document.getElementById('dataStatus').textContent=reports.length+'份报告';}})
+      .catch(()=>{document.getElementById('dataStatus').textContent='等待部署...';});
+  }
+},3000);
 
 // Update next update time
 function updateNextTime() {
