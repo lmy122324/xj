@@ -348,6 +348,8 @@ function renderMatch(m){
     for(let ai=0;ai<al.length;ai++){const a=al[ai],cl=a.confidence>=80?'ct-h':a.confidence>=60?'ct-m':'ct-l';
       html+=`<div class="ae"><div class="ae-meta">${a.isNew?'<span class="new-tag">NEW</span>':''}<span>🕐 ${a.time}</span><span class="ct ${cl}">${a.confidence}%</span>`;
       if(a.factors){for(const f of a.factors){const c2=f.type==='good'?'fc-up':f.type==='bad'?'fc-down':'';html+=`<span class="fc ${c2}">${f.icon||''} ${f.text}</span>`;}}
+      // Goal info
+      if(a.goalCount)html+=`<div style="font-size:10px;margin-top:4px;display:flex;gap:10px;flex-wrap:wrap;"><span>⚽ 预计进球: <strong style="color:var(--gold);">${a.goalCount}球</strong></span><span>🎯 可能比分: ${a.possibleScores?`<span style="color:var(--sub);">${a.possibleScores.join(' / ')}</span>`:'-'}</span></div>`;
       html+=`</div><div class="ae-text">${a.text}</div>`;
       if(a.sources)html+=`<div class="ae-source">📰 来源: ${a.sources.join(' · ')}</div>`;
       if(a.fullReport)html+=`<div style="text-align:right;margin-top:4px;"><span class="fr-btn" data-m="${mi}" data-a="${ai}">📄 完整报告</span></div>`;
