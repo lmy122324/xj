@@ -19,7 +19,18 @@
   --red:#ff4757;
   --text:#e8e0f0;
   --sub:#7a7090;
-  --glow:0 0 20px rgba(255,215,0,.15);
+}
+.light{
+  --bg:#f5f0e8;
+  --card:#fffaf0;
+  --card-border:#d4c8a8;
+  --accent:#00a88a;
+  --gold:#b8860b;
+  --gold-light:#daa520;
+  --gold-dark:#8b6914;
+  --red:#d63031;
+  --text:#2d2010;
+  --sub:#8a7a5a;
 }
 
 body{
@@ -31,6 +42,12 @@ body{
   color:var(--text);
   min-height:100vh;
   line-height:1.6;
+  transition:background .3s,color .3s;
+}
+.light body,body.light{
+  background:var(--bg);
+  background-image:radial-gradient(ellipse at 20% 50%,rgba(139,105,20,.03) 0%,transparent 50%),
+                   repeating-linear-gradient(0deg,transparent,transparent 40px,rgba(139,105,20,.005) 40px,rgba(139,105,20,.005) 41px);
 }
 
 /* ===== HEADER ===== */
@@ -42,10 +59,12 @@ body{
   position:relative;
   overflow:hidden;
 }
+.light .header{background:linear-gradient(180deg,#f0e8d8 0%,#f5f0e8 100%);}
 .header::before{
   content:'';position:absolute;top:0;left:0;right:0;height:2px;
   background:linear-gradient(90deg,transparent,var(--gold),var(--accent),var(--gold),transparent);
 }
+.light .header::before{opacity:.5;}
 .header::after{
   content:'';position:absolute;top:0;left:0;right:0;bottom:0;
   background:radial-gradient(ellipse at 50% 0%,rgba(255,215,0,.06) 0%,transparent 60%);
@@ -105,9 +124,8 @@ body{
 /* ===== DAY HEADER ===== */
 .day-head{
   font-size:15px;font-weight:700;padding:10px 0 6px;
-  background:linear-gradient(90deg,var(--gold),var(--gold-light));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-  background-clip:text;letter-spacing:1px;
+  color:var(--gold);
+  letter-spacing:1px;
 }
 .day-sub{font-size:10px;color:var(--sub);font-weight:400;margin-left:6px;letter-spacing:0;}
 
@@ -270,6 +288,7 @@ body{
 <div class="header">
   <h1>🏆 2026 世界杯 · AI 情报站</h1>
   <div class="sub">守护最好的小徐佳俊 <span>✦</span> 每2h自动分析 <span>✦</span> 每晚12点刷新赛程</div>
+  <button id="themeBtn" onclick="toggleTheme()" style="position:absolute;top:12px;right:12px;background:rgba(255,255,255,.05);border:1px solid var(--card-border);border-radius:20px;padding:4px 12px;color:var(--sub);cursor:pointer;font-size:10px;font-weight:600;transition:.2s;z-index:2;">🌙 夜间</button>
 </div>
 
 <div class="container">
@@ -360,6 +379,18 @@ function showFR(home,away,time,report){
   document.getElementById('modal').classList.add('open');
 }
 function closeFR(){document.getElementById('modal').classList.remove('open');}
+
+function toggleTheme(){
+  const b=document.body.classList.toggle('light');
+  const btn=document.getElementById('themeBtn');
+  btn.textContent=b?'🌞 白天':'🌙 夜间';
+  localStorage.setItem('wcTheme',b?'light':'dark');
+}
+// Load saved theme
+if(localStorage.getItem('wcTheme')==='light'){
+  document.body.classList.add('light');
+  document.getElementById('themeBtn').textContent='🌞 白天';
+}
 
 function getTodayStr(){const d=new Date();return(d.getMonth()+1)+'/'+d.getDate();}
 document.getElementById('navBar').addEventListener('click',e=>{const btn=e.target.closest('.nav-btn');if(!btn)return;document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');currentView=btn.dataset.view;render();});
