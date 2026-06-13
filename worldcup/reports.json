@@ -1,0 +1,96 @@
+{
+  "reports": [
+    {
+      "id": "v1",
+      "time": "2026-06-13 16:00 BJT",
+      "version": 1,
+      "status": "new",
+      "matchCount": 4,
+      "nextUpdate": "18:00 BJT",
+      "matches": [
+        {
+          "home": "卡塔尔",
+          "away": "瑞士",
+          "flagHome": "🇶🇦",
+          "flagAway": "🇨🇭",
+          "score": "0-2 🟢",
+          "confidence": 88,
+          "note": "瑞士FIFA≈15名 卡塔尔≈50+，身价差14倍。瑞士防守体系严密(近5场仅失3球)，扎卡+索默领衔。卡塔尔传控遇欧洲铁桶无计可施，2022世界杯3战全败。旧金山室内球场无影响。赔率客1.23合理，大概率小比分。",
+          "changes": [],
+          "factors": [
+            {"icon":"🧠","text":"实力差距巨大，瑞士FIFA≈15 卡塔尔≈50+","type":"bad","isChange":false},
+            {"icon":"🔒","text":"瑞士近5场仅失3球，防守体系极强","type":"bad","isChange":false},
+            {"icon":"🤔","text":"卡塔尔2022世界杯3战全败0进球","type":"bad","isChange":false},
+            {"icon":"📊","text":"市场赔率客1.23，极度看好瑞士","type":"bad","isChange":false},
+            {"icon":"🏟️","text":"旧金山室内球场，无天气影响","type":"neutral","isChange":false}
+          ]
+        },
+        {
+          "home": "巴西",
+          "away": "摩洛哥",
+          "flagHome": "🇧🇷",
+          "flagAway": "🇲🇦",
+          "score": "1-0 🟡",
+          "confidence": 62,
+          "note": "安切洛蒂外教首秀+内马尔回归双不确定因素。摩洛哥上届4强，近45场仅2负。罗德里戈膝盖伤缺、埃斯特旺腿筋伤缺影响巴西边路。赔率主1.73非碾压局，摩洛哥受让0.8。建议小注或回避。",
+          "changes": [],
+          "factors": [
+            {"icon":"🔴","text":"罗德里戈(膝伤❌)+埃斯特旺(腿筋❌)双双伤缺","type":"bad","isChange":false},
+            {"icon":"🔄","text":"内马尔回归，已连续10场巴甲首发，但久疏大赛","type":"good","isChange":false},
+            {"icon":"🆕","text":"安切洛蒂首位外教+大赛首秀，磨合存疑","type":"bad","isChange":false},
+            {"icon":"🛡️","text":"摩洛哥近45场仅2负，上届世界杯4强","type":"bad","isChange":false},
+            {"icon":"📊","text":"主1.73+让0.8，巴西非稳胆","type":"neutral","isChange":false}
+          ]
+        },
+        {
+          "home": "海地",
+          "away": "苏格兰",
+          "flagHome": "🇭🇹",
+          "flagAway": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+          "score": "0-2 🟢",
+          "confidence": 82,
+          "note": "苏格兰26年终返世界杯，士气极高。罗伯逊(利物浦)+麦金(维拉)+麦克托米奈(那不勒斯)配置碾压海地。海地首次参赛经验为零。波士顿大量苏格兰侨民≈半个主场。赔率客1.57今日最稳。",
+          "changes": [],
+          "factors": [
+            {"icon":"💪","text":"苏格兰球星配置碾压，全主力五大联赛","type":"good","isChange":false},
+            {"icon":"🆕","text":"海地首次世界杯亮相，经验为零","type":"bad","isChange":false},
+            {"icon":"🏴󠁧󠁢󠁳󠁣󠁴󠁿","text":"苏格兰26年终返世界杯，心气极高","type":"good","isChange":false},
+            {"icon":"🏟️","text":"波士顿大量苏格兰侨民，≈半个主场","type":"good","isChange":false}
+          ]
+        },
+        {
+          "home": "澳大利亚",
+          "away": "土耳其",
+          "flagHome": "🇦🇺",
+          "flagAway": "🇹🇷",
+          "score": "0-1 🟡",
+          "confidence": 68,
+          "note": "恰尔汗奥卢(国米)+伊尔迪兹(尤文)领先土耳其技术流。澳洲传统英式长传冲吊，面对欧洲中上游差距明显。两队首秀可能保守。赔率客1.73合理，小2.5球价值不错。",
+          "changes": [],
+          "factors": [
+            {"icon":"🌟","text":"恰尔汗奥卢+伊尔迪兹，土耳其星味远超澳洲","type":"bad","isChange":false},
+            {"icon":"⚔️","text":"土耳其技术流vs澳洲英式打法，技术占优","type":"bad","isChange":false},
+            {"icon":"🤝","text":"两队都是首秀，可能保守试探","type":"neutral","isChange":false}
+          ]
+        }
+      ],
+      "recommendations": [
+        {"type":"best","title":"🏴󠁧󠁢󠁳󠁣󠁴󠁿 苏格兰胜","odds":"1.57","reason":"最稳之选，海地太弱，苏格兰首秀必拼全力"},
+        {"type":"value","title":"🇶🇦卡塔尔 vs 🇨🇭瑞士 小2.5球","odds":"2.23","reason":"全场最佳价值赔率，瑞士保守+卡塔尔进攻弱"},
+        {"type":"safe","title":"串关 🇨🇭瑞士胜×🏴󠁧󠁢󠁳󠁣󠁴󠁿苏格兰胜","odds":"~1.90","reason":"两场都比较稳，适合做串关基础"},
+        {"type":"skip","title":"🇧🇷巴西 vs 🇲🇦摩洛哥 谨慎","odds":"1.73","reason":"不确定性最高，摩洛哥防守强，巴西非稳胆"}
+      ],
+      "bets": [
+        {"icon":"🇨🇭","text":"瑞士赢 — 待赛","status":"pending"},
+        {"icon":"🔗","text":"串关: 美国赢✅ + 瑞士赢⏳ — 美国已拿下","status":"pending"},
+        {"icon":"⭐","text":"卡塔尔vs瑞士 小2.5球 — 最佳价值注","status":"pending"},
+        {"icon":"❌","text":"加拿大赢 — 1-1平局 已凉","status":"lose"}
+      ],
+      "news": [
+        {"icon":"🇨🇦","text":"加拿大 1-1 波黑 — 赛尔·拉林扳平，东道主首秀闷平","isChange":false},
+        {"icon":"🇺🇸","text":"美国 4-1 巴拉圭 — 主场大胜开门红","isChange":false},
+        {"icon":"✅","text":"明日4场比赛均在室内/有顶球场，无天气影响","isChange":false}
+      ]
+    }
+  ]
+}
