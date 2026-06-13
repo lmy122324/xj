@@ -14,61 +14,57 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .header .sub{font-size:10px;color:var(--sub);margin-top:2px}
 .badge{display:inline-block;padding:1px 5px;border-radius:3px;font-size:8px;font-weight:700}
 .badge-a{background:var(--accent);color:#000}
-.badge-r{background:var(--red);color:#fff}
-.badge-g{background:var(--gold);color:#000}
 .container{max-width:720px;margin:0 auto;padding:6px 8px 60px}
-
-/* Status bar */
 .status-bar{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:6px;font-size:9px;color:var(--sub)}
-
-/* Day section */
 .day-head{font-size:13px;font-weight:700;padding:8px 0 4px;color:var(--gold)}
 .day-sub{font-size:9px;color:var(--sub);font-weight:400;margin-left:6px}
 
-/* Match card */
+/* Match card - collapsed by default */
 .mc{border:1px solid var(--border);border-radius:8px;margin-bottom:6px;overflow:hidden}
-.mc-head{padding:6px 10px;display:flex;align-items:center;gap:6px;background:rgba(0,212,170,.03);border-bottom:1px solid var(--border)}
+.mc-head{padding:8px 10px;display:flex;align-items:center;gap:6px;cursor:pointer;transition:.15s;user-select:none}
+.mc-head:hover{background:rgba(0,212,170,.06)}
+.mc-head.expanded{background:rgba(0,212,170,.08);border-bottom:1px solid var(--border)}
 .mc-teams{flex:1;font-size:13px;font-weight:700}
 .mc-teams .flag{font-size:18px;margin-right:2px}
 .mc-vs{color:var(--sub);font-size:10px;margin:0 3px}
 .mc-time{font-size:9px;color:var(--sub);white-space:nowrap}
-.mc-body{padding:6px 10px}
+.mc-conf-badge{padding:1px 6px;border-radius:3px;font-size:9px;font-weight:700;margin-left:4px}
+.mcb-h{background:rgba(0,212,170,.15);color:var(--accent)}
+.mcb-m{background:rgba(255,215,0,.15);color:var(--gold)}
+.mcb-l{background:rgba(255,71,87,.15);color:var(--red)}
+.mc-arrow{font-size:10px;color:var(--sub);transition:transform .2s;flex-shrink:0}
+.mc-arrow.open{transform:rotate(90deg)}
+.mc-body{padding:6px 10px;display:none}
+.mc-body.open{display:block}
+
+.new-tag{display:inline-block;padding:1px 5px;border-radius:3px;background:var(--red);color:#fff;font-size:8px;font-weight:700;margin-right:4px;animation:blink 1.5s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.5}}
 
 /* Analysis entry */
-.ae{border-left:2px solid var(--border);padding:4px 0 4px 8px;margin:4px 0}
-.ae:first-child{border-left-color:var(--accent)}
-.ae-meta{font-size:9px;color:var(--sub);margin-bottom:2px;display:flex;gap:6px;align-items:center}
+.ae{border-left:2px solid var(--accent);padding:4px 0 4px 8px;margin:4px 0}
+.ae+.ae{margin-top:6px;border-left-color:var(--sub)}
+.ae-meta{font-size:9px;color:var(--sub);margin-bottom:2px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
 .ae-text{font-size:11px}
 .ae-source{font-size:9px;color:var(--sub);margin-top:2px}
 
-/* Confidence tag */
 .ct{padding:1px 5px;border-radius:3px;font-size:9px;font-weight:700}
 .ct-h{background:rgba(0,212,170,.15);color:var(--accent)}
 .ct-m{background:rgba(255,215,0,.15);color:var(--gold)}
 .ct-l{background:rgba(255,71,87,.15);color:var(--red)}
 
-/* Factor chips */
 .fc{display:inline-block;padding:1px 5px;border-radius:3px;font-size:9px;margin:1px;font-weight:600}
 .fc-up{background:rgba(0,212,170,.1);color:var(--accent)}
 .fc-down{background:rgba(255,71,87,.1);color:var(--red)}
-.fc-new{background:rgba(255,215,0,.1);color:var(--gold)}
 
-/* New analysis marker */
-.new-tag{display:inline-block;padding:1px 5px;border-radius:3px;background:var(--red);color:#fff;font-size:8px;font-weight:700;margin-right:4px;animation:blink 1.5s infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.5}}
-
-/* Change highlight */
+/* Change marker */
 .chg{background:rgba(255,71,87,.06);border-radius:3px;padding:3px 5px;margin:2px 0;font-size:10px;border-left:2px solid var(--red)}
 .chg-label{font-weight:700;color:var(--red)}
 
-/* Recommendation */
 .rec-box{padding:6px 8px;margin:4px 0;border-radius:5px;font-size:11px;border:1px solid var(--gold);background:rgba(255,215,0,.05)}
 
-/* Nav */
 .nav{display:flex;gap:4px;padding:4px 0;flex-wrap:wrap}
 .nav-btn{padding:4px 10px;border-radius:4px;border:1px solid var(--border);background:transparent;color:var(--sub);cursor:pointer;font-size:10px;font-weight:600}
 .nav-btn.active{background:var(--accent);color:#000;border-color:var(--accent)}
-
 .empty{padding:40px 10px;text-align:center;color:var(--sub);font-size:12px}
 </style>
 </head>
@@ -76,11 +72,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 
 <div class="header">
   <h1>🏆 <span>2026</span>世界杯 · AI情报站</h1>
-  <div class="sub">守护最好的小徐佳俊 · 每2h自动分析 · 每晚12点刷新赛程</div>
+  <div class="sub">守护最好的小徐佳俊 · 每2h自动分析 · 每晚12点刷新赛程 · 点击赛程查看详情</div>
 </div>
 
 <div class="container">
-
 <div class="status-bar">
   <span>📡 <span id="dataStatus">加载中...</span></span>
   <span>⏰ 更新: <span id="nextUpdate">-</span></span>
@@ -94,192 +89,105 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 </div>
 
 <div id="content"><div class="empty">🤖 加载分析数据...</div></div>
-
 </div>
 
 <script>
-// ===== DATA =====
 const FLAGS={'墨西哥':'🇲🇽','南非':'🇿🇦','韩国':'🇰🇷','捷克':'🇨🇿','加拿大':'🇨🇦','波黑':'🇧🇦','卡塔尔':'🇶🇦','瑞士':'🇨🇭','巴西':'🇧🇷','摩洛哥':'🇲🇦','海地':'🇭🇹','苏格兰':'🏴','美国':'🇺🇸','巴拉圭':'🇵🇾','澳大利亚':'🇦🇺','土耳其':'🇹🇷','德国':'🇩🇪','库拉索':'🇨🇼','科特迪瓦':'🇨🇮','厄瓜多尔':'🇪🇨','荷兰':'🇳🇱','日本':'🇯🇵','瑞典':'🇸🇪','突尼斯':'🇹🇳'};
 
-let reportsData = {}; // {matches: {matchKey: [{analysis}]}, recommendations: [], meta: {}}
 let allMatches = [];
-
-// ===== LOAD =====
-function loadData() {
-  const base = window.location.pathname.replace(/\/[^/]*$/, '') || '/xj/worldcup';
-  const url = window.location.origin + base + '/data.json?v=' + Date.now();
-  fetch(url)
-    .then(r => { if(!r.ok) throw Error(); return r.json(); })
-    .then(d => {
-      reportsData = d;
-      allMatches = d.matches || [];
-      document.getElementById('dataStatus').textContent = (d.analysisCount||0)+'份分析 · '+(d.matchCount||0)+'场比赛';
-      render();
-    })
-    .catch(() => {
-      fetch('data.json', {cache:'no-cache'})
-        .then(r => r.json())
-        .then(d => {
-          reportsData = d; allMatches = d.matches || [];
-          document.getElementById('dataStatus').textContent = (d.analysisCount||0)+'份分析';
-          render();
-        })
-        .catch(() => { document.getElementById('dataStatus').textContent = '等待首版数据...'; });
-    });
-}
-
-// ===== RENDER =====
 let currentView = 'all';
 
-function render() {
-  const el = document.getElementById('content');
-  const view = currentView;
-
-  if(!allMatches.length) {
-    el.innerHTML = `<div class="empty">🤖 暂无赛程数据<br><span style="font-size:10px;">每晚12点自动刷新后三天赛程</span></div>`;
-    return;
-  }
-
-  let html = '';
-
-  // Group by day
-  const days = {};
-  for(const m of allMatches) {
-    if(!days[m.date]) days[m.date] = [];
-    days[m.date].push(m);
-  }
-
-  if(view === 'changes') {
-    // Show only matches with changes
-    html = '<div class="day-head">🔄 变化追踪</div>';
-    let hasChanges = false;
-    for(const m of allMatches) {
-      if(m.changes && m.changes.length) {
-        hasChanges = true;
-        html += renderMatch(m, true);
-      }
-    }
-    if(!hasChanges) html += '<div class="empty">暂无变化</div>';
-  } else {
-    for(const [date, dayMatches] of Object.entries(days)) {
-      const isToday = date === getTodayStr();
-      html += `<div class="day-head">${isToday?'🔥 ':''}${date} <span class="day-sub">${dayMatches.length}场</span></div>`;
-      for(const m of dayMatches) {
-        html += renderMatch(m, view==='today');
-      }
-    }
-  }
-
-  el.innerHTML = html;
+function loadData() {
+  const u = window.location.origin + (window.location.pathname.replace(/\/[^/]*$/,'')||'/xj/worldcup')+'/data.json?v='+Date.now();
+  fetch(u).then(r=>{if(!r.ok)throw Error();return r.json();}).then(d=>{
+    allMatches=d.matches||[];
+    document.getElementById('dataStatus').textContent=(d.analysisCount||0)+'份分析 · '+(d.matchCount||0)+'场';
+    render();
+  }).catch(()=>{
+    fetch('data.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{allMatches=d.matches||[];render();}).catch(()=>{document.getElementById('dataStatus').textContent='等待首版...';render();});
+  });
 }
 
-function renderMatch(m, forceShow) {
-  const anaList = m.analyses || [];
-  const hasChanges = m.changes && m.changes.length;
-  const latestAna = anaList.length ? anaList[anaList.length-1] : null;
+function render(){
+  const el=document.getElementById('content');
+  const view=currentView;
+  if(!allMatches.length){el.innerHTML='<div class="empty">🤖 暂无赛程数据<br><span style="font-size:10px;">每晚12点自动刷新后三天赛程</span></div>';return;}
+  let html='';
+  const days={};
+  for(const m of allMatches){if(!days[m.date])days[m.date]=[];days[m.date].push(m);}
 
-  let html = `<div class="mc">
-    <div class="mc-head">
+  if(view==='changes'){
+    html='<div class="day-head">🔄 变化追踪</div>';
+    let has=false;
+    for(const m of allMatches){if(m.changes&&m.changes.length){has=true;html+=renderMatch(m);}}
+    if(!has)html+='<div class="empty">暂无变化</div>';
+  }else{
+    for(const[date,dayMatches]of Object.entries(days)){
+      const isToday=date===getTodayStr();
+      html+=`<div class="day-head">${isToday?'🔥 ':''}${date} <span class="day-sub">${dayMatches.length}场</span></div>`;
+      for(const m of dayMatches)html+=renderMatch(m);
+    }
+  }
+  el.innerHTML=html;
+}
+
+function renderMatch(m){
+  const al=m.analyses||[];
+  const l=al.length?al[al.length-1]:null;
+  const c=l?l.confidence:0;
+  const cc=c>=80?'mcb-h':c>=60?'mcb-m':c>=1?'mcb-l':'';
+  const id=(m.home+'_'+m.away).replace(/[^a-zA-Z0-9]/g,'_');
+  const hasNew=al.some(a=>a.isNew);
+  const hasChg=m.changes&&m.changes.length;
+
+  let html=`<div class="mc" id="mc_${id}">
+    <div class="mc-head" onclick="toggleMatch('${id}')">
+      <span class="mc-arrow" id="arr_${id}">▶</span>
       <span class="mc-teams"><span class="flag">${FLAGS[m.home]||''}</span>${m.home} <span class="mc-vs">vs</span> <span class="flag">${FLAGS[m.away]||''}</span>${m.away}</span>
       <span class="mc-time">${m.date} ${m.time} · ${m.group}组</span>
+      ${c?`<span class="mc-conf-badge ${cc}">${c}%</span>`:''}
+      ${hasNew?'<span class="new-tag">NEW</span>':''}
     </div>
-    <div class="mc-body">`;
+    <div class="mc-body" id="body_${id}">`;
 
-  // Changes
-  if(hasChanges) {
-    for(const c of m.changes) {
-      html += `<div class="chg"><span class="chg-label">${c.icon||'🔄'} ${c.label}</span> ${c.text}</div>`;
-    }
-  }
+  if(hasChg){for(const c of m.changes)html+=`<div class="chg"><span class="chg-label">${c.icon||'🔄'} ${c.label}</span> ${c.text}</div>`;}
 
-  // Analysis entries
-  if(anaList.length) {
-    const showAll = forceShow || window.innerWidth > 0;
-    const toShow = showAll ? anaList : [latestAna];
-
-    for(const a of toShow) {
-      const isNew = a.isNew;
-      const confClass = a.confidence >= 80 ? 'ct-h' : a.confidence >= 60 ? 'ct-m' : 'ct-l';
-      html += `<div class="ae">
+  if(al.length){
+    for(const a of al){
+      const cl=a.confidence>=80?'ct-h':a.confidence>=60?'ct-m':'ct-l';
+      html+=`<div class="ae">
         <div class="ae-meta">
-          ${isNew?'<span class="new-tag">NEW</span>':''}
+          ${a.isNew?'<span class="new-tag">NEW</span>':''}
           <span>🕐 ${a.time}</span>
-          <span class="ct ${confClass}">${a.confidence}%</span>`;
-
-      // Factors
-      if(a.factors && a.factors.length) {
-        for(const f of a.factors) {
-          const cls = f.type==='good'?'fc-up':f.type==='bad'?'fc-down':'';
-          html += `<span class="fc ${cls} ${f.isNew?'fc-new':''}">${f.icon||''} ${f.text}</span>`;
-        }
-      }
-
-      html += `</div>`;
-      html += `<div class="ae-text">${a.text}</div>`;
-
-      // Sources
-      if(a.sources && a.sources.length) {
-        html += `<div class="ae-source">📰 来源: ${a.sources.join(' · ')}</div>`;
-      }
-
-      html += `</div>`;
+          <span class="ct ${cl}">${a.confidence}%</span>`;
+      if(a.factors){for(const f of a.factors){const cl2=f.type==='good'?'fc-up':f.type==='bad'?'fc-down':'';html+=`<span class="fc ${cl2}">${f.icon||''} ${f.text}</span>`;}}
+      html+=`</div><div class="ae-text">${a.text}</div>`;
+      if(a.sources)html+=`<div class="ae-source">📰 来源: ${a.sources.join(' · ')}</div>`;
+      html+=`</div>`;
     }
+  }else{html+=`<div style="font-size:10px;color:var(--sub);padding:4px 0;">⏳ 等待分析...</div>`;}
 
-    // Show older analysis count
-    if(!forceShow && anaList.length > 1) {
-      html += `<div style="font-size:9px;color:var(--sub);text-align:center;padding:2px 0;cursor:pointer;" onclick="this.nextElementSibling.style.display='block';this.style.display='none';">📋 还有${anaList.length-1}份历史分析 · 点击展开</div>`;
-      html += `<div style="display:none;">`;
-      for(let i=0; i<anaList.length-1; i++) {
-        const a = anaList[i];
-        html += `<div class="ae">
-          <div class="ae-meta"><span>🕐 ${a.time}</span><span class="ct ${a.confidence>=80?'ct-h':a.confidence>=60?'ct-m':'ct-l'}">${a.confidence}%</span></div>
-          <div class="ae-text">${a.text}</div>
-        </div>`;
-      }
-      html += `</div>`;
-    }
-  } else {
-    html += `<div style="font-size:10px;color:var(--sub);padding:4px 0;">⏳ 等待分析...</div>`;
-  }
+  if(m.recommendations){for(const r of m.recommendations)html+=`<div class="rec-box">💎 ${r.title} ${r.odds||''} — ${r.reason}</div>`;}
 
-  // Recommendations
-  if(m.recommendations && m.recommendations.length) {
-    for(const r of m.recommendations) {
-      html += `<div class="rec-box">💎 ${r.title} ${r.odds||''} — ${r.reason}</div>`;
-    }
-  }
-
-  html += `</div></div>`;
+  html+=`</div></div>`;
   return html;
 }
 
-function getTodayStr() {
-  const d = new Date();
-  return `${d.getMonth()+1}/${d.getDate()}`;
+function toggleMatch(id){
+  const b=document.getElementById('body_'+id);
+  const h=b.previousElementSibling;
+  const a=document.getElementById('arr_'+id);
+  b.classList.toggle('open');
+  h.classList.toggle('expanded');
+  a.classList.toggle('open');
 }
 
-// ===== NAV =====
-document.getElementById('navBar').addEventListener('click', e => {
-  const btn = e.target.closest('.nav-btn');
-  if(!btn) return;
-  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  currentView = btn.dataset.view;
-  render();
-});
+function getTodayStr(){const d=new Date();return (d.getMonth()+1)+'/'+d.getDate();}
 
-// ===== NEXT UPDATE TIME =====
-function updateNextTime() {
-  const now = new Date();
-  const h = now.getHours();
-  const next = new Date(now);
-  next.setHours(Math.floor(h/2)*2 + 2, 0, 0, 0);
-  document.getElementById('nextUpdate').textContent = next.toLocaleTimeString('zh-CN');
-}
-updateNextTime();
-setInterval(updateNextTime, 60000);
+document.getElementById('navBar').addEventListener('click',e=>{const btn=e.target.closest('.nav-btn');if(!btn)return;document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');currentView=btn.dataset.view;render();});
 
-// ===== INIT =====
+function updateNextTime(){const n=new Date();const h=n.getHours();const nx=new Date(n);nx.setHours(Math.floor(h/2)*2+2,0,0,0);document.getElementById('nextUpdate').textContent=nx.toLocaleTimeString('zh-CN');}
+updateNextTime();setInterval(updateNextTime,60000);
 loadData();
 </script>
 </body>
