@@ -80,12 +80,6 @@
         {"type":"safe","title":"串关 🇨🇭瑞士胜×🏴󠁧󠁢󠁳󠁣󠁴󠁿苏格兰胜","odds":"~1.90","reason":"两场都比较稳，适合做串关基础"},
         {"type":"skip","title":"🇧🇷巴西 vs 🇲🇦摩洛哥 谨慎","odds":"1.73","reason":"不确定性最高，摩洛哥防守强，巴西非稳胆"}
       ],
-      "bets": [
-        {"icon":"🇨🇭","text":"瑞士赢 — 待赛","status":"pending"},
-        {"icon":"🔗","text":"串关: 美国赢✅ + 瑞士赢⏳ — 美国已拿下","status":"pending"},
-        {"icon":"⭐","text":"卡塔尔vs瑞士 小2.5球 — 最佳价值注","status":"pending"},
-        {"icon":"❌","text":"加拿大赢 — 1-1平局 已凉","status":"lose"}
-      ],
       "news": [
         {"icon":"🇨🇦","text":"加拿大 1-1 波黑 — 赛尔·拉林扳平，东道主首秀闷平","isChange":false},
         {"icon":"🇺🇸","text":"美国 4-1 巴拉圭 — 主场大胜开门红","isChange":false},

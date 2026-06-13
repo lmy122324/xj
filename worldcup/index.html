@@ -215,15 +215,6 @@ function renderReports(view) {
       }
     }
 
-    // User bets status
-    if (r.bets) {
-      html += `<div class="sec-title">📋 你的仓位</div>`;
-      for (const b of r.bets) {
-        const clr = b.status === 'win' ? 'var(--accent)' : b.status === 'lose' ? 'var(--red)' : 'var(--gold)';
-        html += `<div style="font-size:10px;padding:2px 0;color:${clr};">${b.icon||'•'} ${b.text}</div>`;
-      }
-    }
-
     html += `</div></div>`;
   }
 
