@@ -1,433 +1,201 @@
 {
-  "matchCount": 12,
-  "analysisCount": 8,
-  "generatedAt": "2026-06-13 16:08 BJT",
   "matches": [
     {
-      "date": "6/14",
-      "time": "03:00",
+      "home": "韩国",
+      "away": "捷克",
+      "date": "6/12",
+      "time": "已完赛",
+      "group": "A",
+      "result": "2-1",
+      "analyses": [
+        {
+          "time": "2026-06-13 20:00",
+          "confidence": 95,
+          "isNew": true,
+          "goalCount": 3,
+          "possibleScores": ["2-1 (实际)"],
+          "factors": [
+            {"type": "good", "icon": "⚽", "text": "黄仁范67'扳平"},
+            {"type": "good", "icon": "⚽", "text": "吴贤揆80'绝杀"}
+          ],
+          "text": "韩国在先丢一球的情况下完成逆转，黄仁范和吴贤揆下半场连入两球，2-1击败捷克。韩国与墨西哥同积3分并列A组榜首，捷克0分垫底。",
+          "sources": ["AP News", "ESPN"],
+          "fullReport": "<h3>🇰🇷 韩国 2-1 🇨🇿 捷克</h3><p><b>比分：</b>韩国 2-1 捷克</p><p><b>进球：</b><br>⚽ 0-1 卢卡斯·克雷吉奇 59'<br>⚽ 1-1 黄仁范 67'<br>⚽ 2-1 吴贤揆 80'</p><p><b>分析：</b>韩国队展现了顽强的意志力，下半场连入两球逆转。黄仁范在中场的组织和前插是取胜关键。捷克开场占据主动并率先破门，但体能下降后被韩国抓住机会。</p><p><b>影响：</b>A组出线形势：墨西哥(+3) 和 韩国(+3) 并列领先，捷克(+0) 垫底。</p>"
+        }
+      ],
+      "changes": [],
+      "recommendations": []
+    },
+    {
+      "home": "加拿大",
+      "away": "波黑",
+      "date": "6/12",
+      "time": "已完赛",
       "group": "B",
+      "result": "1-1",
+      "analyses": [
+        {
+          "time": "2026-06-13 20:00",
+          "confidence": 90,
+          "isNew": true,
+          "goalCount": 2,
+          "possibleScores": ["1-1 (实际)"],
+          "factors": [
+            {"type": "good", "icon": "🇨🇦", "text": "加拿大队史首分"},
+            {"type": "neutral", "icon": "🤝", "text": "波黑表现不俗"}
+          ],
+          "text": "加拿大1-1战平波黑，拿到队史世界杯第一分。波黑早早取得领先，但加拿大终场前扳平。这对杰西·马什的球队是宝贵的一分，但想要出线仍需在后续比赛中抢分。",
+          "sources": ["ESPN", "The Athletic"],
+          "fullReport": "<h3>🇨🇦 加拿大 1-1 🇧🇦 波黑</h3><p><b>比分：</b>加拿大 1-1 波黑</p><p><b>分析：</b>加拿大收获队史首个世界杯积分。波黑先入一球，加拿大在比赛末段顽强扳平。</p><p><b>影响：</b>B组两队各积1分，出线形势开放。</p>"
+        }
+      ],
+      "changes": [],
+      "recommendations": []
+    },
+    {
+      "home": "美国",
+      "away": "巴拉圭",
+      "date": "6/13",
+      "time": "已完赛",
+      "group": "D",
+      "result": "4-1",
+      "analyses": [
+        {
+          "time": "2026-06-13 20:00",
+          "confidence": 95,
+          "isNew": true,
+          "goalCount": 5,
+          "possibleScores": ["4-1 (实际)"],
+          "factors": [
+            {"type": "good", "icon": "⚽", "text": "巴洛贡梅开二度"},
+            {"type": "good", "icon": "🎯", "text": "普利西奇2助攻"},
+            {"type": "good", "icon": "🌟", "text": "雷纳补时世界波"},
+            {"type": "good", "icon": "🇺🇸", "text": "东道主状态火热"}
+          ],
+          "text": "美国队在洛杉矶4-1大胜巴拉圭！开场7分钟巴拉圭乌龙，巴洛贡梅开二度（第31分、第52分），巴拉圭扳回一球后，替补登场的雷纳在补时阶段用外脚背轰出20米世界波锁定胜局。普利西奇送出两次助攻后被换下，赛后确认无大碍。美国追平了队史世界杯最大赢球纪录（1930年3-0巴拉圭/比利时）。",
+          "sources": ["BBC", "NBC News", "FOX Sports"],
+          "fullReport": "<h3>🇺🇸 美国 4-1 🇵🇾 巴拉圭</h3><p><b>比分：</b>美国 4-1 巴拉圭</p><p><b>进球：</b><br>⚽ 1-0 博巴迪亚(乌龙) 7'<br>⚽ 2-0 巴洛贡 31'<br>⚽ 3-0 巴洛贡 52'<br>⚽ 3-1 毛里西奥 68'<br>⚽ 4-1 雷纳 90+5'</p><p><b>关键球员：</b><br>• 巴洛贡：2球，成为帕特瑙德后首位单场世界杯2+球的美国球员<br>• 普利西奇：2次助攻，突破犀利<br>• 雷纳：补时世界波，惊艳全场</p><p><b>影响：</b>美国(+3, +3净胜球) 暂居D组榜首，出线形势大好。</p>"
+        }
+      ],
+      "changes": [],
+      "recommendations": [
+        {"title": "🇺🇸 美国夺冠赔率可能继续走低", "odds": "", "reason": "东道主首战4-1大胜展现冠军相，后续值得关注"}
+      ]
+    },
+    {
       "home": "卡塔尔",
       "away": "瑞士",
+      "date": "6/13",
+      "time": "03:00 (CST)",
+      "group": "B",
       "analyses": [
         {
-          "time": "6/13 16:00",
-          "version": 1,
+          "time": "2026-06-13 20:00",
+          "confidence": 80,
           "isNew": true,
-          "confidence": 88,
-          "text": "🇨🇭瑞士实力碾压，FIFA≈15名 vs 卡塔尔50+名，身价差14倍。瑞士近5场仅失3球，扎卡+索默领衔防守体系极其严密。卡塔尔传控遇欧洲铁桶无计可施，2022世界杯3战全败0进球。旧金山室内球场无天气影响。",
-          "factors": [
-            {
-              "icon": "🧠",
-              "text": "实力差距巨大",
-              "type": "bad"
-            },
-            {
-              "icon": "🔒",
-              "text": "瑞士近5场仅失3球",
-              "type": "bad"
-            },
-            {
-              "icon": "📉",
-              "text": "卡塔尔2022世界杯0进球",
-              "type": "bad"
-            }
-          ],
-          "sources": [
-            "BBC赛前分析",
-            "wc-2026.com赔率"
-          ],
-          "fullReport": "<div class=\"s\">🆔 比赛编号: B组第2轮 · 旧金山李维斯球场</div><hr><b>🇶🇦 卡塔尔</b><br><span class=\"s\">FIFA排名: ~52 | 总身价: ~2000万€ | 教练: 廷廷·马克斯(西班牙传控体系)</span><br><span class=\"s\">关键球员: 阿菲夫(亚洲足球先生) 阿里(亚洲杯金靴)</span><br><span class=\"s\">近5场: 1胜2平2负 | 进球4 失球5</span><br><span class=\"s\">世界杯历史: 2022年3战全败 进1球失7球</span><hr><b>🇨🇭 瑞士</b><br><span class=\"s\">FIFA排名: 约15 | 总身价: ~2.8亿€ | 教练: 穆拉特·雅金(防守反击)</span><br><span class=\"s\">关键球员: 扎卡(勒沃库森队长) 索默(门将) 沙奇里(替补奇兵) 阿坎吉(曼城中卫)</span><br><span class=\"s\">近5场: 3胜2平0负 | 进球7 失球3</span><br><span class=\"s\">世界杯历史: 连续6届参赛 2022年16强</span><hr><b>⚔️ 对位分析</b><br>瑞士中场扎卡vs卡塔尔阿菲夫 — <span class=\"hl\">扎卡完胜</span><br>瑞士防线(阿坎吉+索默)vs卡塔尔锋线 — <span class=\"hl\">瑞士铁桶</span><br>高空球对抗(瑞士1.85m avg vs 卡塔尔1.76m avg) — <span class=\"hl\">瑞士优势</span><hr><b>🏟️ 场地环境</b><br>旧金山湾区(圣克拉拉) · 李维斯球场<br>室内球场 恒温24°C · 无天气影响<br>草皮: 人工草(对控球型球队略有影响)<hr><b>🎯 预测</b><br><span class=\"gl\">🇨🇭瑞士胜 @1.23</span><br><span class=\"hl\">推荐比分: 0-2</span><br>信心: <span class=\"hl\">88%</span><br><span class=\"s\">注: 瑞士风格保守 让球盘(1.5)有风险 小2.5球价值更高</span>",
           "goalCount": 2,
-          "possibleScores": [
-            "0-1",
-            "0-2",
-            "1-2"
-          ]
+          "possibleScores": ["0-2", "0-1", "1-2"],
+          "factors": [
+            {"type": "good", "icon": "🇨🇭", "text": "瑞士14场仅1负"},
+            {"type": "good", "icon": "⚽", "text": "Embolo状态火热"},
+            {"type": "bad", "icon": "❗", "text": "Vargas出战成疑(GTD)"},
+            {"type": "neutral", "icon": "🇶🇦", "text": "Afif个人能力需警惕"}
+          ],
+          "text": "瑞士实力碾压，近14场比赛仅输1场。卡塔尔世界杯正赛经验不足，面对Embolo和扎卡领衔的瑞士中场很难招架。瑞士唯一的隐患是边锋Ruben Vargas有伤出战成疑。预测瑞士控球主导，2-0取胜。赔率：瑞士1.22 / 平6.50 / 卡塔尔11.00",
+          "sources": ["RotoWire", "Covers", "Betway"],
+          "fullReport": "<h3>🇶🇦 卡塔尔 vs 🇨🇭 瑞士 · 赛前分析</h3><p><b>时间：</b>6月13日 12:00 PT / 15:00 ET</p><p><b>场地：</b>旧金山湾区体育场</p><p><b>预计阵型：</b><br>卡塔尔 4-3-3：阿布纳达 - 艾哈迈德、佩德罗·米格尔、胡赫、阿尔奥伊 - 法蒂、贾比尔、布迪亚夫 - 阿费夫、阿里、埃德米尔森<br>瑞士 4-2-3-1：科贝尔 - 罗德里格斯、埃尔维迪、阿坎吉、维德默 - 弗罗伊勒、扎卡 - 埃比舍尔、里德尔、巴尔加斯(GTD) - 恩博洛</p><p><b>伤病：</b>Ruben Vargas（瑞士）- 出战成疑，若缺阵影响边路突破</p><p><b>分析：</b>瑞士是典型的控制型球队，不追求大比分但极少犯错。卡塔尔的唯一希望是Akram Afif在反击中的爆点发挥。</p><p><b>预测：</b>瑞士 2-0 卡塔尔（信心80%）</p>"
         }
       ],
+      "changes": [],
       "recommendations": [
-        {
-          "title": "🇨🇭瑞士胜",
-          "odds": "",
-          "reason": "实力差距明显，但让球盘需谨慎"
-        }
+        {"title": "💎 瑞士胜", "odds": "1.22", "reason": "实力碾压，可作为串关基础选项（信心85%）"}
       ]
     },
     {
-      "date": "6/14",
-      "time": "06:00",
-      "group": "C",
       "home": "巴西",
       "away": "摩洛哥",
+      "date": "6/13",
+      "time": "06:00 (CST)",
+      "group": "C",
       "analyses": [
         {
-          "time": "6/13 16:00",
-          "version": 1,
+          "time": "2026-06-13 20:00",
+          "confidence": 60,
           "isNew": true,
-          "confidence": 62,
-          "text": "🇧🇷安切洛蒂外教首秀+内马尔回归双不确定因素。摩洛哥上届4强，近45场仅2负，防守极其硬朗。巴西罗德里戈(膝伤❌)+埃斯特旺(腿筋❌)双双伤缺影响边路。历史巴西对非洲队7胜1负，但摩洛哥是史上最强非洲队之一。",
+          "goalCount": 3,
+          "possibleScores": ["2-1", "1-0", "1-1"],
           "factors": [
-            {
-              "icon": "🔴",
-              "text": "罗德里戈+埃斯特旺伤缺",
-              "type": "bad"
-            },
-            {
-              "icon": "🔄",
-              "text": "内马尔回归状态成疑",
-              "type": "neutral"
-            },
-            {
-              "icon": "🛡️",
-              "text": "摩洛哥近45场仅2负",
-              "type": "bad"
-            }
+            {"type": "good", "icon": "🇧🇷", "text": "维尼修斯+拉菲尼亚破坏力强"},
+            {"type": "good", "icon": "🧠", "text": "安切洛蒂大赛经验丰富"},
+            {"type": "bad", "icon": "🚑", "text": "内马尔小腿伤缺席"},
+            {"type": "bad", "icon": "🇲🇦", "text": "Aguerd+Ezzalzouli伤缺"},
+            {"type": "neutral", "icon": "⚡", "text": "摩洛哥2022四强基因"}
           ],
-          "sources": [
-            "SportsMole赛前预览",
-            "RotoWire阵容分析"
-          ],
-          "fullReport": "<div class=\"s\">🆔 C组第1轮 · 纽约大都会人寿球场</div><hr><b>🇧🇷 巴西</b><br><span class=\"s\">FIFA排名: 5 | 总身价: ~9.3亿€ | 教练: 安切洛蒂(意大利 首位外教)</span><br><span class=\"s\">关键球员: 内马尔(回归) 维尼修斯(皇马) 拉菲尼亚(巴萨) 伊戈尔·蒂亚戈(中锋)</span><br><span class=\"rl\">❌ 伤缺: 罗德里戈(膝伤) 埃斯特旺(腿筋) 蒂亚戈·席尔瓦(落选)</span><br><span class=\"s\">近5场: 3胜0平2负(赢克罗地亚 巴拿马 埃及 输玻利维亚 日本)</span><br><span class=\"s\">世界杯历史: 5冠王 但2002年后无冠 已24年</span><hr><b>🇲🇦 摩洛哥</b><br><span class=\"s\">FIFA排名: 7 | 总身价: ~3.5亿€ | 教练: 乌阿迪(前U23临时接任)</span><br><span class=\"rl\">⚠️ 雷格拉吉赛前<100天辞职 换帅动荡</span><br><span class=\"s\">关键球员: 齐耶赫(切尔西) 阿什拉夫(巴黎) 恩-内斯里(塞维利亚)</span><br><span class=\"s\">近45场: 33胜10平2负(不败率95%)</span><br><span class=\"s\">2026非洲杯: 冠军(有争议 塞内加尔被取消资格)</span><hr><b>⚔️ 对位分析</b><br>巴西左路维尼修斯vs摩洛哥右路阿什拉夫 — <span class=\"hl\">顶级对决 互爆</span><br>巴西中场(吉马良斯+帕奎塔)vs摩洛哥(阿姆拉巴特) — <span class=\"hl\">巴西略优</span><br>摩洛哥防反vs巴西控制 — <span class=\"hl\">摩洛哥有空间偷鸡</span><hr><b>📊 历史数据</b><br>巴西世界杯对非洲球队: <span class=\"hl\">7胜1负</span>(唯一输喀麦隆2022)<br>摩洛哥上届世界杯: <span class=\"hl\">4强</span>(点球淘汰西班牙葡萄牙)<hr><b>🎯 预测</b><br><span class=\"gl\">🇧🇷巴西胜 @1.73</span><br><span class=\"hl\">推荐比分: 1-0 或 2-1</span><br>信心: <span class=\"ct-m\">62%</span><br><span class=\"rl\">⚠️ 不确定性高 非稳胆 建议小注</span>",
-          "goalCount": 1,
-          "possibleScores": [
-            "1-0",
-            "1-1",
-            "0-0"
-          ]
+          "text": "🔥 今日最焦点对决！巴西虽缺内马尔（小腿Grade 2拉伤），但维尼修斯+拉菲尼亚+库尼亚的攻击线依然豪华。摩洛哥方面缺少后卫Aguerd和边锋Ezzalzouli，防守有隐患。不过摩洛哥2022年曾击败比利时、西班牙、葡萄牙，爆冷基因不容忽视。Opta预测巴西57.7% vs 摩洛哥18.8%。赔率：巴西1.61 / 平3.75 / 摩洛哥5.25",
+          "sources": ["Al Jazeera", "CBS Sports", "ESPN", "Sky Bet"],
+          "fullReport": "<h3>🇧🇷 巴西 vs 🇲🇦 摩洛哥 · 赛前深度分析</h3><p><b>时间：</b>6月13日 18:00 ET / 06:00 CST (6/14)</p><p><b>场地：</b>大都会人寿体育场，东卢瑟福，新泽西</p><p><b>天气：</b>约25°C，适宜比赛</p><p><b>伤病更新：</b><br>🚑 内马尔（巴西）- 小腿Grade 2拉伤，确认缺席揭幕战<br>🚑 Nayef Aguerd（摩洛哥）- 确认缺席<br>🚑 Abde Ezzalzouli（摩洛哥）- 确认缺席</p><p><b>预计阵型：</b><br>巴西 4-3-3：阿利松 - 韦斯利、马尔基尼奥斯、加布里埃尔、桑德罗 - 卡塞米罗、吉马良斯 - 拉菲尼亚、帕奎塔、维尼修斯 - 库尼亚<br>摩洛哥 4-3-3：布努 - 阿什拉夫、迪奥普、里亚德、马兹拉维 - 埃尔阿尤纳维、布阿迪、乌纳希 - 迪亚兹、埃尔卡比、赛巴里</p><p><b>关键对决：</b><br>• 维尼修斯 vs 阿什拉夫 - 左路对决，速度与技术的碰撞<br>• 摩洛哥右路阿什拉夫+迪亚兹 - 针对巴西左后卫桑德罗的薄弱环节<br>• 卡塞米罗 vs 摩洛哥中场 - 巴西能否控制中场</p><p><b>赔率变动：</b>巴西赔率从-145降至-167，市场信心小幅上升</p><p><b>预测：</b>巴西 2-1 摩洛哥（信心60%）<br>看好巴西小胜，但摩洛哥有能力制造麻烦。</p>"
         }
       ],
+      "changes": [],
       "recommendations": [
-        {
-          "title": "⚠️谨慎参与",
-          "odds": "",
-          "reason": "非稳胆，摩洛哥防守强，建议小注或回避"
-        }
+        {"title": "💎 巴西胜", "odds": "1.61", "reason": "巴西整体实力占优，赔率合理（信心65%）"},
+        {"title": "⚡ 摩洛哥+0.5", "odds": "", "reason": "摩洛哥有爆冷传统，高赔冷门选项（信心40%）"},
+        {"title": "📊 总进球超2.5", "odds": "+110", "reason": "两队攻击力强，防守均有漏洞，看好进球大战（信心55%）"}
       ]
     },
     {
-      "date": "6/14",
-      "time": "09:00",
-      "group": "C",
       "home": "海地",
       "away": "苏格兰",
+      "date": "6/13",
+      "time": "09:00 (CST)",
+      "group": "C",
       "analyses": [
         {
-          "time": "6/13 16:00",
-          "version": 1,
+          "time": "2026-06-13 20:00",
+          "confidence": 70,
           "isNew": true,
-          "confidence": 82,
-          "text": "🏴󠁧󠁢󠁳󠁣󠁴󠁿苏格兰26年终返世界杯，士气极高。罗伯逊(利物浦)+麦金(维拉)+麦克托米奈(那不勒斯)配置碾压海地全队身价。海地首次参赛经验为零。波士顿大量苏格兰侨民≈半个主场。",
-          "factors": [
-            {
-              "icon": "💪",
-              "text": "苏格兰五大联赛球星配置",
-              "type": "good"
-            },
-            {
-              "icon": "🆕",
-              "text": "海地首次世界杯亮相",
-              "type": "bad"
-            },
-            {
-              "icon": "🏟️",
-              "text": "波士顿=苏格兰侨民主场",
-              "type": "good"
-            }
-          ],
-          "sources": [
-            "BBC世界杯特辑",
-            "RotoWire小组分析"
-          ],
-          "fullReport": "<div class=\"s\">🆔 C组第1轮 · 波士顿吉列球场</div><hr><b>🇭🇹 海地</b><br><span class=\"s\">FIFA排名: ~87 | 总身价: <1000万€</span><br><span class=\"rl\">⚠️ 首次参加世界杯 经验为零</span><br><span class=\"s\">关键球员: 无五大联赛级别球星</span><br><span class=\"s\">预选赛: 中北美区突围 对手强度偏低</span><hr><b>🏴󠁧󠁢󠁳󠁣󠁴󠁿 苏格兰</b><br><span class=\"s\">FIFA排名: ~35 | 总身价: ~2亿€ | 教练: 史蒂夫·克拉克(实用主义)</span><br><span class=\"s\">关键球员: 罗伯逊(利物浦队长) 麦金(维拉核心) 麦克托米奈(那不勒斯)</span><br><span class=\"gl\">🔥 26年后重返世界杯 士气最高点</span><br><span class=\"s\">预选赛: 欧洲区以小组第二出线</span><hr><b>⚔️ 对位分析</b><br>罗伯逊vs海地右路 — <span class=\"hl\">碾压</span><br>定位球(苏格兰强项)vs海地防守 — <span class=\"hl\">苏格兰优势</span><br>大赛经验 — <span class=\"hl\">苏格兰完胜</span><hr><b>🏟️ 场地</b><br>波士顿吉列球场 · 室外球场<br><span class=\"hl\">波士顿有大量苏格兰裔居民 预计>60%球迷支持苏格兰</span><hr><b>🎯 预测</b><br><span class=\"gl\">🏴󠁧󠁢󠁳󠁣󠁴󠁿苏格兰胜 @1.57</span><br><span class=\"hl\">推荐比分: 0-2</span><br>信心: <span class=\"hl\">82%</span><br><span class=\"s\">今日最稳之选</span>",
           "goalCount": 2,
-          "possibleScores": [
-            "0-1",
-            "0-2",
-            "1-2"
-          ]
+          "possibleScores": ["0-2", "1-2", "0-1"],
+          "factors": [
+            {"type": "good", "icon": "🏴󠁧󠁢󠁳󠁣󠁴󠁿", "text": "苏格兰经验丰富"},
+            {"type": "bad", "icon": "🇭🇹", "text": "海地首次参赛"}
+          ],
+          "text": "苏格兰作为欧洲球队经验占优，海地首次参加世界杯正赛。苏格兰需要在本组中抢分。预计苏格兰2-0取胜。",
+          "sources": ["ESPN"],
+          "fullReport": "<h3>🇭🇹 海地 vs 🏴󠁧󠁢󠁳󠁣󠁴󠁿 苏格兰</h3><p><b>时间：</b>6月13日 21:00 ET / 09:00 CST (6/14)</p><p><b>预测：</b>苏格兰 2-0（信心70%）</p>"
         }
       ],
-      "recommendations": [
-        {
-          "title": "🏴󠁧󠁢󠁳󠁣󠁴󠁿苏格兰胜",
-          "odds": "",
-          "reason": "今日最稳之选"
-        }
-      ]
+      "changes": [],
+      "recommendations": []
     },
     {
-      "date": "6/14",
-      "time": "12:00",
-      "group": "D",
       "home": "澳大利亚",
       "away": "土耳其",
-      "analyses": [
-        {
-          "time": "6/13 16:00",
-          "version": 1,
-          "isNew": true,
-          "confidence": 68,
-          "text": "🇹🇷恰尔汗奥卢(国米)+伊尔迪兹(尤文)领先土耳其技术流中场。澳洲传统英式长传冲吊，在亚洲可称霸但面对欧洲中上游差距明显。两队首秀可能保守试探，小比分概率较高。",
-          "factors": [
-            {
-              "icon": "🌟",
-              "text": "土耳其明星球员碾压澳洲",
-              "type": "bad"
-            },
-            {
-              "icon": "⚔️",
-              "text": "技术流vs英式打法",
-              "type": "bad"
-            },
-            {
-              "icon": "🤝",
-              "text": "首秀可能保守",
-              "type": "neutral"
-            }
-          ],
-          "sources": [
-            "BBC分组分析"
-          ],
-          "fullReport": "<div class=\"s\">🆔 D组第1轮 · 温哥华BC球场</div><hr><b>🇦🇺 澳大利亚</b><br><span class=\"s\">FIFA排名: ~40 | 总身价: ~5000万€</span><br><span class=\"s\">教练: 格拉汉姆·阿诺德(传统英式)</span><br><span class=\"s\">关键球员: 无五大联赛顶级球星</span><br><span class=\"s\">打法: 长传冲吊 身体对抗 定位球</span><br><span class=\"s\">近况: 亚洲预选赛不败 但对手强度低</span><hr><b>🇹🇷 土耳其</b><br><span class=\"s\">FIFA排名: ~25 | 总身价: ~3.2亿€</span><br><span class=\"s\">教练: 文森佐·蒙特拉(意大利 技术流)</span><br><span class=\"s\">关键球员: 恰尔汗奥卢(国米中场核心) 伊尔迪兹(尤文边锋)</span><br><span class=\"s\">近况: 欧洲预选赛表现出色</span><br><span class=\"s\">大赛: 2024欧洲杯8强</span><hr><b>⚔️ 对位分析</b><br>土耳其技术中场vs澳洲硬核中场 — <span class=\"hl\">土耳其占优</span><br>伊尔迪兹边路爆点 — <span class=\"hl\">土耳其武器</span><br>澳洲高空优势 — 土耳其防空略弱但可控<span class=\"s\"></span><hr><b>🎯 预测</b><br><span class=\"gl\">🇹🇷土耳其胜 @1.73</span><br><span class=\"hl\">推荐比分: 0-1</span><br>信心: <span class=\"ct-m\">68%</span><br><span class=\"s\">小2.5球也是不错选择</span>",
-          "goalCount": 1,
-          "possibleScores": [
-            "0-1",
-            "1-1",
-            "0-0"
-          ]
-        }
-      ],
-      "recommendations": [
-        {
-          "title": "🇹🇷土耳其胜",
-          "odds": "",
-          "reason": "技术占优，但非稳胆"
-        }
-      ]
-    },
-    {
-      "date": "6/15",
-      "time": "01:00",
+      "date": "6/13",
+      "time": "09:00 (CST)",
       "group": "E",
-      "home": "德国",
-      "away": "库拉索",
       "analyses": [
         {
-          "time": "6/13 16:00",
-          "version": 1,
+          "time": "2026-06-13 20:00",
+          "confidence": 55,
           "isNew": true,
-          "confidence": 95,
-          "text": "🇩🇪德国青春风暴(维尔茨+穆西亚拉)vs库拉索(15万人最小参赛国)。德国预选赛全胜且0失球。库拉索预选赛不败但对手强度天差地别。大概率5-0起步的碾压局。",
+          "goalCount": 3,
+          "possibleScores": ["1-2", "2-1", "1-1"],
           "factors": [
-            {
-              "icon": "💥",
-              "text": "德国vs15万人口小国",
-              "type": "bad"
-            },
-            {
-              "icon": "🟢",
-              "text": "德国预选赛全胜0失球",
-              "type": "good"
-            },
-            {
-              "icon": "📊",
-              "text": "赔率主1.04极度碾压",
-              "type": "bad"
-            }
+            {"type": "good", "icon": "🇹🇷", "text": "土耳其近年进步明显"},
+            {"type": "neutral", "icon": "🇦🇺", "text": "澳大利亚身体对抗强"}
           ],
-          "sources": [
-            "BBC世界杯特辑"
-          ],
-          "fullReport": "<div class=\"s\">🆔 E组第1轮 · 休斯顿NRG球场</div><hr><b>🇩🇪 德国</b><br><span class=\"s\">FIFA排名: 10 | 总身价: ~8亿€ | 教练: 纳格尔斯曼(高位压迫 快节奏)</span><br><span class=\"s\">关键球员: 维尔茨(勒沃库森) 穆西亚拉(拜仁) 哈弗茨(阿森纳)</span><br><span class=\"gl\">预选赛全胜 0失球 完美表现</span><br><span class=\"s\">世界杯历史: 4冠王 2022小组赛出局(反弹动力)</span><hr><b>🇨🇼 库拉索</b><br><span class=\"s\">FIFA排名: ~85 | 总身价: ~300万€</span><br><span class=\"rl\">⚠️ 世界杯最小参赛国 人口仅15万</span><br><span class=\"s\">2010年才成为荷兰王国自治国</span><br><span class=\"s\">预选赛: 中北美区不败出线 但对手弱</span><br><span class=\"s\">球员: 大部分效力荷兰/美国低级别联赛</span><hr><b>⚔️ 对位分析</b><br>全队身价差: 8亿€ vs 300万€ — <span class=\"hl\">267倍</span><br>维尔茨+穆西亚拉 vs 库拉索防线 — <span class=\"hl\">完全碾压</span><hr><b>🎯 预测</b><br><span class=\"gl\">🇩🇪德国让2球胜 @1.75</span><br><span class=\"hl\">推荐比分: 5-0 或 6-0</span><br>信心: <span class=\"hl\">95%</span><br><span class=\"s\">本场唯一悬念: 德国进几个</span>",
-          "goalCount": 5,
-          "possibleScores": [
-            "4-0",
-            "5-0",
-            "6-0"
-          ]
+          "text": "势均力敌的对决。土耳其近年足球水平提升明显，澳大利亚则以身体对抗和团队纪律见长。预测土耳其2-1小胜。",
+          "sources": ["FOX Sports"],
+          "fullReport": "<h3>🇦🇺 澳大利亚 vs 🇹🇷 土耳其</h3><p><b>时间：</b>6月13日 21:00 ET / 09:00 CST (6/14)</p><p><b>预测：</b>土耳其 2-1（信心55%）</p>"
         }
       ],
-      "recommendations": [
-        {
-          "title": "🇩🇪德国让2球胜",
-          "odds": "~1.75",
-          "reason": "碾压局，让球盘可信"
-        }
-      ]
-    },
-    {
-      "date": "6/15",
-      "time": "04:00",
-      "group": "F",
-      "home": "荷兰",
-      "away": "日本",
-      "analyses": [
-        {
-          "time": "6/13 16:00",
-          "version": 1,
-          "isNew": true,
-          "confidence": 58,
-          "text": "🇯🇵日本热身赛1-0客胜英格兰不容小觑。荷兰全攻全守vs日本纪律性防守，日本预选赛16场仅失3球。荷兰星味更足但日本近年进步神速。五五开格局。",
-          "factors": [
-            {
-              "icon": "🇯🇵",
-              "text": "日本热身胜英格兰",
-              "type": "good"
-            },
-            {
-              "icon": "🔒",
-              "text": "日本预选赛16场失3球",
-              "type": "good"
-            },
-            {
-              "icon": "🌟",
-              "text": "荷兰纸面实力占优",
-              "type": "neutral"
-            }
-          ],
-          "sources": [
-            "BBC",
-            "热身赛数据"
-          ],
-          "fullReport": "<div class=\"s\">🆔 F组第1轮 · 达拉斯AT&T球场</div><hr><b>🇳🇱 荷兰</b><br><span class=\"s\">FIFA排名: ~12 | 总身价: ~6亿€ | 教练: 科曼(全攻全守)</span><br><span class=\"s\">关键球员: 范迪克(利物浦) 德容(巴萨) 加克波(利物浦) 邓弗里斯(国米)</span><br><span class=\"s\">世界杯历史: 3次亚军 上届8强</span><hr><b>🇯🇵 日本</b><br><span class=\"s\">FIFA排名: ~18 | 总身价: ~2.5亿€ | 教练: 森保一(纪律防守+快速转换)</span><br><span class=\"gl\">🔥 预选赛16场仅失3球 亚洲最强防守</span><br><span class=\"gl\">🔥 3月热身赛1-0客胜英格兰(历史首胜英格兰)</span><br><span class=\"s\">关键球员: 久保建英(皇家社会) 三笘薰(布莱顿) 远藤航(利物浦)</span><br><span class=\"s\">世界杯历史: 连续8届参赛 2022年16强(赢德国西班牙)</span><hr><b>⚔️ 对位分析</b><br>荷兰全攻全守vs日本纪律防线 — <span class=\"hl\">日本防守体系成熟</span><br>三笘薰左路vs邓弗里斯右路 — <span class=\"hl\">互爆</span><br>荷兰控球vs日本反击 — <span class=\"hl\">日本有空间</span><hr><b>🎯 预测</b><br><span class=\"gl\">荷兰胜 @1.95 但非稳胆</span><br><span class=\"hl\">推荐比分: 1-1 或 2-1</span><br>信心: <span class=\"ct-m\">58%</span><br><span class=\"rl\">⚠️ 不确定性高 日本爆冷力强</span>",
-          "goalCount": 2,
-          "possibleScores": [
-            "1-0",
-            "1-1",
-            "2-1"
-          ]
-        }
-      ],
-      "recommendations": [
-        {
-          "title": "🤝平局",
-          "odds": "",
-          "reason": "日本防守顽强，荷兰非稳胜"
-        }
-      ]
-    },
-    {
-      "date": "6/15",
-      "time": "07:00",
-      "group": "E",
-      "home": "科特迪瓦",
-      "away": "厄瓜多尔",
-      "analyses": [
-        {
-          "time": "6/13 16:00",
-          "version": 1,
-          "isNew": true,
-          "confidence": 52,
-          "text": "⚖️五五开对决。厄瓜多尔南美预选赛表现出色(曾赢巴西阿根廷)，科特迪瓦非洲传统劲旅但状态不稳定。两队实力接近，谁赢都不意外。",
-          "factors": [
-            {
-              "icon": "📊",
-              "text": "赔率客2.43主3.73，接近",
-              "type": "neutral"
-            },
-            {
-              "icon": "🌍",
-              "text": "南美vs非洲风格碰撞",
-              "type": "neutral"
-            }
-          ],
-          "sources": [
-            "体育赛前分析"
-          ],
-          "fullReport": "<div class=\"s\">🆔 E组第1轮 · 费城林肯金融球场</div><hr><b>🇨🇮 科特迪瓦</b><br><span class=\"s\">FIFA排名: ~42 | 总身价: ~2亿€</span><br><span class=\"s\">关键球员: 博尼(国米) 凯西(沙特) 阿莱(多特蒙德)</span><br><span class=\"s\">近况: 非洲区预选赛表现起伏 热身不稳定</span><hr><b>🇪🇨 厄瓜多尔</b><br><span class=\"s\">FIFA排名: ~30 | 总身价: ~1.5亿€</span><br><span class=\"s\">关键球员: 凯塞多(切尔西) 帕乔(巴黎) 埃斯图皮南(布莱顿)</span><br><span class=\"gl\">南美预选赛赢过巴西和阿根廷</span><hr><b>⚔️ 对位分析</b><br>风格迥异: 非洲个人能力vs南美整体配合<br>凯塞多vs科特迪瓦中场 — <span class=\"hl\">凯塞多略优</span><br><span class=\"s\">两队都擅长反击 中场控制力是胜负手</span><hr><b>🎯 预测</b><br><span class=\"gl\">厄瓜多尔略优 @2.43</span><br><span class=\"hl\">推荐比分: 1-1 或 0-1</span><br>信心: <span class=\"ct-m\">52%</span><br><span class=\"rl\">⚖️ 五五开 回避</span>",
-          "goalCount": 2,
-          "possibleScores": [
-            "0-0",
-            "1-1",
-            "0-1"
-          ]
-        }
-      ],
-      "recommendations": [
-        {
-          "title": "⚖️回避",
-          "odds": "",
-          "reason": "五五开，无明确方向"
-        }
-      ]
-    },
-    {
-      "date": "6/15",
-      "time": "10:00",
-      "group": "F",
-      "home": "瑞典",
-      "away": "突尼斯",
-      "analyses": [
-        {
-          "time": "6/13 16:00",
-          "version": 1,
-          "isNew": true,
-          "confidence": 72,
-          "text": "🇸🇪瑞典身体对抗+高空优势明显，北欧球队对非洲球队有天然身材克制。突尼斯技术细腻但身体吃亏。瑞典预选赛表现稳定，看好小比分取胜。",
-          "factors": [
-            {
-              "icon": "💪",
-              "text": "瑞典身材优势克制突尼斯",
-              "type": "good"
-            },
-            {
-              "icon": "📊",
-              "text": "主胜1.88合理",
-              "type": "good"
-            }
-          ],
-          "sources": [
-            "BBC分组分析"
-          ],
-          "fullReport": "<div class=\"s\">🆔 F组第1轮 · 蒙特雷BBVA球场</div><hr><b>🇸🇪 瑞典</b><br><span class=\"s\">FIFA排名: ~22 | 总身价: ~3亿€</span><br><span class=\"s\">关键球员: 伊萨克(纽卡) 库卢塞夫斯基(热刺) 林德洛夫(曼联)</span><br><span class=\"s\">打法: 身体对抗 高空轰炸 边路传中</span><br><span class=\"s\">预选赛: 稳定发挥 防守稳固</span><hr><b>🇹🇳 突尼斯</b><br><span class=\"s\">FIFA排名: ~28 | 总身价: ~1亿€</span><br><span class=\"s\">关键球员: 无顶级联赛明星 整体性强</span><br><span class=\"s\">打法: 技术传控 短传渗透</span><br><span class=\"s\">世界杯历史: 2022年小组赛赢法国(替补阵容)</span><hr><b>⚔️ 对位分析</b><br>瑞典身高1.86m avg vs 突尼斯1.78m avg — <span class=\"hl\">瑞典身体碾压</span><br>伊萨克速度vs突尼斯防线 — <span class=\"hl\">瑞典爆点</span><br>突尼斯技术优势在瑞典高强度对抗下难发挥<span class=\"s\"></span><hr><b>🎯 预测</b><br><span class=\"gl\">🇸🇪瑞典胜 @1.88</span><br><span class=\"hl\">推荐比分: 2-0</span><br>信心: <span class=\"ct-m\">72%</span><br><span class=\"s\">北欧身体克制 小比分取胜</span>",
-          "goalCount": 2,
-          "possibleScores": [
-            "1-0",
-            "2-0",
-            "2-1"
-          ]
-        }
-      ],
-      "recommendations": [
-        {
-          "title": "🇸🇪瑞典胜",
-          "odds": "",
-          "reason": "身体克制，看好小比分"
-        }
-      ]
-    },
-    {
-      "date": "6/18",
-      "time": "17:00",
-      "group": "A",
-      "home": "捷克",
-      "away": "南非",
-      "analyses": []
-    },
-    {
-      "date": "6/18",
-      "time": "20:00",
-      "group": "B",
-      "home": "瑞士",
-      "away": "波黑",
-      "analyses": []
-    },
-    {
-      "date": "6/18",
-      "time": "23:00",
-      "group": "B",
-      "home": "加拿大",
-      "away": "卡塔尔",
-      "analyses": []
-    },
-    {
-      "date": "6/19",
-      "time": "02:00",
-      "group": "A",
-      "home": "墨西哥",
-      "away": "韩国",
-      "analyses": []
+      "changes": [],
+      "recommendations": []
     }
-  ]
+  ],
+  "analysisCount": 1,
+  "matchCount": 7,
+  "lastUpdate": "2026-06-13T20:00:00+08:00",
+  "rawReportFile": "reports.json"
 }

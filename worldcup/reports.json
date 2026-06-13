@@ -1,90 +1,198 @@
-{
-  "reports": [
-    {
-      "id": "v1",
-      "time": "2026-06-13 16:02 BJT (数据已刷新)",
-      "version": 1,
-      "status": "new",
-      "matchCount": 4,
-      "nextUpdate": "18:00 BJT",
-      "matches": [
-        {
-          "home": "卡塔尔",
-          "away": "瑞士",
-          "flagHome": "🇶🇦",
-          "flagAway": "🇨🇭",
-          "score": "0-2 🟢",
-          "confidence": 88,
-          "note": "瑞士FIFA≈15名 卡塔尔≈50+，身价差14倍。瑞士防守体系严密(近5场仅失3球)，扎卡+索默领衔。卡塔尔传控遇欧洲铁桶无计可施，2022世界杯3战全败。旧金山室内球场无影响。赔率客1.23合理，大概率小比分。",
-          "changes": [],
-          "factors": [
-            {"icon":"🧠","text":"实力差距巨大，瑞士FIFA≈15 卡塔尔≈50+","type":"bad","isChange":false},
-            {"icon":"🔒","text":"瑞士近5场仅失3球，防守体系极强","type":"bad","isChange":false},
-            {"icon":"🤔","text":"卡塔尔2022世界杯3战全败0进球","type":"bad","isChange":false},
-            {"icon":"📊","text":"市场赔率客1.23，极度看好瑞士","type":"bad","isChange":false},
-            {"icon":"🏟️","text":"旧金山室内球场，无天气影响","type":"neutral","isChange":false}
-          ]
+[
+  {
+    "id": "wc-20260613-2000",
+    "timestamp": "2026-06-13T20:00:00+08:00",
+    "date": "2026-06-13",
+    "title": "世界杯情报更新 — Day 3 战报&预测",
+    "summary": "世界杯第3日，今日已完赛3场：韩国2-1逆转捷克、加拿大1-1首取积分、美国4-1大胜巴拉圭。今晚焦点战巴西vs摩洛哥即将开打（06:00 CST），瑞士vs卡塔尔也将登场。",
+
+    "completed_matches": [
+      {
+        "match": "韩国 2-1 捷克",
+        "group": "A组",
+        "date": "2026-06-12",
+        "key_events": "捷克Lukas Krejčí第59分钟首开纪录；黄仁范第67分钟扳平；吴贤揆第80分钟绝杀。韩国完成逆转，与墨西哥同积3分。",
+        "standings_impact": "韩国(+3) 与墨西哥(+3) 并列A组榜首，捷克(0)垫底。"
+      },
+      {
+        "match": "加拿大 1-1 波黑",
+        "group": "B组",
+        "date": "2026-06-12",
+        "key_events": "加拿大收获队史世界杯首分。波黑先进球，加拿大终场前扳平。",
+        "standings_impact": "两队各取1分，B组出线形势混沌。"
+      },
+      {
+        "match": "美国 4-1 巴拉圭",
+        "group": "D组",
+        "date": "2026-06-13",
+        "key_events": "开场7分钟巴拉圭博巴迪亚乌龙；巴洛贡梅开二度(31', 52')；巴拉圭毛里西奥追回一球；替补雷纳补时世界波锁定4-1。普利西奇两次助攻后被换下，赛后确认无大碍。",
+        "standings_impact": "美国(+3) 暂居D组榜首，净胜球+3优势明显。"
+      }
+    ],
+
+    "upcoming_matches": [
+      {
+        "match": "卡塔尔 vs 瑞士",
+        "group": "B组",
+        "time_cst": "2026-06-14 03:00",
+        "venue": "旧金山湾区体育场",
+        "weather": "旧金山湾区6月夜间约15°C，可能有海雾，对比赛影响有限",
+        "prediction": {
+          "winner": "瑞士",
+          "score": "2-0",
+          "confidence": "80%",
+          "analysis": "瑞士近14场仅1负，状态稳固。卡塔尔世界杯正赛经验不足，防守面对瑞士的Embolo和Xhaka领衔的中场很难抵挡。关键变量：瑞士边锋Ruben Vargas出战成疑（GTD），若缺阵将影响边路突破能力。Opta赔率：瑞士胜53% / 平27% / 卡塔尔胜20%。",
+          "odds": {
+            "switzerland_win": "1.22 (Betway)",
+            "draw": "6.50",
+            "qatar_win": "11.00"
+          }
         },
-        {
-          "home": "巴西",
-          "away": "摩洛哥",
-          "flagHome": "🇧🇷",
-          "flagAway": "🇲🇦",
-          "score": "1-0 🟡",
-          "confidence": 62,
-          "note": "安切洛蒂外教首秀+内马尔回归双不确定因素。摩洛哥上届4强，近45场仅2负。罗德里戈膝盖伤缺、埃斯特旺腿筋伤缺影响巴西边路。赔率主1.73非碾压局，摩洛哥受让0.8。建议小注或回避。",
-          "changes": [],
-          "factors": [
-            {"icon":"🔴","text":"罗德里戈(膝伤❌)+埃斯特旺(腿筋❌)双双伤缺","type":"bad","isChange":false},
-            {"icon":"🔄","text":"内马尔回归，已连续10场巴甲首发，但久疏大赛","type":"good","isChange":false},
-            {"icon":"🆕","text":"安切洛蒂首位外教+大赛首秀，磨合存疑","type":"bad","isChange":false},
-            {"icon":"🛡️","text":"摩洛哥近45场仅2负，上届世界杯4强","type":"bad","isChange":false},
-            {"icon":"📊","text":"主1.73+让0.8，巴西非稳胆","type":"neutral","isChange":false}
-          ]
-        },
-        {
-          "home": "海地",
-          "away": "苏格兰",
-          "flagHome": "🇭🇹",
-          "flagAway": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-          "score": "0-2 🟢",
-          "confidence": 82,
-          "note": "苏格兰26年终返世界杯，士气极高。罗伯逊(利物浦)+麦金(维拉)+麦克托米奈(那不勒斯)配置碾压海地。海地首次参赛经验为零。波士顿大量苏格兰侨民≈半个主场。赔率客1.57今日最稳。",
-          "changes": [],
-          "factors": [
-            {"icon":"💪","text":"苏格兰球星配置碾压，全主力五大联赛","type":"good","isChange":false},
-            {"icon":"🆕","text":"海地首次世界杯亮相，经验为零","type":"bad","isChange":false},
-            {"icon":"🏴󠁧󠁢󠁳󠁣󠁴󠁿","text":"苏格兰26年终返世界杯，心气极高","type":"good","isChange":false},
-            {"icon":"🏟️","text":"波士顿大量苏格兰侨民，≈半个主场","type":"good","isChange":false}
-          ]
-        },
-        {
-          "home": "澳大利亚",
-          "away": "土耳其",
-          "flagHome": "🇦🇺",
-          "flagAway": "🇹🇷",
-          "score": "0-1 🟡",
-          "confidence": 68,
-          "note": "恰尔汗奥卢(国米)+伊尔迪兹(尤文)领先土耳其技术流。澳洲传统英式长传冲吊，面对欧洲中上游差距明显。两队首秀可能保守。赔率客1.73合理，小2.5球价值不错。",
-          "changes": [],
-          "factors": [
-            {"icon":"🌟","text":"恰尔汗奥卢+伊尔迪兹，土耳其星味远超澳洲","type":"bad","isChange":false},
-            {"icon":"⚔️","text":"土耳其技术流vs澳洲英式打法，技术占优","type":"bad","isChange":false},
-            {"icon":"🤝","text":"两队都是首秀，可能保守试探","type":"neutral","isChange":false}
-          ]
+        "key_factors": {
+          "favorable_switzerland": ["历史交锋占优", "整体实力碾压", "Embolo状态火热"],
+          "favorable_qatar": ["Akram Afif个人能力", "防守反击有一定威胁", "首战无压力"]
         }
-      ],
-      "recommendations": [
-        {"type":"best","title":"🏴󠁧󠁢󠁳󠁣󠁴󠁿 苏格兰胜","odds":"1.57","reason":"最稳之选，海地太弱，苏格兰首秀必拼全力"},
-        {"type":"value","title":"🇶🇦卡塔尔 vs 🇨🇭瑞士 小2.5球","odds":"2.23","reason":"全场最佳价值赔率，瑞士保守+卡塔尔进攻弱"},
-        {"type":"safe","title":"串关 🇨🇭瑞士胜×🏴󠁧󠁢󠁳󠁣󠁴󠁿苏格兰胜","odds":"~1.90","reason":"两场都比较稳，适合做串关基础"},
-        {"type":"skip","title":"🇧🇷巴西 vs 🇲🇦摩洛哥 谨慎","odds":"1.73","reason":"不确定性最高，摩洛哥防守强，巴西非稳胆"}
-      ],
-      "news": [
-        {"icon":"🇨🇦","text":"加拿大 1-1 波黑 — 赛尔·拉林扳平，东道主首秀闷平","isChange":false},
-        {"icon":"🇺🇸","text":"美国 4-1 巴拉圭 — 主场大胜开门红","isChange":false},
-        {"icon":"✅","text":"明日4场比赛均在室内/有顶球场，无天气影响","isChange":false}
-      ]
-    }
-  ]
-}
+      },
+      {
+        "match": "巴西 vs 摩洛哥",
+        "group": "C组",
+        "time_cst": "2026-06-14 06:00",
+        "venue": "大都会人寿体育场, 东卢瑟福, 新泽西",
+        "weather": "新泽西6月傍晚约25°C，适宜比赛",
+        "prediction": {
+          "winner": "巴西",
+          "score": "2-1",
+          "confidence": "60%",
+          "analysis": "今日最焦点的对决。巴西虽有Neymar因小腿伤缺席揭幕战（Grade 2 calf strain），但维尼修斯、拉菲尼亚和库尼亚的攻击线依然极具威胁。摩洛哥缺少了后卫Aguerd和边锋Ezzalzouli，防守受影响。但摩洛哥2022年曾击败多支强队，有爆冷基因。Opta预测巴西胜率57.7%，摩洛哥18.8%。",
+          "odds": {
+            "brazil_win": "1.61 (Betway) / -167 (DraftKings)",
+            "draw": "3.75 / +290",
+            "morocco_win": "5.25 / +400",
+            "over_2.5": "+110"
+          }
+        },
+        "key_factors": {
+          "favorable_brazil": ["维尼修斯+拉菲尼亚边路爆破", "安切洛蒂大赛经验", "摩洛哥防线伤病较多"],
+          "favorable_morocco": ["阿什拉夫+迪亚兹右路威胁", "2022年四强底蕴", "巴西全队压力大"]
+        }
+      },
+      {
+        "match": "海地 vs 苏格兰",
+        "group": "C组",
+        "time_cst": "2026-06-14 09:00",
+        "venue": "吉列体育场, 福克斯堡, 马萨诸塞",
+        "prediction": {
+          "winner": "苏格兰",
+          "score": "2-0",
+          "confidence": "70%",
+          "analysis": "苏格兰经验占优，海地首次参加世界杯。苏格兰需要小组出线抢分。",
+          "odds": {}
+        }
+      },
+      {
+        "match": "澳大利亚 vs 土耳其",
+        "group": "E组",
+        "time_cst": "2026-06-14 09:00",
+        "prediction": {
+          "winner": "土耳其",
+          "score": "2-1",
+          "confidence": "55%",
+          "analysis": "势均力敌的对决，土耳其近年进步明显，澳大利亚身体对抗不落下风。",
+          "odds": {}
+        }
+      }
+    ],
+
+    "injury_news": [
+      {
+        "player": "Neymar (巴西)",
+        "injury": "小腿Grade 2拉伤",
+        "status": "确认缺席vs摩洛哥",
+        "severity": "高",
+        "return_estimate": "小组赛第二轮可能复出",
+        "change": "新"
+      },
+      {
+        "player": "Ruben Vargas (瑞士)",
+        "injury": "未公开伤病",
+        "status": "Questionable (GTD)",
+        "severity": "中",
+        "return_estimate": "赛前决定",
+        "change": "新"
+      },
+      {
+        "player": "Nayef Aguerd (摩洛哥)",
+        "injury": "伤病",
+        "status": "确认缺席vs巴西",
+        "severity": "高",
+        "change": "新"
+      },
+      {
+        "player": "Abde Ezzalzouli (摩洛哥)",
+        "injury": "伤病",
+        "status": "确认缺席vs巴西",
+        "severity": "中",
+        "change": "新"
+      },
+      {
+        "player": "Christian Pulisic (美国)",
+        "injury": "轻微碰撞",
+        "status": "被换下但赛后确认无大碍",
+        "severity": "低",
+        "change": "新"
+      }
+    ],
+
+    "odds_movement": [
+      {
+        "match": "巴西 vs 摩洛哥",
+        "previous_odds": "巴西 -145 (3天前)",
+        "current_odds": "巴西 -167 / 1.61",
+        "movement": "巴西赔率走低，市场信心上升约...",
+        "direction": "巴西方向",
+        "change": "新"
+      },
+      {
+        "match": "卡塔尔 vs 瑞士",
+        "previous_odds": "N/A (首次追踪)",
+        "current_odds": "瑞士 1.22",
+        "change": "新"
+      }
+    ],
+
+    "recommendations": [
+      {
+        "category": "信心较高",
+        "pick": "瑞士胜 卡塔尔vs瑞士",
+        "rationale": "瑞士实力碾压，赔率1.22看似低但胜率极高，可作为串关基础选项",
+        "confidence": 85
+      },
+      {
+        "category": "值得关注",
+        "pick": "巴西胜 巴西vs摩洛哥",
+        "rationale": "巴西虽缺Neymar但整体仍强于摩洛哥，主场之利+赔率1.61合理。但摩洛哥反击不可小觑，建议小注或等开赛后观察",
+        "confidence": 65
+      },
+      {
+        "category": "高赔冷门",
+        "pick": "摩洛哥+0.5",
+        "rationale": "2022年摩洛哥曾多次爆冷，如果巴西久攻不下，摩洛哥有机会偷分",
+        "confidence": 40
+      },
+      {
+        "category": "赛后观察",
+        "pick": "关注美国vs巴拉圭 4-1的影响",
+        "rationale": "美国首战大胜，D组出线形势大好。后续可关注美国vs...的盘口",
+        "confidence": 90
+      }
+    ],
+
+    "overall_tournament_observations": [
+      "48队新赛制下，首轮比赛强度分化明显——强队基本顺利过关，但也有加拿大这样的新军拿到历史首分",
+      "墨西哥2-0南非+韩国2-1逆转捷克，A组竞争激烈",
+      "美国作为东道主状态火热，4-1大胜展现出冠军相",
+      "红牌和VAR争议首日即成焦点话题",
+      "补水暂停在夏季北美赛事中可能成为常见因素"
+    ]
+  }
+]
