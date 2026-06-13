@@ -112,7 +112,7 @@ function loadData(){
 }
 
 function render(){
-  const el=document.getElementById('content'),view=currentView;
+  matchIdx=0;const el=document.getElementById('content'),view=currentView;
   if(!allMatches.length){el.innerHTML='<div class="empty">🤖 暂无赛程数据<br><span style="font-size:10px;">每晚12点自动刷新后三天赛程</span></div>';return;}
   let html='';const days={};
   for(const m of allMatches){if(!days[m.date])days[m.date]=[];days[m.date].push(m);}
@@ -126,9 +126,10 @@ function render(){
   el.innerHTML=html;
 }
 
+let matchIdx=0;
 function renderMatch(m){
   const al=m.analyses||[],l=al.length?al[al.length-1]:null,c=l?l.confidence:0,cc=c>=80?'mcb-h':c>=60?'mcb-m':c>=1?'mcb-l':'';
-  const id=(m.home+'_'+m.away).replace(/[^a-zA-Z0-9]/g,'_'),hasNew=al.some(a=>a.isNew),hasChg=m.changes&&m.changes.length;
+  const mi=matchIdx++;const id='m'+mi;const hasNew=al.some(a=>a.isNew),hasChg=m.changes&&m.changes.length;
   let html=`<div class="mc" id="mc_${id}"><div class="mc-head" onclick="toggleMatch('${id}')"><span class="mc-arrow" id="arr_${id}">▶</span><span class="mc-teams"><span class="flag">${FLAGS[m.home]||''}</span>${m.home} <span class="mc-vs">vs</span> <span class="flag">${FLAGS[m.away]||''}</span>${m.away}</span><span class="mc-time">${m.date} ${m.time} · ${m.group}组</span>${c?`<span class="mc-cb ${cc}">${c}%</span>`:''}${hasNew?'<span class="new-tag">NEW</span>':''}</div><div class="mc-body" id="body_${id}">`;
   if(hasChg){for(const c of m.changes)html+=`<div class="chg"><span class="chg-label">${c.icon||'🔄'} ${c.label}</span> ${c.text}</div>`;}
   if(al.length){
@@ -138,7 +139,7 @@ function renderMatch(m){
       html+=`</div><div class="ae-text">${a.text}</div>`;
       if(a.sources)html+=`<div class="ae-source">📰 来源: ${a.sources.join(' · ')}</div>`;
       // Full report button
-      if(a.fullReport)html+=`<div style="text-align:right;"><span class="fr-btn" data-fi="${id}_${ai}">📄 完整报告</span></div>`;
+      if(a.fullReport)html+=`<div style="text-align:right;"><span class="fr-btn" data-m="${mi}" data-a="${ai}">📄 完整报告</span></div>`;
       html+=`</div>`;
     }
   }else{html+=`<div style="font-size:10px;color:var(--sub);padding:4px 0;">⏳ 等待分析...</div>`;}
@@ -148,7 +149,8 @@ function renderMatch(m){
 }
 
 function toggleMatch(id){
-  const b=document.getElementById('body_'+id),h=b.previousElementSibling,a=document.getElementById('arr_'+id);
+  const b=document.getElementById('body_'+id);if(!b)return;
+  const h=b.previousElementSibling,a=document.getElementById('arr_'+id);
   b.classList.toggle('open');h.classList.toggle('expanded');a.classList.toggle('open');
 }
 
@@ -156,9 +158,9 @@ function toggleMatch(id){
 document.getElementById('content').addEventListener('click',function(e){
   const btn=e.target.closest('.fr-btn');
   if(!btn)return;
-  const key=btn.dataset.fi; // "home_away_idx"
-  const us=key.lastIndexOf('_');const idx=parseInt(key.substring(us+1));const mk=key.substring(0,us);
-  for(const m of allMatches){const mid=(m.home+'_'+m.away).replace(/[^a-zA-Z0-9]/g,'_');if(mid===mk){const a=m.analyses[idx];if(a&&a.fullReport){showFR(m.home,m.away,a.time,a.fullReport);}}}
+  const mi=parseInt(btn.dataset.m),ai=parseInt(btn.dataset.a);
+  const m=allMatches[mi];if(!m)return;
+  const a=m.analyses[ai];if(a&&a.fullReport)showFR(m.home,m.away,a.time,a.fullReport);
 });
 
 function showFR(home,away,time,report){
