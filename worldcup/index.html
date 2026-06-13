@@ -202,9 +202,15 @@ body{
 /* ===== CHANGES ===== */
 .chg{
   background:rgba(255,71,87,.05);border-radius:6px;padding:4px 8px;
-  margin:4px 0;font-size:10px;border-left:2px solid var(--red);
+  margin:4px 0;font-size:10px;border-left:3px solid var(--red);
 }
-.chg-label{font-weight:700;color:var(--red);}
+.chg-label{font-weight:700;}
+.chg-good{border-left-color:rgba(0,212,170,.6);background:rgba(0,212,170,.04);}
+.chg-good .chg-label{color:var(--accent);}
+.chg-bad{border-left-color:var(--red);background:rgba(255,71,87,.05);}
+.chg-bad .chg-label{color:var(--red);}
+.chg-neutral{border-left-color:var(--gold);background:rgba(255,215,0,.03);}
+.chg-neutral .chg-label{color:var(--gold);}
 
 /* ===== RECOMMENDATION ===== */
 .rec-box{
@@ -333,7 +339,7 @@ function render(){
   if(view==='changes'){
     html='<div class="day-head">🔄 变化追踪</div>';let has=false;
     for(const m of allMatches){if(m.changes&&m.changes.length){has=true;html+=renderMatch(m);}}
-    if(!has)html+='<div class="empty">暂无变化</div>';
+    if(!has)html+='<div class="empty">🔄 暂无变化数据<br><span style="font-size:10px;color:var(--sub);">每2小时自动更新后，利好/利空动态会显示在这里</span></div>';
   }else{
     for(const[date,dayMatches]of Object.entries(days)){const isToday=date===getTodayStr();html+=`<div class="day-head">${isToday?'🔥 ':''}${date} <span class="day-sub">${dayMatches.length}场</span></div>`;for(const m of dayMatches)html+=renderMatch(m);}
   }
@@ -344,7 +350,7 @@ function renderMatch(m){
   const al=m.analyses||[],l=al.length?al[al.length-1]:null,c=l?l.confidence:0,cc=c>=80?'mcb-h':c>=60?'mcb-m':c>=1?'mcb-l':'';
   const mi=matchIdx++,id='m'+mi,hasNew=al.some(a=>a.isNew),hasChg=m.changes&&m.changes.length;
   let html=`<div class="mc" id="mc_${id}"><div class="mc-head" onclick="toggleMatch('${id}')"><span class="mc-arrow" id="arr_${id}">▶</span><span class="mc-teams"><span class="flag">${FLAGS[m.home]||''}</span>${m.home} <span class="mc-vs">vs</span> <span class="flag">${FLAGS[m.away]||''}</span>${m.away}</span><span class="mc-time">${m.date} ${m.time} · ${m.group}组</span>${c?`<span class="mc-cb ${cc}">${c}%</span>`:''}${hasNew?'<span class="new-tag">NEW</span>':''}</div><div class="mc-body" id="body_${id}">`;
-  if(hasChg){for(const c of m.changes)html+=`<div class="chg"><span class="chg-label">${c.icon||'🔄'} ${c.label}</span> ${c.text}</div>`;}
+  if(hasChg){for(const c of m.changes){const ct=c.type==='good'?'chg-good':c.type==='bad'?'chg-bad':'chg-neutral';html+=`<div class="chg ${ct}"><span class="chg-label">${c.icon||'🔄'} ${c.label}</span> ${c.text}</div>`;}}
   if(al.length){
     for(let ai=0;ai<al.length;ai++){const a=al[ai],cl=a.confidence>=80?'ct-h':a.confidence>=60?'ct-m':'ct-l';
       html+=`<div class="ae"><div class="ae-meta">${a.isNew?'<span class="new-tag">NEW</span>':''}<span>🕐 ${a.time}</span><span class="ct ${cl}">${a.confidence}%</span>`;
