@@ -1,0 +1,157 @@
+{
+  "matchCount": 12,
+  "analysisCount": 8,
+  "generatedAt": "2026-06-13 16:08 BJT",
+  "matches": [
+    {
+      "date": "6/14", "time": "03:00", "group": "B",
+      "home": "卡塔尔", "away": "瑞士",
+      "analyses": [
+        {
+          "time": "6/13 16:00", "version": 1, "isNew": true, "confidence": 88,
+          "text": "🇨🇭瑞士实力碾压，FIFA≈15名 vs 卡塔尔50+名，身价差14倍。瑞士近5场仅失3球，扎卡+索默领衔防守体系极其严密。卡塔尔传控遇欧洲铁桶无计可施，2022世界杯3战全败0进球。旧金山室内球场无天气影响。",
+          "factors": [
+            {"icon":"🧠","text":"实力差距巨大","type":"bad"},
+            {"icon":"🔒","text":"瑞士近5场仅失3球","type":"bad"},
+            {"icon":"📉","text":"卡塔尔2022世界杯0进球","type":"bad"}
+          ],
+          "sources": ["BBC赛前分析", "wc-2026.com赔率"]
+        }
+      ],
+      "recommendations": [{"title":"🇨🇭瑞士胜","odds":"","reason":"实力差距明显，但让球盘需谨慎"}]
+    },
+    {
+      "date": "6/14", "time": "06:00", "group": "C",
+      "home": "巴西", "away": "摩洛哥",
+      "analyses": [
+        {
+          "time": "6/13 16:00", "version": 1, "isNew": true, "confidence": 62,
+          "text": "🇧🇷安切洛蒂外教首秀+内马尔回归双不确定因素。摩洛哥上届4强，近45场仅2负，防守极其硬朗。巴西罗德里戈(膝伤❌)+埃斯特旺(腿筋❌)双双伤缺影响边路。历史巴西对非洲队7胜1负，但摩洛哥是史上最强非洲队之一。",
+          "factors": [
+            {"icon":"🔴","text":"罗德里戈+埃斯特旺伤缺","type":"bad"},
+            {"icon":"🔄","text":"内马尔回归状态成疑","type":"neutral"},
+            {"icon":"🛡️","text":"摩洛哥近45场仅2负","type":"bad"}
+          ],
+          "sources": ["SportsMole赛前预览", "RotoWire阵容分析"]
+        }
+      ],
+      "recommendations": [{"title":"⚠️谨慎参与","odds":"","reason":"非稳胆，摩洛哥防守强，建议小注或回避"}]
+    },
+    {
+      "date": "6/14", "time": "09:00", "group": "C",
+      "home": "海地", "away": "苏格兰",
+      "analyses": [
+        {
+          "time": "6/13 16:00", "version": 1, "isNew": true, "confidence": 82,
+          "text": "🏴󠁧󠁢󠁳󠁣󠁴󠁿苏格兰26年终返世界杯，士气极高。罗伯逊(利物浦)+麦金(维拉)+麦克托米奈(那不勒斯)配置碾压海地全队身价。海地首次参赛经验为零。波士顿大量苏格兰侨民≈半个主场。",
+          "factors": [
+            {"icon":"💪","text":"苏格兰五大联赛球星配置","type":"good"},
+            {"icon":"🆕","text":"海地首次世界杯亮相","type":"bad"},
+            {"icon":"🏟️","text":"波士顿=苏格兰侨民主场","type":"good"}
+          ],
+          "sources": ["BBC世界杯特辑", "RotoWire小组分析"]
+        }
+      ],
+      "recommendations": [{"title":"🏴󠁧󠁢󠁳󠁣󠁴󠁿苏格兰胜","odds":"","reason":"今日最稳之选"}]
+    },
+    {
+      "date": "6/14", "time": "12:00", "group": "D",
+      "home": "澳大利亚", "away": "土耳其",
+      "analyses": [
+        {
+          "time": "6/13 16:00", "version": 1, "isNew": true, "confidence": 68,
+          "text": "🇹🇷恰尔汗奥卢(国米)+伊尔迪兹(尤文)领先土耳其技术流中场。澳洲传统英式长传冲吊，在亚洲可称霸但面对欧洲中上游差距明显。两队首秀可能保守试探，小比分概率较高。",
+          "factors": [
+            {"icon":"🌟","text":"土耳其明星球员碾压澳洲","type":"bad"},
+            {"icon":"⚔️","text":"技术流vs英式打法","type":"bad"},
+            {"icon":"🤝","text":"首秀可能保守","type":"neutral"}
+          ],
+          "sources": ["BBC分组分析"]
+        }
+      ],
+      "recommendations": [{"title":"🇹🇷土耳其胜","odds":"","reason":"技术占优，但非稳胆"}]
+    },
+    {
+      "date": "6/15", "time": "01:00", "group": "E",
+      "home": "德国", "away": "库拉索",
+      "analyses": [
+        {
+          "time": "6/13 16:00", "version": 1, "isNew": true, "confidence": 95,
+          "text": "🇩🇪德国青春风暴(维尔茨+穆西亚拉)vs库拉索(15万人最小参赛国)。德国预选赛全胜且0失球。库拉索预选赛不败但对手强度天差地别。大概率5-0起步的碾压局。",
+          "factors": [
+            {"icon":"💥","text":"德国vs15万人口小国","type":"bad"},
+            {"icon":"🟢","text":"德国预选赛全胜0失球","type":"good"},
+            {"icon":"📊","text":"赔率主1.04极度碾压","type":"bad"}
+          ],
+          "sources": ["BBC世界杯特辑"]
+        }
+      ],
+      "recommendations": [{"title":"🇩🇪德国让2球胜","odds":"~1.75","reason":"碾压局，让球盘可信"}]
+    },
+    {
+      "date": "6/15", "time": "04:00", "group": "F",
+      "home": "荷兰", "away": "日本",
+      "analyses": [
+        {
+          "time": "6/13 16:00", "version": 1, "isNew": true, "confidence": 58,
+          "text": "🇯🇵日本热身赛1-0客胜英格兰不容小觑。荷兰全攻全守vs日本纪律性防守，日本预选赛16场仅失3球。荷兰星味更足但日本近年进步神速。五五开格局。",
+          "factors": [
+            {"icon":"🇯🇵","text":"日本热身胜英格兰","type":"good"},
+            {"icon":"🔒","text":"日本预选赛16场失3球","type":"good"},
+            {"icon":"🌟","text":"荷兰纸面实力占优","type":"neutral"}
+          ],
+          "sources": ["BBC","热身赛数据"]
+        }
+      ],
+      "recommendations": [{"title":"🤝平局","odds":"","reason":"日本防守顽强，荷兰非稳胜"}]
+    },
+    {
+      "date": "6/15", "time": "07:00", "group": "E",
+      "home": "科特迪瓦", "away": "厄瓜多尔",
+      "analyses": [
+        {
+          "time": "6/13 16:00", "version": 1, "isNew": true, "confidence": 52,
+          "text": "⚖️五五开对决。厄瓜多尔南美预选赛表现出色(曾赢巴西阿根廷)，科特迪瓦非洲传统劲旅但状态不稳定。两队实力接近，谁赢都不意外。",
+          "factors": [
+            {"icon":"📊","text":"赔率客2.43主3.73，接近","type":"neutral"},
+            {"icon":"🌍","text":"南美vs非洲风格碰撞","type":"neutral"}
+          ],
+          "sources": ["B体育赛前分析"]
+        }
+      ],
+      "recommendations": [{"title":"⚖️回避","odds":"","reason":"五五开，无明确方向"}]
+    },
+    {
+      "date": "6/15", "time": "10:00", "group": "F",
+      "home": "瑞典", "away": "突尼斯",
+      "analyses": [
+        {
+          "time": "6/13 16:00", "version": 1, "isNew": true, "confidence": 72,
+          "text": "🇸🇪瑞典身体对抗+高空优势明显，北欧球队对非洲球队有天然身材克制。突尼斯技术细腻但身体吃亏。瑞典预选赛表现稳定，看好小比分取胜。",
+          "factors": [
+            {"icon":"💪","text":"瑞典身材优势克制突尼斯","type":"good"},
+            {"icon":"📊","text":"主胜1.88合理","type":"good"}
+          ],
+          "sources": ["BBC分组分析"]
+        }
+      ],
+      "recommendations": [{"title":"🇸🇪瑞典胜","odds":"","reason":"身体克制，看好小比分"}]
+    },
+    {
+      "date": "6/18", "time": "17:00", "group": "A", "home": "捷克", "away": "南非",
+      "analyses": []
+    },
+    {
+      "date": "6/18", "time": "20:00", "group": "B", "home": "瑞士", "away": "波黑",
+      "analyses": []
+    },
+    {
+      "date": "6/18", "time": "23:00", "group": "B", "home": "加拿大", "away": "卡塔尔",
+      "analyses": []
+    },
+    {
+      "date": "6/19", "time": "02:00", "group": "A", "home": "墨西哥", "away": "韩国",
+      "analyses": []
+    }
+  ]
+}

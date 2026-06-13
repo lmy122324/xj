@@ -5,270 +5,282 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>守护最好的小徐佳俊 🏆 世界杯情报站</title>
 <style>
-:root{--bg:#0a0e27;--card:#131743;--accent:#00d4aa;--gold:#ffd700;--red:#ff4757;--text:#e0e6ff;--sub:#8892b0;--border:#1e2350;--blue:#4d7cff;--orange:#ff8c42}
+:root{--bg:#0a0e27;--card:#131743;--accent:#00d4aa;--gold:#ffd700;--red:#ff4757;--text:#e0e6ff;--sub:#8892b0;--border:#1e2350;--orange:#ff8c42}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
 .header{padding:14px 12px;background:linear-gradient(135deg,#0a0e27,#1a1f4e);border-bottom:1px solid var(--border)}
 .header h1{font-size:16px;font-weight:800}
 .header h1 span{color:var(--gold)}
 .header .sub{font-size:10px;color:var(--sub);margin-top:2px}
-.header .badge{display:inline-block;padding:1px 6px;border-radius:3px;background:var(--accent);color:#000;font-size:9px;font-weight:700;margin-left:4px}
-.container{max-width:720px;margin:0 auto;padding:8px 8px 60px}
+.badge{display:inline-block;padding:1px 5px;border-radius:3px;font-size:8px;font-weight:700}
+.badge-a{background:var(--accent);color:#000}
+.badge-r{background:var(--red);color:#fff}
+.badge-g{background:var(--gold);color:#000}
+.container{max-width:720px;margin:0 auto;padding:6px 8px 60px}
 
-/* Report card */
-.report{border:1px solid var(--border);border-radius:8px;margin-bottom:8px;overflow:hidden}
-.report-header{padding:8px 10px;background:rgba(0,212,170,.05);display:flex;justify-content:space-between;align-items:center;cursor:pointer;transition:.2s}
-.report-header:hover{background:rgba(0,212,170,.1)}
-.report-header.active{background:rgba(0,212,170,.12);border-bottom:1px solid var(--border)}
-.report-time{font-size:11px;font-weight:600}
-.report-ver{font-size:9px;color:var(--sub);background:var(--border);padding:1px 5px;border-radius:3px;margin-left:4px}
-.report-badge{font-size:9px;padding:1px 6px;border-radius:3px}
-.bdg-new{background:var(--red);color:#fff}
-.bdg-update{background:var(--gold);color:#000}
-.report-body{padding:8px 10px;display:none}
-.report-body.open{display:block}
+/* Status bar */
+.status-bar{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:6px;font-size:9px;color:var(--sub)}
 
-/* Match blocks */
-.mb{padding:6px 0;border-bottom:1px solid rgba(30,35,80,.2)}
-.mb:last-child{border-bottom:none}
-.mb-title{font-size:12px;font-weight:700;margin-bottom:2px;display:flex;align-items:center;gap:4px}
-.mb-score{font-size:14px;font-weight:800;color:var(--gold)}
-.mb-score.live{color:var(--red);animation:pulse 1.5s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
-.mb-confidence{font-size:10px;padding:1px 5px;border-radius:3px;margin-left:4px}
-.conf-high{background:rgba(0,212,170,.15);color:var(--accent)}
-.conf-mid{background:rgba(255,215,0,.15);color:var(--gold)}
-.conf-low{background:rgba(255,71,87,.15);color:var(--red)}
-.mb-note{font-size:10px;color:var(--sub);margin-top:2px}
+/* Day section */
+.day-head{font-size:13px;font-weight:700;padding:8px 0 4px;color:var(--gold)}
+.day-sub{font-size:9px;color:var(--sub);font-weight:400;margin-left:6px}
 
-/* Change markers */
-.change{font-size:10px;padding:2px 0}
-.change-up{color:var(--accent)}
-.change-down{color:var(--red)}
-.change-neutral{color:var(--orange)}
-.change-label{font-weight:700;margin-right:4px}
+/* Match card */
+.mc{border:1px solid var(--border);border-radius:8px;margin-bottom:6px;overflow:hidden}
+.mc-head{padding:6px 10px;display:flex;align-items:center;gap:6px;background:rgba(0,212,170,.03);border-bottom:1px solid var(--border)}
+.mc-teams{flex:1;font-size:13px;font-weight:700}
+.mc-teams .flag{font-size:18px;margin-right:2px}
+.mc-vs{color:var(--sub);font-size:10px;margin:0 3px}
+.mc-time{font-size:9px;color:var(--sub);white-space:nowrap}
+.mc-body{padding:6px 10px}
 
-/* Section */
-.sec-title{font-size:11px;font-weight:700;color:var(--accent);padding:8px 0 4px}
+/* Analysis entry */
+.ae{border-left:2px solid var(--border);padding:4px 0 4px 8px;margin:4px 0}
+.ae:first-child{border-left-color:var(--accent)}
+.ae-meta{font-size:9px;color:var(--sub);margin-bottom:2px;display:flex;gap:6px;align-items:center}
+.ae-text{font-size:11px}
+.ae-source{font-size:9px;color:var(--sub);margin-top:2px}
 
-/* Factor list */
-.factor{padding:3px 0;font-size:10px;display:flex;align-items:flex-start;gap:4px}
-.factor-icon{flex-shrink:0}
-.factor-good{color:var(--accent)}
-.factor-bad{color:var(--red)}
-.factor-neutral{color:var(--sub)}
-.factor-change{background:rgba(255,71,87,.1);border-radius:3px;padding:2px 4px;margin:2px 0;border-left:2px solid var(--red)}
+/* Confidence tag */
+.ct{padding:1px 5px;border-radius:3px;font-size:9px;font-weight:700}
+.ct-h{background:rgba(0,212,170,.15);color:var(--accent)}
+.ct-m{background:rgba(255,215,0,.15);color:var(--gold)}
+.ct-l{background:rgba(255,71,87,.15);color:var(--red)}
 
-/* Recommendations */
-.rec{padding:6px 8px;margin:3px 0;border-radius:5px;font-size:11px}
-.rec-gold{background:rgba(255,215,0,.08);border:1px solid var(--gold)}
-.rec-green{background:rgba(0,212,170,.08);border:1px solid var(--accent)}
-.rec-blue{background:rgba(77,124,255,.08);border:1px solid var(--blue)}
-.rec-red{background:rgba(255,71,87,.08);border:1px solid var(--red)}
+/* Factor chips */
+.fc{display:inline-block;padding:1px 5px;border-radius:3px;font-size:9px;margin:1px;font-weight:600}
+.fc-up{background:rgba(0,212,170,.1);color:var(--accent)}
+.fc-down{background:rgba(255,71,87,.1);color:var(--red)}
+.fc-new{background:rgba(255,215,0,.1);color:var(--gold)}
 
-/* Controls */
-.nav-bar{display:flex;gap:4px;padding:4px 0;flex-wrap:wrap}
+/* New analysis marker */
+.new-tag{display:inline-block;padding:1px 5px;border-radius:3px;background:var(--red);color:#fff;font-size:8px;font-weight:700;margin-right:4px;animation:blink 1.5s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.5}}
+
+/* Change highlight */
+.chg{background:rgba(255,71,87,.06);border-radius:3px;padding:3px 5px;margin:2px 0;font-size:10px;border-left:2px solid var(--red)}
+.chg-label{font-weight:700;color:var(--red)}
+
+/* Recommendation */
+.rec-box{padding:6px 8px;margin:4px 0;border-radius:5px;font-size:11px;border:1px solid var(--gold);background:rgba(255,215,0,.05)}
+
+/* Nav */
+.nav{display:flex;gap:4px;padding:4px 0;flex-wrap:wrap}
 .nav-btn{padding:4px 10px;border-radius:4px;border:1px solid var(--border);background:transparent;color:var(--sub);cursor:pointer;font-size:10px;font-weight:600}
-.nav-btn:hover{border-color:var(--accent);color:var(--text)}
 .nav-btn.active{background:var(--accent);color:#000;border-color:var(--accent)}
 
-.empty-state{text-align:center;padding:40px 10px;color:var(--sub);font-size:12px}
-
-.badge-auto{display:inline-block;padding:1px 5px;border-radius:3px;background:rgba(0,212,170,.1);color:var(--accent);font-size:8px;font-weight:700}
+.empty{padding:40px 10px;text-align:center;color:var(--sub);font-size:12px}
 </style>
 </head>
 <body>
 
 <div class="header">
   <h1>🏆 <span>2026</span>世界杯 · AI情报站</h1>
-  <div class="sub">
-    守护最好的小徐佳俊
-    <span class="badge">每2h自动更新</span>
-    <span id="liveIndicator" class="badge" style="background:var(--red);color:#fff;display:none;">LIVE</span>
-  </div>
+  <div class="sub">守护最好的小徐佳俊 · 每2h自动分析 · 每晚12点刷新赛程</div>
 </div>
 
 <div class="container">
 
-<div class="nav-bar" id="reportNav">
-  <button class="nav-btn active" data-ver="latest">📌 最新</button>
-  <button class="nav-btn" data-ver="all">📋 全部</button>
+<div class="status-bar">
+  <span>📡 <span id="dataStatus">加载中...</span></span>
+  <span>⏰ 更新: <span id="nextUpdate">-</span></span>
+  <span><span class="badge badge-a">每2h</span></span>
 </div>
 
-<div class="card" style="padding:6px 10px;margin-bottom:6px;background:rgba(0,212,170,.03);">
-  <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;">
-    <span style="color:var(--sub);">⏰ 下次更新: <span id="nextUpdate">-</span></span>
-    <span style="color:var(--sub);">📡 数据: <span id="dataStatus">服务器采集</span></span>
-  </div>
+<div class="nav" id="navBar">
+  <button class="nav-btn active" data-view="all">📋 全部赛程</button>
+  <button class="nav-btn" data-view="today">🔥 今日</button>
+  <button class="nav-btn" data-view="changes">🔄 变化追踪</button>
 </div>
 
-<div id="reportList">
-  <div class="empty-state">🤖 等待第一版分析报告...</div>
-</div>
+<div id="content"><div class="empty">🤖 加载分析数据...</div></div>
 
 </div>
 
 <script>
-// ===== REPORT STORE =====
-// Reports are injected by the AI as JSON data
-// Structure:
-// { id, time, version, matches: [{home,away,score,confidence,note,changes:[],factors:[]}],
-//   recommendations: [], news: [], status: 'new'|'update', prevId: null }
+// ===== DATA =====
+const FLAGS={'墨西哥':'🇲🇽','南非':'🇿🇦','韩国':'🇰🇷','捷克':'🇨🇿','加拿大':'🇨🇦','波黑':'🇧🇦','卡塔尔':'🇶🇦','瑞士':'🇨🇭','巴西':'🇧🇷','摩洛哥':'🇲🇦','海地':'🇭🇹','苏格兰':'🏴','美国':'🇺🇸','巴拉圭':'🇵🇾','澳大利亚':'🇦🇺','土耳其':'🇹🇷','德国':'🇩🇪','库拉索':'🇨🇼','科特迪瓦':'🇨🇮','厄瓜多尔':'🇪🇨','荷兰':'🇳🇱','日本':'🇯🇵','瑞典':'🇸🇪','突尼斯':'🇹🇳'};
 
-let reports = [];
-let allLoaded = false;
+let reportsData = {}; // {matches: {matchKey: [{analysis}]}, recommendations: [], meta: {}}
+let allMatches = [];
 
-function loadLatestReport() {
-  fetch('reports.json')
-    .then(r => r.json())
-    .then(data => {
-      reports = data.reports || [];
-      allLoaded = true;
-      renderReports('latest');
+// ===== LOAD =====
+function loadData() {
+  const base = window.location.pathname.replace(/\/[^/]*$/, '') || '/xj/worldcup';
+  const url = window.location.origin + base + '/data.json?v=' + Date.now();
+  fetch(url)
+    .then(r => { if(!r.ok) throw Error(); return r.json(); })
+    .then(d => {
+      reportsData = d;
+      allMatches = d.matches || [];
+      document.getElementById('dataStatus').textContent = (d.analysisCount||0)+'份分析 · '+(d.matchCount||0)+'场比赛';
+      render();
     })
-    .catch(() => {}); // silently fail, reports injected via JS
+    .catch(() => {
+      fetch('data.json', {cache:'no-cache'})
+        .then(r => r.json())
+        .then(d => {
+          reportsData = d; allMatches = d.matches || [];
+          document.getElementById('dataStatus').textContent = (d.analysisCount||0)+'份分析';
+          render();
+        })
+        .catch(() => { document.getElementById('dataStatus').textContent = '等待首版数据...'; });
+    });
 }
 
-function renderReports(view) {
-  const el = document.getElementById('reportList');
-  if (!reports.length) {
-    el.innerHTML = `<div class="empty-state">🤖 暂无分析报告<br><span style="font-size:10px;">等待AI生成第一版...</span></div>`;
+// ===== RENDER =====
+let currentView = 'all';
+
+function render() {
+  const el = document.getElementById('content');
+  const view = currentView;
+
+  if(!allMatches.length) {
+    el.innerHTML = `<div class="empty">🤖 暂无赛程数据<br><span style="font-size:10px;">每晚12点自动刷新后三天赛程</span></div>`;
     return;
   }
 
   let html = '';
-  const toShow = view === 'latest' ? [reports[reports.length - 1]] : [...reports].reverse();
 
-  for (const r of toShow) {
-    const isNew = r.status === 'new';
-    const badge = isNew ? '<span class="report-badge bdg-new">NEW</span>' : '<span class="report-badge bdg-update">更新</span>';
-    const isLatest = r === reports[reports.length - 1];
+  // Group by day
+  const days = {};
+  for(const m of allMatches) {
+    if(!days[m.date]) days[m.date] = [];
+    days[m.date].push(m);
+  }
 
-    html += `<div class="report">
-      <div class="report-header ${isLatest?'active':''}" onclick="toggleReport(this)">
-        <div>
-          <span class="report-time">${r.time}</span>
-          <span class="report-ver">v${r.version||'?'}</span>
-          ${badge}
-        </div>
-        <span style="font-size:10px;color:var(--sub);">${isLatest?'📌 最新':''} ${r.matchCount||0}场</span>
-      </div>
-      <div class="report-body ${isLatest?'open':''}">`;
-
-    // News/headlines
-    if (r.news && r.news.length) {
-      html += `<div class="sec-title">📰 最新动态</div>`;
-      for (const n of r.news) html += `<div style="font-size:10px;padding:2px 0;${n.isChange?'color:var(--red);':''}">${n.icon||'•'} ${n.text}</div>`;
-    }
-
-    // Matches
-    if (r.matches && r.matches.length) {
-      html += `<div class="sec-title">🎯 比赛预测</div>`;
-      for (const m of r.matches) {
-        const confClass = m.confidence >= 80 ? 'conf-high' : m.confidence >= 60 ? 'conf-mid' : 'conf-low';
-        html += `<div class="mb">
-          <div class="mb-title">
-            ${m.flagHome||''} ${m.home} vs ${m.flagAway||''} ${m.away}
-            <span class="mb-score">${m.score}</span>
-            <span class="mb-confidence ${confClass}">${m.confidence}%</span>
-          </div>
-          <div class="mb-note">${m.note}</div>`;
-
-        // Changes (red highlighted)
-        if (m.changes && m.changes.length) {
-          for (const c of m.changes) {
-            const icon = c.direction === 'up' ? '📈' : c.direction === 'down' ? '📉' : '➡️';
-            const cls = c.direction === 'up' ? 'change-up' : c.direction === 'down' ? 'change-down' : 'change-neutral';
-            html += `<div class="change ${cls}">${icon} <span class="change-label">${c.label}</span>${c.text}</div>`;
-          }
-        }
-
-        // Factors
-        if (m.factors && m.factors.length) {
-          for (const f of m.factors) {
-            const cls = f.type === 'good' ? 'factor-good' : f.type === 'bad' ? 'factor-bad' : 'factor-neutral';
-            html += `<div class="factor ${f.isChange?'factor-change':''} ${cls}">
-              <span class="factor-icon">${f.icon||'•'}</span>
-              <span>${f.text}</span>
-            </div>`;
-          }
-        }
-
-        html += `</div>`;
+  if(view === 'changes') {
+    // Show only matches with changes
+    html = '<div class="day-head">🔄 变化追踪</div>';
+    let hasChanges = false;
+    for(const m of allMatches) {
+      if(m.changes && m.changes.length) {
+        hasChanges = true;
+        html += renderMatch(m, true);
       }
     }
-
-    // Recommendations
-    if (r.recommendations && r.recommendations.length) {
-      html += `<div class="sec-title">💎 推荐</div>`;
-      for (const rec of r.recommendations) {
-        const cls = rec.type === 'best' ? 'rec-gold' : rec.type === 'value' ? 'rec-green' : rec.type === 'safe' ? 'rec-blue' : 'rec-red';
-        const isChanged = rec.isChange;
-        html += `<div class="rec ${cls}" style="${isChanged?'border-color:var(--red);border-width:2px;':''}">
-          <div style="display:flex;justify-content:space-between;">
-            <span style="font-weight:700;">${rec.title}</span>
-            <span style="color:var(--gold);font-weight:700;">${rec.odds}</span>
-          </div>
-          <div style="font-size:10px;color:var(--sub);margin-top:2px;">${rec.reason}</div>
-          ${isChanged?'<div style="font-size:9px;color:var(--red);margin-top:2px;">🔄 预测已调整</div>':''}
-        </div>`;
+    if(!hasChanges) html += '<div class="empty">暂无变化</div>';
+  } else {
+    for(const [date, dayMatches] of Object.entries(days)) {
+      const isToday = date === getTodayStr();
+      html += `<div class="day-head">${isToday?'🔥 ':''}${date} <span class="day-sub">${dayMatches.length}场</span></div>`;
+      for(const m of dayMatches) {
+        html += renderMatch(m, view==='today');
       }
     }
-
-    html += `</div></div>`;
   }
 
   el.innerHTML = html;
-  document.getElementById('liveIndicator').style.display = reports.length ? 'inline' : 'none';
 }
 
-function toggleReport(header) {
-  header.classList.toggle('active');
-  const body = header.nextElementSibling;
-  body.classList.toggle('open');
+function renderMatch(m, forceShow) {
+  const anaList = m.analyses || [];
+  const hasChanges = m.changes && m.changes.length;
+  const latestAna = anaList.length ? anaList[anaList.length-1] : null;
+
+  let html = `<div class="mc">
+    <div class="mc-head">
+      <span class="mc-teams"><span class="flag">${FLAGS[m.home]||''}</span>${m.home} <span class="mc-vs">vs</span> <span class="flag">${FLAGS[m.away]||''}</span>${m.away}</span>
+      <span class="mc-time">${m.date} ${m.time} · ${m.group}组</span>
+    </div>
+    <div class="mc-body">`;
+
+  // Changes
+  if(hasChanges) {
+    for(const c of m.changes) {
+      html += `<div class="chg"><span class="chg-label">${c.icon||'🔄'} ${c.label}</span> ${c.text}</div>`;
+    }
+  }
+
+  // Analysis entries
+  if(anaList.length) {
+    const showAll = forceShow || window.innerWidth > 0;
+    const toShow = showAll ? anaList : [latestAna];
+
+    for(const a of toShow) {
+      const isNew = a.isNew;
+      const confClass = a.confidence >= 80 ? 'ct-h' : a.confidence >= 60 ? 'ct-m' : 'ct-l';
+      html += `<div class="ae">
+        <div class="ae-meta">
+          ${isNew?'<span class="new-tag">NEW</span>':''}
+          <span>🕐 ${a.time}</span>
+          <span class="ct ${confClass}">${a.confidence}%</span>`;
+
+      // Factors
+      if(a.factors && a.factors.length) {
+        for(const f of a.factors) {
+          const cls = f.type==='good'?'fc-up':f.type==='bad'?'fc-down':'';
+          html += `<span class="fc ${cls} ${f.isNew?'fc-new':''}">${f.icon||''} ${f.text}</span>`;
+        }
+      }
+
+      html += `</div>`;
+      html += `<div class="ae-text">${a.text}</div>`;
+
+      // Sources
+      if(a.sources && a.sources.length) {
+        html += `<div class="ae-source">📰 来源: ${a.sources.join(' · ')}</div>`;
+      }
+
+      html += `</div>`;
+    }
+
+    // Show older analysis count
+    if(!forceShow && anaList.length > 1) {
+      html += `<div style="font-size:9px;color:var(--sub);text-align:center;padding:2px 0;cursor:pointer;" onclick="this.nextElementSibling.style.display='block';this.style.display='none';">📋 还有${anaList.length-1}份历史分析 · 点击展开</div>`;
+      html += `<div style="display:none;">`;
+      for(let i=0; i<anaList.length-1; i++) {
+        const a = anaList[i];
+        html += `<div class="ae">
+          <div class="ae-meta"><span>🕐 ${a.time}</span><span class="ct ${a.confidence>=80?'ct-h':a.confidence>=60?'ct-m':'ct-l'}">${a.confidence}%</span></div>
+          <div class="ae-text">${a.text}</div>
+        </div>`;
+      }
+      html += `</div>`;
+    }
+  } else {
+    html += `<div style="font-size:10px;color:var(--sub);padding:4px 0;">⏳ 等待分析...</div>`;
+  }
+
+  // Recommendations
+  if(m.recommendations && m.recommendations.length) {
+    for(const r of m.recommendations) {
+      html += `<div class="rec-box">💎 ${r.title} ${r.odds||''} — ${r.reason}</div>`;
+    }
+  }
+
+  html += `</div></div>`;
+  return html;
 }
 
-// ===== TABS =====
-document.getElementById('reportNav').addEventListener('click', e => {
+function getTodayStr() {
+  const d = new Date();
+  return `${d.getMonth()+1}/${d.getDate()}`;
+}
+
+// ===== NAV =====
+document.getElementById('navBar').addEventListener('click', e => {
   const btn = e.target.closest('.nav-btn');
-  if (!btn) return;
+  if(!btn) return;
   document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
-  renderReports(btn.dataset.ver);
+  currentView = btn.dataset.view;
+  render();
 });
 
-// ===== INJECT REPORT (called by AI) =====
-function injectReport(report) {
-  reports.push(report);
-  renderReports('latest');
-  // Update next update time
-  const now = new Date();
-  const next = new Date(now);
-  next.setHours(next.getHours() + 2, 0, 0, 0);
-  document.getElementById('nextUpdate').textContent = next.toLocaleTimeString('zh-CN');
-}
-
-// ===== INIT =====
-loadLatestReport();
-
-// Retry with no-cache if empty after 3s
-setTimeout(() => {
-  if(reports.length===0){
-    fetch('reports.json',{cache:'no-cache'})
-      .then(r=>r.json()).then(d=>{if(d.reports&&d.reports.length){reports=d.reports;renderReports('latest');document.getElementById('dataStatus').textContent=reports.length+'份报告';}})
-      .catch(()=>{document.getElementById('dataStatus').textContent='等待部署...';});
-  }
-},3000);
-
-// Update next update time
+// ===== NEXT UPDATE TIME =====
 function updateNextTime() {
   const now = new Date();
+  const h = now.getHours();
   const next = new Date(now);
-  next.setHours(Math.floor(now.getHours()/2)*2 + 2, 0, 0, 0);
+  next.setHours(Math.floor(h/2)*2 + 2, 0, 0, 0);
   document.getElementById('nextUpdate').textContent = next.toLocaleTimeString('zh-CN');
 }
 updateNextTime();
 setInterval(updateNextTime, 60000);
+
+// ===== INIT =====
+loadData();
 </script>
 </body>
 </html>
