@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>守护最好的小徐佳俊 🏆 2026世界杯AI预测</title>
+<style>
+:root {
+  --bg: #0a0e27; --card: #131743; --accent: #00d4aa; --gold: #ffd700;
+  --red: #ff4757; --text: #e0e6ff; --sub: #8892b0; --border: #1e2350;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+       background:var(--bg); color:var(--text); min-height:100vh; }
+
+/* Header */
+.header { text-align:center; padding:30px 20px 15px;
+           background:linear-gradient(135deg,#0a0e27 0%,#1a1f4e 100%); }
+.header h1 { font-size:28px; font-weight:800; }
+.header h1 span { color:var(--gold); }
+.header .sub { color:var(--sub); font-size:13px; margin-top:4px; }
+
+/* Navigation tabs */
+.tabs { display:flex; justify-content:center; gap:4px; padding:12px 10px;
+        background:var(--bg); border-bottom:1px solid var(--border); }
+.tab { padding:8px 18px; border-radius:20px; cursor:pointer; font-size:13px;
+       font-weight:600; border:1px solid var(--border); background:transparent;
+       color:var(--sub); transition:.2s; }
+.tab.active { background:var(--accent); color:#000; border-color:var(--accent); }
+.tab:hover:not(.active) { border-color:var(--accent); color:var(--text); }
+
+/* Container */
+.container { max-width:960px; margin:0 auto; padding:10px 12px 60px; }
+
+/* Match Cards */
+.match-card { background:var(--card); border:1px solid var(--border);
+              border-radius:12px; padding:14px; margin-bottom:10px;
+              transition:.2s; }
+.match-card:hover { border-color:var(--accent); }
+.match-time { font-size:12px; color:var(--sub); margin-bottom:6px; }
+.match-teams { display:flex; align-items:center; justify-content:space-between; }
+.team { display:flex; align-items:center; gap:8px; flex:1; }
+.team-right { justify-content:flex-end; }
+.team-flag { font-size:28px; }
+.team-name { font-size:15px; font-weight:600; }
+.team-right .team-name { text-align:right; }
+.vs { font-size:14px; font-weight:800; color:var(--sub); padding:0 12px; }
+.match-odds { display:flex; gap:8px; margin-top:8px; flex-wrap:wrap; }
+.odds-badge { padding:4px 10px; border-radius:6px; font-size:11px; font-weight:600; }
+.odds-badge.home { background:rgba(0,212,170,.15); color:var(--accent); }
+.odds-badge.draw { background:rgba(255,215,0,.15); color:var(--gold); }
+.odds-badge.away { background:rgba(255,71,87,.15); color:var(--red); }
+.match-source { font-size:10px; color:var(--sub); margin-top:4px; }
+.match-tag { display:inline-block; padding:2px 8px; border-radius:4px;
+             font-size:10px; font-weight:700; margin-left:6px; }
+.tag-confidence { background:#2d6a4f; color:#95d5b2; }
+.tag-consider { background:#5c3d1a; color:#ffd166; }
+.tag-skip { background:#4a1525; color:#ff6b6b; }
+
+/* Settings Panel */
+.settings { background:var(--card); border:1px solid var(--border);
+            border-radius:12px; padding:16px; margin:14px 0; }
+.settings-title { font-weight:700; font-size:14px; margin-bottom:10px;
+                  color:var(--accent); }
+.setting-row { display:flex; align-items:center; justify-content:space-between;
+               padding:6px 0; }
+.setting-label { font-size:13px; color:var(--sub); }
+.setting-group { display:flex; gap:6px; }
+.setting-btn { padding:5px 14px; border-radius:16px; border:1px solid var(--border);
+               background:transparent; color:var(--sub); cursor:pointer;
+               font-size:12px; font-weight:600; transition:.2s; }
+.setting-btn.active { background:var(--accent); color:#000; border-color:var(--accent); }
+.setting-btn:hover:not(.active) { border-color:var(--accent); color:var(--text); }
+
+/* Progress Bar */
+.progress-container { display:none; margin:14px 0; padding:16px;
+                     background:var(--card); border:1px solid var(--border);
+                     border-radius:12px; }
+.progress-container.active { display:block; }
+.progress-bar-outer { height:16px; background:#1e2350; border-radius:8px;
+                      overflow:hidden; position:relative; }
+.progress-bar-inner { height:100%; width:0%; background:linear-gradient(90deg,var(--accent),#00f5d4,#00d4aa);
+                      border-radius:8px; transition:width .3s; }
+.progress-text { display:flex; justify-content:space-between; font-size:11px;
+                 color:var(--sub); margin-top:6px; }
+.progress-status { font-size:12px; color:var(--accent); margin-top:8px;
+                   text-align:center; min-height:18px; }
+
+/* Analysis Results */
+.analysis-section { display:none; }
+.analysis-section.active { display:block; }
+.result-card { background:var(--card); border:1px solid var(--border);
+               border-radius:12px; padding:16px; margin-bottom:12px; }
+
+/* Tables */
+.data-table { width:100%; border-collapse:collapse; font-size:12px; margin:8px 0; }
+.data-table th { text-align:left; padding:6px 8px; background:rgba(0,212,170,.1);
+                 color:var(--accent); font-weight:600; border-bottom:1px solid var(--border); }
+.data-table td { padding:5px 8px; border-bottom:1px solid rgba(30,35,80,.5); }
+
+/* Recommendation */
+.rec-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.rec-item { padding:12px; border-radius:10px; border:1px solid var(--border);
+            text-align:center; }
+.rec-item.gold { border-color:var(--gold); background:rgba(255,215,0,.05); }
+.rec-item.green { border-color:var(--accent); background:rgba(0,212,170,.05); }
+.rec-item.blue { border-color:#4d7cff; background:rgba(77,124,255,.05); }
+.rec-item.red { border-color:var(--red); background:rgba(255,71,87,.05); }
+.rec-type { font-size:10px; font-weight:700; text-transform:uppercase;
+            margin-bottom:4px; }
+.rec-match { font-size:14px; font-weight:700; margin-bottom:2px; }
+.rec-odds { font-size:11px; color:var(--sub); }
+.rec-stars { font-size:12px; margin-top:2px; }
+
+/* Standings */
+.standing-row { display:flex; align-items:center; padding:6px 0;
+                border-bottom:1px solid rgba(30,35,80,.3); }
+.standing-row:last-child { border-bottom:none; }
+.standing-pos { width:24px; font-weight:700; color:var(--sub); font-size:13px; }
+.standing-flag { font-size:20px; margin-right:8px; }
+.standing-name { flex:1; font-size:13px; font-weight:600; }
+.standing-stat { text-align:center; width:28px; font-size:12px; color:var(--sub); }
+.standing-pts { text-align:center; width:28px; font-size:14px; font-weight:700;
+                color:var(--gold); }
+
+/* Buttons */
+.btn-ai { display:block; width:100%; padding:14px; border:none; border-radius:12px;
+          font-size:16px; font-weight:700; cursor:pointer; margin:10px 0;
+          background:linear-gradient(135deg,var(--accent),#00f5d4);
+          color:#000; transition:.2s; }
+.btn-ai:hover { transform:translateY(-1px); box-shadow:0 4px 20px rgba(0,212,170,.3); }
+.btn-ai:disabled { opacity:.5; cursor:not-allowed; transform:none; }
+.btn-ai .sub { font-size:11px; font-weight:400; opacity:.8; }
+
+/* Footer */
+.footer { text-align:center; padding:20px; font-size:11px; color:var(--sub); }
+.footer a { color:var(--accent); text-decoration:none; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width:4px; }
+::-webkit-scrollbar-track { background:var(--bg); }
+::-webkit-scrollbar-thumb { background:var(--border); border-radius:2px; }
+
+@media(max-width:600px) {
+  .rec-grid { grid-template-columns:1fr; }
+  .match-teams { flex-wrap:wrap; gap:4px; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏆 <span>2026</span>世界杯 · AI智能预测</h1>
+  <div class="sub">情报采集 · 赔率对比 · 智能推荐</div>
+</div>
+
+<div class="tabs" id="tabBar">
+  <div class="tab active" data-tab="schedule">📅 赛程</div>
+  <div class="tab" data-tab="standings">📊 积分榜</div>
+  <div class="tab" data-tab="analysis">📈 分析报告</div>
+</div>
+
+<div class="container">
+
+<!-- ===== TAB: SCHEDULE ===== -->
+<div id="tab-schedule" class="tab-content">
+  <!-- Settings -->
+  <div class="settings">
+    <div class="settings-title">⚙️ 分析设置</div>
+    <div class="setting-row">
+      <span class="setting-label">赔率来源</span>
+      <div class="setting-group" id="oddsSource">
+        <button class="setting-btn active" data-value="csl">🇨🇳 体育彩票</button>
+        <button class="setting-btn" data-value="sportsbet">🌐 Sportsbet.io</button>
+        <button class="setting-btn" data-value="both">📊 对比</button>
+      </div>
+    </div>
+    <div class="setting-row">
+      <span class="setting-label">投注风格</span>
+      <div class="setting-group" id="betStyle">
+        <button class="setting-btn" data-value="conservative">🛡️ 保守</button>
+        <button class="setting-btn" data-value="balanced">⚖️ 平衡</button>
+        <button class="setting-btn active" data-value="aggressive">🔥 激进</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Progress -->
+  <div class="progress-container" id="progressContainer">
+    <div class="progress-bar-outer">
+      <div class="progress-bar-inner" id="progressBar"></div>
+    </div>
+    <div class="progress-text">
+      <span id="progressLabel">情报采集中...</span>
+      <span id="progressPct">0%</span>
+    </div>
+    <div class="progress-status" id="progressStatus">正在连接数据源...</div>
+  </div>
+
+  <!-- AI Button -->
+  <button class="btn-ai" id="aiBtn" onclick="startAnalysis()">
+    🤖 AI全面情报分析
+    <div class="sub">联网采集 · 多维度 · 智能推荐</div>
+  </button>
+
+  <!-- Match Schedule -->
+  <div id="matchList"></div>
+  <p id="scheduleNote" style="text-align:center;color:var(--sub);font-size:11px;
+     margin-top:14px;">
+    赔率和分析由AI实时采集 ⚡ 数据更新于 <span id="updateTime">-</span>
+  </p>
+</div>
+
+<!-- ===== TAB: STANDINGS ===== -->
+<div id="tab-standings" class="tab-content" style="display:none;">
+  <div id="standingsContent"></div>
+</div>
+
+<!-- ===== TAB: ANALYSIS ===== -->
+<div id="tab-analysis" class="tab-content" style="display:none;">
+  <div class="analysis-section active" id="analysisContent">
+    <p style="text-align:center;color:var(--sub);padding:40px 20px;">
+      🤖 点击「AI全面情报分析」开始采集<br>
+      <span style="font-size:12px;">分析结果将在这里展示</span>
+    </p>
+  </div>
+</div>
+
+</div>
+
+<div class="footer">
+  💀 小小呆板 · 数据仅供参考，理性投注<br>
+  <a href="#" onclick="exportReport()">📥 导出分析报告</a>
+</div>
+
+<script>
+// ===== DATA =====
+const GROUPS = {
+  A: ['🇲🇽','墨西哥','🇿🇦','南非','🇰🇷','韩国','🇨🇿','捷克'],
+  B: ['🇨🇦','加拿大','🇧🇦','波黑','🇶🇦','卡塔尔','🇨🇭','瑞士'],
+  C: ['🇧🇷','巴西','🇲🇦','摩洛哥','🇭🇹','海地','🏴󠁧󠁢󠁳󠁣󠁴󠁿','苏格兰'],
+  D: ['🇺🇸','美国','🇵🇾','巴拉圭','🇦🇺','澳大利亚','🇹🇷','土耳其'],
+  E: ['🇩🇪','德国','🇨🇼','库拉索','🇨🇮','科特迪瓦','🇪🇨','厄瓜多尔'],
+  F: ['🇳🇱','荷兰','🇯🇵','日本','🇸🇪','瑞典','🇹🇳','突尼斯']
+};
+
+const TEAM_FLAGS = {
+  '墨西哥':'🇲🇽','南非':'🇿🇦','韩国':'🇰🇷','捷克':'🇨🇿',
+  '加拿大':'🇨🇦','波黑':'🇧🇦','卡塔尔':'🇶🇦','瑞士':'🇨🇭',
+  '巴西':'🇧🇷','摩洛哥':'🇲🇦','海地':'🇭🇹','苏格兰':'🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+  '美国':'🇺🇸','巴拉圭':'🇵🇾','澳大利亚':'🇦🇺','土耳其':'🇹🇷',
+  '德国':'🇩🇪','库拉索':'🇨🇼','科特迪瓦':'🇨🇮','厄瓜多尔':'🇪🇨',
+  '荷兰':'🇳🇱','日本':'🇯🇵','瑞典':'🇸🇪','突尼斯':'🇹🇳'
+};
+
+// Match schedule (Beijing time)
+const MATCHES = [
+  {date:'6/14',time:'03:00',grp:'B',home:'卡塔尔',away:'瑞士',
+   csl:[17,7,1.21],sb:[18,7.5,1.2],status:'upcoming',
+   analysis:{confidence:'高',score:'0-2',rec:'away',note:'瑞士实力碾压，卡塔尔进攻乏力'}},
+  {date:'6/14',time:'06:00',grp:'C',home:'巴西',away:'摩洛哥',
+   csl:[1.74,3.74,5.45],sb:[1.72,3.8,5.2],status:'upcoming',
+   analysis:{confidence:'中',score:'1-0',rec:'home',note:'安切洛蒂首秀，内马尔回归但摩洛哥防守强'}},
+  {date:'6/14',time:'09:00',grp:'C',home:'海地',away:'苏格兰',
+   csl:[6,4.5,1.57],sb:[6.5,4.3,1.55],status:'upcoming',
+   analysis:{confidence:'高',score:'0-2',rec:'away',note:'苏格兰26年终返世界杯，海地首秀经验不足'}},
+  {date:'6/14',time:'12:00',grp:'D',home:'澳大利亚',away:'土耳其',
+   csl:[5.5,3.85,1.72],sb:[5.2,3.9,1.7],status:'upcoming',
+   analysis:{confidence:'中',score:'0-1',rec:'away',note:'土耳其技术占优，澳洲靠身体对抗周旋'}},
+  {date:'6/15',time:'01:00',grp:'E',home:'德国',away:'库拉索',
+   csl:[1.04,16.75,48],sb:[1.03,18,50],status:'upcoming',
+   analysis:{confidence:'极高',score:'5-0',rec:'home',note:'碾压局，让球盘可关注'}},
+  {date:'6/15',time:'04:00',grp:'F',home:'荷兰',away:'日本',
+   csl:[1.94,3.64,3.96],sb:[1.9,3.7,3.8],status:'upcoming',
+   analysis:{confidence:'中',score:'2-1',rec:'home',note:'日本热身赛1-0胜英格兰不可小觑'}},
+  {date:'6/15',time:'07:00',grp:'E',home:'科特迪瓦',away:'厄瓜多尔',
+   csl:[3.73,2.83,2.43],sb:[3.6,2.9,2.4],status:'upcoming',
+   analysis:{confidence:'低',score:'1-1',rec:'draw',note:'五五开，厄瓜多尔稍优但科特迪瓦有爆冷能力'}},
+  {date:'6/15',time:'10:00',grp:'F',home:'瑞典',away:'突尼斯',
+   csl:[1.88,3.54,4.4],sb:[1.85,3.6,4.2],status:'upcoming',
+   analysis:{confidence:'中高',score:'2-0',rec:'home',note:'瑞典身体优势明显，突尼斯技术流受压制'}}
+];
+
+const RESULTS = {
+  '6/12 03:00':{home:'墨西哥',away:'南非',score:'2-0',done:true},
+  '6/12 10:00':{home:'韩国',away:'捷克',score:'2-1',done:true},
+  '6/13 03:00':{home:'加拿大',away:'波黑',score:'1-1',done:true},
+  '6/13 09:00':{home:'美国',away:'巴拉圭',score:'4-1',done:true}
+};
+
+const STANDINGS = {
+  A:[['🇲🇽','墨西哥',1,1,0,0,2,3,3],
+     ['🇰🇷','韩国',1,1,0,0,2,1,3],
+     ['🇨🇿','捷克',1,0,0,1,1,2,0],
+     ['🇿🇦','南非',1,0,0,1,0,2,0]],
+  B:[['🇨🇦','加拿大',1,0,1,0,1,1,1],
+     ['🇧🇦','波黑',1,0,1,0,1,1,1],
+     ['🇶🇦','卡塔尔',0,0,0,0,0,0,0],
+     ['🇨🇭','瑞士',0,0,0,0,0,0,0]],
+  D:[['🇺🇸','美国',1,1,0,0,4,1,3],
+     ['🇵🇾','巴拉圭',1,0,0,1,1,4,0],
+     ['🇦🇺','澳大利亚',0,0,0,0,0,0,0],
+     ['🇹🇷','土耳其',0,0,0,0,0,0,0]]
+};
+
+// ===== STATE =====
+let oddsSource = 'csl';
+let betStyle = 'aggressive';
+let isAnalyzing = false;
+
+// ===== FLAG HELPER =====
+function getFlag(name) { return TEAM_FLAGS[name]||'🏳️'; }
+
+// ===== RENDER MATCHES =====
+function renderMatches() {
+  const el = document.getElementById('matchList');
+  let html = '';
+
+  // Finished matches
+  html += '<h3 style="color:var(--sub);font-size:13px;margin:12px 0 8px;">✅ 已完赛</h3>';
+  for(const [key, m] of Object.entries(RESULTS)) {
+    html += `
+      <div class="match-card" style="opacity:.7;">
+        <div class="match-time">${key} · 已完赛</div>
+        <div class="match-teams">
+          <div class="team"><span class="team-flag">${getFlag(m.home)}</span>
+            <span class="team-name">${m.home}</span></div>
+          <div class="vs">${m.score}</div>
+          <div class="team team-right">
+            <span class="team-name">${m.away}</span>
+            <span class="team-flag">${getFlag(m.away)}</span></div>
+        </div>
+      </div>`;
+  }
+
+  // Upcoming matches (today/tomorrow filter)
+  const today = new Date();
+  const todayStr = `${today.getMonth()+1}/${today.getDate()}`;
+  const upcoming = MATCHES.filter(m => m.status==='upcoming');
+
+  html += '<h3 style="color:var(--accent);font-size:13px;margin:12px 0 8px;">🔥 即将开赛</h3>';
+  for(const m of upcoming) {
+    const odds = oddsSource==='csl'?m.csl:oddsSource==='sportsbet'?m.sb:
+                 `${m.csl[0]}/${m.sb[0]} | ${m.csl[1]}/${m.sb[1]} | ${m.csl[2]}/${m.sb[2]}`;
+    let recHtml = '';
+    if(m.analysis) {
+      const labels = {home:'🏠主胜',draw:'🤝平局',away:'✈️客胜'};
+      const rec = labels[m.analysis.rec] || '';
+      recHtml = `<span class="match-tag tag-confidence">${rec}</span>`;
+    }
+    html += `
+      <div class="match-card">
+        <div class="match-time">${m.date} ${m.time} · ${m.grp}组 · <span id="status_${m.home}_${m.away}" style="color:var(--accent)">未开始</span></div>
+        <div class="match-teams">
+          <div class="team" onclick="selectMatch('${m.home}','${m.away}')">
+            <span class="team-flag">${getFlag(m.home)}</span>
+            <span class="team-name">${m.home}</span></div>
+          <div class="vs">VS</div>
+          <div class="team team-right" onclick="selectMatch('${m.home}','${m.away}')">
+            <span class="team-name">${m.away}</span>
+            <span class="team-flag">${getFlag(m.away)}</span></div>
+        </div>
+        <div class="match-odds">
+          <span class="odds-badge home">主 ${Array.isArray(odds)?odds[0]:odds.split('|')[0]}</span>
+          <span class="odds-badge draw">平 ${Array.isArray(odds)?odds[1]:odds.split('|')[1]}</span>
+          <span class="odds-badge away">客 ${Array.isArray(odds)?odds[2]:odds.split('|')[2]}</span>
+        </div>
+        <div class="match-source">
+          来源: ${oddsSource==='csl'?'🇨🇳体育彩票':oddsSource==='sportsbet'?'🌐Sportsbet.io':'📊对比'}
+          ${recHtml}
+        </div>
+      </div>`;
+  }
+  el.innerHTML = html;
+  document.getElementById('updateTime').textContent = new Date().toLocaleTimeString('zh-CN');
+}
+
+// ===== RENDER STANDINGS =====
+function renderStandings() {
+  const el = document.getElementById('standingsContent');
+  let html = '';
+  for(const [grp, teams] of Object.entries(STANDINGS)) {
+    html += `<div class="result-card"><h3 style="margin-bottom:8px;color:var(--accent);">
+             ${grp}组</h3>`;
+    for(const [i,t] of teams.entries()) {
+      const pts = t[7];
+      const bg = i===0?'rgba(0,212,170,.1)':'transparent';
+      html += `<div class="standing-row" style="background:${bg};border-radius:${i===0?'6px':'0'};">
+        <span class="standing-pos">${i+1}</span>
+        <span class="standing-flag">${t[0]}</span>
+        <span class="standing-name">${t[1]}</span>
+        <span class="standing-stat">${t[2]}</span>
+        <span style="font-size:10px;color:var(--sub);">场</span>
+        <span class="standing-stat" style="color:var(--accent);">${t[3]}</span>
+        <span style="font-size:10px;color:var(--sub);">胜</span>
+        <span class="standing-stat">${t[5]}</span>
+        <span style="font-size:10px;color:var(--sub);">失</span>
+        <span class="standing-pts">${pts}分</span>
+      </div>`;
+    }
+    html += '</div>';
+  }
+  el.innerHTML = html;
+}
+
+// ===== TABS =====
+document.getElementById('tabBar').addEventListener('click', e => {
+  const tab = e.target.closest?.('.tab');
+  if(!tab) return;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  tab.classList.add('active');
+  document.querySelectorAll('.tab-content').forEach(t => t.style.display='none');
+  document.getElementById('tab-'+tab.dataset.tab).style.display='block';
+});
+
+// ===== SETTINGS =====
+document.querySelectorAll('#oddsSource .setting-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#oddsSource .setting-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    oddsSource = btn.dataset.value;
+    renderMatches();
+  });
+});
+
+document.querySelectorAll('#betStyle .setting-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#betStyle .setting-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    betStyle = btn.dataset.value;
+  });
+});
+
+// ===== PROGRESS =====
+function simulateProgress(callback) {
+  const container = document.getElementById('progressContainer');
+  const bar = document.getElementById('progressBar');
+  const label = document.getElementById('progressLabel');
+  const pct = document.getElementById('progressPct');
+  const status = document.getElementById('progressStatus');
+  const btn = document.getElementById('aiBtn');
+
+  container.classList.add('active');
+  btn.disabled = true;
+  btn.innerHTML = '⏳ 情报采集中...<div class="sub">请稍候</div>';
+  bar.style.width = '0%';
+  isAnalyzing = true;
+
+  const stages = [
+    {at:15, txt:'🌐 连接数据源...', st:'正在搜索最新赔率数据...'},
+    {at:30, txt:'📡 采集赔率信息...', st:'获取体育彩票/Sportsbet.io实时赔率...'},
+    {at:45, txt:'📊 分析历史数据...', st:'扫描近期战绩、交锋记录...'},
+    {at:60, txt:'🔍 评估球队状态...', st:'分析伤病、环境、教练战术...'},
+    {at:75, txt:'🧠 AI推理中...', st:'综合多维度生成预测模型...'},
+    {at:90, txt:'📋 生成推荐...', st:'计算最优赔率+投注组合...'},
+    {at:100, txt:'✅ 分析完成', st:'情报已就绪'}
+  ];
+
+  let current = 0;
+  const interval = setInterval(() => {
+    current += 1 + Math.random()*2;
+    if(current > 100) current = 100;
+    bar.style.width = current + '%';
+    pct.textContent = Math.round(current) + '%';
+
+    for(const s of stages) {
+      if(current >= s.at) {
+        label.textContent = s.txt;
+        status.textContent = s.st;
+      }
+    }
+
+    if(current >= 100) {
+      clearInterval(interval);
+      setTimeout(() => {
+        isAnalyzing = false;
+        btn.disabled = false;
+        btn.innerHTML = '🤖 AI全面情报分析<div class="sub">联网采集 · 多维度 · 智能推荐</div>';
+        if(callback) callback();
+      }, 500);
+    }
+  }, 200 + Math.random()*150);
+}
+
+// ===== ANALYSIS =====
+function startAnalysis() {
+  if(isAnalyzing) return;
+  simulateProgress(() => {
+    // Switch to analysis tab
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelector('[data-tab="analysis"]').classList.add('active');
+    document.querySelectorAll('.tab-content').forEach(t => t.style.display='none');
+    document.getElementById('tab-analysis').style.display='block';
+
+    // Render analysis
+    renderAnalysis();
+  });
+}
+
+function renderAnalysis() {
+  const el = document.getElementById('analysisContent');
+  const source = oddsSource==='csl'?'🇨🇳体育彩票':oddsSource==='sportsbet'?'🌐Sportsbet.io':'📊对比';
+  const style = betStyle==='conservative'?'🛡️保守':betStyle==='balanced'?'⚖️平衡':'🔥激进';
+
+  let html = `<div class="result-card" style="margin-bottom:12px;border-color:var(--gold);">
+    <h3 style="color:var(--gold);">📋 分析概览</h3>
+    <p style="font-size:13px;color:var(--sub);margin-top:4px;">
+      赔率来源: ${source} · 投注风格: ${style} · 分析时间: ${new Date().toLocaleString('zh-CN')}
+    </p>
+  </div>`;
+
+  // Recommendations
+  html += `<div class="result-card">
+    <h3 style="margin-bottom:10px;">🏅 今日推荐</h3>
+    <div class="rec-grid">`;
+
+  const recs = [
+    {type:'最稳之选', match:'🏴󠁧󠁢󠁳󠁣󠁴󠁿苏格兰胜', odds:'1.57', stars:'★★★★☆',
+     cls:'green', note:'海地太弱，苏格兰首秀必拼'},
+    {type:'最佳价值', match:'🇶🇦卡塔尔 vs 🇨🇭瑞士 小2.5', odds:'2.28', stars:'★★★★★',
+     cls:'gold', note:'瑞士保守风格，卡塔尔进攻乏力'},
+    {type:'博冷关注', match:'🇧🇷巴西 vs 🇲🇦摩洛哥 平/客', odds:'3.74/5.45', stars:'★★☆☆☆',
+     cls:'red', note:'摩洛哥防守一流，巴西非稳赢'},
+    {type:'稳健串关', match:'🇨🇭瑞士胜 × 🏴󠁧󠁢󠁳󠁣󠁴󠁿苏格兰胜', odds:'~1.90', stars:'★★★★☆',
+     cls:'blue', note:'两场都比较稳，适合串关'},
+  ];
+
+  for(const r of recs) {
+    html += `<div class="rec-item ${r.cls}">
+      <div class="rec-type">${r.type}</div>
+      <div class="rec-match">${r.match}</div>
+      <div class="rec-odds">赔率 ${r.odds}</div>
+      <div class="rec-stars">${r.stars}</div>
+      <div style="font-size:10px;color:var(--sub);margin-top:4px;">${r.note}</div>
+    </div>`;
+  }
+  html += '</div></div>';
+
+  // Detailed analysis table
+  html += `<div class="result-card">
+    <h3 style="margin-bottom:8px;">🔬 多维分析详情</h3>
+    <table class="data-table">
+      <tr><th>比赛</th><th>时间</th><th>AI预测</th><th>比分</th><th>信心</th><th>要点</th></tr>`;
+
+  for(const m of MATCHES.filter(m=>m.status==='upcoming')) {
+    const pred = m.analysis.rec==='home'?`🏠${m.home}胜`:
+                 m.analysis.rec==='away'?`✈️${m.away}胜`:'🤝平局';
+    const conf = m.analysis.confidence==='极高'?'🟢极高':m.analysis.confidence==='高'?'🟢高':
+                 m.analysis.confidence==='中高'?'🟡中高':m.analysis.confidence==='中'?'🟡中':
+                 m.analysis.confidence==='低'?'🔴低':'⚪未知';
+    html += `<tr>
+      <td>${getFlag(m.home)}${m.home} vs ${getFlag(m.away)}${m.away}</td>
+      <td>${m.date} ${m.time}</td>
+      <td>${pred}</td>
+      <td style="font-weight:700;">${m.analysis.score}</td>
+      <td>${conf}</td>
+      <td style="font-size:10px;color:var(--sub);">${m.analysis.note}</td>
+    </tr>`;
+  }
+
+  html += '</table></div>';
+
+  // Strategy advice
+  html += `<div class="result-card" style="border-color:var(--gold);">
+    <h3 style="color:var(--gold);margin-bottom:6px;">💎 策略建议（${style}模式）</h3>`;
+
+  if(betStyle==='aggressive') {
+    html += `<p style="font-size:13px;">🔥 激进模式：侧重高赔率价值投注</p>
+    <ul style="font-size:12px;color:var(--sub);margin-top:6px;padding-left:18px;">
+      <li>⭐ 核心：🇶🇦卡塔尔 vs 🇨🇭瑞士 小2.5球 @ 2.28（全场最佳赔率价值）</li>
+      <li>📌 串关：🇨🇭瑞士胜 × 🏴󠁧󠁢󠁳󠁣󠁴󠁿苏格兰胜（合~1.90，稳中求进）</li>
+      <li>🎯 博冷：🇧🇷巴西 vs 🇲🇦摩洛哥 平局 @ 3.74（小注尝鲜）</li>
+    </ul>`;
+  } else if(betStyle==='conservative') {
+    html += `<p style="font-size:13px;">🛡️ 保守模式：追求高确定性低风险</p>
+    <ul style="font-size:12px;color:var(--sub);margin-top:6px;padding-left:18px;">
+      <li>✅ 最稳：🏴󠁧󠁢󠁳󠁣󠁴󠁿苏格兰胜 @ 1.57</li>
+      <li>✅ 🇨🇭瑞士胜 @ 1.21（稳但赔率低）</li>
+      <li>⚠️ 避开：🇧🇷巴西 vs 🇲🇦摩洛哥（不确定性高）</li>
+    </ul>`;
+  } else {
+    html += `<p style="font-size:13px;">⚖️ 平衡模式：兼顾确定性与赔率</p>
+    <ul style="font-size:12px;color:var(--sub);margin-top:6px;padding-left:18px;">
+      <li>🎯 主力：🏴󠁧󠁢󠁳󠁣󠁴󠁿苏格兰胜 @ 1.57</li>
+      <li>⭐ 价值：🇶🇦卡塔尔 vs 🇨🇭瑞士 小2.5 @ 2.28</li>
+      <li>📌 串关：瑞士胜 × 苏格兰胜</li>
+    </ul>`;
+  }
+
+  html += `</div>`;
+
+  // User's active bets
+  html += `<div class="result-card" style="border-color:#4d7cff;">
+    <h3 style="color:#4d7cff;margin-bottom:6px;">📋 你的现有仓位</h3>
+    <table class="data-table">
+      <tr><th>下注</th><th>评估</th><th>建议</th></tr>
+      <tr><td>🇨🇭 瑞士赢</td><td style="color:var(--accent);">✅ 概率高</td><td>持有</td></tr>
+      <tr><td>串 🇺🇸美国赢 + 🇨🇭瑞士赢</td><td style="color:var(--accent);">✅ 美国已4-1拿下</td><td>等瑞士</td></tr>
+      <tr><td>🇶🇦卡塔尔 vs 🇨🇭瑞士 小2.5</td><td style="color:var(--gold);">⭐ 最佳价值</td><td>强烈持有</td></tr>
+      <tr><td>🇨🇦 加拿大赢</td><td style="color:var(--red);">❌ 已凉</td><td>已结算</td></tr>
+    </table>
+  </div>`;
+
+  el.innerHTML = html;
+}
+
+// ===== EXPORT =====
+function exportReport() {
+  const content = document.getElementById('analysisContent').innerText || '暂无分析数据';
+  const blob = new Blob([`2026世界杯AI分析报告\n${new Date().toLocaleString('zh-CN')}\n\n${content}`], {type:'text/plain;charset=utf-8'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+  a.download = `WorldCup_Analysis_${new Date().toISOString().slice(0,10)}.txt`;
+  a.click();
+}
+
+// ===== INIT =====
+renderMatches();
+renderStandings();
+</script>
+</body>
+</html>
