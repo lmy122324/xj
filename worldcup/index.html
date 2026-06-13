@@ -97,6 +97,7 @@ const FLAGS={'墨西哥':'🇲🇽','南非':'🇿🇦','韩国':'🇰🇷','捷
 let allMatches = [];
 let currentView = 'all';
 
+console.log('🏆 世界杯情报站 v1.1 加载中...');
 function loadData() {
   const u = window.location.origin + (window.location.pathname.replace(/\/[^/]*$/,'')||'/xj/worldcup')+'/data.json?v='+Date.now();
   fetch(u).then(r=>{if(!r.ok)throw Error();return r.json();}).then(d=>{
