@@ -1,0 +1,1631 @@
+{
+  "updated": "2026-06-13 16:00 CST",
+  "days": {
+    "2026-06-12": {
+      "header": "2026年06月12日 星期五",
+      "matches": [
+        {
+          "id": "219",
+          "home": "墨西哥",
+          "away": "南非",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "2 - 0",
+          "finished": true,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "220",
+          "home": "韩国",
+          "away": "捷克",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "2 - 1",
+          "finished": true,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-06-13": {
+      "header": "2026年06月13日 星期六",
+      "matches": [
+        {
+          "id": "221",
+          "home": "加拿大",
+          "away": "波黑",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "1 - 1",
+          "finished": true,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "223",
+          "home": "美国",
+          "away": "巴拉圭",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "4 - 1",
+          "finished": true,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-06-14": {
+      "header": "2026年06月14日 星期日",
+      "matches": [
+        {
+          "id": "222",
+          "home": "卡塔尔",
+          "away": "瑞士",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "225",
+          "home": "巴西",
+          "away": "摩洛哥",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "226",
+          "home": "海地",
+          "away": "苏格兰",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "224",
+          "home": "澳大利亚",
+          "away": "土耳其",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-06-15": {
+      "header": "2026年06月15日 星期一",
+      "matches": [
+        {
+          "id": "227",
+          "home": "德国",
+          "away": "库拉索",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "228",
+          "home": "荷兰",
+          "away": "日本",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "229",
+          "home": "科特迪瓦",
+          "away": "厄瓜多尔",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "230",
+          "home": "瑞典",
+          "away": "突尼斯",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-06-16": {
+      "header": "2026年06月16日 星期二",
+      "matches": [
+        {
+          "id": "231",
+          "home": "西班牙",
+          "away": "佛得角",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "232",
+          "home": "比利时",
+          "away": "埃及",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "233",
+          "home": "沙特阿拉伯",
+          "away": "乌拉圭",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "234",
+          "home": "伊朗",
+          "away": "新西兰",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-06-17": {
+      "header": "2026年06月17日 星期三",
+      "matches": [
+        {
+          "id": "236",
+          "home": "法国",
+          "away": "塞内加尔",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "237",
+          "home": "伊拉克",
+          "away": "挪威",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "238",
+          "home": "阿根廷",
+          "away": "阿尔及利亚",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "235",
+          "home": "奥地利",
+          "away": "约旦",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-06-18": {
+      "header": "2026年06月18日 星期四",
+      "matches": [
+        {
+          "id": "239",
+          "home": "葡萄牙",
+          "away": "刚果民主共和国",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "240",
+          "home": "英格兰",
+          "away": "克罗地亚",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "241",
+          "home": "加纳",
+          "away": "巴拿马",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "242",
+          "home": "乌兹别克斯坦",
+          "away": "哥伦比亚",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-06-19": {
+      "header": "2026年06月19日 星期五",
+      "matches": [
+        {
+          "id": "243",
+          "home": "捷克",
+          "away": "南非",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "244",
+          "home": "瑞士",
+          "away": "波黑",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "245",
+          "home": "加拿大",
+          "away": "卡塔尔",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "246",
+          "home": "墨西哥",
+          "away": "韩国",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-06-20": {
+      "header": "2026年06月20日 星期六",
+      "matches": [
+        {
+          "id": "248",
+          "home": "美国",
+          "away": "澳大利亚",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "247",
+          "home": "苏格兰",
+          "away": "摩洛哥",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "249",
+          "home": "巴西",
+          "away": "海地",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "250",
+          "home": "土耳其",
+          "away": "巴拉圭",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-06-21": {
+      "header": "2026年06月21日 星期日",
+      "matches": [
+        {
+          "id": "251",
+          "home": "荷兰",
+          "away": "瑞典",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "252",
+          "home": "德国",
+          "away": "科特迪瓦",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "253",
+          "home": "厄瓜多尔",
+          "away": "库拉索",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "254",
+          "home": "突尼斯",
+          "away": "日本",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-06-22": {
+      "header": "2026年06月22日 星期一",
+      "matches": [
+        {
+          "id": "255",
+          "home": "西班牙",
+          "away": "沙特阿拉伯",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "256",
+          "home": "比利时",
+          "away": "伊朗",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "257",
+          "home": "乌拉圭",
+          "away": "佛得角",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "258",
+          "home": "新西兰",
+          "away": "埃及",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-06-23": {
+      "header": "2026年06月23日 星期二",
+      "matches": [
+        {
+          "id": "259",
+          "home": "阿根廷",
+          "away": "奥地利",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "260",
+          "home": "法国",
+          "away": "伊拉克",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "261",
+          "home": "挪威",
+          "away": "塞内加尔",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "262",
+          "home": "约旦",
+          "away": "阿尔及利亚",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-06-24": {
+      "header": "2026年06月24日 星期三",
+      "matches": [
+        {
+          "id": "263",
+          "home": "葡萄牙",
+          "away": "乌兹别克斯坦",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "264",
+          "home": "英格兰",
+          "away": "加纳",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "265",
+          "home": "巴拿马",
+          "away": "克罗地亚",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "266",
+          "home": "哥伦比亚",
+          "away": "刚果民主共和国",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-06-25": {
+      "header": "2026年06月25日 星期四",
+      "matches": [
+        {
+          "id": "272",
+          "home": "瑞士",
+          "away": "加拿大",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "271",
+          "home": "波黑",
+          "away": "卡塔尔",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "269",
+          "home": "苏格兰",
+          "away": "巴西",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "268",
+          "home": "摩洛哥",
+          "away": "海地",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "270",
+          "home": "捷克",
+          "away": "墨西哥",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "267",
+          "home": "南非",
+          "away": "韩国",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-06-26": {
+      "header": "2026年06月26日 星期五",
+      "matches": [
+        {
+          "id": "276",
+          "home": "库拉索",
+          "away": "科特迪瓦",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "275",
+          "home": "厄瓜多尔",
+          "away": "德国",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "277",
+          "home": "日本",
+          "away": "瑞典",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "278",
+          "home": "突尼斯",
+          "away": "荷兰",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "274",
+          "home": "土耳其",
+          "away": "美国",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "273",
+          "home": "巴拉圭",
+          "away": "澳大利亚",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-06-27": {
+      "header": "2026年06月27日 星期六",
+      "matches": [
+        {
+          "id": "284",
+          "home": "挪威",
+          "away": "法国",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "283",
+          "home": "塞内加尔",
+          "away": "伊拉克",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "279",
+          "home": "佛得角",
+          "away": "沙特阿拉伯",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "280",
+          "home": "乌拉圭",
+          "away": "西班牙",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "281",
+          "home": "埃及",
+          "away": "伊朗",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "282",
+          "home": "新西兰",
+          "away": "比利时",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-06-28": {
+      "header": "2026年06月28日 星期日",
+      "matches": [
+        {
+          "id": "289",
+          "home": "巴拿马",
+          "away": "英格兰",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "290",
+          "home": "克罗地亚",
+          "away": "加纳",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "288",
+          "home": "哥伦比亚",
+          "away": "葡萄牙",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "287",
+          "home": "刚果民主共和国",
+          "away": "乌兹别克斯坦",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "285",
+          "home": "阿尔及利亚",
+          "away": "奥地利",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "286",
+          "home": "约旦",
+          "away": "阿根廷",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-06-29": {
+      "header": "2026年06月29日 星期一",
+      "matches": [
+        {
+          "id": "291",
+          "home": "A组次名",
+          "away": "B组次名",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-06-30": {
+      "header": "2026年06月30日 星期二",
+      "matches": [
+        {
+          "id": "294",
+          "home": "C组首名",
+          "away": "F组次名",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "292",
+          "home": "E组首名",
+          "away": "第三名A/B/C/D/F",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "293",
+          "home": "F组首名",
+          "away": "C组次名",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-07-01": {
+      "header": "2026年07月01日 星期三",
+      "matches": [
+        {
+          "id": "296",
+          "home": "E组次名",
+          "away": "I组次名",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "295",
+          "home": "I组首名",
+          "away": "第三名C/D/F/G/H",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "297",
+          "home": "A组首名",
+          "away": "第三名C/E/F/H/I",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-07-02": {
+      "header": "2026年07月02日 星期四",
+      "matches": [
+        {
+          "id": "298",
+          "home": "L组首名",
+          "away": "第三名E/H/I/J/K",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "300",
+          "home": "G组首名",
+          "away": "第三名A/E/H/I/J",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "299",
+          "home": "D组首名",
+          "away": "第三名B/E/F/I/J",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-07-03": {
+      "header": "2026年07月03日 星期五",
+      "matches": [
+        {
+          "id": "302",
+          "home": "H组首名",
+          "away": "J组次名",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "301",
+          "home": "K组次名",
+          "away": "L组次名",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "303",
+          "home": "B组首名",
+          "away": "第三名E/F/G/I/J",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-07-04": {
+      "header": "2026年07月04日 星期六",
+      "matches": [
+        {
+          "id": "306",
+          "home": "D组次名",
+          "away": "G组次名",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "304",
+          "home": "J组首名",
+          "away": "H组次名",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "305",
+          "home": "K组首名",
+          "away": "第三名D/E/I/J/L",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-07-05": {
+      "header": "2026年07月05日 星期日",
+      "matches": [
+        {
+          "id": "308",
+          "home": "第73场胜者",
+          "away": "第75场胜者",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "307",
+          "home": "第74场胜者",
+          "away": "第77场胜者",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-07-06": {
+      "header": "2026年07月06日 星期一",
+      "matches": [
+        {
+          "id": "309",
+          "home": "第76场胜者",
+          "away": "第78场胜者",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "310",
+          "home": "第79场胜者",
+          "away": "第80场胜者",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-07-07": {
+      "header": "2026年07月07日 星期二",
+      "matches": [
+        {
+          "id": "311",
+          "home": "第83场胜者",
+          "away": "第84场胜者",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "312",
+          "home": "第81场胜者",
+          "away": "第82场胜者",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-07-08": {
+      "header": "2026年07月08日 星期三",
+      "matches": [
+        {
+          "id": "313",
+          "home": "第86场胜者",
+          "away": "第88场胜者",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "314",
+          "home": "第85场胜者",
+          "away": "第87场胜者",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-07-10": {
+      "header": "2026年07月10日 星期五",
+      "matches": [
+        {
+          "id": "315",
+          "home": "第89场胜者",
+          "away": "第90场胜者",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-07-11": {
+      "header": "2026年07月11日 星期六",
+      "matches": [
+        {
+          "id": "316",
+          "home": "第93场胜者",
+          "away": "第94场胜者",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-07-12": {
+      "header": "2026年07月12日 星期日",
+      "matches": [
+        {
+          "id": "317",
+          "home": "第91场胜者",
+          "away": "第92场胜者",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        },
+        {
+          "id": "318",
+          "home": "第95场胜者",
+          "away": "第96场胜者",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-07-15": {
+      "header": "2026年07月15日 星期三",
+      "matches": [
+        {
+          "id": "319",
+          "home": "第97场胜者",
+          "away": "第98场胜者",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-07-16": {
+      "header": "2026年07月16日 星期四",
+      "matches": [
+        {
+          "id": "320",
+          "home": "第99场胜者",
+          "away": "第100场胜者",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-07-19": {
+      "header": "2026年07月19日 星期日",
+      "matches": [
+        {
+          "id": "321",
+          "home": "第101场负者",
+          "away": "第102场负者",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    },
+    "2026-07-20": {
+      "header": "2026年07月20日 星期一",
+      "matches": [
+        {
+          "id": "322",
+          "home": "第101场胜者",
+          "away": "第102场胜者",
+          "time": "",
+          "group": "",
+          "stadium": "",
+          "city": "",
+          "score": "",
+          "finished": false,
+          "odds": {},
+          "handicap": "",
+          "ou": ""
+        }
+      ]
+    }
+  }
+}
