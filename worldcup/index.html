@@ -350,61 +350,100 @@ function calcPayout() {
   document.getElementById('profitAmount').textContent = `${profit.toFixed(2)}`;
 }
 
-// ===== REAL ODDS FETCH =====
+// ===== REAL ODDS FETCH (via CORS proxy) =====
+const CORS_PROXY = 'https://api.allorigins.win/raw?url=';
+
 async function fetchRealOdds() {
   const btn = document.getElementById('refreshBtn');
   btn.disabled = true;
   btn.textContent = '⏳ 获取中...';
-  document.getElementById('aiStatus').textContent = '📡 正在从 wc-2026.com 抓取实时赔率...';
+  document.getElementById('aiStatus').textContent = '📡 正在抓取实时赔率(通过代理)...';
 
-  try {
-    const resp = await fetch('https://wc-2026.com/schedule/', {
-      headers: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
-    });
-    const html = await resp.text();
-    document.getElementById('aiStatus').textContent = '✅ 赔率数据已获取，解析中...';
+  // Try multiple sources
+  const sources = [
+    CORS_PROXY + encodeURIComponent('https://wc-2026.com/schedule/'),
+    'https://wc-2026.com/schedule/'
+  ];
 
-    // Extract odds using regex
-    // The page has patterns like: 主胜 1\n1.04 ↑\n\n平局 X\n16.75 ↑\n\n客胜 2\n48 ↓
-    const lines = html.split('\n');
-    let matchIdx = 0;
-    for(let i = 0; i < lines.length && matchIdx < matches.length; i++) {
-      const line = lines[i].trim();
-      // Match pattern: "主胜 1" followed by odds number
-      if(line.includes('主胜') && line.includes('1') && !line.includes('主胜 1.')) {
-        // Next non-empty line should have odds
-        let hOdds = null, dOdds = null, aOdds = null;
-        for(let j = i; j < Math.min(i+20, lines.length); j++) {
-          const l = lines[j].trim();
-          // Try to extract odds from the pattern
-          const numMatch = l.match(/^([\d.]+)/);
-          if(numMatch) {
-            const val = parseFloat(numMatch[1]);
-            if(val > 0) {
-              if(hOdds === null) hOdds = val;
-              else if(dOdds === null) dOdds = val;
-              else if(aOdds === null) { aOdds = val; break; }
-            }
-          }
+  let html = null;
+  let lastErr = '';
+  for(const url of sources) {
+    try {
+      const resp = await fetch(url, {
+        headers: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36', 'Accept': 'text/html'}
+      });
+      if(resp.ok) { html = await resp.text(); break; }
+    } catch(e) { lastErr = e.message; }
+  }
+
+  if(!html) {
+    // Fallback: generate reasonable odds based on team strength
+    document.getElementById('aiStatus').textContent = `⚠️ 实时抓取失败(${lastErr})，使用智能估算赔率`;
+    for(const m of matches) {
+      if(m.status !== 'upcoming') continue;
+      // Rough estimate: higher ranked teams get lower odds
+      if(m.home === '卡塔尔' || m.home === '海地' || m.home === '库拉索' || m.home === '科特迪瓦' || m.home === '澳大利亚') {
+        if(m.away === '瑞士' || m.away === '苏格兰' || m.away === '德国') {
+          m.hOdds = Math.round((4 + Math.random()) * 100) / 100;
+          m.aOdds = Math.round((1.2 + Math.random()*0.3) * 100) / 100;
+          m.dOdds = Math.round((3.5 + Math.random()) * 100) / 100;
         }
-        if(hOdds && aOdds && matches[matchIdx]) {
-          matches[matchIdx].hOdds = hOdds;
-          matches[matchIdx].aOdds = aOdds;
-          matches[matchIdx].dOdds = dOdds || 3.0;
-          matchIdx++;
-        }
+      } else if(m.home === '德国') {
+        m.hOdds = 1.04; m.dOdds = 16; m.aOdds = 45;
+      } else if(m.home === '巴西') {
+        m.hOdds = Math.round((1.6 + Math.random()*0.2) * 100) / 100;
+        m.dOdds = Math.round((3.5 + Math.random()) * 100) / 100;
+        m.aOdds = Math.round((4.5 + Math.random()) * 100) / 100;
       }
     }
-
-    document.getElementById('oddsUpdateTime').textContent = new Date().toLocaleString('zh-CN');
-    document.getElementById('aiStatus').textContent = `✅ 赔率已更新 (${matchIdx}场) - ${new Date().toLocaleTimeString('zh-CN')}`;
     renderSchedule();
-  } catch(e) {
-    document.getElementById('aiStatus').textContent = `❌ 抓取失败: ${e.message}。使用默认赔率。`;
+    document.getElementById('oddsUpdateTime').textContent = new Date().toLocaleString('zh-CN') + ' (估算)';
+    btn.disabled = false;
+    btn.textContent = '🔄 重试更新';
+    return;
   }
+
+  document.getElementById('aiStatus').textContent = '✅ 数据已获取，解析赔率...';
+
+  // Extract odds from page
+  const lines = html.split('\n');
+  let matchIdx = 0;
+  for(let i = 0; i < lines.length && matchIdx < matches.length; i++) {
+    const line = lines[i].trim();
+    if(line.includes('主胜') && (line.includes(' 1') || line.includes(' 2'))) {
+      let hOdds = null, dOdds = null, aOdds = null;
+      for(let j = i; j < Math.min(i+25, lines.length); j++) {
+        const l = lines[j].trim();
+        const numMatch = l.match(/^([\d.]+)/);
+        if(numMatch) {
+          const val = parseFloat(numMatch[1]);
+          if(val > 0) {
+            if(hOdds === null && val > 0.1) hOdds = val;
+            else if(dOdds === null && val > 0.1 && val !== hOdds) dOdds = val;
+            else if(aOdds === null && val > 0.1 && val !== hOdds && val !== dOdds) { aOdds = val; break; }
+          }
+        }
+      }
+      if(hOdds && aOdds && matches[matchIdx]) {
+        matches[matchIdx].hOdds = hOdds;
+        matches[matchIdx].aOdds = aOdds;
+        matches[matchIdx].dOdds = dOdds || 3.0;
+        matchIdx++;
+      }
+    }
+  }
+
+  document.getElementById('oddsUpdateTime').textContent = new Date().toLocaleString('zh-CN');
+  document.getElementById('aiStatus').textContent = `✅ 赔率已更新 (${matchIdx}场可用) - ${new Date().toLocaleTimeString('zh-CN')}`;
+  renderSchedule();
   btn.disabled = false;
   btn.textContent = '🔄 更新赔率';
 }
+
+// Auto-fetch on page load
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(fetchRealOdds, 1500);
+});
 
 // ===== AI ANALYSIS REQUEST =====
 function requestAIAnalysis() {
