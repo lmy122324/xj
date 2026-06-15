@@ -1491,26 +1491,26 @@
           "fullReport": "<h3>🇪🇸 西班牙 vs 🇨🇻 佛得角 · 临场分析（首发已公布！）</h3><p><b>比赛时间：</b>6月16日 00:00 CST</p><p><b>场地：</b>梅赛德斯-奔驰体育场，亚特兰大（室内场馆）</p><p><b>确认首发：</b></p><p>Unai Simon (GK); Marcos Llorente (RB), Pau Cubarsi (CB), Aymeric Laporte (CB), Marc Cucurella (LB); Rodri (CDM), Fabian Ruiz (CM), Pedri (CAM); Ferran Torres (RW), Gavi (LW), Mikel Oyarzabal (ST)</p><p><b>替补席：</b>Lamine Yamal ❗, Nico Williams ❗, Dani Olmo, Victor Munoz等人待命</p><p><b>战术分析：</b></p><p>de la Fuente排出4-3-3阵型，Gavi被安排在左路，Pedri在中路10号位串联。Rodri和Fabian Ruiz组成双后腰。Ferran Torres在右路首发，Yamal和Williams双双替补待命。关键看点：Rodri在ACL伤势恢复后的状态——他的中场覆盖能力是西班牙控制力的基础。</p><p>佛得角全部26名球员在海外踢球（23人在欧洲），预计摆出5-4-1铁桶阵。队长Ryan Mendes是最大威胁。如果西班牙上半场无法打破僵局，Yamal和Williams可能在中场就被换上场。</p><p><b>预测：</b>西班牙控球率70%+，预计3-0或4-0取胜。佛得角如果能撑过前30分钟，有机会将分差控制在2球以内。</p>"
         },
         {
-          "time": "2026-06-15T23:54:02+08:00",
-          "confidence": 85,
+          "time": "2026-06-16T00:05:50+08:00",
+          "confidence": 86,
           "isNew": true,
-          "goalCount": 4,
+          "goalCount": 0,
           "possibleScores": [
             "3-0",
             "4-0",
-            "5-0"
+            "2-0"
           ],
-          "text": "【最新确认阵容】西班牙vs佛得角首发已公布：Unai Simon; Llorente, Cubarsi, Laporte, Cucurella; Rodri, Fabian Ruiz; Ferran Torres, Pedri, Gavi; Oyarzabal。Yamal和Williams均未首发替补待命。比赛即将在亚特兰大梅赛德斯-奔驰体育场开球！",
+          "text": "【比赛进行中】西班牙vs佛得角已于00:00在亚特兰大梅赛德斯-奔驰体育场开球！首发确认：Unai Simon; Llorente, Cubarsi, Laporte, Cucurella; Rodri, Fabian Ruiz; Ferran Torres, Pedri, Gavi; Oyarzabal。Yamal和Williams替补待命。西班牙开场即掌控控球，佛得角全线退守。",
           "factors": [
             {
               "type": "good",
-              "icon": "✅",
-              "text": "Yamal和Williams均已恢复训练进入替补席，攻击线深度恐怖"
+              "icon": "🇪🇸",
+              "text": "西班牙开场即掌控球权，Rodri+Pedri+Gavi中场统治力碾压"
             },
             {
               "type": "good",
-              "icon": "🇪🇸",
-              "text": "4名巴萨球员首发（Cubarsi, Pedri, Ferran Torres, Gavi），配合默契度高"
+              "icon": "✅",
+              "text": "Yamal和Williams替补待命，下半场可能登场制造杀机"
             },
             {
               "type": "bad",
@@ -1519,21 +1519,21 @@
             },
             {
               "type": "neutral",
-              "icon": "🇨🇻",
-              "text": "佛得角26人全旅欧，队长Ryan Mendes是队史射手王"
+              "icon": "🏟️",
+              "text": "亚特兰大室内场馆空调充足，西班牙tiki-taka不受天气影响"
             },
             {
               "type": "neutral",
-              "icon": "🏟️",
-              "text": "亚特兰大室内场馆不受天气影响，西班牙tiki-taka可全力发挥"
+              "icon": "🇨🇻",
+              "text": "佛得角全员退守5-4-1阵型，目标撑过半场减少失球"
             }
           ],
           "sources": [
-            "Yahoo Sports(confirmed lineup)",
+            "Yahoo Sports",
             "Evening Standard",
-            "Sports Illustrated"
+            "FIFA.com"
           ],
-          "fullReport": "<h3>🇪🇸 西班牙 vs 🇨🇻 佛得角 · 临场分析（首发已公布！）</h3><p><b>比赛时间：</b>6月16日 00:00 CST</p><p><b>场地：</b>梅赛德斯-奔驰体育场，亚特兰大（室内场馆）</p><p><b>确认首发：</b></p><p>Unai Simon (GK); Marcos Llorente (RB), Pau Cubarsi (CB), Aymeric Laporte (CB), Marc Cucurella (LB); Rodri (CDM), Fabian Ruiz (CM), Pedri (CAM); Ferran Torres (RW), Gavi (LW), Mikel Oyarzabal (ST)</p><p><b>替补席：</b>Lamine Yamal ❗, Nico Williams ❗, Dani Olmo, Victor Munoz等人待命</p><p><b>战术分析：</b></p><p>de la Fuente排出4-3-3阵型，Gavi被安排在左路，Pedri在中路10号位串联。Rodri和Fabian Ruiz组成双后腰。Ferran Torres在右路首发，Yamal和Williams双双替补待命。关键看点：Rodri在ACL伤势恢复后的状态——他的中场覆盖能力是西班牙控制力的基础。</p><p>佛得角全部26名球员在海外踢球（23人在欧洲），预计摆出5-4-1铁桶阵。队长Ryan Mendes是最大威胁。如果西班牙上半场无法打破僵局，Yamal和Williams可能在中场就被换上场。</p><p><b>预测：</b>西班牙控球率70%+，预计3-0或4-0取胜。佛得角如果能撑过前30分钟，有机会将分差控制在2球以内。</p>"
+          "fullReport": "<h3>🇪🇸 西班牙 vs 🇨🇻 佛得角 · 比赛进行中</h3><p><b>时间：</b>6月16日 00:00 CST 开球</p><p><b>场地：</b>梅赛德斯-奔驰体育场，亚特兰大（室内场馆）</p><p><b>首发：</b></p><p>Unai Simon; Llorente, Cubarsi, Laporte, Cucurella; Rodri, Fabian Ruiz; Ferran Torres, Pedri, Gavi; Oyarzabal</p><p>替补：Lamine Yamal, Nico Williams, Dani Olmo 等人待命</p><p><b>战术观察：</b>de la Fuente排出4-3-3，Gavi在左路，Pedri在中路10号位。Rodri和Fabian Ruiz双后腰。佛得角摆出5-4-1铁桶阵，26人全部旅欧。西班牙控球率预计70%+。上半场能否打破僵局是比赛关键——如果西班牙迟迟无法破门，Yamal和Williams可能在中场就被换上场。</p><p><b>关键看点：</b>Rodri在ACL伤势恢复后的状态。Oyarzabal作为首发中锋的终结效率。佛得角队长Ryan Mendes的反击威胁。</p>"
         }
       ],
       "changes": [
@@ -1541,31 +1541,25 @@
           "icon": "🟢",
           "type": "good",
           "label": "利好",
-          "text": "Yamal和Williams进入替补席确认可出战！攻击线深度有保障"
+          "text": "西班牙开场掌控球权，Rodri+Pedri+Gavi中场优势明显"
         },
         {
           "icon": "🟢",
           "type": "good",
           "label": "利好",
-          "text": "首发11人已公布：4名巴萨球员领衔，Rodri+Pedri+Gavi中场控制力强"
-        },
-        {
-          "icon": "🔴",
-          "type": "bad",
-          "label": "利空",
-          "text": "Fermin Lopez脚伤缺席整届世界杯，中场轮换深度下降"
+          "text": "Yamal和Williams替补待命，下半场可改变比赛走势"
         },
         {
           "icon": "🟡",
           "type": "neutral",
           "label": "观察",
-          "text": "Yamal和Williams均未首发但替补待命，若半场未破僵局可能提前登场"
+          "text": "佛得角摆出5-4-1铁桶阵，西班牙上半场能否破门是最大看点"
         },
         {
-          "icon": "🟢",
-          "type": "good",
-          "label": "利好",
-          "text": "亚特兰大室内场馆空调充足，传控体系不受外界条件影响"
+          "icon": "🔴",
+          "type": "bad",
+          "label": "利空",
+          "text": "Fermin Lopez脚伤缺席整届，西班牙中场轮换深度不足"
         }
       ],
       "recommendations": []
@@ -1670,50 +1664,56 @@
           "fullReport": "<h3>🇧🇪 比利时 vs 🇪🇬 埃及 · 赛前深度分析</h3><p><b>比赛时间：</b>6月16日 03:00 CST</p><p><b>场地：</b>流明体育场，西雅图（户外场地）</p><p><b>预计首发：</b></p><p><b>比利时（4-3-3）：</b>Courtois (GK); Meunier (RB), Mechele (CB), Ngoy (CB), Castagne (LB); Onana (CDM), Tielemans (CM), De Bruyne (CAM); Trossard (RW), Doku (LW), De Ketelaere (ST)</p><p><b>埃及（4-2-3-1）：</b>El Shenawy (GK); Hany (RB), Abdelmonem (CB), Rabia (CB), Hamdi (LB); Elneny (CDM), Kamal (CDM); Salah (RW), Marmoush (LW), El-Said (CAM); Hassan (ST)</p><p><b>深度分析：</b></p><p>2018年季军、2022年小组出局——比利时黄金一代的最后一届大赛。De Bruyne赛前表示\"这届世界杯是我可以享受的一届\"。但Rudi Garcia面临的后防线问题很严峻：Debast大腿伤缺席小组赛初段，中卫组合只能从Mechele+Ngoy（大赛首秀）或Arthur Theate中选择。</p><p>De Ketelaere vs Lukaku的选择是最大变数。卢卡库赛季仅5次意甲首发，状态严重存疑。Garcia可能选择Atalanta的De Ketelaere首发。卢卡库作为比利时队史射手王，替补上场也能改变比赛。</p><p>Salah在2025年夏天自由身离开利物浦加盟沙特后依然保持顶级状态。Omar Marmoush在曼城的崛起给了埃及第二进攻维度。Hossam Hassan带领的埃及预选赛6场0失球，防守纪律出色。定位球和反击是埃及得分的两大武器。</p><p>战术关键：比利时控球主导，但中卫经验不足可能被Salah跑位打穿。埃及将打防守反击，利用Salah和Marmoush速度冲击比利时防线身后。比利时中场Onana对埃及双后腰的压制将决定比赛节奏。</p></p><p><b>预测：</b>比利时实力占优但防线隐患大，埃及有能力制造麻烦。比利时2-1小胜或1-1平局概率大。</p>"
         },
         {
-          "time": "2026-06-15T23:54:02+08:00",
-          "confidence": 76,
+          "time": "2026-06-16T00:05:50+08:00",
+          "confidence": 77,
           "isNew": true,
           "goalCount": 3,
           "possibleScores": [
             "2-1",
-            "2-0",
-            "1-1"
+            "1-1",
+            "2-0"
           ],
-          "text": "【最新分析】比利时vs埃及3小时后开球！De Bruyne确认首发，De Ketelaere预计顶替卢卡库首发中锋。比利时防线遭遇伤病危机：Debast大腿伤缺小组赛初期，中卫组合经验不足。埃及全员健康，Salah+Marmoush双枪出击。两队2022年友谊赛埃及2-1击败比利时。",
+          "text": "【赛前2.5小时更新】比利时vs埃及将在03:00于西雅图流明体育场开球。De Bruyne确认首发领衔黄金一代最后一届大赛。比利时防线危机：Debast大腿伤缺小组赛初期，中卫Mechele+Ngoy搭档大赛经验严重不足。埃及全员健康，Salah+Marmoush双枪出击。西雅图夜间气温约15°C，对双方公平。关键博弈：De Ketelaere预计首发中锋vs Lukaku替补→比利时状态vs经验抉择。",
           "factors": [
             {
               "type": "good",
               "icon": "🇧🇪",
-              "text": "De Bruyne确认首发，称\"期待与Salah再次对决\"，比利时黄金一代最后一届大赛"
+              "text": "De Bruyne确认首发+精神领袖作用，赛前表态享受最后一届大赛"
             },
             {
               "type": "good",
               "icon": "🇧🇪",
-              "text": "Courtois回归稳固门将位置，Onana+Tielemans中场防守覆盖力强"
+              "text": "Courtois回归门将位置稳固，Onana+Tielemans中场防守覆盖力强"
             },
             {
               "type": "bad",
               "icon": "🚑",
-              "text": "比利时中卫荒：Debast大腿伤缺，Mechele+Ngoy或Theate搭档，大赛经验不足"
+              "text": "比利时中卫荒：Debast大腿伤缺小组赛初期，Mechele+Ngoy或Theate搭档大赛经验不足"
             },
             {
               "type": "good",
               "icon": "🇪🇬",
-              "text": "埃及全员健康！Salah+曼城前锋Marmoush双枪组合威胁倍增"
+              "text": "埃及全员健康！Salah+曼城前锋Marmoush双枪威胁极大"
             },
             {
               "type": "neutral",
               "icon": "📊",
-              "text": "埃及世界杯历史上尚未取得过胜利（4次参赛0胜），心理压力巨大"
+              "text": "埃及世界杯历史0胜（4次参赛），但预选赛6场0失球防守纪律出色"
+            },
+            {
+              "type": "neutral",
+              "icon": "🤝",
+              "text": "2022年友谊赛埃及2-1击败比利时，心理上不落下风"
             }
           ],
           "sources": [
             "Evening Standard",
             "KingFut",
             "Reuters",
-            "FIFA.com"
+            "FIFA.com",
+            "TotalFootballAnalysis"
           ],
-          "fullReport": "<h3>🇧🇪 比利时 vs 🇪🇬 埃及 · 赛前深度分析</h3><p><b>比赛时间：</b>6月16日 03:00 CST</p><p><b>场地：</b>流明体育场，西雅图（户外场地）</p><p><b>预计首发：</b></p><p><b>比利时（4-3-3）：</b>Courtois (GK); Meunier (RB), Mechele (CB), Ngoy (CB), Castagne (LB); Onana (CDM), Tielemans (CM), De Bruyne (CAM); Trossard (RW), Doku (LW), De Ketelaere (ST)</p><p><b>埃及（4-2-3-1）：</b>El Shenawy (GK); Hany (RB), Abdelmonem (CB), Rabia (CB), Hamdi (LB); Elneny (CDM), Kamal (CDM); Salah (RW), Marmoush (LW), El-Said (CAM); Hassan (ST)</p><p><b>深度分析：</b></p><p>2018年季军、2022年小组出局——比利时黄金一代的最后一届大赛。De Bruyne赛前表示\"这届世界杯是我可以享受的一届\"。但Rudi Garcia面临的后防线问题很严峻：Debast大腿伤缺席小组赛初段，中卫组合只能从Mechele+Ngoy（大赛首秀）或Arthur Theate中选择。</p><p>De Ketelaere vs Lukaku的选择是最大变数。卢卡库赛季仅5次意甲首发，状态严重存疑。Garcia可能选择Atalanta的De Ketelaere首发。卢卡库作为比利时队史射手王，替补上场也能改变比赛。</p><p>Salah在2025年夏天自由身离开利物浦加盟沙特后依然保持顶级状态。Omar Marmoush在曼城的崛起给了埃及第二进攻维度。Hossam Hassan带领的埃及预选赛6场0失球，防守纪律出色。定位球和反击是埃及得分的两大武器。</p><p>战术关键：比利时控球主导，但中卫经验不足可能被Salah跑位打穿。埃及将打防守反击，利用Salah和Marmoush速度冲击比利时防线身后。比利时中场Onana对埃及双后腰的压制将决定比赛节奏。</p></p><p><b>预测：</b>比利时实力占优但防线隐患大，埃及有能力制造麻烦。比利时2-1小胜或1-1平局概率大。</p>"
+          "fullReport": "<h3>🇧🇪 比利时 vs 🇪🇬 埃及 · 赛前深度分析</h3><p><b>更新时间：</b>2026-06-16T00:05:50+08:00</p><p><b>比赛时间：</b>6月16日 03:00 CST</p><p><b>场地：</b>流明体育场，西雅图（户外）</p><p><b>预计阵容：</b></p><p><b>比利时（4-3-3）：</b>Courtois; Meunier, Mechele, Ngoy, Castagne; Onana, Tielemans, De Bruyne; Trossard, Doku, De Ketelaere</p><p><b>埃及（4-2-3-1）：</b>El Shenawy; Hany, Abdelmonem, Rabia, Hamdi; Elneny, Kamal; Salah, Marmoush, El-Said; Hassan</p><p><b>核心对位分析：</b></p><p><b>1. De Bruyne vs Salah——老友记：</b>两位英超传奇在世界杯舞台再次相遇。De Bruyne称\"和Salah再次竞争，就像回到旧日时光\"。两人都是各自球队的进攻组织核心。Salah本赛季离开利物浦后状态依然火爆，De Bruyne在曼城则承担更多组织责任。</p><p><b>2. 比利时防线——最大隐患：</b>2018年季军、2022年小组出局后，Rudi Garcia面临严峻的后防问题。Debast大腿伤缺席小组赛初段，中卫组合只能从Mechele+Ngoy（大赛首秀）或Theate中选择。面对Salah+Marmoush的速度冲击，这条临时拼凑的防线能否顶住是最大疑问。</p><p><b>3. De Ketelaere vs Lukaku的分歧：</b>卢卡库赛季仅5次意甲首发，状态严重存疑。Atalanta的De Ketelaere更可能首发。但卢卡库作为队史射手王，替补上场也能改变比赛。Garcia如何分配两人的出场时间将直接影响比赛结果。</p><p><b>4. 埃及的壁垒：</b>预选赛6场0失球——Hossam Hassan的防守体系纪律极严。Salah依然是反击核心，Marmoush在曼城的崛起给了埃及第二维度。2025年非洲杯四强的表现证明该队已具备硬仗能力。定位球和反击是埃及两大武器。</p><p><b>5. 战术关键：</b>比利时控球主导（预计60%+），De Bruyne在防线和中场间寻找空隙。埃及保持紧密防守，利用Salah和Marmoush速度打反击。比利时中场Onana对埃及双后腰的压制将决定比赛节奏。西雅图夜间约15°C，对双方公平。</p><p><b>预测：</b>比利时实力占优但防线隐患极大。比利时2-1小胜或1-1平局概率最大。埃及若能顶住前30分钟，越到后面越有机会。</p>"
         }
       ],
       "changes": [
@@ -1721,31 +1721,37 @@
           "icon": "🟢",
           "type": "good",
           "label": "利好",
-          "text": "De Bruyne确认首发，赛前表态精神面貌良好"
-        },
-        {
-          "icon": "🔴",
-          "type": "bad",
-          "label": "利空",
-          "text": "比利时中卫选择严重受限：Debast大腿伤缺，组合大赛经验不足"
-        },
-        {
-          "icon": "🟡",
-          "type": "neutral",
-          "label": "观察",
-          "text": "De Ketelaere预计首发中锋vs Lukaku替补——状态vs经验博弈"
+          "text": "De Bruyne确认首发，精神领袖+技术核心双重角色"
         },
         {
           "icon": "🟢",
           "type": "good",
           "label": "利好",
-          "text": "埃及全员健康，Salah+Marmoush都能出战，进攻威胁巨大"
+          "text": "Courtois回归门线，比利时后防有最后一道保障"
         },
         {
           "icon": "🔴",
           "type": "bad",
           "label": "利空",
-          "text": "埃及世界杯历史0胜（4次参赛），心理包袱重"
+          "text": "比利时中卫荒严重：Debast伤缺，Mechele+Ngoy大赛首秀经验不足"
+        },
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "利好",
+          "text": "埃及全员健康！Salah+Marmoush双枪均可出战"
+        },
+        {
+          "icon": "🟡",
+          "type": "neutral",
+          "label": "观察",
+          "text": "De Ketelaere首发中锋vs Lukaku替补——状态优先还是经验优先？"
+        },
+        {
+          "icon": "🟡",
+          "type": "neutral",
+          "label": "观察",
+          "text": "埃及4次世界杯0胜，西雅图夜间15°C对北非球队不算友好"
         }
       ],
       "recommendations": []
@@ -1850,7 +1856,7 @@
           "fullReport": "<h3>🇸🇦 沙特阿拉伯 vs 🇺🇾 乌拉圭 · 赛前深度分析</h3><p><b>比赛时间：</b>6月16日 06:00 CST（迈阿密当地时间6月15日 18:00）</p><p><b>场地：</b>硬石体育场，迈阿密花园（户外露天场馆）</p><p><b>🔥 极端高温可能成为比赛最大变数：</b></p><p>Climate Central给出的数据显示，迈阿密6月15日18:00的比赛有88%概率出现影响运动员表现的极端高温！迈阿密6月傍晚体感温度可达35℃以上。沙特球员来自中东，天然适应高温环境。乌拉圭球员绝大多数在欧洲踢球，高温下体能消耗会更大。Bielsa的高位压迫战术对体能要求极高——高温可能是这场比赛的最大变量！</p><p><b>✈️ 乌拉圭航班延误：</b>据WSVN 7News报道，乌拉圭国家队飞往迈阿密的航班出现延误，备战日程被打乱。任何赛前备战节奏的破坏都会影响球员状态和战术准备。</p><p><b>⚔️ 战术分析：</b></p><p>Bielsa的乌拉圭以3-4-3阵型为核心，Valverde在右路内收是进攻组织关键。但1-5惨败美国暴露出高位防线被打反击的致命弱点。沙特如果利用Al-Dawsari的速度打乌拉圭防线身后，可能有意外收获。</p><p>沙特4月换帅Donis后战术体系未完全建立。热身赛4连败（含0-4负埃及）说明球队状态极差。但沙特在2018年和2022年世界杯均有爆冷表现（2-1逆转埃及、2-1逆转阿根廷）。</p><p><b>关键对位：</b>Federico Valverde vs Salem Al-Dawsari——皇马巨星vs沙特传奇。Valverde的体能和覆盖在高温下可能下降，会给Al-Dawsari空间。</p><p><b>历史交锋：</b>两队2018世界杯小组赛相遇，乌拉圭1-0小胜。</p><p><b>预测：</b>乌拉圭实力占优，但高温+航班延误是重大不利因素。沙特有爆冷传统。预计乌拉圭小胜（1-0或2-1），但平局甚至沙特爆冷并非不可能。</p>"
         },
         {
-          "time": "2026-06-15T23:54:02+08:00",
+          "time": "2026-06-16T00:05:50+08:00",
           "confidence": 68,
           "isNew": true,
           "goalCount": 2,
@@ -1859,12 +1865,12 @@
             "1-2",
             "0-1"
           ],
-          "text": "【最新情报】沙特vs乌拉圭6小时后开球！重大场外信息：(1)乌拉圭国家队飞迈阿密航班延误，备战受影响；(2)迈阿密88%概率出现影响运动员表现的极端高温！沙特热身赛4连败但高温下更适应。Bielsa的乌拉圭热身赛近5场仅1胜。2018世界杯乌拉圭1-0沙特。",
+          "text": "【赛前6小时更新】沙特vs乌拉圭06:00在迈阿密硬石体育场开球。重大场外变量：(1)乌拉圭航班延误影响备战节奏；(2)迈阿密傍晚极端高温（88%概率影响表现），沙特中东球员更适应；(3)Bielsa的乌拉圭热身赛近5场仅1胜。沙特虽热身4连败但有世界杯爆冷传统。",
           "factors": [
             {
               "type": "bad",
               "icon": "✈️",
-              "text": "乌拉圭国家队飞往迈阿密航班延误，赛前备战节奏被打乱"
+              "text": "乌拉圭航班延误，赛前备战节奏被打乱"
             },
             {
               "type": "bad",
@@ -1874,7 +1880,7 @@
             {
               "type": "bad",
               "icon": "🇺🇾",
-              "text": "乌拉圭近5场热身仅1胜，含1-5惨败美国，Bielsa体系状态成疑"
+              "text": "乌拉圭近5场热身仅1胜含1-5惨败美国，Bielsa体系状态成疑"
             },
             {
               "type": "good",
@@ -1882,9 +1888,14 @@
               "text": "Valverde+Ugarte+Bentancur中场实力碾压沙特"
             },
             {
+              "type": "good",
+              "icon": "🇸🇦",
+              "text": "Al-Dawsari是唯一爆点，沙特有2018和2022世界杯爆冷传统"
+            },
+            {
               "type": "bad",
               "icon": "🇸🇦",
-              "text": "沙特热身赛4连败+0-4惨败埃及，状态糟糕"
+              "text": "沙特热身赛4连败+0-4惨败埃及+4月刚换帅，状态战术双重堪忧"
             }
           ],
           "sources": [
@@ -1893,39 +1904,45 @@
             "WhoScored",
             "CBS Miami"
           ],
-          "fullReport": "<h3>🇸🇦 沙特阿拉伯 vs 🇺🇾 乌拉圭 · 赛前深度分析</h3><p><b>比赛时间：</b>6月16日 06:00 CST（迈阿密当地时间6月15日 18:00）</p><p><b>场地：</b>硬石体育场，迈阿密花园（户外露天场馆）</p><p><b>🔥 极端高温可能成为比赛最大变数：</b></p><p>Climate Central给出的数据显示，迈阿密6月15日18:00的比赛有88%概率出现影响运动员表现的极端高温！迈阿密6月傍晚体感温度可达35℃以上。沙特球员来自中东，天然适应高温环境。乌拉圭球员绝大多数在欧洲踢球，高温下体能消耗会更大。Bielsa的高位压迫战术对体能要求极高——高温可能是这场比赛的最大变量！</p><p><b>✈️ 乌拉圭航班延误：</b>据WSVN 7News报道，乌拉圭国家队飞往迈阿密的航班出现延误，备战日程被打乱。任何赛前备战节奏的破坏都会影响球员状态和战术准备。</p><p><b>⚔️ 战术分析：</b></p><p>Bielsa的乌拉圭以3-4-3阵型为核心，Valverde在右路内收是进攻组织关键。但1-5惨败美国暴露出高位防线被打反击的致命弱点。沙特如果利用Al-Dawsari的速度打乌拉圭防线身后，可能有意外收获。</p><p>沙特4月换帅Donis后战术体系未完全建立。热身赛4连败（含0-4负埃及）说明球队状态极差。但沙特在2018年和2022年世界杯均有爆冷表现（2-1逆转埃及、2-1逆转阿根廷）。</p><p><b>关键对位：</b>Federico Valverde vs Salem Al-Dawsari——皇马巨星vs沙特传奇。Valverde的体能和覆盖在高温下可能下降，会给Al-Dawsari空间。</p><p><b>历史交锋：</b>两队2018世界杯小组赛相遇，乌拉圭1-0小胜。</p><p><b>预测：</b>乌拉圭实力占优，但高温+航班延误是重大不利因素。沙特有爆冷传统。预计乌拉圭小胜（1-0或2-1），但平局甚至沙特爆冷并非不可能。</p>"
+          "fullReport": "<h3>🇸🇦 沙特阿拉伯 vs 🇺🇾 乌拉圭 · 赛前深度分析</h3><p><b>更新时间：</b>2026-06-16T00:05:50+08:00</p><p><b>比赛时间：</b>6月16日 06:00 CST（迈阿密6月15日 18:00）</p><p><b>场地：</b>硬石体育场，迈阿密花园（户外露天场馆）</p><p><b>🔥 极端高温——最大变数：</b>Climate Central数据显示迈阿密6月15日18:00比赛有88%概率出现影响运动员表现的极端高温！迈阿密6月傍晚体感温度可达35°C+。沙特球员天然适应高温，而乌拉圭球员绝大多数在欧洲踢球，高温下体能消耗会更大。Bielsa的高位压迫战术对体能要求极高——高温可能是这场比赛最大变量！</p><p><b>✈️ 航班延误影响不容忽视：</b>据WSVN 7News报道，乌拉圭国家队飞往迈阿密的航班延误，备战日程被打乱。任何赛前备战节奏的破坏都会影响球员状态和战术准备。</p><p><b>⚔️ 战术分析：</b>Bielsa的乌拉圭以3-4-3阵型为核心，Valverde在右路内收是进攻组织关键。但1-5惨败美国暴露出高位防线被打反击的致命弱点。沙特如果利用Al-Dawsari速度打乌拉圭防线身后，可能有意外收获。沙特4月换帅Donis后战术体系未完全建立，热身赛4连败说明状态极差。但沙特在2018年（2-1逆转埃及）和2022年（2-1逆转阿根廷）均有世界杯爆冷表现。</p><p><b>关键对位：</b>Federico Valverde vs Salem Al-Dawsari——皇马巨星vs沙特传奇。Valverde的体能和覆盖在高温下可能下降。Araujo+Gimenez中卫组合经验丰富。</p><p><b>历史交锋：</b>2018世界杯乌拉圭1-0沙特。2002友谊赛沙特3-2乌拉圭。</p><p><b>预测：</b>乌拉圭实力占优，但高温+航班延误+热身状态三方面不利因素叠加。预计乌拉圭小胜（1-0或2-1），但平局甚至沙特爆冷概率较赛前显著上升。</p>"
         }
       ],
       "changes": [
         {
+          "icon": "🔴",
+          "type": "bad",
+          "label": "利空",
+          "text": "乌拉圭航班延误，赛前备战受影响"
+        },
+        {
+          "icon": "🔴",
+          "type": "bad",
+          "label": "利空",
+          "text": "迈阿密88%概率极端高温！乌拉圭欧洲球员适应性远不如沙特"
+        },
+        {
+          "icon": "🔴",
+          "type": "bad",
+          "label": "利空",
+          "text": "乌拉圭近5场热身仅1胜含1-5惨败美国，Bielsa状态成疑"
+        },
+        {
           "icon": "🟢",
           "type": "good",
           "label": "利好",
-          "text": "Valverde+Ugarte+Bentancur中场实力碾压沙特"
-        },
-        {
-          "icon": "🔴",
-          "type": "bad",
-          "label": "利空",
-          "text": "乌拉圭飞迈阿密航班延误，赛前备战受影响"
-        },
-        {
-          "icon": "🔴",
-          "type": "bad",
-          "label": "利空",
-          "text": "迈阿密88%概率极端高温！乌拉圭欧洲球员适应性不如沙特"
-        },
-        {
-          "icon": "🔴",
-          "type": "bad",
-          "label": "利空",
-          "text": "乌拉圭近5场热身仅1胜（含1-5惨败美国），Bielsa状态成疑"
+          "text": "Valverde+Ugarte+Bentancur中场实力碾压，技术优势明显"
         },
         {
           "icon": "🟡",
           "type": "neutral",
           "label": "观察",
-          "text": "沙特热身4连败但4月刚换帅，且有世界杯爆冷传统"
+          "text": "沙特热身4连败但4月换帅+有世界杯爆冷传统(逆转阿根廷/埃及)"
+        },
+        {
+          "icon": "🟡",
+          "type": "neutral",
+          "label": "观察",
+          "text": "Al-Dawsari是沙特唯一爆点，他的个人发挥决定沙特上限"
         }
       ],
       "recommendations": []
@@ -2031,8 +2048,8 @@
           "fullReport": "<h3>🇮🇷 伊朗 vs 🇳🇿 新西兰 · 赛前深度分析</h3><p><b>比赛时间：</b>6月16日 09:00 CST（6月15日 18:00 PT）</p><p><b>场地：</b>SoFi体育场，洛杉矶英格尔伍德（室内场馆）</p><p><b>🇳🇿 Chris Wood完全恢复：</b>新西兰队长在2天前获颁\"Pride of New Zealand\"最高足球荣誉奖项，并亲口确认膝伤已进入恢复新阶段，将首发出战伊朗。这位诺丁汉森林前锋的头球能力和禁区支点作用对伊朗防线是巨大考验。</p><p><b>🇮🇷 Taremi独自扛旗：</b>Mehdi Taremi是伊朗本届大赛的绝对核心，预选赛5球证明顶级终结能力。但Azmoun因与迪拜统治者合影引发争议被排除大名单后，伊朗锋线缺乏第二得分点。更致命的是伊朗国内联赛自3月起因中东冲突全面停摆，国内球员已3个月没有正式比赛。</p><p><b>战术对位：</b>伊朗预计排出4-3-3，Taremi左路内切是主要进攻套路。Beiranvand门将经验丰富。新西兰5-3-2防守反击，Wood和Barbarouses双前锋，中场Stamenic负责拦截。</p><p><b>G组出线形势：</b>Group G实力分布：比利时＞埃及＞伊朗≈新西兰。本场胜者将占据小组第三vs第二争夺的有利位置。RotoWire评价\"这是决定谁在G组排第三、谁有争取第二的现实的比赛\"。</p><p><b>预测：</b>伊朗略被看好（赔率-118）。但Wood回归+伊朗国内球员状态存疑使得平局概率不小。伊朗小胜（1-0或2-0）概率最大，但平局绝非意外。</p>"
         },
         {
-          "time": "2026-06-15T23:54:02+08:00",
-          "confidence": 67,
+          "time": "2026-06-16T00:05:50+08:00",
+          "confidence": 68,
           "isNew": true,
           "goalCount": 2,
           "possibleScores": [
@@ -2040,32 +2057,37 @@
             "2-0",
             "1-1"
           ],
-          "text": "【最新情报】伊朗vs新西兰9小时后在SoFi体育场开球。好消息：新西兰头号射手Chris Wood膝伤完全恢复，确认首发出战。伊朗方面Taremi是绝对核心，但Azmoun被排除名单+国内联赛自3月停摆的双重打击仍存在。SoFi室内球馆公平竞赛条件。",
+          "text": "【赛前9小时更新】伊朗vs新西兰将于09:00在洛杉矶SoFi体育场开球。Chris Wood膝伤完全恢复确认首发！新西兰进攻核心归位。伊朗方面Taremi独扛进攻大旗，但Azmoun被排除名单+国内联赛3月停摆的双重打击是隐患。SoFi室内场馆公平竞赛。",
           "factors": [
             {
               "type": "good",
               "icon": "🇳🇿",
-              "text": "Chris Wood膝伤完全恢复获颁奖项，确认首发出战！新西兰进攻核心归位"
+              "text": "Chris Wood膝伤完全恢复获颁最高荣誉，确认首发出战！"
             },
             {
               "type": "good",
               "icon": "🇮🇷",
-              "text": "Taremi是亚洲区最具威胁的前锋之一，预选赛5球状态火热"
+              "text": "Taremi是亚洲最具威胁前锋之一，预选赛5球状态火热"
             },
             {
               "type": "bad",
               "icon": "🇮🇷",
-              "text": "Azmoun场外风波被排除大名单，锋线深度严重受损"
+              "text": "Azmoun因场外风波被排除大名单，伊朗锋线深度严重受损"
             },
             {
               "type": "bad",
               "icon": "📉",
-              "text": "伊朗国内联赛自3月起因地区冲突停摆，国内球员比赛状态存疑"
+              "text": "伊朗国内联赛自3月因中东冲突停摆，国内球员3个月无正式比赛"
             },
             {
               "type": "good",
               "icon": "🇮🇷",
-              "text": "伊朗6次世界杯经验远胜新西兰（仅3次），大赛经验占优"
+              "text": "伊朗6次世界杯经验远胜新西兰(3次)，Beiranvand门将可靠"
+            },
+            {
+              "type": "neutral",
+              "icon": "🏟️",
+              "text": "SoFi室内球馆不受天气影响，公平竞赛条件"
             }
           ],
           "sources": [
@@ -2074,7 +2096,7 @@
             "WhoScored",
             "NZ Football"
           ],
-          "fullReport": "<h3>🇮🇷 伊朗 vs 🇳🇿 新西兰 · 赛前深度分析</h3><p><b>比赛时间：</b>6月16日 09:00 CST（6月15日 18:00 PT）</p><p><b>场地：</b>SoFi体育场，洛杉矶英格尔伍德（室内场馆）</p><p><b>🇳🇿 Chris Wood完全恢复：</b>新西兰队长在2天前获颁\"Pride of New Zealand\"最高足球荣誉奖项，并亲口确认膝伤已进入恢复新阶段，将首发出战伊朗。这位诺丁汉森林前锋的头球能力和禁区支点作用对伊朗防线是巨大考验。</p><p><b>🇮🇷 Taremi独自扛旗：</b>Mehdi Taremi是伊朗本届大赛的绝对核心，预选赛5球证明顶级终结能力。但Azmoun因与迪拜统治者合影引发争议被排除大名单后，伊朗锋线缺乏第二得分点。更致命的是伊朗国内联赛自3月起因中东冲突全面停摆，国内球员已3个月没有正式比赛。</p><p><b>战术对位：</b>伊朗预计排出4-3-3，Taremi左路内切是主要进攻套路。Beiranvand门将经验丰富。新西兰5-3-2防守反击，Wood和Barbarouses双前锋，中场Stamenic负责拦截。</p><p><b>G组出线形势：</b>Group G实力分布：比利时＞埃及＞伊朗≈新西兰。本场胜者将占据小组第三vs第二争夺的有利位置。RotoWire评价\"这是决定谁在G组排第三、谁有争取第二的现实的比赛\"。</p><p><b>预测：</b>伊朗略被看好（赔率-118）。但Wood回归+伊朗国内球员状态存疑使得平局概率不小。伊朗小胜（1-0或2-0）概率最大，但平局绝非意外。</p>"
+          "fullReport": "<h3>🇮🇷 伊朗 vs 🇳🇿 新西兰 · 赛前深度分析</h3><p><b>更新时间：</b>2026-06-16T00:05:50+08:00</p><p><b>比赛时间：</b>6月16日 09:00 CST（洛杉矶6月15日 18:00）</p><p><b>场地：</b>SoFi体育场，洛杉矶英格尔伍德（室内场馆）</p><p><b>🇳🇿 Chris Wood完全恢复：</b>新西兰队长在2天前获颁\"Pride of New Zealand\"最高足球荣誉奖项，并亲口确认膝伤已进入恢复新阶段。这位诺丁汉森林前锋的头球能力和禁区支点作用对伊朗防线是巨大考验。新西兰时隔16年重返世界杯，2010年三战全平\"不败出局\"的神奇经历让他们有足够自信。</p><p><b>🇮🇷 Taremi独自扛旗：</b>Mehdi Taremi是伊朗本届的绝对核心，预选赛5球证明顶级终结能力。但Azmoun因与迪拜统治者合影引发争议被排除大名单后，伊朗锋线缺乏第二得分点。更致命的是伊朗国内联赛自3月起因中东冲突全面停摆，Persepolis和Esteghlal等俱乐部的球员已3个月没踢正式比赛，比赛状态严重存疑。</p><p><b>⚔️ 战术对位：</b>伊朗预计排出4-3-3，Taremi左路内切是主要进攻套路。Beiranvand门将经验丰富。新西兰5-3-2防守反击，Wood和Barbarouses双前锋，中场Stamenic负责拦截。Cacace左路助攻是新西兰另一个进攻手段。</p><p><b>📊 G组出线形势：</b>比利时＞埃及＞伊朗≈新西兰。本场胜者将占据小组第三争夺第二的有利位置。RotoWire评价\"这场决定谁在G组争第二\"。</p><p><b>预测：</b>伊朗赔率-118略被看好。Wood回归+伊朗国内球员状态存疑使平局概率不小。伊朗小胜(1-0)概率最大，但平局绝非意外。SoFi室内场地对双方公平。</p>"
         }
       ],
       "changes": [
@@ -2082,31 +2104,37 @@
           "icon": "🟢",
           "type": "good",
           "label": "利好",
-          "text": "Chris Wood膝伤完全恢复，确认首发！新西兰进攻核心归位"
+          "text": "Chris Wood膝伤完全恢复确认首发！新西兰进攻核心归位"
         },
         {
           "icon": "🔴",
           "type": "bad",
           "label": "利空",
-          "text": "Azmoun被排除名单+国内联赛3月停摆至今，伊朗锋线和状态双重受损"
+          "text": "Azmoun被排除名单，伊朗锋线深度严重受损"
         },
         {
-          "icon": "🟡",
-          "type": "neutral",
-          "label": "观察",
-          "text": "Taremi独扛进攻大旗，他一人能否带队取胜是最大问号"
+          "icon": "🔴",
+          "type": "bad",
+          "label": "利空",
+          "text": "伊朗国内联赛自3月停摆至今，国内球员比赛状态存疑"
         },
         {
           "icon": "🟢",
           "type": "good",
           "label": "利好",
-          "text": "伊朗6次世界杯经验丰富，Beiranvand门将位置可靠"
+          "text": "Taremi预选赛5球状态火热，他是伊朗进攻唯一保障"
         },
         {
           "icon": "🟡",
           "type": "neutral",
           "label": "观察",
-          "text": "SoFi室内球馆公平竞赛，但场外政治因素可能影响双方心理"
+          "text": "SoFi室内场馆公平竞赛，双方均无天气影响"
+        },
+        {
+          "icon": "🟡",
+          "type": "neutral",
+          "label": "观察",
+          "text": "伊朗6次世界杯经验(新西兰仅3次)能否转化为场上优势？"
         }
       ],
       "recommendations": []
@@ -2114,6 +2142,6 @@
   ],
   "analysisCount": 36,
   "matchCount": 16,
-  "lastUpdate": "2026-06-15T23:54:02+08:00",
+  "lastUpdate": "2026-06-16T00:05:50+08:00",
   "rawReportFile": "reports.json"
 }
