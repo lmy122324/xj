@@ -1,6 +1,81 @@
 {
   "matches": [
     {
+      "home": "墨西哥",
+      "away": "南非",
+      "date": "6/11",
+      "time": "已完赛",
+      "group": "A",
+      "result": "2-0",
+      "analyses": [
+        {
+          "time": "2026-06-15T20:29:00+08:00",
+          "confidence": 95,
+          "isNew": true,
+          "goalCount": 2,
+          "possibleScores": [
+            "2-0 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "🇲🇽",
+              "text": "Julian Quinones 36'首开纪录，墨西哥世界杯揭幕战首胜！"
+            },
+            {
+              "type": "good",
+              "icon": "🇲🇽",
+              "text": "Raul Jimenez 67'点球锁定胜局，墨西哥终结揭幕战不胜魔咒"
+            },
+            {
+              "type": "bad",
+              "icon": "🔴",
+              "text": "南非全场两张红牌（Modiba 72'、Mokoena 90+2'），9人应战"
+            },
+            {
+              "type": "bad",
+              "icon": "❗",
+              "text": "墨西哥35次射门仅8射正，终结效率仍需提升"
+            }
+          ],
+          "text": "墨西哥2-0击败南非，取得世界杯揭幕战胜利！Quinones第36分钟接桑切斯助攻首开纪录，Jimenez第67分钟点球锁定胜局。南非在第72分钟和第90+2分钟连吃两张红牌，9人完赛。",
+          "sources": [
+            "FIFA.com",
+            "ESPN",
+            "BBC Sport"
+          ],
+          "fullReport": "<h3>🇲🇽 墨西哥 2-0 🇿🇦 南非 · 开幕式战报</h3><p><b>比分：</b>墨西哥 2-0 南非</p><p><b>场地：</b>墨西哥城体育场，墨西哥城</p><p><b>进球：</b><br>⚽ 1-0 Julian Quinones 36' (Jorge Sanchez助攻)<br>⚽ 2-0 Raul Jimenez 67' (点球)</p><p><b>红牌：</b>🔴 Modiba 72'、🔴 Mokoena 90+2'（南非）</p><p><b>赛后分析：</b>墨西哥终结了世界杯揭幕战不胜的纪录。东道主全场占据绝对优势，但终结能力仍有提升空间。南非的两张红牌彻底断送了追平的可能。墨西哥成为A组出线最大热门，同组还有韩国和捷克。</p>"
+        }
+      ],
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "利好",
+          "text": "墨西哥2-0揭幕战取胜，终结东道主揭幕战不胜历史"
+        },
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "利好",
+          "text": "Quinones首开纪录+Jimenez点射，双前锋各有建树"
+        },
+        {
+          "icon": "🔴",
+          "type": "bad",
+          "label": "利空",
+          "text": "南非9人应战+两张红牌，全场被压制"
+        },
+        {
+          "icon": "🟡",
+          "type": "neutral",
+          "label": "观察",
+          "text": "墨西哥35射仅8正，终结效率是隐患"
+        }
+      ],
+      "recommendations": []
+    },
+    {
       "home": "韩国",
       "away": "捷克",
       "date": "6/12",
@@ -289,7 +364,7 @@
           "icon": "🟡",
           "type": "neutral",
           "label": "观察",
-          "text": "B组四队同积1分，出线形势从赛前"瑞士一骑绝尘"变为全开放竞争"
+          "text": "B组四队同积1分，出线形势从赛前」瑞士一骑绝尘」变为全开放竞争"
         },
         {
           "icon": "🟢",
@@ -386,7 +461,7 @@
             "FOX Sports",
             "Yahoo Sports"
           ],
-          "fullReport": "<h3>🇧🇷 巴西 1-1 🇲🇦 摩洛哥 · 赛后分析</h3><p><b>比分：</b>巴西 1-1 摩洛哥</p><p><b>场地：</b>大都会人寿体育场，东卢瑟福，新泽西</p><p><b>进球：</b><br>⚽ 0-1 Ismael Saibari 21' (Brahim Diaz助攻，巧妙挑射)<br>⚽ 1-1 Vinicius Jr 32' (Bruno Guimaraes助攻，左路内切兜射远角)</p><p><b>赛后深度分析：</b></p><p><b>维尼修斯一人carry：</b>巴西全场进攻缺乏章法，但维尼修斯的个人能力创造了一个世界波。他在左路接到Bruno Guimaraes传球后，内切一步晃开空档，右脚兜射直挂远角，布努鞭长莫及。赛后BBC解说称"这才是金球奖级别的表现"。Al Jazeera标题："Vinicius drags low-key Brazil level"。</p><p><b>巴西整体令人担忧：</b>安切洛蒂的首场世界杯比赛暴露了严重问题。摩洛哥全场控球不落下风，创造了更多有威胁的进攻。缺少Neymar(仍在恢复小腿伤势)后，巴西前场缺乏创造性传球。Paqueta表现平平，拉菲尼亚被推上中路效果不佳。ESPN评价："Bailed out by Vinicius Junior, Brazil are still a work in progress"。</p><p><b>摩洛哥证明2022绝非偶然：</b>2022年四强摩洛哥展现了成熟的防守反击体系。Saibari的挑射体现了这支球队的冷静和天赋。Diaz、Hakimi等人的发挥令人印象深刻。摩洛哥主帅Ouahbi赛前说"不惧怕巴西"，全队用表现兑现了承诺。他们近两届世界杯面对巴西1胜1平保持不败！</p><p><b>C组形势：</b>苏格兰3分(1-0海地)领跑，巴西1分、摩洛哥1分，海地0分垫底。巴西下一轮对阵海地(6月19日)必须取胜。</p><p><b>安切洛蒂的挑战：</b>作为巴西历史上首位外籍主帅，安切洛蒂的首秀令人失望。罗纳尔多、卡洛斯、卡卡等02冠军队成员都在现场观战——这些传奇在场，更加重了这支"后Neymar时代"巴西的压力。</p>"
+          "fullReport": "<h3>🇧🇷 巴西 1-1 🇲🇦 摩洛哥 · 赛后分析</h3><p><b>比分：</b>巴西 1-1 摩洛哥</p><p><b>场地：</b>大都会人寿体育场，东卢瑟福，新泽西</p><p><b>进球：</b><br>⚽ 0-1 Ismael Saibari 21' (Brahim Diaz助攻，巧妙挑射)<br>⚽ 1-1 Vinicius Jr 32' (Bruno Guimaraes助攻，左路内切兜射远角)</p><p><b>赛后深度分析：</b></p><p><b>维尼修斯一人carry：</b>巴西全场进攻缺乏章法，但维尼修斯的个人能力创造了一个世界波。他在左路接到Bruno Guimaraes传球后，内切一步晃开空档，右脚兜射直挂远角，布努鞭长莫及。赛后BBC解说称」这才是金球奖级别的表现」。Al Jazeera标题：」Vinicius drags low-key Brazil level「。</p><p><b>巴西整体令人担忧：</b>安切洛蒂的首场世界杯比赛暴露了严重问题。摩洛哥全场控球不落下风，创造了更多有威胁的进攻。缺少Neymar(仍在恢复小腿伤势)后，巴西前场缺乏创造性传球。Paqueta表现平平，拉菲尼亚被推上中路效果不佳。ESPN评价：」Bailed out by Vinicius Junior, Brazil are still a work in progress「。</p><p><b>摩洛哥证明2022绝非偶然：</b>2022年四强摩洛哥展现了成熟的防守反击体系。Saibari的挑射体现了这支球队的冷静和天赋。Diaz、Hakimi等人的发挥令人印象深刻。摩洛哥主帅Ouahbi赛前说」不惧怕巴西」，全队用表现兑现了承诺。他们近两届世界杯面对巴西1胜1平保持不败！</p><p><b>C组形势：</b>苏格兰3分(1-0海地)领跑，巴西1分、摩洛哥1分，海地0分垫底。巴西下一轮对阵海地(6月19日)必须取胜。</p><p><b>安切洛蒂的挑战：</b>作为巴西历史上首位外籍主帅，安切洛蒂的首秀令人失望。罗纳尔多、卡洛斯、卡卡等02冠军队成员都在现场观战——这些传奇在场，更加重了这支」后Neymar时代」巴西的压力。</p>"
         }
       ],
       "changes": [
@@ -498,7 +573,7 @@
             "ESPN",
             "FOX Sports"
           ],
-          "fullReport": "<h3>🇭🇹 海地 0-1 🏴󠁧󠁢󠁳󠁣󠁴󠁿 苏格兰 · 赛后分析</h3><p><b>比分：</b>海地 0-1 苏格兰</p><p><b>场地：</b>吉列体育场，福克斯堡，马萨诸塞</p><p><b>进球：</b><br>⚽ 0-1 John McGinn 28' (射门被Bellegarde折射入网)</p><p><b>赛后深度分析：</b></p><p><b>历史性胜利：</b>苏格兰自1990年意大利世界杯2-1击败瑞典后，时隔36年再次在世界杯赢球！这也是他们自1998年法国世界杯后28年重返该项赛事的首胜。The Guardian标题："苏格兰重返世界杯的首胜"。Al Jazeera："McGinn折射破门为苏格兰赢得历史性胜利"。</p><p><b>McGinn的进球：</b>Aston Villa队长在第28分钟接球，在禁区边缘起脚射门，球打在Jean-Ricner Bellegarde的腿上折射入网。虽然有些运气成分，但McGinn的跑位和起脚时机非常果断。ESPN称这是他"典型的不华丽但致命"的进球。</p><p><b>McTominay恢复证明：</b>赛前因胃部不适被列为出战成疑的McTominay全场表现活跃，第17分钟几乎复制了世预赛对丹麦时的标志性后插上射门——但他的射门击中横梁上沿弹出。Napoli中场的复出让苏格兰中前场有了关键支点。</p><p><b>海地的表现：</b>海地虽有世界排名84位的差距(苏格兰排名前40)，但下半场打出了不错的机会。效力于法甲和英超的前锋Pierrot在第85分钟差点回头球扳平。Rubén Providence在边路的突破给苏格兰制造了不少麻烦。他们的下一场挑战是6月19日对阵巴西。</p><p><b>C组形势：</b>苏格兰3分领跑，巴西1分、摩洛哥1分，海地0分垫底。苏格兰下轮对阵摩洛哥(6月19日)若能取胜将基本锁定出线。</p>"
+          "fullReport": "<h3>🇭🇹 海地 0-1 🏴󠁧󠁢󠁳󠁣󠁴󠁿 苏格兰 · 赛后分析</h3><p><b>比分：</b>海地 0-1 苏格兰</p><p><b>场地：</b>吉列体育场，福克斯堡，马萨诸塞</p><p><b>进球：</b><br>⚽ 0-1 John McGinn 28' (射门被Bellegarde折射入网)</p><p><b>赛后深度分析：</b></p><p><b>历史性胜利：</b>苏格兰自1990年意大利世界杯2-1击败瑞典后，时隔36年再次在世界杯赢球！这也是他们自1998年法国世界杯后28年重返该项赛事的首胜。The Guardian标题：」苏格兰重返世界杯的首胜」。Al Jazeera：」McGinn折射破门为苏格兰赢得历史性胜利」。</p><p><b>McGinn的进球：</b>Aston Villa队长在第28分钟接球，在禁区边缘起脚射门，球打在Jean-Ricner Bellegarde的腿上折射入网。虽然有些运气成分，但McGinn的跑位和起脚时机非常果断。ESPN称这是他」典型的不华丽但致命」的进球。</p><p><b>McTominay恢复证明：</b>赛前因胃部不适被列为出战成疑的McTominay全场表现活跃，第17分钟几乎复制了世预赛对丹麦时的标志性后插上射门——但他的射门击中横梁上沿弹出。Napoli中场的复出让苏格兰中前场有了关键支点。</p><p><b>海地的表现：</b>海地虽有世界排名84位的差距(苏格兰排名前40)，但下半场打出了不错的机会。效力于法甲和英超的前锋Pierrot在第85分钟差点回头球扳平。Rubén Providence在边路的突破给苏格兰制造了不少麻烦。他们的下一场挑战是6月19日对阵巴西。</p><p><b>C组形势：</b>苏格兰3分领跑，巴西1分、摩洛哥1分，海地0分垫底。苏格兰下轮对阵摩洛哥(6月19日)若能取胜将基本锁定出线。</p>"
         }
       ],
       "changes": [
@@ -621,7 +696,7 @@
             "Hindustan Times",
             "FOX Sports"
           ],
-          "fullReport": "<h3>🇦🇺 澳大利亚 2-0 🇹🇷 土耳其 · 赛后分析</h3><p><b>比分：</b>澳大利亚 2-0 土耳其</p><p><b>场地：</b>BC Place体育场，温哥华（室内场馆）</p><p><b>进球：</b><br>⚽ 1-0 Nestory Irankunda 27' (反击中精妙停球+低射)<br>⚽ 2-0 Connor Metcalfe 75' (禁区外低射远角)</p><p><b>赛后深度分析：</b></p><p><b>本届最大冷门之一：</b>赔率+434的澳大利亚2-0完胜土耳其！赛前土耳其被市场一致看好(-148赔率)，但澳大利亚用完美的防守反击战术打了一场教科书般的比赛。ESPN评价："Australia stun Turkiye 2-0, upend Group D"。</p><p><b>Irankunda——澳洲新星：</b>19岁的Bayern慕尼黑天才Nestory Irankunda在第27分钟展现了令人惊叹的技术：土耳其的一次进攻被化解后，澳大利亚快速反击，Irankunda在左路接到传球后，一记精妙的停球将球卸下，随后低射远角破门。Yahoo Sports称赞："What a first touch!" 这是他的世界杯处子球。</p><p><b>Metcalfe锁定胜局：</b>第75分钟，Connor Metcalfe带球到禁区弧顶附近，突然起脚劲射，球弹地后钻入右下角，土耳其门将Cakir毫无办法。</p><p><b>Beach一战成名：</b>23岁的门将Patrick Beach在自己世界杯首秀中做出了8次扑救，包括扑出居勒尔的任意球、Bardakci的近距离射门等关键救险。赛后数据：全场零封！</p><p><b>土耳其的失望：</b>拥有居勒尔、恰尔汗奥卢、伊尔马兹的土耳其全队控球占优，但始终无法穿透澳大利亚的密集防守。居勒尔的任意球被Beach扑出，恰尔汗奥卢的中场调度也被限制。土耳其24年后重返世界杯的首秀以失利告终。</p><p><b>D组形势：</b>美国3分(+3)、澳大利亚3分(+2)、土耳其0分(-2)、巴拉圭0分(-3)。下一轮(6月19日)：美国vs澳大利亚直接交锋，土耳其vs巴拉圭背水一战。</p>"
+          "fullReport": "<h3>🇦🇺 澳大利亚 2-0 🇹🇷 土耳其 · 赛后分析</h3><p><b>比分：</b>澳大利亚 2-0 土耳其</p><p><b>场地：</b>BC Place体育场，温哥华（室内场馆）</p><p><b>进球：</b><br>⚽ 1-0 Nestory Irankunda 27' (反击中精妙停球+低射)<br>⚽ 2-0 Connor Metcalfe 75' (禁区外低射远角)</p><p><b>赛后深度分析：</b></p><p><b>本届最大冷门之一：</b>赔率+434的澳大利亚2-0完胜土耳其！赛前土耳其被市场一致看好(-148赔率)，但澳大利亚用完美的防守反击战术打了一场教科书般的比赛。ESPN评价：」Australia stun Turkiye 2-0, upend Group D「。</p><p><b>Irankunda——澳洲新星：</b>19岁的Bayern慕尼黑天才Nestory Irankunda在第27分钟展现了令人惊叹的技术：土耳其的一次进攻被化解后，澳大利亚快速反击，Irankunda在左路接到传球后，一记精妙的停球将球卸下，随后低射远角破门。Yahoo Sports称赞：」What a first touch!「 这是他的世界杯处子球。</p><p><b>Metcalfe锁定胜局：</b>第75分钟，Connor Metcalfe带球到禁区弧顶附近，突然起脚劲射，球弹地后钻入右下角，土耳其门将Cakir毫无办法。</p><p><b>Beach一战成名：</b>23岁的门将Patrick Beach在自己世界杯首秀中做出了8次扑救，包括扑出居勒尔的任意球、Bardakci的近距离射门等关键救险。赛后数据：全场零封！</p><p><b>土耳其的失望：</b>拥有居勒尔、恰尔汗奥卢、伊尔马兹的土耳其全队控球占优，但始终无法穿透澳大利亚的密集防守。居勒尔的任意球被Beach扑出，恰尔汗奥卢的中场调度也被限制。土耳其24年后重返世界杯的首秀以失利告终。</p><p><b>D组形势：</b>美国3分(+3)、澳大利亚3分(+2)、土耳其0分(-2)、巴拉圭0分(-3)。下一轮(6月19日)：美国vs澳大利亚直接交锋，土耳其vs巴拉圭背水一战。</p>"
         }
       ],
       "changes": [
@@ -1315,10 +1390,340 @@
         }
       ],
       "recommendations": []
+    },
+    {
+      "home": "西班牙",
+      "away": "佛得角",
+      "date": "6/16",
+      "time": "00:00",
+      "group": "H",
+      "result": "",
+      "analyses": [
+        {
+          "time": "2026-06-15T20:29:00+08:00",
+          "confidence": 82,
+          "isNew": true,
+          "goalCount": 4,
+          "possibleScores": [
+            "3-0",
+            "4-0",
+            "5-0"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "🇪🇸",
+              "text": "西班牙世界排名第2，2024欧洲杯冠军，整体实力碾压"
+            },
+            {
+              "type": "good",
+              "icon": "🔄",
+              "text": "Lamine Yamal和Nico Williams均已恢复训练，可能替补出场"
+            },
+            {
+              "type": "bad",
+              "icon": "🚑",
+              "text": "Fermin Lopez脚伤无缘整届世界杯"
+            },
+            {
+              "type": "neutral",
+              "icon": "🇨🇻",
+              "text": "佛得角人口不足60万，本届第三小参赛国，非洲杯曾进8强"
+            },
+            {
+              "type": "good",
+              "icon": "⚽",
+              "text": "Rodri+PEdri+Gabvi中场组合控制力极强"
+            }
+          ],
+          "text": "【赛前分析】西班牙vs佛得角，H组首轮最大实力差距的对决。西班牙世界第2 vs 佛得角第67。Yamal和Williams均已恢复训练，但首发可能性不大，预计Ferran Torres+Oyarzabal首发。佛得角26人全部旅欧，队长Ryan Mendes是核心球员。",
+          "sources": [
+            "Evening Standard",
+            "ESPN",
+            "Sports Mole",
+            "RotoWire"
+          ],
+          "fullReport": "<h3>🇪🇸 西班牙 vs 🇨🇻 佛得角 · 赛前分析</h3><p><b>时间：</b>6月16日 00:00 CST</p><p><b>场地：</b>梅赛德斯-奔驰体育场，亚特兰大（室内场馆）</p><p><b>赛前深度分析：</b></p><p><b>实力鸿沟：</b>西班牙世界排名第2，是2024年欧洲杯冠军，拥有Rodri、Pedri、Gavi等顶级中场。佛得角世界排名第67，人口不到60万，是本届世界杯第三小参赛国（仅大于库拉索和冰岛）。两队实力悬殊。</p><p><b>Yamal和Williams的伤病情况：</b>两位边锋均因腿筋伤势缺席了赛季末的比赛。Luis de la Fuente表示Yamal可能只会踢\"几分钟\"。预计首发边锋将是Ferran Torres和Mikel Oyarzabal。Victor Munoz也已恢复训练，可替补待命。Fermin Lopez因脚部骨折确定缺席整届世界杯。</p><p><b>佛得角的爆冷机会：</b>佛得角自2013年以来两度打入非洲杯8强，证明他们具备一定的竞争力。全部26名球员在海外踢球（23人在欧洲）。队长Ryan Mendes是队史射手王兼出场王。但整体实力与西班牙差距太大。</p><p><b>战术展望：</b>西班牙将主导控球，预计控球率在70%以上。佛得角将摆出铁桶阵寻求反击机会。定位球可能是佛得角唯一的得分方式。</p>"
+        }
+      ],
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "利好",
+          "text": "Yamal和Williams均已恢复训练，攻击线深度有保障"
+        },
+        {
+          "icon": "🔴",
+          "type": "bad",
+          "label": "利空",
+          "text": "Fermin Lopez脚伤缺席整届世界杯，中场轮换深度下降"
+        },
+        {
+          "icon": "🟡",
+          "type": "neutral",
+          "label": "观察",
+          "text": "Yamal和Williams首发出场可能性不大，替补待命"
+        },
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "利好",
+          "text": "德容恩中场组合Rodri+Pedri+Gavi经验丰富，佛得角难以突破"
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "home": "比利时",
+      "away": "埃及",
+      "date": "6/16",
+      "time": "03:00",
+      "group": "G",
+      "result": "",
+      "analyses": [
+        {
+          "time": "2026-06-15T20:29:00+08:00",
+          "confidence": 73,
+          "isNew": true,
+          "goalCount": 3,
+          "possibleScores": [
+            "2-0",
+            "2-1",
+            "1-0"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "🇧🇪",
+              "text": "De Bruyne确认首发，比利时黄金一代核心仍在"
+            },
+            {
+              "type": "good",
+              "icon": "🇧🇪",
+              "text": "比利时预选赛8场进29球，攻击力恐怖"
+            },
+            {
+              "type": "bad",
+              "icon": "🇪🇬",
+              "text": "埃及预选赛6场0失球，防守纪律极为出色"
+            },
+            {
+              "type": "good",
+              "icon": "🇪🇬",
+              "text": "Mohamed Salah状态火热，是埃及反击的唯一指望"
+            },
+            {
+              "type": "neutral",
+              "icon": "🤝",
+              "text": "两队历史交锋4次全为友谊赛，埃及2胜1平1负占优"
+            }
+          ],
+          "text": "【赛前分析】比利时vs埃及，G组首轮焦点对决！De Bruyne与Salah的老友对决。比利时黄金一代最后一届大赛，预选赛29球攻击力恐怖。埃及预选赛0失球，防守极为出色。两队从未在正式比赛交手。",
+          "sources": [
+            "OneFootball",
+            "RotoWire",
+            "TotalFootballAnalysis"
+          ],
+          "fullReport": "<h3>🇧🇪 比利时 vs 🇪🇬 埃及 · 赛前分析</h3><p><b>时间：</b>6月16日 03:00 CST</p><p><b>场地：</b>流明体育场，西雅图（户外场地）</p><p><b>赛前深度分析：</b></p><p><b>黄金一代的最后一舞：</b>比利时在2022年世界杯小组赛出局后，经历换血期。但De Bruyne（34岁）、Lukaku和Courtois仍在阵中。Rudi Garcia执教后比利时进攻明显改善，预选赛8场29球。但面对强队时的防守仍是软肋——1-1平墨西哥暴露了这一点。</p><p><b>埃及的壁垒：</b>Hossam Hassan带领的埃及预选赛6场0失球，防守纪律登峰造极。Salah依然是进攻核心，但Omar Marmoush的崛起给埃及反击增加了第二维度。2025年非洲杯埃及打入半决赛，证明该队已具备硬仗能力。</p><p><b>De Bruyne vs Salah——英超老友记：</b>两位前利物浦和曼城的老对手再次在世界杯舞台相遇。De Bruyne赛前表示：\"和Salah再次竞争，就像回到旧日时光。\"</p><p><b>战术预测：</b>比利时控球占优，De Bruyne在防线和中场之间寻找空隙。埃及将保持紧密防守，利用Salah的速度打反击。比赛可能由定位球或失误决定。</p>"
+        }
+      ],
+      "changes": [
+        {
+          "icon": "🟡",
+          "type": "neutral",
+          "label": "观察",
+          "text": "De Bruyne vs Salah——世界级中场和前锋的正面交锋"
+        },
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "利好",
+          "text": "比利时预选赛29球，攻击线多点开花"
+        },
+        {
+          "icon": "🔴",
+          "type": "bad",
+          "label": "利空",
+          "text": "埃及预选赛0失球，防守纪律极强，比利时攻坚面临挑战"
+        },
+        {
+          "icon": "🟡",
+          "type": "neutral",
+          "label": "观察",
+          "text": "两队首次正式比赛交锋，历史友谊赛埃及2胜1平1负占优"
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "home": "沙特阿拉伯",
+      "away": "乌拉圭",
+      "date": "6/16",
+      "time": "06:00",
+      "group": "H",
+      "result": "",
+      "analyses": [
+        {
+          "time": "2026-06-15T20:29:00+08:00",
+          "confidence": 68,
+          "isNew": true,
+          "goalCount": 2,
+          "possibleScores": [
+            "0-2",
+            "1-2",
+            "0-1"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "🇺🇾",
+              "text": "Valverde+Ugarte中场组合实力碾压，Bielsa高位压迫战术"
+            },
+            {
+              "type": "good",
+              "icon": "🇺🇾",
+              "text": "Araujo+Gimenez中卫搭档经验丰富，沙特难以突破"
+            },
+            {
+              "type": "bad",
+              "icon": "🇸🇦",
+              "text": "沙特赛前4场热身赛输了4场，含0-4负埃及"
+            },
+            {
+              "type": "neutral",
+              "icon": "🔄",
+              "text": "沙特4月刚换帅Donis，战术连续性存疑"
+            },
+            {
+              "type": "good",
+              "icon": "🇸🇦",
+              "text": "Salem Al-Dawsari是沙特唯一爆点，个人能力可改变比赛"
+            }
+          ],
+          "text": "【赛前分析】沙特阿拉伯vs乌拉圭，H组首轮。乌拉圭实力占优但热身赛状态仅1胜（2-1乌兹别克斯坦，其他4场3平1负含1-5负美国）。沙特热身赛4连败，4月刚换帅。Bielsa的乌拉圭面对密集防守能否有效破门是最大看点。",
+          "sources": [
+            "OneFootball",
+            "FIFA.com",
+            "WhoScored"
+          ],
+          "fullReport": "<h3>🇸🇦 沙特阿拉伯 vs 🇺🇾 乌拉圭 · 赛前分析</h3><p><b>时间：</b>6月16日 06:00 CST</p><p><b>场地：</b>硬石体育场，迈阿密花园（户外）</p><p><b>赛前深度分析：</b></p><p><b>Bielsa的乌拉圭体系：</b>Marcelo Bielsa自2023年执教乌拉圭以来，建立了高强度压迫+纵向快速的风格。Valverde在右路的内收跑动是进攻关键。但热身赛1-5惨败美国暴露了高位防线被打反击的致命弱点。乌拉圭近5场热身赛仅1胜，状态成疑。</p><p><b>沙特困境：</b>沙特热身赛4连败，0-4负埃及令人震惊。4月换帅Donis破坏了战术连续性。唯一亮点是队长Salem Al-Dawsari的个人能力。沙特2018世界杯曾2-1逆转埃及，2022世界杯2-1逆转阿根廷——他们有爆冷传统。</p><p><b>历史交锋：</b>两队曾在2018世界杯小组赛相遇，乌拉圭1-0小胜。另有一场2002年友谊赛沙特3-2胜出。</p><p><b>关键对位：</b>Valverde vs Al-Dawsari是比赛关键。如果Valverde前插被限制，沙特就有机会。乌拉圭的定位球（Araujo+Gimenez头球）是主要进攻武器。</p>"
+        }
+      ],
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "利好",
+          "text": "乌拉圭整体实力占优，Valverde+Ugarte+Bentancur中场深度出色"
+        },
+        {
+          "icon": "🔴",
+          "type": "bad",
+          "label": "利空",
+          "text": "乌拉圭热身赛1-5惨败美国，防线被打反击是致命弱点"
+        },
+        {
+          "icon": "🔴",
+          "type": "bad",
+          "label": "利空",
+          "text": "沙特热身赛4连败+0-4负埃及，状态糟糕"
+        },
+        {
+          "icon": "🟡",
+          "type": "neutral",
+          "label": "观察",
+          "text": "沙特换帅后战术体系未定，2018和2022均有爆冷表现"
+        }
+      ],
+      "recommendations": []
+    },
+    {
+      "home": "伊朗",
+      "away": "新西兰",
+      "date": "6/16",
+      "time": "09:00",
+      "group": "G",
+      "result": "",
+      "analyses": [
+        {
+          "time": "2026-06-15T20:29:00+08:00",
+          "confidence": 66,
+          "isNew": true,
+          "goalCount": 2,
+          "possibleScores": [
+            "1-0",
+            "2-0",
+            "1-1"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "🇮🇷",
+              "text": "Mehdi Taremi是场上最具威胁的球员，预选赛5球"
+            },
+            {
+              "type": "good",
+              "icon": "🇮🇷",
+              "text": "伊朗6次世界杯经验远胜新西兰（仅3次）"
+            },
+            {
+              "type": "bad",
+              "icon": "🚑",
+              "text": "Sardar Azmoun因场外原因被排除出大名单，锋线深度大减"
+            },
+            {
+              "type": "bad",
+              "icon": "⚠️",
+              "text": "伊朗国内联赛因地区冲突自3月起停摆，国内球员缺乏比赛状态"
+            },
+            {
+              "type": "neutral",
+              "icon": "🇳🇿",
+              "text": "新西兰核心Chris Wood膝伤刚恢复，但预计首发"
+            }
+          ],
+          "text": "【赛前分析】伊朗vs新西兰，G组首轮。伊朗是更被看好的球队（赔率-118），Taremi是进攻核心。但Azmoun的缺席和国内联赛停摆是重大隐患。新西兰16年后重返世界杯，目标复制2010年三战全平的\"不败出局\"模式。Chris Wood是主要威胁。",
+          "sources": [
+            "Squawka",
+            "OneFootball",
+            "WhoScored",
+            "Racing Post"
+          ],
+          "fullReport": "<h3>🇮🇷 伊朗 vs 🇳🇿 新西兰 · 赛前分析</h3><p><b>时间：</b>6月16日 09:00 CST</p><p><b>场地：</b>SoFi体育场，洛杉矶（室内场馆）</p><p><b>赛前深度分析：</b></p><p><b>伊朗的历史机遇：</b>6次参加世界杯从未小组出线，这可能是黄金一代最后的机会。Taremi是进攻绝对核心。但Azmoun被排除出大名单（因与迪拜统治者合影引发争议）严重削弱了锋线深度。更致命的是伊朗国内联赛因中东地区冲突自3月停摆，Persepolis和Esteghlal等俱乐部的球员缺乏比赛状态。</p><p><b>新西兰的回归：</b>时隔16年重返世界杯。2010年他们三战全平成为唯一不败出局的球队。此次目标依然是\"守平争胜\"。Chris Wood是进攻核心且头球威胁巨大，但他刚从膝伤恢复，状态存疑。Liberato Cacace和Marko Stamenic组成的中场有一定控制力。</p><p><b>比赛关键：</b>伊朗将控球主导进攻，面对新西兰的密集防守如何破局是最大考验。新西兰将依靠定位球（Wood头球）和反击机会。伊朗的危险在于——如果久攻不下，新西兰的顽强防守可能制造冷门。</p><p><b>预测：</b>伊朗小胜概率最大，但平局绝非意外。</p>"
+        }
+      ],
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "利好",
+          "text": "Taremi状态出色，伊朗整体实力优于新西兰"
+        },
+        {
+          "icon": "🔴",
+          "type": "bad",
+          "label": "利空",
+          "text": "Azmoun场外风波被排除出名单，外加国内联赛停摆，进攻和状态受损"
+        },
+        {
+          "icon": "🟡",
+          "type": "neutral",
+          "label": "观察",
+          "text": "Chris Wood膝伤刚愈状态未知，但他是新西兰最大威胁"
+        },
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "利好",
+          "text": "伊朗6次世界杯经验丰富，新西兰仅第三次参赛"
+        }
+      ],
+      "recommendations": []
     }
   ],
-  "analysisCount": 22,
-  "matchCount": 12,
-  "lastUpdate": "2026-06-15T16:37:00+08:00",
+  "analysisCount": 28,
+  "matchCount": 16,
+  "lastUpdate": "2026-06-15T20:29:00+08:00",
   "rawReportFile": "reports.json"
 }
