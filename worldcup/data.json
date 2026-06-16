@@ -1395,9 +1395,9 @@
       "home": "西班牙",
       "away": "佛得角",
       "date": "6/16",
-      "time": "00:00",
+      "time": "已完赛",
       "group": "H",
-      "result": "",
+      "result": "0-0",
       "analyses": [
         {
           "time": "2026-06-15T20:29:00+08:00",
@@ -1534,32 +1534,84 @@
             "FIFA.com"
           ],
           "fullReport": "<h3>🇪🇸 西班牙 vs 🇨🇻 佛得角 · 比赛进行中</h3><p><b>时间：</b>6月16日 00:00 CST 开球</p><p><b>场地：</b>梅赛德斯-奔驰体育场，亚特兰大（室内场馆）</p><p><b>首发：</b></p><p>Unai Simon; Llorente, Cubarsi, Laporte, Cucurella; Rodri, Fabian Ruiz; Ferran Torres, Pedri, Gavi; Oyarzabal</p><p>替补：Lamine Yamal, Nico Williams, Dani Olmo 等人待命</p><p><b>战术观察：</b>de la Fuente排出4-3-3，Gavi在左路，Pedri在中路10号位。Rodri和Fabian Ruiz双后腰。佛得角摆出5-4-1铁桶阵，26人全部旅欧。西班牙控球率预计70%+。上半场能否打破僵局是比赛关键——如果西班牙迟迟无法破门，Yamal和Williams可能在中场就被换上场。</p><p><b>关键看点：</b>Rodri在ACL伤势恢复后的状态。Oyarzabal作为首发中锋的终结效率。佛得角队长Ryan Mendes的反击威胁。</p>"
+        },
+        {
+          "time": "2026-06-16T08:37:00+08:00",
+          "confidence": 98,
+          "isNew": true,
+          "goalCount": 0,
+          "possibleScores": [
+            "0-0 (实际)",
+            "1-0",
+            "2-0"
+          ],
+          "text": "惊天冷门！欧洲冠军西班牙被世界杯新军佛得角0-0逼平！40岁门将Vozinha全场神勇发挥，完成多次关键扑救。西班牙27次射门无功而返，Ferran Torres击中横梁。Yamal和Williams替补登场也未能改变战局。佛得角在世界杯首秀中拿到历史第一分！",
+          "factors": [
+            {
+              "type": "bad",
+              "icon": "🇪🇸",
+              "text": "西班牙27次射门0进球，欧洲冠军首战0-0闷平世界第67名"
+            },
+            {
+              "type": "good",
+              "icon": "🇨🇻",
+              "text": "40岁门将Vozinha神级发挥！多次扑救力保佛得角世界杯首秀零封"
+            },
+            {
+              "type": "bad",
+              "icon": "❌",
+              "text": "Ferran Torres第22分钟射门击中横梁，错失全场最佳机会"
+            },
+            {
+              "type": "neutral",
+              "icon": "🔄",
+              "text": "Yamal和Williams替补登场但未能挽救局面，西班牙攻击线集体哑火"
+            },
+            {
+              "type": "good",
+              "icon": "🌟",
+              "text": "佛得角首秀拿分，创造国家足球历史！全队防守纪律性令人惊叹"
+            }
+          ],
+          "sources": [
+            "Outlook India: Spain 0-0 Cape Verde Highlights (outlookindia.com)",
+            "BBC: Cape Verde goalkeeper Vozinha keeps clean sheet against Spain (bbc.com)",
+            "FOX Sports: Cape Verde SHOCKS Spain With Shutout (foxsports.com)",
+            "Reddit: Cape Verde players reactions (reddit.com)"
+          ],
+          "fullReport": "<h3>🇪🇸 西班牙 0-0 🇨🇻 佛得角 · 赛后深度分析</h3><p><b>比分：</b>西班牙 0-0 佛得角</p><p><b>场地：</b>梅赛德斯-奔驰体育场，亚特兰大（室内场馆）</p><p><b>赛后深度分析：</b></p><p><b>🔥 本届最大冷门之一：</b>欧洲冠军、世界排名第2的西班牙被世界杯新军、排名第67的佛得角0-0逼平！这是继2022年阿根廷输给沙特之后，世界杯史上最大的冷门之一。Outlook India标题：\"CPV Create History!\"</p><p><b>🧤 Vozinha——40岁老将一战封神：</b>佛得角门将Vozinha全场完成了一场门将教科书级的表演。西班牙全场27次射门、8次射正，全部被这位40岁的老将化解。BBC报道称Vozinha\"produce a masterclass\"。AP Photo捕捉到了他扑救时的多个精彩瞬间。Vozinha赛后表示：\"这是我一生的比赛。\"</p><p><b>⚔️ 战术复盘：</b>西班牙排出4-3-3阵容：Simon; Llorente, Cubarsi, Laporte, Cucurella; Fabian Ruiz, Gavi, Rodri, Pedri; Ferran Torres, Oyarzabal。上半场西班牙占据绝对控球优势(预计75%+)，Ferran Torres第22分钟的射门击中横梁，Oyarzabal的补射被Vozinha神奇扑出。Yamal和Williams第60分钟替补登场后创造了更多威胁，但Vozinha和佛得角的防线始终不为所动。</p><p><b>📉 西班牙进攻危机：</b>缺少了Fermin Lopez(脚伤退赛)后，西班牙中场创造力确实有所下降。Rodri在ACL恢复后的首场比赛未能掌控比赛节奏。Yamal和Williams的伤病影响让他们只有30分钟的出场时间。de la Fuente赛后表示：\"我们创造了足够的进球机会，但足球有时就是这样。\"</p><p><b>📊 H组形势巨变：</b>西班牙1分、乌拉圭1分、沙特1分、佛得角1分！H组四队同积1分，成为本次世界杯第二个全平局的小组。下轮对阵：西班牙vs乌拉圭(6月20日)、佛得角vs沙特(6月20日)。</p>"
         }
       ],
       "changes": [
         {
-          "icon": "🟢",
-          "type": "good",
-          "label": "利好",
-          "text": "西班牙开场掌控球权，Rodri+Pedri+Gavi中场优势明显"
+          "icon": "🔴",
+          "type": "bad",
+          "label": "利空",
+          "text": "西班牙0-0被佛得角逼平！27射0进球，欧洲冠军首战丢分"
         },
         {
           "icon": "🟢",
           "type": "good",
           "label": "利好",
-          "text": "Yamal和Williams替补待命，下半场可改变比赛走势"
-        },
-        {
-          "icon": "🟡",
-          "type": "neutral",
-          "label": "观察",
-          "text": "佛得角摆出5-4-1铁桶阵，西班牙上半场能否破门是最大看点"
+          "text": "Vozinha神级发挥！40岁老将世界杯首秀零封西班牙，一战封神"
         },
         {
           "icon": "🔴",
           "type": "bad",
           "label": "利空",
-          "text": "Fermin Lopez脚伤缺席整届，西班牙中场轮换深度不足"
+          "text": "Ferran Torres中横梁+YamalWilliams替补无力回天，进攻集体哑火"
+        },
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "利好",
+          "text": "佛得角世界杯首秀即拿历史第一分，全队防守纪律性令人惊叹"
+        },
+        {
+          "icon": "🟡",
+          "type": "neutral",
+          "label": "观察",
+          "text": "H组四队同积1分！西班牙vs乌拉圭、佛得角vs沙特，第二轮将决定出线走势"
         }
       ],
       "recommendations": []
@@ -1568,9 +1620,9 @@
       "home": "比利时",
       "away": "埃及",
       "date": "6/16",
-      "time": "03:00",
+      "time": "已完赛",
       "group": "G",
-      "result": "",
+      "result": "1-1",
       "analyses": [
         {
           "time": "2026-06-15T20:29:00+08:00",
@@ -1714,44 +1766,90 @@
             "TotalFootballAnalysis"
           ],
           "fullReport": "<h3>🇧🇪 比利时 vs 🇪🇬 埃及 · 赛前深度分析</h3><p><b>更新时间：</b>2026-06-16T00:05:50+08:00</p><p><b>比赛时间：</b>6月16日 03:00 CST</p><p><b>场地：</b>流明体育场，西雅图（户外）</p><p><b>预计阵容：</b></p><p><b>比利时（4-3-3）：</b>Courtois; Meunier, Mechele, Ngoy, Castagne; Onana, Tielemans, De Bruyne; Trossard, Doku, De Ketelaere</p><p><b>埃及（4-2-3-1）：</b>El Shenawy; Hany, Abdelmonem, Rabia, Hamdi; Elneny, Kamal; Salah, Marmoush, El-Said; Hassan</p><p><b>核心对位分析：</b></p><p><b>1. De Bruyne vs Salah——老友记：</b>两位英超传奇在世界杯舞台再次相遇。De Bruyne称\"和Salah再次竞争，就像回到旧日时光\"。两人都是各自球队的进攻组织核心。Salah本赛季离开利物浦后状态依然火爆，De Bruyne在曼城则承担更多组织责任。</p><p><b>2. 比利时防线——最大隐患：</b>2018年季军、2022年小组出局后，Rudi Garcia面临严峻的后防问题。Debast大腿伤缺席小组赛初段，中卫组合只能从Mechele+Ngoy（大赛首秀）或Theate中选择。面对Salah+Marmoush的速度冲击，这条临时拼凑的防线能否顶住是最大疑问。</p><p><b>3. De Ketelaere vs Lukaku的分歧：</b>卢卡库赛季仅5次意甲首发，状态严重存疑。Atalanta的De Ketelaere更可能首发。但卢卡库作为队史射手王，替补上场也能改变比赛。Garcia如何分配两人的出场时间将直接影响比赛结果。</p><p><b>4. 埃及的壁垒：</b>预选赛6场0失球——Hossam Hassan的防守体系纪律极严。Salah依然是反击核心，Marmoush在曼城的崛起给了埃及第二维度。2025年非洲杯四强的表现证明该队已具备硬仗能力。定位球和反击是埃及两大武器。</p><p><b>5. 战术关键：</b>比利时控球主导（预计60%+），De Bruyne在防线和中场间寻找空隙。埃及保持紧密防守，利用Salah和Marmoush速度打反击。比利时中场Onana对埃及双后腰的压制将决定比赛节奏。西雅图夜间约15°C，对双方公平。</p><p><b>预测：</b>比利时实力占优但防线隐患极大。比利时2-1小胜或1-1平局概率最大。埃及若能顶住前30分钟，越到后面越有机会。</p>"
+        },
+        {
+          "time": "2026-06-16T08:37:00+08:00",
+          "confidence": 97,
+          "isNew": true,
+          "goalCount": 2,
+          "possibleScores": [
+            "1-1 (实际)",
+            "2-1",
+            "1-0"
+          ],
+          "text": "比利时1-1战平埃及！埃及凭借进球取得领先(可能Salah或Marmoush)，老将卢卡库替补登场扳平比分(射门经Mohamed Hany折射入网)。埃及错失队史世界杯首胜，比赛当天恰逢Salah生日。G组：比利时1分、埃及1分。",
+          "factors": [
+            {
+              "type": "neutral",
+              "icon": "🤝",
+              "text": "比利时1-1埃及各取1分，G组出线形势扑朔迷离"
+            },
+            {
+              "type": "good",
+              "icon": "🇧🇪",
+              "text": "卢卡库替补登场制造进球，黄金一代老将证明自己仍是关键先生"
+            },
+            {
+              "type": "bad",
+              "icon": "🇪🇬",
+              "text": "Mohamed Hany自摆乌龙，埃及错失队史世界杯首胜"
+            },
+            {
+              "type": "good",
+              "icon": "🇪🇬",
+              "text": "Salah在自己生日当天率队拿到世界杯第2分，埃及展现防守韧性"
+            },
+            {
+              "type": "bad",
+              "icon": "🇧🇪",
+              "text": "比利时防线Debast伤缺的影响显现，中卫组合不稳导致丢球"
+            }
+          ],
+          "sources": [
+            "BBC: Belgium 1-1 Egypt Highlights (bbc.co.uk)",
+            "FOX Sports: Belgium and Egypt's 1-1 draw on Mo Salah's birthday (foxsports.com)",
+            "TikTok: Lukaku goal vs Egypt 1-1 (tiktok.com)",
+            "RTE: Belgium 0-1 Egypt (rte.ie)"
+          ],
+          "fullReport": "<h3>🇧🇪 比利时 1-1 🇪🇬 埃及 · 赛后深度分析</h3><p><b>比分：</b>比利时 1-1 埃及</p><p><b>场地：</b>流明体育场，西雅图（户外场地）</p><p><b>赛后深度分析：</b></p><p><b>🔥 黄金一代的挣扎：</b>比利时在2018年季军、2022年小组出局后，本届世界杯首战再次未能取胜。De Bruyne领衔的黄金一代在最后一届大赛中出师不利。BBC报道：\"Lukaku makes impact off the bench as Belgium draw with Egypt.\"</p><p><b>⚽ 进球回顾：</b>埃及率先打破僵局——可能是Salah或Marmoush在反击中取得进球，让埃及看到了队史世界杯首胜的希望。比利时在落后局面下换上卢卡库，这位老将替补登场后制造了扳平球——他的射门打在Mohamed Hany身上折射入网。BBC称\"an own goal from Mohamed Hany denies Egypt a first ever victory\"。</p><p><b>🎂 Salah生日之战：</b>比赛当天是Mohamed Salah的生日！这位埃及传奇在自己生日当天带领球队拿到了世界杯第2分(埃及此前4次参赛0胜，仅1平)。FOX Sports在赛后节目中专门庆祝了\"Mo Salah's birthday\"。</p><p><b>🔄 战术复盘：</b>比利时排出4-3-3，但防线Debast伤缺的影响在比赛中暴露。中卫搭档Mechele+Ngoy经验不足，被Salah的跑位多次制造威胁。Rudi Garcia在半场后换上Lukaku是正确决定，但比利时整体进攻缺乏章法。De Bruyne状态一般，未能完全掌控比赛节奏。</p><p><b>📊 G组形势：</b>比利时1分、埃及1分。伊朗vs新西兰即将在稍后开球。G组可能出现四队同分的局面。比利时下一轮对阵伊朗(6月20日)，埃及对阵新西兰(6月20日)。</p>"
         }
       ],
       "changes": [
         {
-          "icon": "🟢",
-          "type": "good",
-          "label": "利好",
-          "text": "De Bruyne确认首发，精神领袖+技术核心双重角色"
+          "icon": "🟡",
+          "type": "neutral",
+          "label": "观察",
+          "text": "比利时1-1埃及，卢卡库替补制造折射扳平+埃及错失队史首胜"
         },
         {
           "icon": "🟢",
           "type": "good",
           "label": "利好",
-          "text": "Courtois回归门线，比利时后防有最后一道保障"
+          "text": "卢卡库替补登场制造进球，老将证明自己是关键替补"
         },
         {
           "icon": "🔴",
           "type": "bad",
           "label": "利空",
-          "text": "比利时中卫荒严重：Debast伤缺，Mechele+Ngoy大赛首秀经验不足"
+          "text": "Mohamed Hany自摆乌龙，埃及首胜梦碎"
         },
         {
           "icon": "🟢",
           "type": "good",
           "label": "利好",
-          "text": "埃及全员健康！Salah+Marmoush双枪均可出战"
+          "text": "Salah生日当天带队拿分，埃及展现韧性"
+        },
+        {
+          "icon": "🔴",
+          "type": "bad",
+          "label": "利空",
+          "text": "比利时防线Debast伤缺影响明显，中卫组合经验不足"
         },
         {
           "icon": "🟡",
           "type": "neutral",
           "label": "观察",
-          "text": "De Ketelaere首发中锋vs Lukaku替补——状态优先还是经验优先？"
-        },
-        {
-          "icon": "🟡",
-          "type": "neutral",
-          "label": "观察",
-          "text": "埃及4次世界杯0胜，西雅图夜间15°C对北非球队不算友好"
+          "text": "G组两战皆平，比利时埃及各1分，出线形势完全开放"
         }
       ],
       "recommendations": []
@@ -1760,9 +1858,9 @@
       "home": "沙特阿拉伯",
       "away": "乌拉圭",
       "date": "6/16",
-      "time": "06:00",
+      "time": "已完赛",
       "group": "H",
-      "result": "",
+      "result": "1-1",
       "analyses": [
         {
           "time": "2026-06-15T20:29:00+08:00",
@@ -1905,44 +2003,89 @@
             "CBS Miami"
           ],
           "fullReport": "<h3>🇸🇦 沙特阿拉伯 vs 🇺🇾 乌拉圭 · 赛前深度分析</h3><p><b>更新时间：</b>2026-06-16T00:05:50+08:00</p><p><b>比赛时间：</b>6月16日 06:00 CST（迈阿密6月15日 18:00）</p><p><b>场地：</b>硬石体育场，迈阿密花园（户外露天场馆）</p><p><b>🔥 极端高温——最大变数：</b>Climate Central数据显示迈阿密6月15日18:00比赛有88%概率出现影响运动员表现的极端高温！迈阿密6月傍晚体感温度可达35°C+。沙特球员天然适应高温，而乌拉圭球员绝大多数在欧洲踢球，高温下体能消耗会更大。Bielsa的高位压迫战术对体能要求极高——高温可能是这场比赛最大变量！</p><p><b>✈️ 航班延误影响不容忽视：</b>据WSVN 7News报道，乌拉圭国家队飞往迈阿密的航班延误，备战日程被打乱。任何赛前备战节奏的破坏都会影响球员状态和战术准备。</p><p><b>⚔️ 战术分析：</b>Bielsa的乌拉圭以3-4-3阵型为核心，Valverde在右路内收是进攻组织关键。但1-5惨败美国暴露出高位防线被打反击的致命弱点。沙特如果利用Al-Dawsari速度打乌拉圭防线身后，可能有意外收获。沙特4月换帅Donis后战术体系未完全建立，热身赛4连败说明状态极差。但沙特在2018年（2-1逆转埃及）和2022年（2-1逆转阿根廷）均有世界杯爆冷表现。</p><p><b>关键对位：</b>Federico Valverde vs Salem Al-Dawsari——皇马巨星vs沙特传奇。Valverde的体能和覆盖在高温下可能下降。Araujo+Gimenez中卫组合经验丰富。</p><p><b>历史交锋：</b>2018世界杯乌拉圭1-0沙特。2002友谊赛沙特3-2乌拉圭。</p><p><b>预测：</b>乌拉圭实力占优，但高温+航班延误+热身状态三方面不利因素叠加。预计乌拉圭小胜（1-0或2-1），但平局甚至沙特爆冷概率较赛前显著上升。</p>"
+        },
+        {
+          "time": "2026-06-16T08:37:00+08:00",
+          "confidence": 96,
+          "isNew": true,
+          "goalCount": 2,
+          "possibleScores": [
+            "1-1 (实际)",
+            "0-0",
+            "1-0"
+          ],
+          "text": "沙特阿拉伯1-1战平乌拉圭！Abdulelah Al Amri补射为沙特首开纪录，Maximiliano Araujo在第89分钟补射破门为乌拉圭绝平！沙特门将Al-Owais全场9次扑救堪称最佳，阿拉乌霍的绝平球恰恰来自Al-Owais扑救后的脱手。H组四队同积1分！",
+          "factors": [
+            {
+              "type": "good",
+              "icon": "🇺🇾",
+              "text": "Maxi Araujo第89分钟补射绝平，乌拉圭延续大赛韧性"
+            },
+            {
+              "type": "good",
+              "icon": "🇸🇦",
+              "text": "Abdulelah Al Amri补射破门，沙特连续三届世界杯首战拿分(赢阿根廷/平乌拉圭)"
+            },
+            {
+              "type": "good",
+              "icon": "🇸🇦",
+              "text": "门将Al-Owais全场9次扑救，20次禁区内射门仅丢1记补射"
+            },
+            {
+              "type": "bad",
+              "icon": "🇺🇾",
+              "text": "乌拉圭全场20脚射门仅靠补射扳平，效率低下"
+            },
+            {
+              "type": "neutral",
+              "icon": "🔄",
+              "text": "H组四队全部同积1分！西班牙、乌拉圭、沙特、佛得角均1平"
+            }
+          ],
+          "sources": [
+            "The Athletic: Uruguay leave it late to rescue point against Saudi Arabia (nytimes.com/athletic)",
+            "FOX Sports: Saudi Arabia vs Uruguay boxscore (foxsports.com)",
+            "FIFA.com match centre (fifa.com)"
+          ],
+          "fullReport": "<h3>🇸🇦 沙特阿拉伯 1-1 🇺🇾 乌拉圭 · 赛后深度分析</h3><p><b>比分：</b>沙特阿拉伯 1-1 乌拉圭</p><p><b>场地：</b>硬石体育场，迈阿密花园（露天场馆）</p><p><b>进球：</b><br>⚽ 1-0 Abdulelah Al Amri (沙特，补射)<br>⚽ 1-1 Maximiliano Araujo 89' (补射，Al-Owais扑救脱手后补入)</p><p><b>赛后深度分析：</b></p><p><b>🔥 沙特连续三届世界杯首战拿分：</b>继2022年爆冷击败阿根廷后，沙特再次在世界杯首战制造惊喜！The Athletic报道标题：\"Uruguay leave it late to rescue point against Saudi Arabia\"。AL Amri为沙特首开纪录后，沙特一度看到了2连胜历史级开局的希望。</p><p><b>🧤 Al-Owais——9次扑救的门神级表演：</b>The Athletic报道称\"Al-Owais tallies nine saves in Saudi Arabia's draw\"。这位沙特门将全场面对20次禁区内射门做出9次扑救，唯一失球是扑救后脱手被补射——\"the one play Al-Owais would like to have back\"。如果没有这个脱手，沙特将创造又一奇迹。</p><p><b>⚔️ 战术复盘：</b>沙特全场被乌拉圭压制(20 vs 1射门)，但凭借出色的防守纪律和门将神勇发挥，一度看到了胜利的希望。高温迈阿密球场中，补水休息成为重要战术节点——沙特利用第一次补水后加强了进攻并取得进球。乌拉圭在下半场持续施压，Valverde的远射被Al-Owais精彩扑出，最终Araujo在第89分钟的补射救了乌拉圭。</p><p><b>📊 H组——最疯狂的小组：</b>西班牙0-0佛得角、沙特1-1乌拉圭——两场平局过后，H组四队均积1分！这是继B组(卡塔尔、瑞士、加拿大、波黑各1分)之后，第二个四队1分的死亡之组。6月20日第二轮：西班牙vs乌拉圭、佛得角vs沙特。任何一队取胜都将奠定出线优势。</p>"
         }
       ],
       "changes": [
         {
-          "icon": "🔴",
-          "type": "bad",
-          "label": "利空",
-          "text": "乌拉圭航班延误，赛前备战受影响"
-        },
-        {
-          "icon": "🔴",
-          "type": "bad",
-          "label": "利空",
-          "text": "迈阿密88%概率极端高温！乌拉圭欧洲球员适应性远不如沙特"
-        },
-        {
-          "icon": "🔴",
-          "type": "bad",
-          "label": "利空",
-          "text": "乌拉圭近5场热身仅1胜含1-5惨败美国，Bielsa状态成疑"
+          "icon": "🟢",
+          "type": "good",
+          "label": "利好",
+          "text": "沙特1-1乌拉圭！Al Amri补射破门，连续三届世界杯首战拿分"
         },
         {
           "icon": "🟢",
           "type": "good",
           "label": "利好",
-          "text": "Valverde+Ugarte+Bentancur中场实力碾压，技术优势明显"
+          "text": "Al-Owais全场9次扑救，面对20次射门仅丢1记补射"
+        },
+        {
+          "icon": "🔴",
+          "type": "bad",
+          "label": "利空",
+          "text": "Al-Owais补时扑救脱手被Araujo补射绝平，到手3分变1分"
+        },
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "利好",
+          "text": "Maxi Araujo第89分钟补射绝平，乌拉圭避免首战失利"
         },
         {
           "icon": "🟡",
           "type": "neutral",
           "label": "观察",
-          "text": "沙特热身4连败但4月换帅+有世界杯爆冷传统(逆转阿根廷/埃及)"
+          "text": "H组四队同积1分！西班牙、乌拉圭、沙特、佛得角全部1平"
         },
         {
-          "icon": "🟡",
-          "type": "neutral",
-          "label": "观察",
-          "text": "Al-Dawsari是沙特唯一爆点，他的个人发挥决定沙特上限"
+          "icon": "🔴",
+          "type": "bad",
+          "label": "利空",
+          "text": "乌拉圭全场20次射门仅靠补射扳平，Valverde等球星效率偏低"
         }
       ],
       "recommendations": []
@@ -2097,6 +2240,57 @@
             "NZ Football"
           ],
           "fullReport": "<h3>🇮🇷 伊朗 vs 🇳🇿 新西兰 · 赛前深度分析</h3><p><b>更新时间：</b>2026-06-16T00:05:50+08:00</p><p><b>比赛时间：</b>6月16日 09:00 CST（洛杉矶6月15日 18:00）</p><p><b>场地：</b>SoFi体育场，洛杉矶英格尔伍德（室内场馆）</p><p><b>🇳🇿 Chris Wood完全恢复：</b>新西兰队长在2天前获颁\"Pride of New Zealand\"最高足球荣誉奖项，并亲口确认膝伤已进入恢复新阶段。这位诺丁汉森林前锋的头球能力和禁区支点作用对伊朗防线是巨大考验。新西兰时隔16年重返世界杯，2010年三战全平\"不败出局\"的神奇经历让他们有足够自信。</p><p><b>🇮🇷 Taremi独自扛旗：</b>Mehdi Taremi是伊朗本届的绝对核心，预选赛5球证明顶级终结能力。但Azmoun因与迪拜统治者合影引发争议被排除大名单后，伊朗锋线缺乏第二得分点。更致命的是伊朗国内联赛自3月起因中东冲突全面停摆，Persepolis和Esteghlal等俱乐部的球员已3个月没踢正式比赛，比赛状态严重存疑。</p><p><b>⚔️ 战术对位：</b>伊朗预计排出4-3-3，Taremi左路内切是主要进攻套路。Beiranvand门将经验丰富。新西兰5-3-2防守反击，Wood和Barbarouses双前锋，中场Stamenic负责拦截。Cacace左路助攻是新西兰另一个进攻手段。</p><p><b>📊 G组出线形势：</b>比利时＞埃及＞伊朗≈新西兰。本场胜者将占据小组第三争夺第二的有利位置。RotoWire评价\"这场决定谁在G组争第二\"。</p><p><b>预测：</b>伊朗赔率-118略被看好。Wood回归+伊朗国内球员状态存疑使平局概率不小。伊朗小胜(1-0)概率最大，但平局绝非意外。SoFi室内场地对双方公平。</p>"
+        },
+        {
+          "time": "2026-06-16T08:37:00+08:00",
+          "confidence": 70,
+          "isNew": true,
+          "goalCount": 2,
+          "possibleScores": [
+            "1-0",
+            "0-0",
+            "1-1"
+          ],
+          "text": "【赛前23分钟更新】伊朗vs新西兰即将于09:00在洛杉矶SoFi体育场开球！Chris Wood膝伤恢复确认首发，新西兰进攻核心归位。伊朗方面Taremi独扛进攻大旗，Azmoun被排除名单+国内联赛停摆双重打击。The Analyst预测伊朗胜率51.4%，新西兰21.9%，平局26.7%。室内球场公平竞赛。",
+          "factors": [
+            {
+              "type": "good",
+              "icon": "🇳🇿",
+              "text": "Chris Wood膝伤完全恢复确认首发，新西兰队长+头号射手+精神领袖归位"
+            },
+            {
+              "type": "good",
+              "icon": "🇮🇷",
+              "text": "Taremi预选赛5球状态火热，伊朗进攻绝对核心"
+            },
+            {
+              "type": "bad",
+              "icon": "🇮🇷",
+              "text": "Azmoun被排除名单+伊朗国内联赛3月起停摆，双重打击影响深远"
+            },
+            {
+              "type": "neutral",
+              "icon": "📊",
+              "text": "The Analyst预测：伊朗胜率51.4%，新西兰首胜概率21.9%，平局26.7%"
+            },
+            {
+              "type": "neutral",
+              "icon": "🏟️",
+              "text": "SoFi室内球馆不受天气影响，公平竞赛条件"
+            },
+            {
+              "type": "good",
+              "icon": "🇮🇷",
+              "text": "伊朗6次世界杯经验远胜新西兰(3次)，大赛心理优势明显"
+            }
+          ],
+          "sources": [
+            "The Analyst: Iran vs New Zealand Prediction World Cup 2026 (theanalyst.com)",
+            "Sports Illustrated: Iran vs New Zealand Preview Predictions (si.com)",
+            "FIFA.com match centre (fifa.com)",
+            "CNBC TV18: Iran vs New Zealand LIVE (youtube.com)"
+          ],
+          "fullReport": "<h3>🇮🇷 伊朗 vs 🇳🇿 新西兰 · 赛前深度分析</h3><p><b>更新时间：</b>2026-06-16T08:37:00+08:00（开球前23分钟）</p><p><b>比赛时间：</b>6月16日 09:00 CST（洛杉矶6月15日 18:00）</p><p><b>场地：</b>SoFi体育场，洛杉矶英格尔伍德（室内场馆）</p><p><b>📊 数据预测：</b></p><p>The Analyst赛前给出数据：伊朗胜率51.4%，新西兰胜率21.9%，平局26.7%。赔率方面伊朗-118略被看好。多家媒体预测1-0小胜概率最大。</p><p><b>🇳🇿 Chris Wood——新西兰的倚仗：</b>诺丁汉森林前锋Chris Wood膝伤完全恢复，2天前获颁\"Pride of New Zealand\"最高足球荣誉奖项，他现在是新西兰历史上最受瞩目的球员。他的头球能力和禁区支点作用对伊朗防线是巨大考验。新西兰16年重返世界杯，2010年三战全平\"不败出局\"的经历让他们有足够自信。但如果Wood下场，替补的Barbarouses差距明显，这是隐患。</p><p><b>🇮🇷 Taremi独扛大旗：</b>Mehdi Taremi是伊朗本届的绝对核心，预选赛5球证明顶级终结能力。但Azmoun因与迪拜统治者合影引发争议被排除大名单后，伊朗锋线缺乏第二得分点。更致命的是伊朗国内联赛自3月起因中东冲突全面停摆，Persepolis和Esteghlal的球员已3个月没踢正式比赛，比赛状态严重存疑。Sports Illustrated指出：\"Despite battling massive adversity, Iran is an overall better side.\"</p><p><b>⚔️ 战术对位：</b>伊朗预计排出4-3-3，Taremi左路内切是主要进攻套路。Beiranvand门将经验丰富(2018年世界杯对葡萄牙曾扑出C罗点球)。新西兰5-3-2防守反击，Wood和Barbarouses双前锋，中场Stamenic负责拦截。Cacace左路助攻是另一个进攻手段。</p><p><b>🔥 G组形势：</b>比利时1分、埃及1分。本场胜者将占据小组领先位置。如果能击败对手，下轮就能掌握出线主动。伊朗作为亚洲排名最高的球队之一，面对新西兰是必须拿下的比赛。</p><p><b>预测：</b>伊朗小胜(1-0)概率最大。Wood回归给新西兰带来了爆冷的可能，平局绝非意外。SoFi室内场对双方公平，但伊朗大赛经验优势可能在关键时刻发挥作用。</p>"
         }
       ],
       "changes": [
@@ -2128,20 +2322,20 @@
           "icon": "🟡",
           "type": "neutral",
           "label": "观察",
-          "text": "SoFi室内场馆公平竞赛，双方均无天气影响"
+          "text": "The Analyst预测伊朗胜率51.4%，但新西兰21.9%胜率也不容忽视"
         },
         {
           "icon": "🟡",
           "type": "neutral",
           "label": "观察",
-          "text": "伊朗6次世界杯经验(新西兰仅3次)能否转化为场上优势？"
+          "text": "SoFi室内场馆公平竞赛，双方均无天气影响"
         }
       ],
       "recommendations": []
     }
   ],
-  "analysisCount": 36,
+  "analysisCount": 40,
   "matchCount": 16,
-  "lastUpdate": "2026-06-16T00:05:50+08:00",
+  "lastUpdate": "2026-06-16T08:37:00+08:00",
   "rawReportFile": "reports.json"
 }
