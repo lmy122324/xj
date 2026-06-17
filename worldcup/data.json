@@ -2094,9 +2094,9 @@
       "home": "伊朗",
       "away": "新西兰",
       "date": "6/16",
-      "time": "09:00",
+      "time": "已完赛",
       "group": "G",
-      "result": "",
+      "result": "2-2",
       "analyses": [
         {
           "time": "2026-06-15T20:29:00+08:00",
@@ -2291,51 +2291,186 @@
             "CNBC TV18: Iran vs New Zealand LIVE (youtube.com)"
           ],
           "fullReport": "<h3>🇮🇷 伊朗 vs 🇳🇿 新西兰 · 赛前深度分析</h3><p><b>更新时间：</b>2026-06-16T08:37:00+08:00（开球前23分钟）</p><p><b>比赛时间：</b>6月16日 09:00 CST（洛杉矶6月15日 18:00）</p><p><b>场地：</b>SoFi体育场，洛杉矶英格尔伍德（室内场馆）</p><p><b>📊 数据预测：</b></p><p>The Analyst赛前给出数据：伊朗胜率51.4%，新西兰胜率21.9%，平局26.7%。赔率方面伊朗-118略被看好。多家媒体预测1-0小胜概率最大。</p><p><b>🇳🇿 Chris Wood——新西兰的倚仗：</b>诺丁汉森林前锋Chris Wood膝伤完全恢复，2天前获颁\"Pride of New Zealand\"最高足球荣誉奖项，他现在是新西兰历史上最受瞩目的球员。他的头球能力和禁区支点作用对伊朗防线是巨大考验。新西兰16年重返世界杯，2010年三战全平\"不败出局\"的经历让他们有足够自信。但如果Wood下场，替补的Barbarouses差距明显，这是隐患。</p><p><b>🇮🇷 Taremi独扛大旗：</b>Mehdi Taremi是伊朗本届的绝对核心，预选赛5球证明顶级终结能力。但Azmoun因与迪拜统治者合影引发争议被排除大名单后，伊朗锋线缺乏第二得分点。更致命的是伊朗国内联赛自3月起因中东冲突全面停摆，Persepolis和Esteghlal的球员已3个月没踢正式比赛，比赛状态严重存疑。Sports Illustrated指出：\"Despite battling massive adversity, Iran is an overall better side.\"</p><p><b>⚔️ 战术对位：</b>伊朗预计排出4-3-3，Taremi左路内切是主要进攻套路。Beiranvand门将经验丰富(2018年世界杯对葡萄牙曾扑出C罗点球)。新西兰5-3-2防守反击，Wood和Barbarouses双前锋，中场Stamenic负责拦截。Cacace左路助攻是另一个进攻手段。</p><p><b>🔥 G组形势：</b>比利时1分、埃及1分。本场胜者将占据小组领先位置。如果能击败对手，下轮就能掌握出线主动。伊朗作为亚洲排名最高的球队之一，面对新西兰是必须拿下的比赛。</p><p><b>预测：</b>伊朗小胜(1-0)概率最大。Wood回归给新西兰带来了爆冷的可能，平局绝非意外。SoFi室内场对双方公平，但伊朗大赛经验优势可能在关键时刻发挥作用。</p>"
+        },
+        {
+          "time": "2026-06-17T16:10:00+08:00",
+          "confidence": 97,
+          "isNew": true,
+          "goalCount": 4,
+          "possibleScores": [
+            "2-2 (实际)",
+            "1-0",
+            "1-1"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "🇳🇿",
+              "text": "Elijah Just梅开二度！Motherwell前锋17分钟和34分钟两记精彩进球成为新西兰英雄"
+            },
+            {
+              "type": "good",
+              "icon": "🇳🇿",
+              "text": "Chris Wood与Just锋线连线效果出色，新西兰全场14次射门展现进攻威胁"
+            },
+            {
+              "type": "neutral",
+              "icon": "🇮🇷",
+              "text": "伊朗全场17次射门但未能取胜，Taremi威胁巨大但缺少Azmoun支援"
+            },
+            {
+              "type": "bad",
+              "icon": "🇮🇷",
+              "text": "部分工作人员未获美签，训练基地因美伊冲突改至墨西哥，备战严重受影响"
+            },
+            {
+              "type": "neutral",
+              "icon": "🔄",
+              "text": "G组三战皆平：比利时1分、埃及1分、伊朗1分、新西兰1分，四队同分"
+            }
+          ],
+          "text": "伊朗2-2新西兰！Elijah Just在第17和34分钟梅开二度，两记精彩进球让新西兰两度领先。伊朗凭借Taremi的出色发挥两度扳平。新西兰全场14次射门，伊朗17次射门，均未能找到制胜球。G组三场全部平局——比利时1-1埃及、伊朗2-2新西兰，四队同积1分！",
+          "sources": [
+            "BBC: Iran 2-2 New Zealand - Elijah Just scores twice (bbc.co.uk)",
+            "FIFA.com match centre (fifa.com)",
+            "The Analyst: Iran vs New Zealand prediction (theanalyst.com)"
+          ],
+          "fullReport": "<h3>🇮🇷 伊朗 2-2 🇳🇿 新西兰 · 赛后深度分析</h3><p><b>比分：</b>伊朗 2-2 新西兰</p><p><b>场地：</b>SoFi体育场，洛杉矶英格尔伍德（室内场馆）</p><p><b>比赛进程：</b><br>⚽ 1-0 Elijah Just 17'（个人突破精彩低射）<br>⚽ 1-1 伊朗扳平<br>⚽ 2-1 Elijah Just 34'（Chris Wood助攻）<br>⚽ 2-2 伊朗再度扳平</p><p><b>赛后深度分析：</b></p><p><b>🔥 Just闪耀SoFi：</b>Motherwell前锋Elijah Just在17分钟和34分钟各入一球，成为新西兰世界杯历史上首位单场梅开二度的球员。他在2025-26赛季为Motherwell贡献7球8助攻，BBC评论称他的表现\"attracts potential suitors\"。赛后Just表示：\"One goal was nice, two was not something I could ever have dreamed of.\"他与Chris Wood的锋线连线让伊朗防线疲于奔命。Wood的头球摆渡和禁区支点作用为Just创造了大量空间，两人配合默契堪称新西兰进攻双核。</p><p><b>🇮🇷 Taremi独木难支：</b>伊朗全场17次射门展现进攻侵略性，但缺少Azmoun的锋线在终结效率上明显下降。Taremi作为唯一进攻核心被新西兰重点盯防，尽管他个人威胁巨大，但缺乏第二火力点支持。更严重的是，赛前伊朗因美伊冲突面临巨大场外干扰——部分工作人员未获美国签证，全队被迫在墨西哥集训而非原定的亚利桑那基地，备战节奏严重被打乱。国内联赛自3月起停摆的影响也在下半场体能下降后显现。</p><p><b>⚔️ 战术复盘：</b>伊朗排出4-3-3阵型，Taremi左路内切是主要进攻套路，但新西兰的5-3-2防守反击体系运转出色。新西兰14次射门对上伊朗17次射门，双方攻势相当，控球率接近。Just的第二个进球尤其精彩——Wood在禁区前沿做球，Just插上低射远角，展现了完美的锋线配合。伊朗在定位球和边路传中方面创造了不少机会，但新西兰门将表现稳健。</p><p><b>📊 G组——疯狂的平局小组：</b>比利时1-1埃及、伊朗2-2新西兰——G组两场比赛全部平局！四队同积1分，出线形势完全开放。这是继B组(4队1分)和H组(4队1分)之后，本届世界杯第三个四队同分的小组。6月20日：比利时vs伊朗、埃及vs新西兰——任何一场胜利都可能直接锁定出线资格！</p><p><b>🔮 下轮展望：</b>伊朗下轮对阵比利时(6月20日)，新西兰对阵埃及(6月20日)。两场比赛都是生死战。新西兰若能延续Just-Wood连线状态，击败埃及并非奢望。伊朗则需要解决Azmoun缺阵带来的锋线深度问题，Taremi的状态将直接决定伊朗能否在比利时身上拿分。</p>"
+        },
+        {
+          "time": "2026-06-17T16:10:00+08:00",
+          "confidence": 97,
+          "isNew": true,
+          "goalCount": 4,
+          "possibleScores": [
+            "2-2 (实际)",
+            "1-0",
+            "1-1"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "🇳🇿",
+              "text": "Elijah Just梅开二度！Motherwell前锋17分钟和34分钟两记精彩进球成为新西兰英雄"
+            },
+            {
+              "type": "good",
+              "icon": "🇳🇿",
+              "text": "Chris Wood与Just锋线连线效果出色，新西兰全场14次射门展现进攻威胁"
+            },
+            {
+              "type": "neutral",
+              "icon": "🇮🇷",
+              "text": "伊朗全场17次射门但未能取胜，Taremi威胁巨大但缺少Azmoun支援"
+            },
+            {
+              "type": "bad",
+              "icon": "🇮🇷",
+              "text": "部分工作人员未获美签，训练基地因美伊冲突改至墨西哥，备战严重受影响"
+            },
+            {
+              "type": "neutral",
+              "icon": "🔄",
+              "text": "G组三战皆平：比利时1分、埃及1分、伊朗1分、新西兰1分，四队同分"
+            }
+          ],
+          "text": "伊朗2-2新西兰！Elijah Just在第17和34分钟梅开二度，两记精彩进球让新西兰两度领先。伊朗凭借Taremi的出色发挥两度扳平。新西兰全场14次射门，伊朗17次射门，均未能找到制胜球。G组三场全部平局——比利时1-1埃及、伊朗2-2新西兰，四队同积1分！",
+          "sources": [
+            "BBC: Iran 2-2 New Zealand - Elijah Just scores twice (bbc.co.uk)",
+            "FIFA.com match centre (fifa.com)",
+            "The Analyst: Iran vs New Zealand prediction (theanalyst.com)"
+          ],
+          "fullReport": "<h3>🇮🇷 伊朗 2-2 🇳🇿 新西兰 · 赛后深度分析</h3><p><b>比分：</b>伊朗 2-2 新西兰</p><p><b>场地：</b>SoFi体育场，洛杉矶英格尔伍德（室内场馆）</p><p><b>比赛进程：</b><br>⚽ 1-0 Elijah Just 17'（个人突破精彩低射）<br>⚽ 1-1 伊朗扳平<br>⚽ 2-1 Elijah Just 34'（Chris Wood助攻）<br>⚽ 2-2 伊朗再度扳平</p><p><b>赛后深度分析：</b></p><p><b>🔥 Just闪耀SoFi：</b>Motherwell前锋Elijah Just在17分钟和34分钟各入一球，成为新西兰世界杯历史上首位单场梅开二度的球员。他在2025-26赛季为Motherwell贡献7球8助攻，BBC评论称他的表现\"attracts potential suitors\"。赛后Just表示：\"One goal was nice, two was not something I could ever have dreamed of.\"他与Chris Wood的锋线连线让伊朗防线疲于奔命。Wood的头球摆渡和禁区支点作用为Just创造了大量空间，两人配合默契堪称新西兰进攻双核。</p><p><b>🇮🇷 Taremi独木难支：</b>伊朗全场17次射门展现进攻侵略性，但缺少Azmoun的锋线在终结效率上明显下降。Taremi作为唯一进攻核心被新西兰重点盯防，尽管他个人威胁巨大，但缺乏第二火力点支持。更严重的是，赛前伊朗因美伊冲突面临巨大场外干扰——部分工作人员未获美国签证，全队被迫在墨西哥集训而非原定的亚利桑那基地，备战节奏严重被打乱。国内联赛自3月起停摆的影响也在下半场体能下降后显现。</p><p><b>⚔️ 战术复盘：</b>伊朗排出4-3-3阵型，Taremi左路内切是主要进攻套路，但新西兰的5-3-2防守反击体系运转出色。新西兰14次射门对上伊朗17次射门，双方攻势相当，控球率接近。Just的第二个进球尤其精彩——Wood在禁区前沿做球，Just插上低射远角，展现了完美的锋线配合。伊朗在定位球和边路传中方面创造了不少机会，但新西兰门将表现稳健。</p><p><b>📊 G组——疯狂的平局小组：</b>比利时1-1埃及、伊朗2-2新西兰——G组两场比赛全部平局！四队同积1分，出线形势完全开放。这是继B组(4队1分)和H组(4队1分)之后，本届世界杯第三个四队同分的小组。6月20日：比利时vs伊朗、埃及vs新西兰——任何一场胜利都可能直接锁定出线资格！</p><p><b>🔮 下轮展望：</b>伊朗下轮对阵比利时(6月20日)，新西兰对阵埃及(6月20日)。两场比赛都是生死战。新西兰若能延续Just-Wood连线状态，击败埃及并非奢望。伊朗则需要解决Azmoun缺阵带来的锋线深度问题，Taremi的状态将直接决定伊朗能否在比利时身上拿分。</p>"
+        },
+        {
+          "time": "2026-06-17T16:10:00+08:00",
+          "confidence": 97,
+          "isNew": true,
+          "goalCount": 4,
+          "possibleScores": [
+            "2-2 (实际)",
+            "1-0",
+            "1-1"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "🇳🇿",
+              "text": "Elijah Just梅开二度！Motherwell前锋17分钟和34分钟两记精彩进球成为新西兰英雄"
+            },
+            {
+              "type": "good",
+              "icon": "🇳🇿",
+              "text": "Chris Wood与Just锋线连线效果出色，新西兰全场14次射门展现进攻威胁"
+            },
+            {
+              "type": "neutral",
+              "icon": "🇮🇷",
+              "text": "伊朗全场17次射门但未能取胜，Taremi威胁巨大但缺少Azmoun支援"
+            },
+            {
+              "type": "bad",
+              "icon": "🇮🇷",
+              "text": "部分工作人员未获美签，训练基地因美伊冲突改至墨西哥，备战严重受影响"
+            },
+            {
+              "type": "neutral",
+              "icon": "🔄",
+              "text": "G组三战皆平：比利时1分、埃及1分、伊朗1分、新西兰1分，四队同分"
+            }
+          ],
+          "text": "伊朗2-2新西兰！Elijah Just在第17和34分钟梅开二度，两记精彩进球让新西兰两度领先。伊朗凭借Taremi的出色发挥两度扳平。新西兰全场14次射门，伊朗17次射门，均未能找到制胜球。G组三场全部平局——比利时1-1埃及、伊朗2-2新西兰，四队同积1分！",
+          "sources": [
+            "BBC: Iran 2-2 New Zealand - Elijah Just scores twice (bbc.co.uk)",
+            "FIFA.com match centre (fifa.com)",
+            "The Analyst: Iran vs New Zealand prediction (theanalyst.com)"
+          ],
+          "fullReport": "<h3>🇮🇷 伊朗 2-2 🇳🇿 新西兰 · 赛后深度分析</h3><p><b>比分：</b>伊朗 2-2 新西兰</p><p><b>场地：</b>SoFi体育场，洛杉矶英格尔伍德（室内场馆）</p><p><b>比赛进程：</b><br>⚽ 1-0 Elijah Just 17'（个人突破精彩低射）<br>⚽ 1-1 伊朗扳平<br>⚽ 2-1 Elijah Just 34'（Chris Wood助攻）<br>⚽ 2-2 伊朗再度扳平</p><p><b>赛后深度分析：</b></p><p><b>🔥 Just闪耀SoFi：</b>Motherwell前锋Elijah Just在17分钟和34分钟各入一球，成为新西兰世界杯历史上首位单场梅开二度的球员。他在2025-26赛季为Motherwell贡献7球8助攻，BBC评论称他的表现\"attracts potential suitors\"。赛后Just表示：\"One goal was nice, two was not something I could ever have dreamed of.\"他与Chris Wood的锋线连线让伊朗防线疲于奔命。Wood的头球摆渡和禁区支点作用为Just创造了大量空间，两人配合默契堪称新西兰进攻双核。</p><p><b>🇮🇷 Taremi独木难支：</b>伊朗全场17次射门展现进攻侵略性，但缺少Azmoun的锋线在终结效率上明显下降。Taremi作为唯一进攻核心被新西兰重点盯防，尽管他个人威胁巨大，但缺乏第二火力点支持。更严重的是，赛前伊朗因美伊冲突面临巨大场外干扰——部分工作人员未获美国签证，全队被迫在墨西哥集训而非原定的亚利桑那基地，备战节奏严重被打乱。国内联赛自3月起停摆的影响也在下半场体能下降后显现。</p><p><b>⚔️ 战术复盘：</b>伊朗排出4-3-3阵型，Taremi左路内切是主要进攻套路，但新西兰的5-3-2防守反击体系运转出色。新西兰14次射门对上伊朗17次射门，双方攻势相当，控球率接近。Just的第二个进球尤其精彩——Wood在禁区前沿做球，Just插上低射远角，展现了完美的锋线配合。伊朗在定位球和边路传中方面创造了不少机会，但新西兰门将表现稳健。</p><p><b>📊 G组——疯狂的平局小组：</b>比利时1-1埃及、伊朗2-2新西兰——G组两场比赛全部平局！四队同积1分，出线形势完全开放。这是继B组(4队1分)和H组(4队1分)之后，本届世界杯第三个四队同分的小组。6月20日：比利时vs伊朗、埃及vs新西兰——任何一场胜利都可能直接锁定出线资格！</p><p><b>🔮 下轮展望：</b>伊朗下轮对阵比利时(6月20日)，新西兰对阵埃及(6月20日)。两场比赛都是生死战。新西兰若能延续Just-Wood连线状态，击败埃及并非奢望。伊朗则需要解决Azmoun缺阵带来的锋线深度问题，Taremi的状态将直接决定伊朗能否在比利时身上拿分。</p>"
         }
       ],
       "changes": [
         {
-          "icon": "🟢",
-          "type": "good",
-          "label": "利好",
-          "text": "Chris Wood膝伤完全恢复确认首发！新西兰进攻核心归位"
-        },
-        {
-          "icon": "🔴",
-          "type": "bad",
-          "label": "利空",
-          "text": "Azmoun被排除名单，伊朗锋线深度严重受损"
-        },
-        {
-          "icon": "🔴",
-          "type": "bad",
-          "label": "利空",
-          "text": "伊朗国内联赛自3月停摆至今，国内球员比赛状态存疑"
+          "icon": "🟡",
+          "type": "neutral",
+          "label": "观察",
+          "text": "伊朗2-2新西兰！Elijah Just梅开二度，G组四队同积1分"
         },
         {
           "icon": "🟢",
           "type": "good",
           "label": "利好",
-          "text": "Taremi预选赛5球状态火热，他是伊朗进攻唯一保障"
+          "text": "Elijah Just两记精彩进球闪耀世界杯，Motherwell前锋一战成名"
+        },
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "利好",
+          "text": "Chris Wood膝伤康复后首发打满全场，与Just锋线连线展现化学反应"
+        },
+        {
+          "icon": "🔴",
+          "type": "bad",
+          "label": "利空",
+          "text": "伊朗17次射门仅2球，缺少Azmoun后终结效率下降明显"
+        },
+        {
+          "icon": "🔴",
+          "type": "bad",
+          "label": "利空",
+          "text": "伊朗受美伊冲突影响未能在美国正常备战，训练基地改至墨西哥"
         },
         {
           "icon": "🟡",
           "type": "neutral",
           "label": "观察",
-          "text": "The Analyst预测伊朗胜率51.4%，但新西兰21.9%胜率也不容忽视"
-        },
-        {
-          "icon": "🟡",
-          "type": "neutral",
-          "label": "观察",
-          "text": "SoFi室内场馆公平竞赛，双方均无天气影响"
+          "text": "G组四队同分！比利时vs伊朗、埃及vs新西兰将决定出线命运"
         }
       ],
       "recommendations": []
     }
   ],
-  "analysisCount": 40,
+  "analysisCount": 41,
   "matchCount": 16,
-  "lastUpdate": "2026-06-16T08:37:00+08:00",
+  "lastUpdate": "2026-06-17T16:10:00+08:00",
   "rawReportFile": "reports.json"
 }
