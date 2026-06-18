@@ -193,7 +193,7 @@ var FL={'瑞士':'🇨🇭','波黑':'🇧🇦','加拿大':'🇨🇦','卡塔�
 function cn(n){return CN[n]||n}
 function fl(n){return FL[cn(n)]||''}
 
-var AM=[],cV='pred',cF='all',cAv='s',cS='s2',cMi=0,selParlay={};
+var AM=[],cV='pred',cF='all',cAv='s',cS='balanced',cMi=0,selParlay={};
 
 function ld(){
   var u=(window.location.origin+(window.location.pathname.replace(/\/[^/]*$/,'')||'/xj/worldcup'))+'/data.json?v='+Date.now();
@@ -305,7 +305,7 @@ function rAS(el){
     for(var i=0;i<up.length;i++){var m=up[i];h+='<option value="'+i+'"'+(i===cMi?' selected':'')+'>'+fl(cn(m.home))+cn(m.home)+' vs '+fl(cn(m.away))+cn(m.away)+' '+m.date+'</option>';}
     h+='</select>';
     var m=up[cMi],a=m.analyses&&m.analyses.length?m.analyses[m.analyses.length-1]:null;
-    if(a&&a.fullReport)h+='<div class="rpt">'+decodeURIComponent(a.fullReport)+'</div>';
+    if(a&&a.fullReport)h+='<div class="rpt">'+a.fullReport+'</div>';
     else if(a)h+='<div style="font-size:9px;padding:6px">'+a.text+'</div>';
     else h+='<div class="empty">⏳ 等待分析</div>';
   }else{h+='<div class="empty">暂无未开始比赛</div>';}
@@ -323,7 +323,7 @@ function rAT(el){
     var id='ai'+i;
     h+='<div class="pc"><div class="pc-head" onclick="tM(\''+id+'\')"><span class="pc-ar" id="ar'+id+'">▶</span><span class="pc-tm"><span class="fl">'+fl(hc)+'</span>'+hc+'<span class="vs">vs</span><span class="fl">'+fl(ac)+'</span>'+ac+'</span><span class="pc-ti">'+m.time+'</span></div><div class="pc-body" id="bd'+id+'">';
     h+='<div style="font-size:9px;color:var(--sub);margin-bottom:3px">'+(a?'🎯 '+a.text:'⏳ 等待分析')+'</div>';
-    if(a&&a.fullReport)h+='<div class="rpt" style="padding:0">'+decodeURIComponent(a.fullReport)+'</div>';
+    if(a&&a.fullReport)h+='<div class="rpt" style="padding:0">'+a.fullReport+'</div>';
     h+='</div></div>';
   }
   el.innerHTML=h;
