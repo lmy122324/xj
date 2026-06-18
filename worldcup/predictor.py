@@ -199,24 +199,24 @@ def calc_jingcai_all(match, best, avg, var):
     home = match['home_team']
     away = match['away_team']
 
-    # --- 1. SPF (胜平负) — 返奖率0.75 ---
+    # --- 1. SPF (胜平负) — 直接展示欧洲赔率 ---
     spf = {}
     for outcome in [home, 'Draw', away]:
         price = best.get(outcome)
         if price:
-            spf[outcome] = round(price * 0.75, 2)
+            spf[outcome] = round(max(price, 1.01), 2)  # 保底1.01
 
-    # --- 2. 让球 — 返奖率0.78 ---
+    # --- 2. 让球 — 直接展示欧洲赔率 ---
     spreads_data = get_best_spreads(match)
     rangqiu = {}
     if spreads_data:
         for name, info in spreads_data.items():
             rangqiu[name] = {
-                'odds': round(info['price'] * 0.78, 2),
+                'odds': round(max(info['price'], 1.01), 2),
                 'handicap': info['point']
             }
 
-    # --- 3. 总进球数 — 返奖率0.68 ---
+    # --- 3. 总进球数 — 泊松模型估算 ---
     totals_best = get_best_totals(match)
     total_goals = {}
     if totals_best:
@@ -246,14 +246,13 @@ def calc_jingcai_all(match, best, avg, var):
         goal_probs['6_plus'] = 1.0 - sum(goal_probs.get(g, 0) for g in range(6))
         if goal_probs['6_plus'] < 0:
             goal_probs['6_plus'] = 0.0
-        # Convert to odds with 0.68返奖率
+        # Convert to odds (泊松模型估算)
         for k in ['0', '1', '2', '3', '4', '5', '6_plus']:
             p_key = int(k) if k != '6_plus' else '6_plus'
             prob = goal_probs.get(p_key, 0.01)
-            # Scale probabilities to sum to target
-            total_goals[k] = round(0.68 / max(prob, 0.001), 2)
+            total_goals[k] = round(max(1.0 / max(prob, 0.001), 1.01), 2)
 
-    # --- 4. 波胆 (Correct Score) — 返奖率0.68 ---
+    # --- 4. 波胆 (Correct Score) — 泊松模型估算 ---
     scores = {}
     if totals_best and lam > 0:
         # Use same lambda_h, lambda_a from above
@@ -269,12 +268,12 @@ def calc_jingcai_all(match, best, avg, var):
         # Normalize and convert to odds
         for key, prob in raw_probs.items():
             norm_prob = prob / total_raw  # normalize within listed scores
-            scores[key] = round(0.68 / max(norm_prob, 0.001), 2)
+            scores[key] = round(max(1.0 / max(norm_prob, 0.001), 1.01), 2)
     else:
         for s in ['1-0','2-0','2-1','1-1','0-0','3-0','3-1','0-1']:
             scores[s] = 0.0
 
-    # --- 5. 半全场 — 返奖率0.65 ---
+    # --- 5. 半全场 — 泊松模型估算 ---
     half_full = {}
     if totals_best and lam > 0:
         lam_ht = lam * 0.45  # ~45% goals in first half
@@ -311,12 +310,12 @@ def calc_jingcai_all(match, best, avg, var):
         sum_j = sum(raw_joint.values())
         for key, prob in raw_joint.items():
             norm_prob = prob / sum_j
-            half_full[key] = round(0.65 / max(norm_prob, 0.001), 2)
+            half_full[key] = round(max(1.0 / max(norm_prob, 0.001), 1.01), 2)
     else:
         for res in ['胜-胜','胜-平','胜-负','平-胜','平-平','平-负','负-胜','负-平','负-负']:
             half_full[res] = 0.0
 
-    # --- 6. 上半场SPF — 返奖率0.75 ---
+    # --- 6. 上半场SPF — 泊松模型估算 ---
     first_half_spf = {}
     if totals_best and lam > 0:
         lam_ht = lam * 0.45
@@ -336,7 +335,7 @@ def calc_jingcai_all(match, best, avg, var):
         p_h_ht, p_d_ht, p_a_ht = prob_result_ht(lam_ht_h, lam_ht_a)
         prob_ht_spf = {home: p_h_ht, 'Draw': p_d_ht, away: p_a_ht}
         for outcome in [home, 'Draw', away]:
-            first_half_spf[outcome] = round(0.75 / max(prob_ht_spf[outcome], 0.001), 2)
+            first_half_spf[outcome] = round(max(1.0 / max(prob_ht_spf[outcome], 0.001), 1.01), 2)
     else:
         for outcome in [home, 'Draw', away]:
             first_half_spf[outcome] = 0.0
@@ -382,9 +381,8 @@ def calc_kelly(best_p, fair_p):
     return max(0, (b * fair_p - (1 - fair_p)) / b)
 
 def jingcai_odds(euro_odds):
-    """Convert European odds to approximate Chinese lottery (竞彩) odds"""
-    multiplier = 0.75
-    return {k: round(v * multiplier, 2) for k, v in euro_odds.items()}
+    """直接使用欧洲赔率（取消×0.75换算，保底1.01）"""
+    return {k: round(max(v, 1.01), 2) for k, v in euro_odds.items()}
 
 # ========== MATCH PREDICTOR ==========
 def predict_match(home, away, home_avg, away_avg, draw_avg, best, avg, var_data):
@@ -524,7 +522,7 @@ def gen_docx(home, away, pred, strategies, score_pred, match_time):
     P(doc, '', size=4)
     P(doc, '💶 赔率对比', size=12, bold=True)
     t = doc.add_table(rows=4, cols=3); t.style = 'Light Grid Accent 1'
-    for i, h in enumerate(['选项', '欧洲最优赔率', '竞彩换算赔率']):
+    for i, h in enumerate(['选项', '欧洲最优赔率', '参考赔率']):
         t.rows[0].cells[i].text = h
     outcomes = [home, '平局', away]
     for ri, o in enumerate(outcomes):
@@ -598,7 +596,7 @@ def gen_html_report(home, away, pred, strategies, score_pred, match_time):
         <tr style="border-bottom:1px solid rgba(255,215,0,.1);">
           <td style="padding:4px 8px;color:#7a7090;">选项</td>
           <td style="padding:4px 8px;color:#7a7090;">欧洲赔率</td>
-          <td style="padding:4px 8px;color:#7a7090;">竞彩赔率</td>
+          <td style="padding:4px 8px;color:#7a7090;">参考赔率</td>
         </tr>
     '''
     for o in [home, '平局', away]:

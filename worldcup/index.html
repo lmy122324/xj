@@ -188,7 +188,69 @@ body{
 </div></div>
 
 <script>
-var CN={'Switzerland':'瑞士','Bosnia & Herzegovina':'波黑','Canada':'加拿大','Qatar':'卡塔尔','Czech Republic':'捷克','South Africa':'南非','Mexico':'墨西哥','South Korea':'韩国','Brazil':'巴西','Morocco':'摩洛哥','Haiti':'海地','Scotland':'苏格兰','USA':'美国','Paraguay':'巴拉圭','Australia':'澳大利亚','Turkey':'土耳其','Türkiye':'土耳其','Germany':'德国','Curaçao':'库拉索',"Côte d'Ivoire":'科特迪瓦','Ecuador':'厄瓜多尔','Netherlands':'荷兰','Japan':'日本','Sweden':'瑞典','Tunisia':'突尼斯','Portugal':'葡萄牙','DR Congo':'刚果(金)','England':'英格兰','Croatia':'克罗地亚','Ghana':'加纳','Panama':'巴拿马','Colombia':'哥伦比亚','Uzbekistan':'乌兹别克','Argentina':'阿根廷','Algeria':'阿尔及利亚','Norway':'挪威','Iraq':'伊拉克','France':'法国','Senegal':'塞内加尔','Austria':'奥地利','Jordan':'约旦','Spain':'西班牙','Saudi Arabia':'沙特','Belgium':'比利时','Iran':'伊朗','Uruguay':'乌拉圭','Cape Verde':'佛得角','New Zealand':'新西兰','Egypt':'埃及','Czechia':'捷克','Korea Republic':'韩国',"Cote d'Ivoire":'科特迪瓦'};
+// ===== 队名中译字典 =====
+var CN=(function(){var d={
+  // A组
+  'Germany':'德国',              'Curaçao':'库拉索',
+  'Ecuador':'厄瓜多尔',          "Côte d'Ivoire":'科特迪瓦',
+  "Cote d'Ivoire":'科特迪瓦',
+  // B组
+  'Spain':'西班牙',              'Saudi Arabia':'沙特',
+  'Uruguay':'乌拉圭',            'Cape Verde':'佛得角',
+  // C组
+  'Portugal':'葡萄牙',           'Uzbekistan':'乌兹别克',
+  'Colombia':'哥伦比亚',         'DR Congo':'刚果(金)',
+  // D组
+  'England':'英格兰',            'Ghana':'加纳',
+  'Panama':'巴拿马',             'Croatia':'克罗地亚',
+  // E组
+  'France':'法国',               'Iraq':'伊拉克',
+  'Norway':'挪威',               'Senegal':'塞内加尔',
+  // F组
+  'Argentina':'阿根廷',          'Algeria':'阿尔及利亚',
+  'Austria':'奥地利',            'Jordan':'约旦',
+  // G组
+  'Brazil':'巴西',               'Haiti':'海地',
+  'Scotland':'苏格兰',           'Morocco':'摩洛哥',
+  // H组
+  'USA':'美国',                  'Australia':'澳大利亚',
+  'Turkey':'土耳其',             'Paraguay':'巴拉圭',
+  'Türkiye':'土耳其',
+  // I组
+  'Netherlands':'荷兰',          'Sweden':'瑞典',
+  'Japan':'日本',                'Tunisia':'突尼斯',
+  // J组
+  'Switzerland':'瑞士',          'Bosnia & Herzegovina':'波黑',
+  'Canada':'加拿大',             'Qatar':'卡塔尔',
+  // K组
+  'Mexico':'墨西哥',             'South Korea':'韩国',
+  'Czech Republic':'捷克',       'South Africa':'南非',
+  'Czechia':'捷克',              'Korea Republic':'韩国',
+  // L组
+  'Belgium':'比利时',            'Iran':'伊朗',
+  'New Zealand':'新西兰',        'Egypt':'埃及',
+};
+/* 别名映射 */
+d['Czech Republic']='捷克'; d['Korea Republic']='韩国';
+d['Côte d\'Ivoire']='科特迪瓦'; d['Türkiye']='土耳其';
+return d;})();
+
+var FL=(function(){var d={
+  '瑞士':'🇨🇭','波黑':'🇧🇦','加拿大':'🇨🇦','卡塔尔':'🇶🇦',
+  '捷克':'🇨🇿','南非':'🇿🇦','墨西哥':'🇲🇽','韩国':'🇰🇷',
+  '巴西':'🇧🇷','摩洛哥':'🇲🇦','海地':'🇭🇹','苏格兰':'🏴',
+  '美国':'🇺🇸','巴拉圭':'🇵🇾','澳大利亚':'🇦🇺','土耳其':'🇹🇷',
+  '德国':'🇩🇪','库拉索':'🇨🇼','科特迪瓦':'🇨🇮','厄瓜多尔':'🇪🇨',
+  '荷兰':'🇳🇱','日本':'🇯🇵','瑞典':'🇸🇪','突尼斯':'🇹🇳',
+  '葡萄牙':'🇵🇹','刚果(金)':'🇨🇩','英格兰':'🏴','克罗地亚':'🇭🇷',
+  '加纳':'🇬🇭','巴拿马':'🇵🇦','哥伦比亚':'🇨🇴','乌兹别克':'🇺🇿',
+  '阿根廷':'🇦🇷','阿尔及利亚':'🇩🇿','挪威':'🇳🇴','伊拉克':'🇮🇶',
+  '法国':'🇫🇷','塞内加尔':'🇸🇳','奥地利':'🇦🇹','约旦':'🇯🇴',
+  '西班牙':'🇪🇸','沙特':'🇸🇦','比利时':'🇧🇪','伊朗':'🇮🇷',
+  '乌拉圭':'🇺🇾','佛得角':'🇨🇻','新西兰':'🇳🇿','埃及':'🇪🇬',
+};
+return d;})();
+
 var FL={'瑞士':'🇨🇭','波黑':'🇧🇦','加拿大':'🇨🇦','卡塔尔':'🇶🇦','捷克':'🇨🇿','南非':'🇿🇦','墨西哥':'🇲🇽','韩国':'🇰🇷','巴西':'🇧🇷','摩洛哥':'🇲🇦','海地':'🇭🇹','苏格兰':'🏴','美国':'🇺🇸','巴拉圭':'🇵🇾','澳大利亚':'🇦🇺','土耳其':'🇹🇷','德国':'🇩🇪','库拉索':'🇨🇼','科特迪瓦':'🇨🇮','厄瓜多尔':'🇪🇨','荷兰':'🇳🇱','日本':'🇯🇵','瑞典':'🇸🇪','突尼斯':'🇹🇳','葡萄牙':'🇵🇹','刚果(金)':'🇨🇩','英格兰':'🏴','克罗地亚':'🇭🇷','加纳':'🇬🇭','巴拿马':'🇵🇦','哥伦比亚':'🇨🇴','乌兹别克':'🇺🇿','阿根廷':'🇦🇷','阿尔及利亚':'🇩🇿','挪威':'🇳🇴','伊拉克':'🇮🇶','法国':'🇫🇷','塞内加尔':'🇸🇳','奥地利':'🇦🇹','约旦':'🇯🇴','西班牙':'🇪🇸','沙特':'🇸🇦','比利时':'🇧🇪','伊朗':'🇮🇷','乌拉圭':'🇺🇾','佛得角':'🇨🇻','新西兰':'🇳🇿','埃及':'🇪🇬'};
 function cn(n){return CN[n]||n}
 function fl(n){return FL[cn(n)]||''}
