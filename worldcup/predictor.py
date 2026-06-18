@@ -354,14 +354,14 @@ def calc_jingcai_all(match, best, avg, var):
             if combo_odds >= 1.5:
                 chuan_guan.append({
                     'type': '2串1',
-                    'picks': [f'{cn(fav_name)}胜', f'{cn(other_name)}胜'],
+                    'picks': [f'{fav_name}胜', f'{cn(other_name)}胜'],
                     'odds': combo_odds
                 })
     # 3串1 placeholder (single match can't make 3串1 alone, but we keep structure for cross-match)
     if fav_odds > 0:
         chuan_guan.append({
             'type': '单关',
-            'picks': [f'{cn(fav_name)}胜'],
+            'picks': [f'{fav_name}胜'],
             'odds': fav_odds
         })
 
