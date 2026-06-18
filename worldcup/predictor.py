@@ -639,6 +639,31 @@ def gen_html_report(home, away, pred, strategies, score_pred, match_time):
     '''
     return html
 
+
+def cleanup_old_matches(existing):
+    from datetime import datetime, timezone, timedelta
+    now = datetime.now(timezone(timedelta(hours=8)))
+    matches = existing.get('matches', [])
+    kept = []
+    removed = 0
+    for m in matches:
+        result = m.get('result')
+        date_str = m.get('date')
+        if result and date_str and '/' in date_str:
+            try:
+                parts = date_str.split('/')
+                m_date = datetime(now.year, int(parts[0]), int(parts[1]), tzinfo=timezone(timedelta(hours=8)))
+                if (now - m_date) > timedelta(hours=24):
+                    removed += 1
+                    continue
+            except Exception:
+                pass
+        kept.append(m)
+    existing['matches'] = kept
+    if removed:
+        print(f'[CLEANUP] Deleted {removed} matches finished >24h ago')
+    return existing
+
 # ========== MAIN ==========
 def main():
     print(f'[INFO] 世界杯预测引擎启动 — {NOW_STR}')
@@ -663,6 +688,7 @@ def main():
     
     # Load existing data
     existing = load_existing_data()
+    existing = cleanup_old_matches(existing)
     matches = existing.get('matches', [])
     accuracy = existing.get('prediction_accuracy', {'total_matches':0,'correct_h2h':0,'accuracy_rate':'0%','history':[]})
     
