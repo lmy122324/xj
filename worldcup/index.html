@@ -387,9 +387,29 @@ function cP(){
 
 function tM(id){var b=document.getElementById('bd'+id);if(!b)return;b.classList.toggle('open');document.getElementById('ar'+id).classList.toggle('open');b.previousElementSibling.classList.toggle('ex')}
 function tJ(btn){var p=btn.nextElementSibling;p.classList.toggle('open');btn.textContent=p.classList.contains('open')?'⬆️ 收起竞彩':'⬇️ 展开竞彩';}
-function sFR(title,time,enc){var r=decodeURIComponent(enc);var m=document.createElement('div');m.className='modal';m.style.cssText='position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:100;overflow-y:auto;padding:12px 6px';m.innerHTML='<div style="max-width:660px;margin:0 auto;background:var(--card);border:1px solid var(--gold);border-radius:8px;padding:12px;position:relative"><button class="mc" onclick="this.closest(\\'".modal\\'").remove()">✕</button><div style="font-size:12px;font-weight:700;margin-bottom:6px;padding-right:20px;color:var(--gold)">'+title+' · '+time+'</div><div style="font-size:10px;line-height:1.6">'+r+'</div></div>';document.body.appendChild(m);m.onclick=function(e){if(e.target===this)this.remove()};}
-
-function swV(v,btn){cV=v;document.querySelectorAll('.top-nav-btn').forEach(function(b){b.classList.remove('active')});if(btn)btn.classList.add('active');document.getElementById('vPred').className=(v==='pred'?'':'hide');document.getElementById('vAna').className=(v==='ana'?'':'hide');document.getElementById('vBet').className=(v==='bet'?'':'hide');document.getElementById('ab').style.display=(v==='bet'?'none':'');rP();}
+function sFR(tit,time,enc){
+  var r=decodeURIComponent(enc);
+  var m=document.createElement('div');
+  m.style.cssText='position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:100;overflow-y:auto;padding:12px 6px';
+  var box=document.createElement('div');
+  box.style.cssText='max-width:660px;margin:0 auto;background:var(--card);border:1px solid var(--gold);border-radius:8px;padding:12px;position:relative';
+  var closeBtn=document.createElement('button');
+  closeBtn.textContent='X';
+  closeBtn.style.cssText='position:absolute;top:8px;right:10px;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.05);border:none;color:var(--sub);cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center';
+  closeBtn.onclick=function(){m.remove();};
+  box.appendChild(closeBtn);
+  var titDiv=document.createElement('div');
+  titDiv.style.cssText='font-size:12px;font-weight:700;margin-bottom:6px;padding-right:20px;color:var(--gold)';
+  titDiv.textContent=tit+' - '+time;
+  box.appendChild(titDiv);
+  var bodyDiv=document.createElement('div');
+  bodyDiv.style.cssText='font-size:10px;line-height:1.6';
+  bodyDiv.innerHTML=r;
+  box.appendChild(bodyDiv);
+  m.appendChild(box);
+  document.body.appendChild(m);
+  m.onclick=function(e){if(e.target===m)m.remove()};
+}function swV(v,btn){cV=v;document.querySelectorAll('.top-nav-btn').forEach(function(b){b.classList.remove('active')});if(btn)btn.classList.add('active');document.getElementById('vPred').className=(v==='pred'?'':'hide');document.getElementById('vAna').className=(v==='ana'?'':'hide');document.getElementById('vBet').className=(v==='bet'?'':'hide');document.getElementById('ab').style.display=(v==='bet'?'none':'');rP();}
 function fil(f,btn){cF=f;document.querySelectorAll('.sub-btn').forEach(function(b){b.classList.remove('active')});if(btn)btn.classList.add('active');rP();}
 function swAV(v,btn){cAv=v;document.querySelectorAll('.sub-btn').forEach(function(b){b.classList.remove('active')});if(btn)btn.classList.add('active');rA();}
 function tt(){document.body.classList.toggle('light');localStorage.setItem('wcT',document.body.classList.contains('light')?'l':'d')}
