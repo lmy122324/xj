@@ -15,6 +15,7 @@ from collections import Counter
 REPO_DIR = r'C:\Users\19916\Desktop\xj-local'
 DATA_PATH = os.path.join(REPO_DIR, 'worldcup', 'data.json')
 REPORTS_DIR = os.path.join(REPO_DIR, 'worldcup', 'reports')
+TIMESTAMP_FILE = os.path.join(os.path.dirname(__file__), '.last_run')
 ODDS_API = "https://api.the-odds-api.com/v4/sports/soccer_fifa_world_cup/odds/?apiKey=2e767a577f18b239d4e4b8ba2520f04c&regions=eu&markets=h2h,spreads,totals&oddsFormat=decimal"
 PROXY = "http://127.0.0.1:7897"
 os.makedirs(REPORTS_DIR, exist_ok=True)
@@ -126,6 +127,257 @@ def calc_var(match):
         r[n] = {'mean':round(mean,2),'std':round(std,4),'cv':round(cv,4),
                 'min':min(lst),'max':max(lst),'spread':round(max(lst)-min(lst),2)}
     return r
+
+# ========== 竞彩全玩法引擎 ==========
+def get_best_totals(match):
+    """Get best over/under odds from totals market"""
+    best = {}
+    for bm in match['bookmakers']:
+        for mk in bm['markets']:
+            if mk['key'] == 'totals':
+                for o in mk['outcomes']:
+                    key = f"{o['name']}_{o['point']}"
+                    if key not in best or o['price'] > best[key]['price']:
+                        best[key] = {'price': o['price'], 'point': o['point'], 'name': o['name']}
+    return best
+
+
+def get_best_spreads(match):
+    """Get best handicap odds from spreads market"""
+    best = {}
+    for bm in match['bookmakers']:
+        for mk in bm['markets']:
+            if mk['key'] == 'spreads':
+                for o in mk['outcomes']:
+                    n = o['name']
+                    pt = o.get('point', 0)
+                    if n not in best or o['price'] > best[n]['price']:
+                        best[n] = {'price': o['price'], 'point': pt}
+    return best
+
+
+def estimate_poisson_lambda(totals_best):
+    """Estimate average total goals from over/under odds using binary search"""
+    lines = {}
+    for key, data in totals_best.items():
+        point = data['point']
+        if point not in lines:
+            lines[point] = {}
+        lines[point][data['name']] = data['price']
+    for line in sorted(lines.keys()):
+        data = lines[line]
+        if 'Over' in data and 'Under' in data:
+            imp_over = 1.0 / data['Over']
+            imp_under = 1.0 / data['Under']
+            over_prob = imp_over / (imp_over + imp_under)
+            lo, hi = 0.1, 8.0
+            for _ in range(50):
+                mid = (lo + hi) / 2.0
+                prob = 0.0
+                for k in range(int(line) + 1):
+                    prob += math.exp(-mid) * (mid ** k) / math.factorial(k)
+                prob = 1.0 - prob  # P(X > line)
+                if prob > over_prob:
+                    hi = mid
+                else:
+                    lo = mid
+            return round((lo + hi) / 2.0, 4)
+    return 2.5
+
+
+def calc_jingcai_all(match, best, avg, var):
+    """竞彩赔率全玩法计算引擎
+    
+    Args:
+        match: 原始API赛事数据
+        best: h2h最高赔率
+        avg: h2h平均赔率
+        var: h2h方差分析
+    Returns:
+        dict: 竞彩全玩法赔率
+    """
+    home = match['home_team']
+    away = match['away_team']
+
+    # --- 1. SPF (胜平负) — 返奖率0.75 ---
+    spf = {}
+    for outcome in [home, 'Draw', away]:
+        price = best.get(outcome)
+        if price:
+            spf[outcome] = round(price * 0.75, 2)
+
+    # --- 2. 让球 — 返奖率0.78 ---
+    spreads_data = get_best_spreads(match)
+    rangqiu = {}
+    if spreads_data:
+        for name, info in spreads_data.items():
+            rangqiu[name] = {
+                'odds': round(info['price'] * 0.78, 2),
+                'handicap': info['point']
+            }
+
+    # --- 3. 总进球数 — 返奖率0.68 ---
+    totals_best = get_best_totals(match)
+    total_goals = {}
+    if totals_best:
+        lam = estimate_poisson_lambda(totals_best)
+        # Home/away goal split from h2h implied probabilities
+        h_imp = 1.0 / avg.get(home, 2.5) if avg.get(home) else 0.33
+        a_imp = 1.0 / avg.get(away, 2.5) if avg.get(away) else 0.33
+        d_imp = 1.0 / avg.get('Draw', 3.0) if avg.get('Draw') else 0.34
+        total_imp = h_imp + a_imp + d_imp
+        h_imp /= total_imp
+        a_imp /= total_imp
+        d_imp /= total_imp  # keep for reference, not used directly
+        # Split lambda: favor stronger team slightly more
+        lam_h = lam * (h_imp + 0.15 * d_imp) / (h_imp + a_imp + 0.3 * d_imp)
+        lam_a = lam - lam_h
+        lam_h = max(0.1, lam_h)
+        lam_a = max(0.1, lam_a)
+        # Poisson probabilities for total goals
+        goal_probs = {}
+        for g in range(7):
+            p = 0.0
+            for i in range(g + 1):
+                j = g - i
+                p += (math.exp(-lam_h) * (lam_h ** i) / math.factorial(i)) * \
+                     (math.exp(-lam_a) * (lam_a ** j) / math.factorial(j))
+            goal_probs[g] = p
+        goal_probs['6_plus'] = 1.0 - sum(goal_probs.get(g, 0) for g in range(6))
+        if goal_probs['6_plus'] < 0:
+            goal_probs['6_plus'] = 0.0
+        # Convert to odds with 0.68返奖率
+        for k in ['0', '1', '2', '3', '4', '5', '6_plus']:
+            p_key = int(k) if k != '6_plus' else '6_plus'
+            prob = goal_probs.get(p_key, 0.01)
+            # Scale probabilities to sum to target
+            total_goals[k] = round(0.68 / max(prob, 0.001), 2)
+
+    # --- 4. 波胆 (Correct Score) — 返奖率0.68 ---
+    scores = {}
+    if totals_best and lam > 0:
+        # Use same lambda_h, lambda_a from above
+        target_pairs = [(1,0),(2,0),(2,1),(1,1),(0,0),(3,0),(3,1),(0,1)]
+        raw_probs = {}
+        total_raw = 0.0
+        for i, j in target_pairs:
+            p = (math.exp(-lam_h) * (lam_h ** i) / math.factorial(i)) * \
+                (math.exp(-lam_a) * (lam_a ** j) / math.factorial(j))
+            key = f'{i}-{j}'
+            raw_probs[key] = p
+            total_raw += p
+        # Normalize and convert to odds
+        for key, prob in raw_probs.items():
+            norm_prob = prob / total_raw  # normalize within listed scores
+            scores[key] = round(0.68 / max(norm_prob, 0.001), 2)
+    else:
+        for s in ['1-0','2-0','2-1','1-1','0-0','3-0','3-1','0-1']:
+            scores[s] = 0.0
+
+    # --- 5. 半全场 — 返奖率0.65 ---
+    half_full = {}
+    if totals_best and lam > 0:
+        lam_ht = lam * 0.45  # ~45% goals in first half
+        lam_ht_h = lam_h * (lam_ht / lam)
+        lam_ht_a = lam_a * (lam_ht / lam)
+        # HT probabilities
+        def prob_result(lh, la):
+            p_h, p_d, p_a = 0.0, 0.0, 0.0
+            for i in range(8):
+                for j in range(8):
+                    p = (math.exp(-lh) * (lh ** i) / math.factorial(i)) * \
+                        (math.exp(-la) * (la ** j) / math.factorial(j))
+                    if i > j: p_h += p
+                    elif i == j: p_d += p
+                    else: p_a += p
+            tot = p_h + p_d + p_a
+            return p_h/tot, p_d/tot, p_a/tot
+        p_h_ht, p_d_ht, p_a_ht = prob_result(lam_ht_h, lam_ht_a)
+        p_h_ft, p_d_ft, p_a_ft = prob_result(lam_h, lam_a)
+        # Joint probabilities with conditional adjustment
+        # If leading at HT, more likely to win FT
+        adj = 1.4  # boost factor for same-direction outcomes
+        raw_joint = {
+            '胜-胜': p_h_ht * p_h_ft * adj,
+            '胜-平': p_h_ht * p_d_ft * 0.6,
+            '胜-负': p_h_ht * p_a_ft * 0.2,
+            '平-胜': p_d_ht * p_h_ft * 1.2,
+            '平-平': p_d_ht * p_d_ft * 1.3,
+            '平-负': p_d_ht * p_a_ft * 1.2,
+            '负-胜': p_a_ht * p_h_ft * 0.2,
+            '负-平': p_a_ht * p_d_ft * 0.6,
+            '负-负': p_a_ht * p_a_ft * adj,
+        }
+        sum_j = sum(raw_joint.values())
+        for key, prob in raw_joint.items():
+            norm_prob = prob / sum_j
+            half_full[key] = round(0.65 / max(norm_prob, 0.001), 2)
+    else:
+        for res in ['胜-胜','胜-平','胜-负','平-胜','平-平','平-负','负-胜','负-平','负-负']:
+            half_full[res] = 0.0
+
+    # --- 6. 上半场SPF — 返奖率0.75 ---
+    first_half_spf = {}
+    if totals_best and lam > 0:
+        lam_ht = lam * 0.45
+        lam_ht_h = lam_h * (lam_ht / lam)
+        lam_ht_a = lam_a * (lam_ht / lam)
+        def prob_result_ht(lh, la):
+            p_h, p_d, p_a = 0.0, 0.0, 0.0
+            for i in range(6):
+                for j in range(6):
+                    p = (math.exp(-lh) * (lh ** i) / math.factorial(i)) * \
+                        (math.exp(-la) * (la ** j) / math.factorial(j))
+                    if i > j: p_h += p
+                    elif i == j: p_d += p
+                    else: p_a += p
+            tot = p_h + p_d + p_a
+            return p_h/tot, p_d/tot, p_a/tot
+        p_h_ht, p_d_ht, p_a_ht = prob_result_ht(lam_ht_h, lam_ht_a)
+        prob_ht_spf = {home: p_h_ht, 'Draw': p_d_ht, away: p_a_ht}
+        for outcome in [home, 'Draw', away]:
+            first_half_spf[outcome] = round(0.75 / max(prob_ht_spf[outcome], 0.001), 2)
+    else:
+        for outcome in [home, 'Draw', away]:
+            first_half_spf[outcome] = 0.0
+
+    # --- 7. 串关 — 推荐组合 ---
+    chuan_guan = []
+    jc_h = spf.get(home, 0)
+    jc_d = spf.get('Draw', 0)
+    jc_a = spf.get(away, 0)
+    # 2串1: combine two outcomes from this match
+    picks_2x1_pairs = [
+        (f'{home}胜', jc_h, f'{away}胜', jc_a),
+        (f'{home}胜', jc_h, 'Draw', jc_d),
+        ('Draw', jc_d, f'{away}胜', jc_a),
+    ]
+    for p1, o1, p2, o2 in picks_2x1_pairs:
+        if o1 > 0 and o2 > 0 and o1 * o2 > 1.5:
+            chuan_guan.append({
+                'type': '2串1',
+                'picks': [p1, p2],
+                'odds': round(o1 * o2, 2)
+            })
+    # 3串1: three outcomes
+    if jc_h > 0 and jc_d > 0 and jc_a > 0 and jc_h * jc_d * jc_a > 3:
+        picks_3x1 = [f'{home}胜', 'Draw', f'{away}胜']
+        chuan_guan.append({
+            'type': '3串1',
+            'picks': picks_3x1,
+            'odds': round(jc_h * jc_d * jc_a, 2)
+        })
+
+    return {
+        'spf': spf,
+        'rangqiu': rangqiu,
+        'total_goals': total_goals,
+        'scores': scores,
+        'half_full': half_full,
+        'first_half_spf': first_half_spf,
+        'chuan_guan': chuan_guan,
+    }
+
 
 def calc_kelly(best_p, fair_p):
     b = best_p - 1
@@ -394,6 +646,24 @@ def gen_html_report(home, away, pred, strategies, score_pred, match_time):
 def main():
     print(f'[INFO] 世界杯预测引擎启动 — {NOW_STR}')
     
+    # ===== 离线补执行检测 =====
+    if os.path.exists(TIMESTAMP_FILE):
+        try:
+            with open(TIMESTAMP_FILE, 'r') as f:
+                last_ts = f.read().strip()
+            if last_ts:
+                last_dt = datetime.fromisoformat(last_ts)
+                elapsed = NOW - last_dt
+                if elapsed.total_seconds() < 8 * 3600:
+                    remaining = 8 * 3600 - elapsed.total_seconds()
+                    print(f'[SKIP] 距上次执行仅 {elapsed.total_seconds()/3600:.1f}h（<8h），跳过。还需等 {remaining/3600:.1f}h')
+                    return
+                print(f'[OK] 距上次执行 {elapsed.total_seconds()/3600:.1f}h（>=8h），继续')
+        except Exception as e:
+            print(f'[WARN] 时间戳解析失败: {e}，继续执行')
+    else:
+        print('[INFO] 首次运行，无时间戳文件')
+    
     # Load existing data
     existing = load_existing_data()
     matches = existing.get('matches', [])
@@ -461,6 +731,14 @@ def main():
                 'strategies': {k: s for k, s in strategies.items()}
             }]
         }
+        
+        # 添加竞彩全玩法数据
+        try:
+            match_entry['analyses'][0]['jingcai_all'] = calc_jingcai_all(m, best, avg, var)
+        except Exception as e:
+            print(f'[WARN] calc_jingcai_all 失败 ({home} vs {away}): {e}')
+            match_entry['analyses'][0]['jingcai_all'] = None
+        
         new_matches.append(match_entry)
     
     # Merge with existing matches (keep finished results)
@@ -525,6 +803,14 @@ def main():
         print(f'[OK] GitHub push 完成')
     except subprocess.CalledProcessError as e:
         print(f'[WARN] Git push 失败: {e.stderr.decode() if e.stderr else "unknown"}')
+    
+    # 更新时间戳
+    try:
+        with open(TIMESTAMP_FILE, 'w') as f:
+            f.write(NOW.isoformat())
+        print(f'[OK] 时间戳已更新: {TIMESTAMP_FILE}')
+    except Exception as e:
+        print(f'[WARN] 时间戳写入失败: {e}')
     
     print('[DONE]')
 
