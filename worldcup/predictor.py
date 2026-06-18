@@ -661,7 +661,7 @@ def cleanup_old_matches(existing):
         kept.append(m)
     existing['matches'] = kept
     if removed:
-        print(f'[CLEANUP] Deleted {removed} matches finished >24h ago')
+        print(f'[CLEANUP] Deleted {removed} old matches')
     return existing
 
 # ========== MAIN ==========
@@ -736,7 +736,7 @@ def main():
             'home': home, 'away': away,
             'date': t_bj.strftime('%m/%d'), 'time': match_time,
             'group': group, 'result': existing_match.get('result') if existing_match else None,
-            'changes': existing_match.get('changes', []) if existing_match else [],
+            'changes': [],
             'recommendations': [{
                 'title': f'{pred["fav"]}胜',
                 'odds': f'@{pred["fav_avg"]}',
@@ -761,7 +761,43 @@ def main():
         except Exception as e:
             print(f'[WARN] calc_jingcai_all 失败 ({home} vs {away}): {e}')
             match_entry['analyses'][0]['jingcai_all'] = None
-        
+
+        # 生成 changes 数据（比对旧预测和新预测）
+        changes = []
+        if existing_match and existing_match.get('analyses'):
+            old_a = existing_match['analyses'][-1]
+            old_text = old_a.get('text', '')
+            new_text = match_entry['analyses'][0].get('text', '')
+            if old_text and new_text and old_text != new_text:
+                changes.append({
+                    'icon': '\U0001f504',
+                    'type': 'neutral',
+                    'label': '预测调整',
+                    'text': f'预测方向已更新'
+                })
+            # 赔率变化
+            old_jc = old_a.get('jingcai_all', {}) or {}
+            new_jc = match_entry['analyses'][0].get('jingcai_all', {}) or {}
+            if old_jc and new_jc:
+                for team in old_jc.get('spf', {}):
+                    if team in new_jc.get('spf', {}):
+                        diff = new_jc['spf'][team] - old_jc['spf'][team]
+                        if abs(diff) > 0.03:
+                            icon = '\U0001f4c8' if diff > 0 else '\U0001f4c9'
+                            ctype = 'good' if diff > 0 else 'bad'
+                            changes.append({
+                                'icon': icon, 'type': ctype,
+                                'label': f'{team}赔率变动',
+                                'text': f'{old_jc["spf"][team]} → {new_jc["spf"][team]}'
+                            })
+        match_entry['changes'] = changes
+
+        # 强制所有比赛都有 fullReport
+        if not match_entry['analyses'][0].get('fullReport'):
+            match_entry['analyses'][0]['fullReport'] = gen_html_report(
+                home, away, pred, strategies, score_pred, match_time
+            )
+
         new_matches.append(match_entry)
     
     # Merge with existing matches (keep finished results)

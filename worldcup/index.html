@@ -10,7 +10,7 @@
   --bg:#0c0a1a;--card:#141128;--card-border:#2a2040;
   --accent:#00d4aa;--gold:#ffd700;--gold-light:#ffed80;--gold-dark:#b8960f;
   --red:#ff4757;--text:#e8e0f0;--sub:#7a7090;
-  --conservative:#00d4aa;--balanced:#ffd700;--aggressive:#ff4757;
+  --c:#00d4aa;--b:#ffd700;--a:#ff4757;
 }
 .light{
   --bg:#f5f0e8;--card:#fffaf0;--card-border:#d4c8a8;
@@ -19,538 +19,384 @@
 }
 body{
   font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
-  background:var(--bg);color:var(--text);min-height:100vh;
-  line-height:1.5;transition:background .3s,color .3s;
-  -webkit-font-smoothing:antialiased;
+  background:var(--bg);color:var(--text);min-height:100vh;line-height:1.5;
+  transition:background .3s,color .3s;-webkit-font-smoothing:antialiased;
 }
-
-/* ===== HEADER ===== */
-.header{text-align:center;padding:14px 10px 8px;background:linear-gradient(180deg,#1a1040,#0c0a1a);border-bottom:1px solid var(--card-border);position:relative}
+.header{text-align:center;padding:12px 10px 6px;background:linear-gradient(180deg,#1a1040,#0c0a1a);border-bottom:1px solid var(--card-border);position:relative}
 .light .header{background:linear-gradient(180deg,#f0e8d8,#f5f0e8)}
 .header::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),var(--accent),var(--gold),transparent)}
-.header h1{font-size:18px;font-weight:900;background:linear-gradient(135deg,var(--gold),var(--gold-light),var(--gold-dark));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:1px}
-.header .sub{font-size:8px;color:var(--sub);margin-top:1px;letter-spacing:.5px}
-.theme-btn{position:absolute;top:10px;right:10px;background:rgba(255,255,255,.05);border:1px solid var(--card-border);border-radius:16px;padding:3px 10px;color:var(--sub);cursor:pointer;font-size:8px;font-weight:600;z-index:2}
-
-/* ===== TOP NAV ===== */
-.top-nav{display:flex;align-items:center;padding:4px 6px;background:rgba(255,255,255,.015);border-bottom:1px solid var(--card-border);gap:3px;flex-wrap:wrap;position:sticky;top:0;z-index:20;backdrop-filter:blur(8px)}
-.top-nav-btn{padding:4px 10px;border-radius:14px;border:1px solid var(--card-border);background:transparent;color:var(--sub);cursor:pointer;font-size:9px;font-weight:600;transition:.15s;white-space:nowrap}
+.header h1{font-size:17px;font-weight:900;background:linear-gradient(135deg,var(--gold),var(--gold-light),var(--gold-dark));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:1px}
+.header .sub{font-size:7px;color:var(--sub);margin-top:1px;letter-spacing:.5px}
+.theme-btn{position:absolute;top:8px;right:8px;background:rgba(255,255,255,.05);border:1px solid var(--card-border);border-radius:14px;padding:2px 8px;color:var(--sub);cursor:pointer;font-size:7px;font-weight:600;z-index:2}
+.top-nav{display:flex;align-items:center;padding:3px 4px;background:rgba(255,255,255,.015);border-bottom:1px solid var(--card-border);gap:2px;position:sticky;top:0;z-index:20;backdrop-filter:blur(8px)}
+.top-nav-btn{padding:3px 8px;border-radius:12px;border:1px solid var(--card-border);background:transparent;color:var(--sub);cursor:pointer;font-size:8px;font-weight:600;transition:.15s;white-space:nowrap}
 .top-nav-btn:hover{border-color:var(--gold);color:var(--gold)}
 .top-nav-btn.active{background:rgba(255,215,0,.1);border-color:var(--gold);color:var(--gold)}
 .top-nav-spacer{flex:1}
-.strat-btn{padding:3px 10px;border-radius:14px;border:1px solid var(--accent);background:rgba(0,212,170,.06);color:var(--accent);cursor:pointer;font-size:8px;font-weight:700;white-space:nowrap}
-.strat-dd{display:none;position:absolute;top:100%;right:0;z-index:50;background:var(--card);border:1px solid var(--card-border);border-radius:8px;padding:3px;min-width:150px;box-shadow:0 8px 24px rgba(0,0,0,.4);margin-top:3px}
-.strat-dd.open{display:block}
-.strat-opt{display:block;width:100%;text-align:left;padding:5px 8px;border:none;background:transparent;color:var(--text);cursor:pointer;font-size:9px;border-radius:4px}
-.strat-opt:hover{background:rgba(255,215,0,.04)}
-.strat-opt.active{background:rgba(0,212,170,.06)}
-.strat-opt .sl{font-weight:700;font-size:10px}
-.strat-opt .sd{font-size:7px;color:var(--sub);display:block}
-
-/* ===== ACCURACY ===== */
-.acc-bar{margin:3px 6px;padding:6px 10px;background:rgba(255,215,0,.03);border:1px solid rgba(255,215,0,.08);border-radius:8px;font-size:8px}
-.acc-bar .at{font-size:10px;font-weight:700;color:var(--gold);margin-bottom:2px}
-.acc-bar .as{display:flex;gap:8px;flex-wrap:wrap}
-.acc-bar .ai{text-align:center;min-width:50px}
-.acc-bar .ai .n{font-size:14px;font-weight:900}
-.acc-bar .ai .l{font-size:7px;color:var(--sub)}
-.acc-bar .note{font-size:7px;color:var(--sub);margin-top:2px;opacity:.6}
-.dot{width:7px;height:7px;border-radius:50%;display:inline-block;margin:0 1px}
+.acc-bar{margin:2px 4px;padding:4px 8px;background:rgba(255,215,0,.03);border:1px solid rgba(255,215,0,.06);border-radius:6px;font-size:7px}
+.acc-bar .at{font-size:9px;font-weight:700;color:var(--gold);margin-bottom:1px}
+.acc-bar .as{display:flex;gap:6px;flex-wrap:wrap}
+.acc-bar .ai{text-align:center;min-width:40px}
+.acc-bar .ai .n{font-size:12px;font-weight:900}
+.acc-bar .ai .l{font-size:6px;color:var(--sub)}
+.acc-bar .note{font-size:6px;color:var(--sub);margin-top:1px;opacity:.5}
+.dot{width:6px;height:6px;border-radius:50%;display:inline-block;margin:0 1px}
 .dot.up{background:var(--accent)}.dot.down{background:var(--red)}.dot.flat{background:var(--gold)}
-
-/* ===== SUB NAV ===== */
-.sub-nav{display:flex;gap:3px;padding:3px 6px;flex-wrap:wrap;border-bottom:1px solid var(--card-border)}
-.sub-btn{padding:3px 10px;border-radius:12px;border:1px solid var(--card-border);background:transparent;color:var(--sub);cursor:pointer;font-size:8px;font-weight:600;transition:.15s}
-.sub-btn:hover{border-color:var(--accent);color:var(--accent)}
+.sub-nav{display:flex;gap:2px;padding:2px 4px;flex-wrap:wrap;border-bottom:1px solid var(--card-border)}
+.sub-btn{padding:2px 8px;border-radius:10px;border:1px solid var(--card-border);background:transparent;color:var(--sub);cursor:pointer;font-size:7px;font-weight:600}
 .sub-btn.active{background:rgba(0,212,170,.08);border-color:var(--accent);color:var(--accent)}
+.container{max-width:720px;margin:0 auto;padding:2px 4px 60px}
+.status-bar{display:flex;justify-content:space-between;padding:3px 6px;background:rgba(255,215,0,.02);border:1px solid rgba(255,215,0,.04);border-radius:4px;margin:2px 0;font-size:7px;color:var(--sub)}
 
-/* ===== STATUS ===== */
-.status-bar{display:flex;justify-content:space-between;padding:4px 8px;background:rgba(255,215,0,.02);border:1px solid rgba(255,215,0,.06);border-radius:6px;margin:3px 0;font-size:7px;color:var(--sub)}
-
-/* ===== CONTAINER ===== */
-.container{max-width:720px;margin:0 auto;padding:3px 6px 60px}
-
-/* ===== PREDICT CARD ===== */
-.pc{border:1px solid var(--card-border);border-radius:10px;margin-bottom:5px;background:linear-gradient(135deg,var(--card),rgba(255,215,0,.01));overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.1)}
-.pc-head{padding:7px 10px;display:flex;align-items:center;gap:5px;cursor:pointer;user-select:none}
-.pc-head:hover{background:rgba(255,215,0,.015)}
-.pc-head.ex{border-bottom:1px solid rgba(255,215,0,.06);background:rgba(255,215,0,.02)}
-.pc-ar{font-size:7px;color:var(--gold);transition:transform .2s;flex-shrink:0;opacity:.4}
+/* ===== MATCH CARDS ===== */
+.pc{border:1px solid var(--card-border);border-radius:8px;margin-bottom:4px;background:linear-gradient(135deg,var(--card),rgba(255,215,0,.01));overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.08)}
+.pc-head{padding:5px 8px;display:flex;align-items:center;gap:4px;cursor:pointer;user-select:none}
+.pc-head:hover{background:rgba(255,215,0,.01)}
+.pc-head.ex{border-bottom:1px solid rgba(255,215,0,.04);background:rgba(255,215,0,.015)}
+.pc-ar{font-size:6px;color:var(--gold);transition:transform .2s;flex-shrink:0;opacity:.4}
 .pc-ar.open{transform:rotate(90deg);opacity:1}
-.pc-tm{flex:1;font-size:12px;font-weight:700}
-.pc-tm .fl{font-size:16px;margin-right:2px}
-.pc-tm .vs{color:var(--sub);font-size:8px;margin:0 2px;font-weight:400}
+.pc-tm{flex:1;font-size:11px;font-weight:700}
+.pc-tm .fl{font-size:14px;margin-right:1px}
+.pc-tm .vs{color:var(--sub);font-size:7px;margin:0 2px;font-weight:400}
 .pc-ti{font-size:7px;color:var(--sub);white-space:nowrap}
-.pc-cb{padding:1px 5px;border-radius:8px;font-size:7px;font-weight:700}
-.pch{background:rgba(0,212,170,.1);color:var(--accent);border:1px solid rgba(0,212,170,.12)}
-.pcm{background:rgba(255,215,0,.1);color:var(--gold);border:1px solid rgba(255,215,0,.12)}
-.pcl{background:rgba(255,71,87,.1);color:var(--red);border:1px solid rgba(255,71,87,.12)}
-.nt{display:inline-block;padding:1px 4px;border-radius:5px;background:linear-gradient(135deg,var(--red),#ff6b81);color:#fff;font-size:6px;font-weight:700;animation:blink 1.5s infinite}
+.pc-cb{padding:1px 4px;border-radius:6px;font-size:6px;font-weight:700}
+.pch{background:rgba(0,212,170,.1);color:var(--accent);border:1px solid rgba(0,212,170,.1)}
+.pcm{background:rgba(255,215,0,.1);color:var(--gold);border:1px solid rgba(255,215,0,.1)}
+.pcl{background:rgba(255,71,87,.1);color:var(--red);border:1px solid rgba(255,71,87,.1)}
+.nt{display:inline-block;padding:1px 3px;border-radius:4px;background:linear-gradient(135deg,var(--red),#ff6b81);color:#fff;font-size:5px;font-weight:700;animation:blink 1.5s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
-.sb{padding:1px 5px;border-radius:6px;font-size:6px;font-weight:700;margin-left:2px}
-.sbc{background:rgba(0,212,170,.1);color:var(--accent);border:1px solid rgba(0,212,170,.12)}
-.sbb{background:rgba(255,215,0,.1);color:var(--gold);border:1px solid rgba(255,215,0,.12)}
-.sba{background:rgba(255,71,87,.1);color:var(--red);border:1px solid rgba(255,71,87,.12)}
-
-.pc-body{padding:5px 10px;display:none}
+.pc-body{padding:4px 8px;display:none}
 .pc-body.open{display:block}
-
-/* ===== STRAT CARDS ===== */
-.scards{display:flex;gap:3px;margin-bottom:4px;flex-wrap:wrap}
-.sc{flex:1;min-width:90px;padding:5px 6px;border-radius:6px;cursor:pointer;text-align:center;border:1px solid transparent;background:rgba(255,215,0,.015);transition:.15s}
+.scards{display:flex;gap:2px;margin-bottom:3px;flex-wrap:wrap}
+.sc{flex:1;min-width:80px;padding:4px 5px;border-radius:5px;cursor:pointer;text-align:center;border:1px solid transparent;background:rgba(255,215,0,.01);transition:.15s}
 .sc:hover{transform:translateY(-1px)}
 .sc.sel{border-color:var(--gold)}
-.sc .sl{font-size:8px;font-weight:700;display:block}
-.sc .sp{font-size:9px;font-weight:700;display:block;margin:1px 0}
-.sc .so{font-size:10px;font-weight:900;display:block}
-.sc .sr{font-size:7px;display:block;color:var(--sub)}
-
-/* ===== 竞彩 PANEL ===== */
-.jc-toggle{padding:4px 8px;margin:3px 0;border-radius:6px;border:1px solid rgba(255,215,0,.1);background:rgba(255,215,0,.02);color:var(--gold);cursor:pointer;font-size:8px;font-weight:600;text-align:center;width:100%}
-.jc-panel{display:none;margin-top:4px}
+.sc .sl{font-size:7px;font-weight:700;display:block}
+.sc .sp{font-size:8px;font-weight:700;display:block;margin:1px 0}
+.sc .so{font-size:9px;font-weight:900;display:block}
+.sc .sr{font-size:6px;display:block;color:var(--sub)}
+.jc-toggle{width:100%;padding:3px 6px;margin:2px 0;border-radius:4px;border:1px solid rgba(255,215,0,.08);background:rgba(255,215,0,.015);color:var(--gold);cursor:pointer;font-size:7px;font-weight:600;text-align:center}
+.jc-panel{display:none}
 .jc-panel.open{display:block}
-.jc-section{margin-bottom:4px;padding:4px 6px;border-radius:6px;background:rgba(255,215,0,.015);border:1px solid rgba(255,215,0,.05)}
-.jc-section .jct{font-size:8px;font-weight:700;color:var(--gold);margin-bottom:3px}
-.jc-row{display:flex;gap:4px;flex-wrap:wrap}
-.jc-item{padding:2px 6px;border-radius:4px;background:rgba(255,255,255,.02);font-size:8px;white-space:nowrap}
+.jc-section{margin-bottom:3px;padding:3px 5px;border-radius:4px;background:rgba(255,215,0,.01);border:1px solid rgba(255,215,0,.04)}
+.jc-section .jct{font-size:7px;font-weight:700;color:var(--gold);margin-bottom:2px}
+.jc-row{display:flex;gap:3px;flex-wrap:wrap}
+.jc-item{padding:1px 5px;border-radius:3px;background:rgba(255,255,255,.015);font-size:7px;white-space:nowrap}
 .jc-item .jcn{color:var(--sub)}
-.jc-item .jco{font-weight:700;margin-left:2px}
+.jc-item .jco{font-weight:700;margin-left:1px}
 .jco-g{color:var(--accent)}.jco-y{color:var(--gold)}.jco-r{color:var(--red)}
+.chg{padding:2px 5px;margin:2px 0;font-size:7px;border-left:2px solid var(--red);background:rgba(255,255,255,.02);border-radius:0 3px 3px 0}
 
-/* ===== ANALYSIS VIEW ===== */
-.analysis-match-selector{display:flex;gap:4px;padding:4px 0;overflow-x:auto;margin-bottom:4px}
-.ams-btn{padding:3px 8px;border-radius:10px;border:1px solid var(--card-border);background:transparent;color:var(--sub);cursor:pointer;font-size:8px;white-space:nowrap;flex-shrink:0}
-.ams-btn.active{background:rgba(255,215,0,.08);border-color:var(--gold);color:var(--gold)}
-.analysis-full{margin-bottom:5px}
-.analysis-full .af-card{padding:6px 8px;border:1px solid var(--card-border);border-radius:8px;margin-bottom:4px;background:rgba(255,215,0,.01);cursor:pointer}
-.af-card .af-h{font-size:11px;font-weight:700}
-.af-card .af-s{display:flex;gap:8px;margin-top:3px;font-size:8px;color:var(--sub);flex-wrap:wrap}
+/* ===== BETTING VIEW ===== */
+.bv{padding:2px 0}
+.bv-h{font-size:12px;font-weight:700;margin-bottom:4px;color:var(--gold);text-align:center}
+.bv-sub{font-size:7px;color:var(--sub);text-align:center;margin-bottom:6px}
+.bv-cards{display:flex;gap:4px;margin-bottom:6px;flex-wrap:wrap}
+.bv-c{flex:1;min-width:120px;padding:8px;border-radius:8px;cursor:pointer;transition:.2s;text-align:center;border:1px solid var(--card-border)}
+.bv-c:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.bv-c.active{box-shadow:0 0 0 2px var(--gold),0 4px 16px rgba(255,215,0,.1)}
+.bv-c .bvt{font-size:11px;font-weight:700;display:block}
+.bv-c .bvd{font-size:7px;display:block;color:var(--sub);margin:2px 0}
+.bv-c .bvr{font-size:18px;font-weight:900;display:block;margin:4px 0}
+.bv-c .bvn{font-size:7px;display:block;color:var(--sub)}
+.bv-c.s1{border-color:rgba(0,212,170,.3);background:rgba(0,212,170,.04)}
+.bv-c.s1 .bvt{color:var(--c)}.bv-c.s1 .bvr{color:var(--c)}
+.bv-c.s2{border-color:rgba(255,215,0,.3);background:rgba(255,215,0,.04)}
+.bv-c.s2 .bvt{color:var(--b)}.bv-c.s2 .bvr{color:var(--b)}
+.bv-c.s3{border-color:rgba(255,71,87,.3);background:rgba(255,71,87,.04)}
+.bv-c.s3 .bvt{color:var(--a)}.bv-c.s3 .bvr{color:var(--a)}
 
-/* ===== REPORT SECTION ===== */
-.rpt{padding:8px 10px}
-.rpt-h{font-size:16px;font-weight:700;text-align:center;margin-bottom:6px;color:var(--gold)}
-.rpt-box{border-radius:8px;padding:6px 8px;margin-bottom:6px;border:1px solid rgba(255,215,0,.08)}
-.rpt-box .rpt-t{font-size:10px;font-weight:700;margin-bottom:3px}
-.rpt-box .rpt-c{font-size:9px;line-height:1.6}
-.rpt-table{width:100%;border-collapse:collapse;font-size:8px;margin:3px 0}
-.rpt-table td{padding:3px 6px;border-bottom:1px solid rgba(255,215,0,.05)}
-.strat-block{padding:5px 8px;margin:3px 0;border-radius:6px 0 0 6px}
-.sb-c{border-left:3px solid var(--conservative);background:rgba(0,212,170,.03)}
-.sb-b{border-left:3px solid var(--balanced);background:rgba(255,215,0,.03)}
-.sb-a{border-left:3px solid var(--aggressive);background:rgba(255,71,87,.03)}
-.back-btn{padding:3px 8px;border-radius:10px;border:1px solid var(--card-border);color:var(--sub);cursor:pointer;font-size:8px;margin-bottom:6px;display:inline-block}
+.bv-list-title{font-size:9px;font-weight:700;color:var(--gold);margin-bottom:3px}
+.bv-item{padding:4px 6px;margin:2px 0;border-radius:4px;border:1px solid rgba(255,215,0,.06);display:flex;align-items:center;gap:4px;font-size:7px;background:rgba(255,255,255,.01)}
+.bv-item .bvi-ck{width:12px;height:12px;border-radius:2px;border:1px solid var(--sub);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:7px;flex-shrink:0}
+.bv-item .bvi-ck.ckd{background:var(--gold);border-color:var(--gold);color:#000}
+.bv-item .bvi-m{flex:1}
+.bv-item .bvi-o{font-weight:700;font-size:8px}
+.bv-item .bvi-c{font-size:6px;color:var(--sub)}
+.bv-parlay{padding:6px 8px;border-radius:6px;border:1px solid rgba(255,215,0,.12);background:rgba(255,215,0,.02);margin-top:6px}
+.bv-parlay .bvp-h{font-size:9px;font-weight:700;color:var(--gold);margin-bottom:3px}
+.bv-parlay .bvp-row{display:flex;justify-content:space-between;font-size:7px;padding:2px 0}
+.bv-parlay .bvp-btn{padding:4px 12px;border-radius:6px;border:none;background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:#000;font-size:8px;font-weight:700;cursor:pointer;margin-top:3px;width:100%}
+.bv-parlay .bvp-btn:disabled{opacity:.4;cursor:default}
 
-/* ===== EMPTY ===== */
-.empty{padding:30px 10px;text-align:center;color:var(--sub);font-size:11px}
-.empty-r{display:none}
+/* ===== ANALYSIS / MODAL ===== */
+.rpt{padding:6px 8px}
+.modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:100;overflow-y:auto;padding:15px 8px}
+.modal-box{max-width:660px;margin:0 auto;background:var(--card);border:1px solid var(--gold);border-radius:10px;padding:14px;position:relative}
+.mc{width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,.05);border:none;position:absolute;top:8px;right:10px;color:var(--sub);cursor:pointer;font-size:12px;display:flex;align-items:center;justify-content:center}
 
-/* ===== MATCH SELECTOR DROPDOWN ===== */
-.ms-wrap{position:relative;margin-bottom:4px}
-.ms-btn{width:100%;padding:5px 10px;border:1px solid var(--card-border);border-radius:6px;background:rgba(255,215,0,.02);color:var(--text);cursor:pointer;font-size:10px;font-weight:600;text-align:left}
-.ms-dd{display:none;position:absolute;top:100%;left:0;right:0;z-index:30;background:var(--card);border:1px solid var(--card-border);border-radius:6px;max-height:200px;overflow-y:auto;margin-top:2px}
-.ms-dd.open{display:block}
-.ms-opt{padding:5px 8px;border:none;background:transparent;color:var(--text);cursor:pointer;font-size:9px;width:100%;text-align:left}
-.ms-opt:hover{background:rgba(255,215,0,.03)}
-.ms-opt.active{color:var(--gold);font-weight:700}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:480px){
-  .pc-tm{font-size:11px}.pc-tm .fl{font-size:14px}
-  .sc{min-width:70px;padding:4px 4px}
-  .sc .sl{font-size:7px}.sc .sp{font-size:8px}.sc .so{font-size:9px}
-  .header h1{font-size:16px}
-  .jc-item{font-size:7px}
-  .rpt-h{font-size:14px}
-  .top-nav-btn{font-size:8px;padding:3px 8px}
-}
-
-@media(min-width:768px){
-  .scards{flex-wrap:nowrap}
-  .jc-row{gap:6px}
-  .pc{padding:0}
-}
-
+.empty{padding:24px 10px;text-align:center;color:var(--sub);font-size:10px}
 .hide{display:none!important}
+
+@media(max-width:480px){
+  .pc-tm{font-size:10px}.pc-tm .fl{font-size:12px}
+  .sc{min-width:60px}.bv-c{min-width:90px;padding:6px}
+  .header h1{font-size:15px}.bv-c .bvr{font-size:15px}
+}
 </style>
 </head>
 <body>
-
 <div class="header">
   <h1>🏆 2026世界杯 · AI预测系统</h1>
-  <div class="sub">每8h更新 · 竞彩全玩法 · 多维分析</div>
+  <div class="sub">每8h更新 · 竞彩全玩法 · 购彩策略</div>
   <button class="theme-btn" onclick="tt()">🌙</button>
 </div>
 
-<div class="top-nav" id="topNav">
-  <button class="top-nav-btn active" data-view="predict" onclick="swView('predict',this)">🏠 预测</button>
-  <button class="top-nav-btn" data-view="analysis" onclick="swView('analysis',this)">📊 分析</button>
-  <div class="top-nav-spacer"></div>
-  <div style="position:relative">
-    <button class="strat-btn" id="stratBtn" onclick="togStrat()">⚡ 均衡</button>
-    <div class="strat-dd" id="stratDd">
-      <button class="strat-opt" data-s="conservative" onclick="selStrat('conservative',this)"><span class="sl" style="color:var(--conservative)">🛡️ 保守</span><span class="sd">低风险，稳字当头</span></button>
-      <button class="strat-opt active" data-s="balanced" onclick="selStrat('balanced',this)"><span class="sl" style="color:var(--balanced)">⚡ 均衡</span><span class="sd">收益风险兼顾</span></button>
-      <button class="strat-opt" data-s="aggressive" onclick="selStrat('aggressive',this)"><span class="sl" style="color:var(--aggressive)">🔥 激进</span><span class="sd">追求高回报</span></button>
-    </div>
-  </div>
+<div class="top-nav">
+  <button class="top-nav-btn active" data-v="pred" onclick="swV('pred',this)">🏠 预测</button>
+  <button class="top-nav-btn" data-v="ana" onclick="swV('ana',this)">📊 分析</button>
+  <button class="top-nav-btn" data-v="bet" onclick="swV('bet',this)">💰 购彩建议</button>
 </div>
 
-<div class="acc-bar" id="accBar">
+<div class="acc-bar" id="ab">
   <div class="at">📊 预测准确度</div>
   <div class="as">
-    <div class="ai"><div class="n" id="acTotal">-</div><div class="l">已预测</div></div>
-    <div class="ai"><div class="n" id="acRate">-</div><div class="l">准确率</div></div>
-    <div class="ai"><div class="n" id="acCorr">-</div><div class="l">猜中</div></div>
-    <div class="ai"><div class="n"><span id="acDots"></span></div><div class="l">近5场</div></div>
+    <div class="ai"><div class="n" id="aT">-</div><div class="l">已预测</div></div>
+    <div class="ai"><div class="n" id="aR">-</div><div class="l">准确率</div></div>
+    <div class="ai"><div class="n" id="aC">-</div><div class="l">猜中</div></div>
+    <div class="ai"><div class="n"><span id="aD"></span></div><div class="l">近5场</div></div>
   </div>
   <div class="note">⚽ 足球随机性大，顶级模型约58-65%，每场8维数据支撑，长期跟注正期望值自现</div>
 </div>
 
-<!-- ===== PREDICT VIEW ===== -->
-<div id="viewPredict">
+<!-- VIEW: PREDICT -->
+<div id="vPred">
 <div class="container">
-<div class="status-bar"><span>📡 <span id="dataSt">加载中...</span></span><span>⏰ 下次: <span id="nxUp">-</span></span></div>
+<div class="status-bar"><span>📡 <span id="dS">加载中...</span></span><span>⏰ 下次: <span id="nU">-</span></span></div>
 <div class="sub-nav">
-  <button class="sub-btn active" data-f="all" onclick="filMatch('all',this)">📋 全部</button>
-  <button class="sub-btn" data-f="today" onclick="filMatch('today',this)">🔥 今日</button>
-  <button class="sub-btn" data-f="changes" onclick="filMatch('changes',this)">🔄 变化</button>
+  <button class="sub-btn active" data-f="all" onclick="fil('all',this)">📋 全部</button>
+  <button class="sub-btn" data-f="today" onclick="fil('today',this)">🔥 今日</button>
+  <button class="sub-btn" data-f="changes" onclick="fil('changes',this)">🔄 变化</button>
 </div>
-<div id="predictContent"><div class="empty">🤖 加载中...</div></div>
-</div>
-</div>
+<div id="pC"><div class="empty">🤖 加载中...</div></div>
+</div></div>
 
-<!-- ===== ANALYSIS VIEW ===== -->
-<div id="viewAnalysis" class="hide">
+<!-- VIEW: ANALYSIS -->
+<div id="vAna" class="hide">
 <div class="container">
 <div class="sub-nav">
-  <button class="sub-btn active" data-av="single" onclick="swAnaView('single',this)">🔍 单场分析</button>
-  <button class="sub-btn" data-av="all_today" onclick="swAnaView('all_today',this)">📋 今日全部</button>
+  <button class="sub-btn active" data-av="s" onclick="swAV('s',this)">🔍 单场</button>
+  <button class="sub-btn" data-av="t" onclick="swAV('t',this)">📋 今日全部</button>
 </div>
-<div id="analysisContent"><div class="empty">📊 选择一场比赛查看完整分析</div></div>
-</div>
-</div>
+<div id="aC"><div class="empty">📊 选择比赛查看分析</div></div>
+</div></div>
+
+<!-- VIEW: BETTING -->
+<div id="vBet" class="hide">
+<div class="container">
+<div class="bv" id="bC"><div class="empty">💰 加载购彩建议...</div></div>
+</div></div>
 
 <script>
-// ===== CHINESE TEAM NAMES =====
-const CN = {
-  'Switzerland':'瑞士','Bosnia & Herzegovina':'波黑','Canada':'加拿大','Qatar':'卡塔尔',
-  'Czech Republic':'捷克','South Africa':'南非','Mexico':'墨西哥','South Korea':'韩国',
-  'Brazil':'巴西','Morocco':'摩洛哥','Haiti':'海地','Scotland':'苏格兰',
-  'USA':'美国','Paraguay':'巴拉圭','Australia':'澳大利亚','Türkiye':'土耳其',
-  'Germany':'德国','Curaçao':'库拉索',"Côte d'Ivoire":'科特迪瓦','Ecuador':'厄瓜多尔',
-  'Netherlands':'荷兰','Japan':'日本','Sweden':'瑞典','Tunisia':'突尼斯',
-  'Portugal':'葡萄牙','DR Congo':'刚果(金)','England':'英格兰','Croatia':'克罗地亚',
-  'Ghana':'加纳','Panama':'巴拿马','Colombia':'哥伦比亚','Uzbekistan':'乌兹别克',
-  'Argentina':'阿根廷','Algeria':'阿尔及利亚','Norway':'挪威','Iraq':'伊拉克',
-  'France':'法国','Senegal':'塞内加尔','Austria':'奥地利','Jordan':'约旦',
-  'Spain':'西班牙','Saudi Arabia':'沙特','Belgium':'比利时','Iran':'伊朗',
-  'Uruguay':'乌拉圭','Cape Verde':'佛得角','New Zealand':'新西兰','Egypt':'埃及',
-  'Turkey':'土耳其','Bosnia-Herzegovina':'波黑','Czechia':'捷克','Korea':'韩国',
-  'Korea Republic':'韩国','DR Congo':'刚果(金)',"Cote d'Ivoire":'科特迪瓦',
-};
-const FL = {
-  '瑞士':'🇨🇭','波黑':'🇧🇦','加拿大':'🇨🇦','卡塔尔':'🇶🇦','捷克':'🇨🇿','南非':'🇿🇦',
-  '墨西哥':'🇲🇽','韩国':'🇰🇷','巴西':'🇧🇷','摩洛哥':'🇲🇦','海地':'🇭🇹','苏格兰':'🏴󠁧󠁢󠁳󠁣󠁴󠁿',
-  '美国':'🇺🇸','巴拉圭':'🇵🇾','澳大利亚':'🇦🇺','土耳其':'🇹🇷','德国':'🇩🇪','库拉索':'🇨🇼',
-  '科特迪瓦':'🇨🇮','厄瓜多尔':'🇪🇨','荷兰':'🇳🇱','日本':'🇯🇵','瑞典':'🇸🇪','突尼斯':'🇹🇳',
-  '葡萄牙':'🇵🇹','刚果(金)':'🇨🇩','英格兰':'🏴󠁧󠁢󠁥󠁮󠁧󠁿','克罗地亚':'🇭🇷','加纳':'🇬🇭',
-  '巴拿马':'🇵🇦','哥伦比亚':'🇨🇴','乌兹别克':'🇺🇿','阿根廷':'🇦🇷','阿尔及利亚':'🇩🇿',
-  '挪威':'🇳🇴','伊拉克':'🇮🇶','法国':'🇫🇷','塞内加尔':'🇸🇳','奥地利':'🇦🇹','约旦':'🇯🇴',
-  '西班牙':'🇪🇸','沙特':'🇸🇦','比利时':'🇧🇪','伊朗':'🇮🇷','乌拉圭':'🇺🇾','佛得角':'🇨🇻',
-  '新西兰':'🇳🇿','埃及':'🇪🇬',
-};
-function cn(name){return CN[name]||name}
-function fl(name){return FL[cn(name)]||''}
+var CN={'Switzerland':'瑞士','Bosnia & Herzegovina':'波黑','Canada':'加拿大','Qatar':'卡塔尔','Czech Republic':'捷克','South Africa':'南非','Mexico':'墨西哥','South Korea':'韩国','Brazil':'巴西','Morocco':'摩洛哥','Haiti':'海地','Scotland':'苏格兰','USA':'美国','Paraguay':'巴拉圭','Australia':'澳大利亚','Turkey':'土耳其','Türkiye':'土耳其','Germany':'德国','Curaçao':'库拉索',"Côte d'Ivoire":'科特迪瓦','Ecuador':'厄瓜多尔','Netherlands':'荷兰','Japan':'日本','Sweden':'瑞典','Tunisia':'突尼斯','Portugal':'葡萄牙','DR Congo':'刚果(金)','England':'英格兰','Croatia':'克罗地亚','Ghana':'加纳','Panama':'巴拿马','Colombia':'哥伦比亚','Uzbekistan':'乌兹别克','Argentina':'阿根廷','Algeria':'阿尔及利亚','Norway':'挪威','Iraq':'伊拉克','France':'法国','Senegal':'塞内加尔','Austria':'奥地利','Jordan':'约旦','Spain':'西班牙','Saudi Arabia':'沙特','Belgium':'比利时','Iran':'伊朗','Uruguay':'乌拉圭','Cape Verde':'佛得角','New Zealand':'新西兰','Egypt':'埃及','Czechia':'捷克','Korea Republic':'韩国',"Cote d'Ivoire":'科特迪瓦'};
+var FL={'瑞士':'🇨🇭','波黑':'🇧🇦','加拿大':'🇨🇦','卡塔尔':'🇶🇦','捷克':'🇨🇿','南非':'🇿🇦','墨西哥':'🇲🇽','韩国':'🇰🇷','巴西':'🇧🇷','摩洛哥':'🇲🇦','海地':'🇭🇹','苏格兰':'🏴','美国':'🇺🇸','巴拉圭':'🇵🇾','澳大利亚':'🇦🇺','土耳其':'🇹🇷','德国':'🇩🇪','库拉索':'🇨🇼','科特迪瓦':'🇨🇮','厄瓜多尔':'🇪🇨','荷兰':'🇳🇱','日本':'🇯🇵','瑞典':'🇸🇪','突尼斯':'🇹🇳','葡萄牙':'🇵🇹','刚果(金)':'🇨🇩','英格兰':'🏴','克罗地亚':'🇭🇷','加纳':'🇬🇭','巴拿马':'🇵🇦','哥伦比亚':'🇨🇴','乌兹别克':'🇺🇿','阿根廷':'🇦🇷','阿尔及利亚':'🇩🇿','挪威':'🇳🇴','伊拉克':'🇮🇶','法国':'🇫🇷','塞内加尔':'🇸🇳','奥地利':'🇦🇹','约旦':'🇯🇴','西班牙':'🇪🇸','沙特':'🇸🇦','比利时':'🇧🇪','伊朗':'🇮🇷','乌拉圭':'🇺🇾','佛得角':'🇨🇻','新西兰':'🇳🇿','埃及':'🇪🇬'};
+function cn(n){return CN[n]||n}
+function fl(n){return FL[cn(n)]||''}
 
-let AM=[],curView='predict',curStrat='balanced',curFil='all',curAv='single',curMatchIdx=0,mIdx=0;
+var AM=[],cV='pred',cF='all',cAv='s',cS='s2',cMi=0,selParlay={};
 
-// ===== DATA LOAD =====
 function ld(){
-  const u=(window.location.origin+(window.location.pathname.replace(/\/[^/]*$/,'')||'/xj/worldcup'))+'/data.json?v='+Date.now();
-  fetch(u).then(r=>r.json()).then(d=>{
-    AM=d.matches||[];document.getElementById('dataSt').textContent=(d.analysisCount||0)+'份';
-    upAcc(d.prediction_accuracy);ren();
-  }).catch(()=>{
-    fetch('data.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{
-      AM=d.matches||[];upAcc(d.prediction_accuracy);ren();
-    }).catch(()=>{document.getElementById('dataSt').textContent='等待数据...';ren()});
+  var u=(window.location.origin+(window.location.pathname.replace(/\/[^/]*$/,'')||'/xj/worldcup'))+'/data.json?v='+Date.now();
+  fetch(u).then(function(r){return r.json()}).then(function(d){
+    AM=d.matches||[];document.getElementById('dS').textContent=(d.analysisCount||0)+'份';
+    uA(d.prediction_accuracy);rP();
+  }).catch(function(){
+    fetch('data.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(d){
+      AM=d.matches||[];uA(d.prediction_accuracy);rP();
+    }).catch(function(){document.getElementById('dS').textContent='等待数据...';rP()});
   });
 }
-
-function upAcc(ac){
+function uA(ac){
   if(!ac)return;
-  document.getElementById('acTotal').textContent=ac.total_matches||0;
-  document.getElementById('acRate').textContent=ac.accuracy_rate||'0%';
-  document.getElementById('acCorr').textContent=(ac.correct_h2h||0)+'/'+(ac.total_matches||0);
-  const dots=document.getElementById('acDots');
+  document.getElementById('aT').textContent=ac.total_matches||0;
+  document.getElementById('aR').textContent=ac.accuracy_rate||'0%';
+  document.getElementById('aC').textContent=(ac.correct_h2h||0)+'/'+(ac.total_matches||0);
   if(ac.history&&ac.history.length){
-    const r=ac.history.slice(-5);
-    dots.innerHTML=r.map(h=>`<span class="dot ${h.rate>60?'up':h.rate>45?'flat':'down'}" title="${h.date}: ${h.rate}%"></span>`).join('');
+    var r=ac.history.slice(-5);
+    document.getElementById('aD').innerHTML=r.map(function(h){return '<span class="dot '+(h.rate>60?'up':h.rate>45?'flat':'down')+'" title="'+h.date+': '+h.rate+'%"></span>'}).join('');
   }
 }
-
-// ===== RENDER =====
-function ren(){
-  mIdx=0;
-  if(curView==='predict')renPred();
-  else renAna();
+function gT(){
+  var d=new Date();
+  return String(d.getMonth()+1).padStart(2,'0')+'/'+String(d.getDate()).padStart(2,'0');
 }
-
-function renPred(){
-  const el=document.getElementById('predictContent');
-  if(!AM.length){el.innerHTML='<div class="empty">暂无赛程数据</div>';return}
-  const days={};
-  for(const m of AM){
-    const d=m.date||'?';if(!days[d])days[d]=[];days[d].push(m);
-  }
-  let html='';
-  const sD=Object.keys(days).sort((a,b)=>parseInt(a.split('/')[1])-parseInt(b.split('/')[1]));
-  const tD=getT();
-  for(const d of sD){
-    if(curFil==='changes')break;
-    if(curFil==='today'&&d!==tD)continue;
-    const isT=d===tD;
-    html+=`<div class="day-head" style="font-size:13px;font-weight:700;padding:6px 0 3px;color:var(--gold)">${isT?'🔥 ':''}${d} <span style="font-size:8px;color:var(--sub);font-weight:400">${days[d].length}场</span></div>`;
-    for(const m of days[d])html+=rMC(m);
-  }
-  if(curFil==='changes'){
-    html='<div style="font-size:13px;font-weight:700;padding:6px 0 3px;color:var(--gold)">🔄 变化追踪</div>';
-    let has=false;
-    for(const m of AM){if(m.changes&&m.changes.length){has=true;html+=rMC(m);}}
-    if(!has)html+='<div class="empty">暂无变化</div>';
-  }
-  el.innerHTML=html;
+function rP(){
+  if(cV==='pred'){document.getElementById('pC').innerHTML=rM();}
+  else if(cV==='ana'){rA();}
+  else if(cV==='bet'){rB();}
 }
-
-function rMC(m){
-  const al=m.analyses||[],l=al.length?al[al.length-1]:null;
-  const c=l?l.confidence:0,cc=c>=80?'pch':c>=60?'pcm':'pcl';
-  const mi=mIdx++,id='m'+mi,hasNew=l&&l.isNew;
-  const hc=cn(m.home),ac=cn(m.away);
-  const s=curStrat;let rP='-',rO='-',rR='-';
-  if(l&&l.strategies&&l.strategies[s]){const x=l.strategies[s];rP=x.pick||'-';rO=x.odds||'-';rR=x.per_100||'-';rR=rR!=='-'?'¥'+rR:'-';}
-  const sN=s==='conservative'?'保守':s==='balanced'?'均衡':'激进';
-  const sB=s==='conservative'?'sbc':s==='balanced'?'sbb':'sba';
-  
-  let h=`<div class="pc">
-  <div class="pc-head" onclick="togM('${id}')">
-    <span class="pc-ar" id="ar${id}">▶</span>
-    <span class="pc-tm"><span class="fl">${fl(hc)}</span>${hc}<span class="vs">vs</span><span class="fl">${fl(ac)}</span>${ac}</span>
-    <span class="pc-ti">${m.date||''} ${m.time||''}</span>
-    ${c?`<span class="pc-cb ${cc}">${c}%</span>`:''}
-    ${hasNew?'<span class="nt">NEW</span>':''}
-    ${rO!=='-'?`<span class="sb ${sB}">${sN} ${rO}</span>`:''}
-  </div>
-  <div class="pc-body" id="bd${id}">`;
-  
-  // Changes
-  if(m.changes){for(const c of m.changes||[]){
-    const ct=c.type==='good'?'chg-good':c.type==='bad'?'chg-bad':'chg-neutral';
-    h+=`<div style="border-radius:4px;padding:2px 5px;margin:2px 0;font-size:8px;border-left:2px solid ${c.type==='good'?'var(--accent)':'var(--red)'};background:rgba(255,255,255,.01)"><b>${c.icon||'🔄'} ${c.label}</b> ${c.text}</div>`;
-  }}
-  
-  // Strategy cards
+function rM(){
+  if(!AM.length)return '<div class="empty">暂无赛程</div>';
+  var days={},mi=0;
+  for(var i=0;i<AM.length;i++){var m=AM[i];var d=m.date||'?';if(!days[d])days[d]=[];days[d].push(m);}
+  var sd=Object.keys(days).sort(function(a,b){var ap=a.split('/'),bp=b.split('/');return parseInt(ap[1])-parseInt(bp[1]);});
+  var tD=gT(),tD2=String(parseInt(tD.split('/')[0]))+'/'+String(parseInt(tD.split('/')[1]));
+  var h='';
+  for(var di=0;di<sd.length;di++){
+    var d=sd[di],ms=days[d];
+    if(cF==='today'&&d!==tD&&d!==tD2)continue;
+    if(cF==='changes')break;
+    var isT=(d===tD||d===tD2);
+    h+='<div class="day-head" style="font-size:12px;font-weight:700;padding:5px 0 2px;color:var(--gold)">'+(isT?'🔥 ':'')+d+' <span style="font-size:7px;color:var(--sub);font-weight:400">'+ms.length+'场</span></div>';
+    for(var mi2=0;mi2<ms.length;mi2++)h+=rC(ms[mi2],mi++);
+  }
+  if(cF==='changes'){
+    var has=false;h='<div style="font-size:12px;font-weight:700;padding:5px 0 2px;color:var(--gold)">🔄 变化追踪</div>';
+    for(var i=0;i<AM.length;i++){if(AM[i].changes&&AM[i].changes.length){has=true;h+=rC(AM[i],i);}}
+    if(!has)h+='<div class="empty">暂无变化</div>';
+  }
+  return h;
+}
+function rC(m,mi){
+  var al=m.analyses||[],l=al.length?al[al.length-1]:null,c=l?l.confidence:0,cc=c>=80?'pch':c>=60?'pcm':'pcl';
+  var id='m'+mi,hc=cn(m.home),ac=cn(m.away),hasNew=l&&l.isNew;
+  var h='<div class="pc"><div class="pc-head" onclick="tM(\''+id+'\')"><span class="pc-ar" id="ar'+id+'">▶</span><span class="pc-tm"><span class="fl">'+fl(hc)+'</span>'+hc+'<span class="vs">vs</span><span class="fl">'+fl(ac)+'</span>'+ac+'</span><span class="pc-ti">'+(m.date||'')+' '+(m.time||'')+'</span>'+(c?'<span class="pc-cb '+cc+'">'+c+'%</span>':'')+(hasNew?'<span class="nt">NEW</span>':'')+'</div><div class="pc-body" id="bd'+id+'">';
+  if(m.changes){for(var ci=0;ci<m.changes.length;ci++){var cx=m.changes[ci];h+='<div class="chg" style="border-left-color:'+(cx.type==='good'?'var(--accent)':'var(--red)')+'">'+cx.icon+' <b>'+cx.label+'</b> '+cx.text+'</div>';}}
   if(l&&l.strategies){
-    const sc=l.strategies;const o=['conservative','balanced','aggressive'];
-    const cs={'conservative':'var(--conservative)','balanced':'var(--balanced)','aggressive':'var(--aggressive)'};
+    var sc=l.strategies,o=['conservative','balanced','aggressive'],cs={'conservative':'var(--c)','balanced':'var(--b)','aggressive':'var(--a)'};
     h+='<div class="scards">';
-    for(const sk of o){
-      const x=sc[sk];if(!x)continue;
-      h+=`<div class="sc${sk===s?' sel':''}" style="border-color:${cs[sk]}" onclick="selStrat('${sk}',null)">
-        <span class="sl" style="color:${cs[sk]}">${x.label}</span>
-        <span class="sp">${x.pick}</span>
-        <span class="so" style="color:${cs[sk]}">@${x.odds}</span>
-        <span class="sr">每100→¥${x.per_100}</span>
-      </div>`;
+    for(var si=0;si<o.length;si++){
+      var sk=o[si],x=sc[sk];if(!x)continue;
+      h+='<div class="sc'+(sk===cS?' sel':'')+'" style="border-color:'+cs[sk]+'" onclick="cS=\''+sk+'\';rP()"><span class="sl" style="color:'+cs[sk]+'">'+x.label+'</span><span class="sp">'+x.pick+'</span><span class="so" style="color:'+cs[sk]+'">@'+x.odds+'</span><span class="sr">¥'+x.per_100+'</span></div>';
     }
     h+='</div>';
   }
-  
-  // 竞彩 panel
-  h+=`<button class="jc-toggle" onclick="togJC(this)">⬇️ 展开竞彩全玩法</button>
-  <div class="jc-panel">`;
-  
+  h+='<button class="jc-toggle" onclick="tJ(this)">⬇️ 展开竞彩</button><div class="jc-panel">';
   if(l&&l.jingcai_all){
-    const j=l.jingcai_all;
+    var j=l.jingcai_all;
     // SPF
-    h+=`<div class="jc-section"><div class="jct">🎯 胜平负</div><div class="jc-row">`;
-    const spfKeys=Object.keys(j.spf||{});
-    for(const k of spfKeys){const v=j.spf[k];const c=v<=1.8?'g':v<=3.5?'y':'r';h+=`<span class="jc-item"><span class="jcn">${k==='Draw'?'平局':cn(k)}</span><span class="jco jco-${c}">${v}</span></span>`;}
-    h+=`</div></div>`;
-    
-    // RANGQIU
-    if(j.rangqiu){
-      const rqKeys=Object.keys(j.rangqiu);
-      if(rqKeys.length>0){const firstRq=j.rangqiu[rqKeys[0]];const hc=firstRq&&firstRq.handicap?firstRq.handicap:0;
-      h+=`<div class="jc-section"><div class="jct">📊 让球胜平负 (${hc>0?'+':''}${hc})</div><div class="jc-row">`;
-      for(const k of rqKeys){const v=j.rangqiu[k].odds;const c=v<=2?'g':v<=4?'y':'r';h+=`<span class="jc-item"><span class="jcn">${cn(k)}</span><span class="jco jco-${c}">${v}</span></span>`;}
-      h+=`</div></div>`;}
-    }
-    
-    // FIRST HALF
-    if(j.first_half_spf){
-      h+=`<div class="jc-section"><div class="jct">⏱️ 上半场胜平负</div><div class="jc-row">`;
-      for(const[k,v]of Object.entries(j.first_half_spf)){const c=v<=2?'g':v<=4?'y':'r';h+=`<span class="jc-item"><span class="jcn">${k==='Draw'?'平局':cn(k)}</span><span class="jco jco-${c}">${v}</span></span>`;}
-      h+=`</div></div>`;
-    }
-    // Total goals
-    if(j.total_goals){
-      h+=`<div class="jc-section"><div class="jct">⚽ 总进球数</div><div class="jc-row">`;
-      for(const[k,v]of Object.entries(j.total_goals)){const c=v<=4?'g':v<=8?'y':'r';h+=`<span class="jc-item"><span class="jcn">${k}</span><span class="jco jco-${c}">${v}</span></span>`;}
-      h+=`</div></div>`;
-    }
+    h+='<div class="jc-section"><div class="jct">🎯 胜平负</div><div class="jc-row">';
+    for(var k in j.spf){var v=j.spf[k];h+='<span class="jc-item"><span class="jcn">'+(k==='Draw'?'平局':cn(k))+'</span><span class="jco jco-'+(v<=1.8?'g':v<=3.5?'y':'r')+'">'+v+'</span></span>';}
+    h+='</div></div>';
+    // Rangqiu
+    if(j.rangqiu){var rk=Object.keys(j.rangqiu);if(rk.length){var fr=j.rangqiu[rk[0]];var hc2=fr&&fr.handicap?fr.handicap:0;
+      h+='<div class="jc-section"><div class="jct">📊 让球('+(hc2>0?'+':'')+hc2+')</div><div class="jc-row">';
+      for(var ri2=0;ri2<rk.length;ri2++){var kv=rk[ri2];var v2=j.rangqiu[kv].odds;h+='<span class="jc-item"><span class="jcn">'+cn(kv)+'</span><span class="jco jco-'+(v2<=2?'g':v2<=4?'y':'r')+'">'+v2+'</span></span>';}
+      h+='</div></div>';}}
+    // Goals
+    if(j.total_goals){h+='<div class="jc-section"><div class="jct">⚽ 总进球</div><div class="jc-row">';for(var k in j.total_goals){var v=j.total_goals[k];h+='<span class="jc-item"><span class="jcn">'+k+'</span><span class="jco jco-'+(v<=4?'g':v<=8?'y':'r')+'">'+v+'</span></span>';}h+='</div></div>';}
     // Scores
-    if(j.scores){
-      h+=`<div class="jc-section"><div class="jct">🥅 波胆（比分）</div><div class="jc-row">`;
-      for(const[k,v]of Object.entries(j.scores).slice(0,8)){const c=v<=7?'g':v<=12?'y':'r';h+=`<span class="jc-item"><span class="jcn">${k}</span><span class="jco jco-${c}">${v}</span></span>`;}
-      h+=`</div></div>`;
-    }
+    if(j.scores){h+='<div class="jc-section"><div class="jct">🥅 波胆</div><div class="jc-row">';var si3=0;for(var k in j.scores){if(si3++>=8)break;var v=j.scores[k];h+='<span class="jc-item"><span class="jcn">'+k+'</span><span class="jco jco-'+(v<=7?'g':v<=12?'y':'r')+'">'+v+'</span></span>';}h+='</div></div>';}
     // Half Full
-    if(j.half_full){
-      h+=`<div class="jc-section"><div class="jct">🔄 半全场</div><div class="jc-row">`;
-      for(const[k,v]of Object.entries(j.half_full).slice(0,6)){const c=v<=4?'g':v<=8?'y':'r';h+=`<span class="jc-item"><span class="jcn">${k}</span><span class="jco jco-${c}">${v}</span></span>`;}
-      h+=`</div></div>`;
-    }
-    // 串关 (只推荐合理组合)
-    if(j.chuan_guan&&j.chuan_guan.length){
-      // Filter: only show picks where all entries are the favorite
-      const spfKeys2=Object.keys(j.spf||{});
-      let favTeam = ''; let favOdds = 0;
-      for(const k of spfKeys2){if(j.spf[k]>favOdds){favOdds=j.spf[k];favTeam=k;}}
-      const sensible = j.chuan_guan.filter(c => 
-        !c.picks.includes('平局') || c.picks.includes(favTeam)
-      ).slice(0,2);
-      if(sensible.length){
-        h+=`<div class="jc-section"><div class="jct">🔗 推荐串关</div>`;
-        for(const c of sensible){
-          h+=`<div style="font-size:8px;padding:2px 0"><span style="color:var(--gold);font-weight:700">${c.type}</span>: ${c.picks} — <b style="font-size:10px">${c.odds}倍</b> <span style="color:var(--accent)">每100→¥${Math.round(100*c.odds)}</span></div>`;
-        }
-        h+=`</div>`;
-      }
-    }
-  }else{
-    h+=`<div style="font-size:8px;color:var(--sub);padding:4px">⏳ 赔率计算中...</div>`;
+    if(j.half_full){h+='<div class="jc-section"><div class="jct">🔄 半全场</div><div class="jc-row">';var si4=0;for(var k in j.half_full){if(si4++>=6)break;var v=j.half_full[k];h+='<span class="jc-item"><span class="jcn">'+k+'</span><span class="jco jco-'+(v<=4?'g':v<=8?'y':'r')+'">'+v+'</span></span>';}h+='</div></div>';}
+    // First half
+    if(j.first_half_spf){h+='<div class="jc-section"><div class="jct">⏱️ 上半场</div><div class="jc-row">';for(var k in j.first_half_spf){var v=j.first_half_spf[k];h+='<span class="jc-item"><span class="jcn">'+(k==='Draw'?'平局':cn(k))+'</span><span class="jco jco-'+(v<=2?'g':v<=4?'y':'r')+'">'+v+'</span></span>';}h+='</div></div>';}
+    // Chuan guan
+    if(j.chuan_guan&&j.chuan_guan.length){h+='<div class="jc-section"><div class="jct">🔗 串关</div>';for(var si5=0;si5<Math.min(2,j.chuan_guan.length);si5++){var c=j.chuan_guan[si5];h+='<div style="font-size:7px;padding:1px 0"><span style="color:var(--gold);font-weight:700">'+c.type+'</span>: '+c.picks+' — <b style="font-size:8px">'+c.odds+'倍</b> <span style="color:var(--accent)">¥'+Math.round(100*c.odds)+'</span></div>';}h+='</div>';}
   }
-  h+=`</div>`;
-  
-  // Analysis text
-  if(al.length){
-    for(const a of al){
-      h+=`<div style="border-left:2px solid var(--gold);padding:3px 0 3px 7px;margin:3px 0;font-size:10px;line-height:1.5">
-        <div style="font-size:7px;color:var(--sub);margin-bottom:1px">🕐 ${a.time}</div>
-        <div>${a.text}</div>
-        ${a.fullReport?`<div style="text-align:right;margin-top:2px"><button class="top-nav-btn" style="font-size:7px;padding:2px 6px" onclick="showFR('${fl(hc)}${hc} vs ${fl(ac)}${ac}','${(a.time||'').replace(/'/g,"\\'")}','${encodeURIComponent(a.fullReport||'')}')">📄 完整分析</button></div>`:''}
-      </div>`;
-    }
-  }
-  
-  h+=`</div></div>`;
+  h+='</div>';
+  if(al.length){var aa=al[al.length-1];h+='<div style="border-left:2px solid var(--gold);padding:2px 0 2px 6px;margin:2px 0;font-size:9px"><div style="font-size:6px;color:var(--sub)">🕐 '+aa.time+'</div><div>'+aa.text+'</div>'+(aa.fullReport?'<div style="text-align:right;margin-top:1px"><button class="sub-btn" style="font-size:6px;padding:1px 5px" onclick="sFR(\''+fl(hc)+hc+' vs '+fl(ac)+ac+'\',\''+(aa.time||'')+'\',\''+encodeURIComponent(aa.fullReport)+'\')">📄 完整分析</button></div>':'')+'</div>';}
+  h+='</div></div>';
   return h;
 }
 
-// ===== ANALYSIS VIEW =====
-function renAna(){
-  const el=document.getElementById('analysisContent');
-  if(!AM.length){el.innerHTML='<div class="empty">暂无赛程数据</div>';return}
-  if(curAv==='single')renAnaSingle(el);
-  else renAnaAll(el);
+// ANALYSIS VIEW
+function rA(){
+  var el=document.getElementById('aC');
+  if(!AM.length){el.innerHTML='<div class="empty">暂无数据</div>';return}
+  if(cAv==='s')rAS(el);else rAT(el);
 }
-
-function renAnaSingle(el){
-  // Match selector
-  const upc=AM.filter(m=>!m.result||m.result==='');
-  let h=`<div class="ms-wrap">
-    <button class="ms-btn" onclick="this.nextElementSibling.classList.toggle('open')">⬇️ ${curMatchIdx<upc.length?fl(cn(upc[curMatchIdx].home))+' '+cn(upc[curMatchIdx].home)+' vs '+fl(cn(upc[curMatchIdx].away))+' '+cn(upc[curMatchIdx].away):'选择比赛'}</button>
-    <div class="ms-dd">`;
-  for(let i=0;i<upc.length;i++){
-    const m=upc[i];const a=cn(m.home),b=cn(m.away);
-    h+=`<button class="ms-opt${i===curMatchIdx?' active':''}" onclick="curMatchIdx=${i};renAna()">${fl(a)}${a} vs ${fl(b)}${b} ${m.date||''}</button>`;
-  }
-  h+=`</div></div>`;
-  
-  // Report
-  if(upc.length>0&&curMatchIdx<upc.length){
-    const m=upc[curMatchIdx];const a=m.analyses?.[m.analyses.length-1];
-    if(a&&a.fullReport){h+=`<div class="rpt">${decodeURIComponent(a.fullReport)}</div>`;}
-    else h+=`<div class="empty">⏳ 等待分析</div>`;
-  }else h+=`<div class="empty">暂无未开始比赛</div>`;
-  
+function rAS(el){
+  var up=[];for(var i=0;i<AM.length;i++){if(!AM[i].result||AM[i].result==='')up.push(AM[i]);}
+  if(cMi>=up.length)cMi=0;
+  var h='';
+  if(up.length){
+    h+='<select style="width:100%;padding:4px 6px;border:1px solid var(--card-border);border-radius:4px;background:var(--card);color:var(--text);font-size:9px;margin-bottom:4px" onchange="cMi=parseInt(this.value);rA()">';
+    for(var i=0;i<up.length;i++){var m=up[i];h+='<option value="'+i+'"'+(i===cMi?' selected':'')+'>'+fl(cn(m.home))+cn(m.home)+' vs '+fl(cn(m.away))+cn(m.away)+' '+m.date+'</option>';}
+    h+='</select>';
+    var m=up[cMi],a=m.analyses&&m.analyses.length?m.analyses[m.analyses.length-1]:null;
+    if(a&&a.fullReport)h+='<div class="rpt">'+decodeURIComponent(a.fullReport)+'</div>';
+    else if(a)h+='<div style="font-size:9px;padding:6px">'+a.text+'</div>';
+    else h+='<div class="empty">⏳ 等待分析</div>';
+  }else{h+='<div class="empty">暂无未开始比赛</div>';}
   el.innerHTML=h;
 }
-
-function renAnaAll(el){
-  const tD=getT();let h='';
-  const tdM=AM.filter(m=>m.date===tD);
-  if(!tdM.length){el.innerHTML='<div class="empty">今日暂无比赛</div>';return}
-  h+=('<div style="font-size:13px;font-weight:700;padding:6px 0;color:var(--gold)">'+'🔥 今日 '+tD+' 全部分析</div>');
-  for(const m of tdM){
-    const a=m.analyses?.[m.analyses.length-1];
-    const hc=cn(m.home),ac=cn(m.away);
-    h+=('<div class="pc"><div class="pc-head" onclick="this.nextElementSibling.classList.toggle(\'open\');this.classList.toggle(\'ex\')">'+'<span class="pc-ar">▶</span><span class="pc-tm"><span class="fl">'+fl(hc)+'</span>'+hc+'<span class="vs">vs</span><span class="fl">'+fl(ac)+'</span>'+ac+'</span><span class="pc-ti">'+(m.time||'')+'</span>'+(a&&a.confidence?'<span class="pc-cb '+(a.confidence>=80?'pch':a.confidence>=60?'pcm':'pcl')+'">'+a.confidence+'%</span>':'')+'</div><div class="pc-body"><div style="font-size:10px;color:var(--sub);margin-bottom:4px">'+(a?'🎯 '+a.text:'⏳ 等待分析')+'</div>'+(a&&a.fullReport?'<div class="rpt" style="padding:0">'+decodeURIComponent(a.fullReport)+'</div>':'')+'</div></div>');
+function rAT(el){
+  var tD=gT(),tD2=String(parseInt(tD.split('/')[0]))+'/'+String(parseInt(tD.split('/')[1]));
+  var tdM=[];
+  for(var i=0;i<AM.length;i++){var m=AM[i];if(m.date===tD||m.date===tD2)tdM.push(m);}
+  if(!tdM.length){el.innerHTML='<div class="empty">今日暂无比赛</div>';return;}
+  var h='<div style="font-size:12px;font-weight:700;padding:5px 0;color:var(--gold)">🔥 今日全部分析</div>';
+  for(var i=0;i<tdM.length;i++){
+    var m=tdM[i],a=m.analyses&&m.analyses.length?m.analyses[m.analyses.length-1]:null;
+    var hc=cn(m.home),ac=cn(m.away);
+    var id='ai'+i;
+    h+='<div class="pc"><div class="pc-head" onclick="tM(\''+id+'\')"><span class="pc-ar" id="ar'+id+'">▶</span><span class="pc-tm"><span class="fl">'+fl(hc)+'</span>'+hc+'<span class="vs">vs</span><span class="fl">'+fl(ac)+'</span>'+ac+'</span><span class="pc-ti">'+m.time+'</span></div><div class="pc-body" id="bd'+id+'">';
+    h+='<div style="font-size:9px;color:var(--sub);margin-bottom:3px">'+(a?'🎯 '+a.text:'⏳ 等待分析')+'</div>';
+    if(a&&a.fullReport)h+='<div class="rpt" style="padding:0">'+decodeURIComponent(a.fullReport)+'</div>';
+    h+='</div></div>';
   }
   el.innerHTML=h;
 }
 
-// ===== FULL REPORT MODAL =====
-function showFR(title,time,enc){
-  const r=decodeURIComponent(enc);
-  const modal=document.createElement('div');modal.className='modal';
-  modal.style.cssText='position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:100;overflow-y:auto;padding:15px 8px';
-  modal.innerHTML=`<div style="max-width:660px;margin:0 auto;background:var(--card);border:1px solid var(--gold);border-radius:12px;padding:16px;position:relative">
-    <button style="position:absolute;top:10px;right:12px;background:rgba(255,255,255,.05);border:none;color:var(--sub);font-size:14px;cursor:pointer;width:24px;height:24px;border-radius:50%" onclick="this.closest('.modal').remove()">✕</button>
-    <div style="font-size:14px;font-weight:700;margin-bottom:8px;padding-right:24px;color:var(--gold)">${title} · ${time}</div>
-    <div style="font-size:11px;line-height:1.7;color:var(--text)">${r}</div>
-  </div>`;
-  document.body.appendChild(modal);
-  modal.onclick=function(e){if(e.target===this)this.remove()};
+// BETTING VIEW
+function rB(){
+  var el=document.getElementById('bC');
+  if(!AM.length){el.innerHTML='<div class="empty">暂无数据</div>';return;}
+  var tD=gT(),tD2=String(parseInt(tD.split('/')[0]))+'/'+String(parseInt(tD.split('/')[1]));
+  var tdM=[];
+  for(var i=0;i<AM.length;i++){var m=AM[i];if(!m.result&&(m.date===tD||m.date===tD2))tdM.push(m);}
+  var stratInfo={'conservative':{label:'🛡️ 保守',desc:'低风险，稳字当头',color:'var(--c)',cls:'s1',minC:70,maxO:2.5},
+    'balanced':{label:'⚡ 均衡',desc:'收益风险兼顾',color:'var(--b)',cls:'s2',minC:50,maxO:5},
+    'aggressive':{label:'🔥 激进',desc:'追求高回报',color:'var(--a)',cls:'s3',minC:0,maxO:99}};
+  var si=stratInfo[cS];
+  var h='<div class="bv"><div class="bv-h">💰 购彩建议</div><div class="bv-sub">选择风险偏好，查看对应推荐方案</div>';
+  h+='<div class="bv-cards">';
+  for(var sk in stratInfo){
+    var info=stratInfo[sk],sel=sk===cS;
+    h+='<div class="bv-c '+info.cls+(sel?' active':'')+'" onclick="cS=\''+sk+'\';rB()"><span class="bvt">'+info.label+'</span><span class="bvd">'+info.desc+'</span>';
+    // Count available picks
+    var cnt=0;for(var i=0;i<tdM.length;i++){var m=tdM[i],a=m.analyses&&m.analyses.length?m.analyses[m.analyses.length-1]:null;if(a&&a.confidence>=info.minC)cnt++;}
+    h+='<span class="bvr">'+cnt+'</span><span class="bvn">可推荐场次</span></div>';
+  }
+  h+='</div><div class="bv-list-title">📋 '+si.label+' 推荐 ('+tdM.length+'场今日比赛)</div>';
+  // Filter matches for current strategy
+  for(var i=0;i<tdM.length;i++){
+    var m=tdM[i],a=m.analyses&&m.analyses.length?m.analyses[m.analyses.length-1]:null;
+    if(!a||a.confidence<si.minC)continue;
+    var hc=cn(m.home),ac=cn(m.away),mid=m.home+m.away;
+    var stra=a.strategies?a.strategies[cS]:null;
+    if(!stra)continue;
+    if(stra.odds>si.maxO)continue;
+    var checked=selParlay[mid]?'ckd':'';
+    h+='<div class="bv-item"><div class="bvi-ck '+checked+'" onclick="togP(\''+mid+'\',\''+stra.pick+'\','+stra.odds+',this)">'+(checked?'✓':'')+'</div><div class="bvi-m"><span class="fl">'+fl(hc)+'</span>'+hc+' vs <span class="fl">'+fl(ac)+'</span>'+ac+'<div style="color:var(--sub)">'+(a.text||'')+'</div></div><div><div class="bvi-o" style="color:'+si.color+'">@'+stra.odds+'</div><div class="bvi-c">'+stra.type+'</div></div></div>';
+  }
+  // Parlay summary
+  var pKeys=Object.keys(selParlay),pOdds=1,pCount=pKeys.length;
+  for(var pi=0;pi<pKeys.length;pi++){pOdds*=selParlay[pKeys[pi]].odds;}
+  pOdds=Math.round(pOdds*100)/100;
+  h+='<div class="bv-parlay"><div class="bvp-h">🔗 我的串关方案</div><div class="bvp-row"><span>已选</span><span>'+(pCount<2?'至少选2场':pCount+'场')+'</span></div>';
+  if(pCount>=2){h+='<div class="bvp-row"><span>当前赔率</span><span style="color:var(--gold);font-weight:700;font-size:10px">'+pOdds+'倍</span></div><div class="bvp-row"><span>每100元回报</span><span style="color:var(--accent);font-weight:700;font-size:10px">¥'+Math.round(100*pOdds)+'</span></div>';}
+  h+='<button class="bvp-btn" onclick="cP()" '+(pCount<2?'disabled':'')+'>'+(pCount<2?'请选择至少2场比赛':'生成投注单')+'</button>';
+  if(pCount>0)h+='<div style="text-align:right;margin-top:2px"><button class="sub-btn" style="font-size:6px;padding:1px 5px" onclick="selParlay={};rB()">清空选择</button></div>';
+  h+='</div></div>';
+  el.innerHTML=h;
+}
+function togP(id,pick,odds,el){
+  if(selParlay[id]){delete selParlay[id];}else{selParlay[id]={pick:pick,odds:odds};}
+  rB();
+}
+function cP(){
+  var pKeys=Object.keys(selParlay);
+  if(pKeys.length<2)return;
+  var pOdds=1,txt='';
+  for(var i=0;i<pKeys.length;i++){pOdds*=selParlay[pKeys[i]].odds;txt+=selParlay[pKeys[i]].pick+(i<pKeys.length-1?' × ':'');}
+  pOdds=Math.round(pOdds*100)/100;
+  alert('🎯 投注方案\n\n组合: '+txt+'\n赔率: '+pOdds+'倍\n每100元回报: ¥'+Math.round(100*pOdds)+'\n\n⚠️ 请理性投注');
 }
 
-// ===== UTILS =====
-function togM(id){const b=document.getElementById('bd'+id);if(!b)return;const a=document.getElementById('ar'+id);b.classList.toggle('open');a.classList.toggle('open');b.previousElementSibling.classList.toggle('ex')}
-function togJC(btn){const p=btn.nextElementSibling;p.classList.toggle('open');btn.textContent=p.classList.contains('open')?'⬆️ 收起竞彩':'⬇️ 展开竞彩全玩法'}
-function togStrat(){document.getElementById('stratDd').classList.toggle('open')}
-function selStrat(s,btn){
-  curStrat=s;
-  const n={'conservative':'🛡️ 保守','balanced':'⚡ 均衡','aggressive':'🔥 激进'};
-  document.getElementById('stratBtn').textContent=n[s];
-  document.querySelectorAll('.strat-opt').forEach(b=>b.classList.remove('active'));
-  if(btn)btn.classList.add('active');else document.querySelector(`.strat-opt[data-s="${s}"]`).classList.add('active');
-  document.getElementById('stratDd').classList.remove('open');
-  ren();
-}
-document.addEventListener('click',function(e){if(!e.target.closest('.strat-dd')&&!e.target.closest('.strat-btn'))document.getElementById('stratDd').classList.remove('open')});
+function tM(id){var b=document.getElementById('bd'+id);if(!b)return;b.classList.toggle('open');document.getElementById('ar'+id).classList.toggle('open');b.previousElementSibling.classList.toggle('ex')}
+function tJ(btn){var p=btn.nextElementSibling;p.classList.toggle('open');btn.textContent=p.classList.contains('open')?'⬆️ 收起竞彩':'⬇️ 展开竞彩';}
+function sFR(title,time,enc){var r=decodeURIComponent(enc);var m=document.createElement('div');m.className='modal';m.style.cssText='position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:100;overflow-y:auto;padding:12px 6px';m.innerHTML='<div style="max-width:660px;margin:0 auto;background:var(--card);border:1px solid var(--gold);border-radius:8px;padding:12px;position:relative"><button class="mc" onclick="this.closest(\\'".modal\\'").remove()">✕</button><div style="font-size:12px;font-weight:700;margin-bottom:6px;padding-right:20px;color:var(--gold)">'+title+' · '+time+'</div><div style="font-size:10px;line-height:1.6">'+r+'</div></div>';document.body.appendChild(m);m.onclick=function(e){if(e.target===this)this.remove()};}
 
-function swView(v,btn){
-  curView=v;
-  document.querySelectorAll('.top-nav-btn').forEach(b=>b.classList.remove('active'));
-  if(btn)btn.classList.add('active');
-  document.getElementById('viewPredict').classList.toggle('hide',v!=='predict');
-  document.getElementById('viewAnalysis').classList.toggle('hide',v!=='analysis');
-  ren();
-}
-function filMatch(f,btn){
-  curFil=f;
-  document.querySelectorAll('.sub-btn').forEach(b=>b.classList.remove('active'));
-  if(btn)btn.classList.add('active');
-  ren();
-}
-function swAnaView(v,btn){
-  curAv=v;
-  document.querySelectorAll('.sub-btn').forEach(b=>b.classList.remove('active'));
-  if(btn)btn.classList.add('active');
-  ren();
-}
-function getT(){const d=new Date();return (d.getMonth()+1)+'/'+d.getDate()}
-function tt(){document.body.classList.toggle('light');const l=document.body.classList.contains('light');localStorage.setItem('wcT',l?'l':'d')}
+function swV(v,btn){cV=v;document.querySelectorAll('.top-nav-btn').forEach(function(b){b.classList.remove('active')});if(btn)btn.classList.add('active');document.getElementById('vPred').className=(v==='pred'?'':'hide');document.getElementById('vAna').className=(v==='ana'?'':'hide');document.getElementById('vBet').className=(v==='bet'?'':'hide');document.getElementById('ab').style.display=(v==='bet'?'none':'');rP();}
+function fil(f,btn){cF=f;document.querySelectorAll('.sub-btn').forEach(function(b){b.classList.remove('active')});if(btn)btn.classList.add('active');rP();}
+function swAV(v,btn){cAv=v;document.querySelectorAll('.sub-btn').forEach(function(b){b.classList.remove('active')});if(btn)btn.classList.add('active');rA();}
+function tt(){document.body.classList.toggle('light');localStorage.setItem('wcT',document.body.classList.contains('light')?'l':'d')}
 if(localStorage.getItem('wcT')==='l')document.body.classList.add('light');
 
-// ===== INIT =====
-function uNx(){
-  const n=new Date(),h=n.getHours();const nx=new Date(n);
-  nx.setHours(Math.floor(h/8)*8+8,0,0,0);
-  document.getElementById('nxUp').textContent=nx.toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'});
-}
-uNx();setInterval(uNx,60000);
+function uN(){var n=new Date();var nx=new Date(n);nx.setHours(Math.floor(n.getHours()/8)*8+8,0,0,0);document.getElementById('nU').textContent=nx.toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'});}
+uN();setInterval(uN,60000);
 ld();
 </script>
 </body>
