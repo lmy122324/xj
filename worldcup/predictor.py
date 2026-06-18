@@ -343,29 +343,26 @@ def calc_jingcai_all(match, best, avg, var):
 
     # --- 7. 串关 — 推荐组合 ---
     chuan_guan = []
-    jc_h = spf.get(home, 0)
-    jc_d = spf.get('Draw', 0)
-    jc_a = spf.get(away, 0)
-    # 2串1: combine two outcomes from this match
-    picks_2x1_pairs = [
-        (f'{home}胜', jc_h, f'{away}胜', jc_a),
-        (f'{home}胜', jc_h, 'Draw', jc_d),
-        ('Draw', jc_d, f'{away}胜', jc_a),
-    ]
-    for p1, o1, p2, o2 in picks_2x1_pairs:
-        if o1 > 0 and o2 > 0 and o1 * o2 > 1.5:
-            chuan_guan.append({
-                'type': '2串1',
-                'picks': [p1, p2],
-                'odds': round(o1 * o2, 2)
-            })
-    # 3串1: three outcomes
-    if jc_h > 0 and jc_d > 0 and jc_a > 0 and jc_h * jc_d * jc_a > 3:
-        picks_3x1 = [f'{home}胜', 'Draw', f'{away}胜']
+    # Find favorite (highest implied probability)
+    fav_name = max(spf, key=lambda k: 1/spf[k] if spf[k] > 0 else 0)
+    fav_odds = spf.get(fav_name, 0)
+    # 2串1: only recommend parlay involving the favorite
+    for other_name, other_odds in spf.items():
+        if other_name == fav_name: continue
+        if fav_odds > 0 and other_odds > 0:
+            combo_odds = round(fav_odds * other_odds, 2)
+            if combo_odds >= 1.5:
+                chuan_guan.append({
+                    'type': '2串1',
+                    'picks': [f'{cn(fav_name)}胜', f'{cn(other_name)}胜'],
+                    'odds': combo_odds
+                })
+    # 3串1 placeholder (single match can't make 3串1 alone, but we keep structure for cross-match)
+    if fav_odds > 0:
         chuan_guan.append({
-            'type': '3串1',
-            'picks': picks_3x1,
-            'odds': round(jc_h * jc_d * jc_a, 2)
+            'type': '单关',
+            'picks': [f'{cn(fav_name)}胜'],
+            'odds': fav_odds
         })
 
     return {

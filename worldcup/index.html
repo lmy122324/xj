@@ -377,6 +377,22 @@ function rMC(m){
     const spfKeys=Object.keys(j.spf||{});
     for(const k of spfKeys){const v=j.spf[k];const c=v<=1.8?'g':v<=3.5?'y':'r';h+=`<span class="jc-item"><span class="jcn">${k==='Draw'?'平局':cn(k)}</span><span class="jco jco-${c}">${v}</span></span>`;}
     h+=`</div></div>`;
+    
+    // RANGQIU
+    if(j.rangqiu){
+      const rqKeys=Object.keys(j.rangqiu);
+      if(rqKeys.length>0){const firstRq=j.rangqiu[rqKeys[0]];const hc=firstRq&&firstRq.handicap?firstRq.handicap:0;
+      h+=`<div class="jc-section"><div class="jct">📊 让球胜平负 (${hc>0?'+':''}${hc})</div><div class="jc-row">`;
+      for(const k of rqKeys){const v=j.rangqiu[k].odds;const c=v<=2?'g':v<=4?'y':'r';h+=`<span class="jc-item"><span class="jcn">${cn(k)}</span><span class="jco jco-${c}">${v}</span></span>`;}
+      h+=`</div></div>`;}
+    }
+    
+    // FIRST HALF
+    if(j.first_half_spf){
+      h+=`<div class="jc-section"><div class="jct">⏱️ 上半场胜平负</div><div class="jc-row">`;
+      for(const[k,v]of Object.entries(j.first_half_spf)){const c=v<=2?'g':v<=4?'y':'r';h+=`<span class="jc-item"><span class="jcn">${k==='Draw'?'平局':cn(k)}</span><span class="jco jco-${c}">${v}</span></span>`;}
+      h+=`</div></div>`;
+    }
     // Total goals
     if(j.total_goals){
       h+=`<div class="jc-section"><div class="jct">⚽ 总进球数</div><div class="jc-row">`;
@@ -395,13 +411,22 @@ function rMC(m){
       for(const[k,v]of Object.entries(j.half_full).slice(0,6)){const c=v<=4?'g':v<=8?'y':'r';h+=`<span class="jc-item"><span class="jcn">${k}</span><span class="jco jco-${c}">${v}</span></span>`;}
       h+=`</div></div>`;
     }
-    // 串关
+    // 串关 (只推荐合理组合)
     if(j.chuan_guan&&j.chuan_guan.length){
-      h+=`<div class="jc-section"><div class="jct">🔗 推荐串关</div>`;
-      for(const c of j.chuan_guan.slice(0,3)){
-        h+=`<div style="font-size:8px;padding:2px 0"><span style="color:var(--gold);font-weight:700">${c.type}</span>: ${c.picks} — <b style="font-size:10px">${c.odds}倍</b> (每100→¥${Math.round(100*c.odds)})</div>`;
+      // Filter: only show picks where all entries are the favorite
+      const spfKeys2=Object.keys(j.spf||{});
+      let favTeam = ''; let favOdds = 0;
+      for(const k of spfKeys2){if(j.spf[k]>favOdds){favOdds=j.spf[k];favTeam=k;}}
+      const sensible = j.chuan_guan.filter(c => 
+        !c.picks.includes('平局') || c.picks.includes(favTeam)
+      ).slice(0,2);
+      if(sensible.length){
+        h+=`<div class="jc-section"><div class="jct">🔗 推荐串关</div>`;
+        for(const c of sensible){
+          h+=`<div style="font-size:8px;padding:2px 0"><span style="color:var(--gold);font-weight:700">${c.type}</span>: ${c.picks} — <b style="font-size:10px">${c.odds}倍</b> <span style="color:var(--accent)">每100→¥${Math.round(100*c.odds)}</span></div>`;
+        }
+        h+=`</div>`;
       }
-      h+=`</div>`;
     }
   }else{
     h+=`<div style="font-size:8px;color:var(--sub);padding:4px">⏳ 赔率计算中...</div>`;
@@ -457,17 +482,11 @@ function renAnaAll(el){
   const tD=getT();let h='';
   const tdM=AM.filter(m=>m.date===tD);
   if(!tdM.length){el.innerHTML='<div class="empty">今日暂无比赛</div>';return}
-  h+=`<div style="font-size:13px;font-weight:700;padding:6px 0;color:var(--gold)">🔥 今日 ${tD} 全部分析</div>`;
+  h+=('<div style="font-size:13px;font-weight:700;padding:6px 0;color:var(--gold)">'+'🔥 今日 '+tD+' 全部分析</div>');
   for(const m of tdM){
     const a=m.analyses?.[m.analyses.length-1];
     const hc=cn(m.home),ac=cn(m.away);
-    h+=`<div class="af-card" onclick="${a&&a.fullReport?`showFR('${fl(hc)}${hc} vs ${fl(ac)}${ac}','${(a.time||'').replace(/'/g,"\\'")}','${encodeURIComponent(a.fullReport||'')}')`:''}">
-      <div class="af-h">${fl(hc)}${hc} vs ${fl(ac)}${ac} <span style="font-size:8px;color:var(--sub)">${m.time||''}</span></div>
-      <div class="af-s">
-        <span>🎯 ${a?`${a.text||'-'}`:'⏳ 等待分析'}</span>
-        ${a&&a.confidence?`<span class="pc-cb ${a.confidence>=80?'pch':a.confidence>=60?'pcm':'pcl'}">${a.confidence}%</span>`:''}
-      </div>
-    </div>`;
+    h+=('<div class="pc"><div class="pc-head" onclick="this.nextElementSibling.classList.toggle(\'open\');this.classList.toggle(\'ex\')">'+'<span class="pc-ar">▶</span><span class="pc-tm"><span class="fl">'+fl(hc)+'</span>'+hc+'<span class="vs">vs</span><span class="fl">'+fl(ac)+'</span>'+ac+'</span><span class="pc-ti">'+(m.time||'')+'</span>'+(a&&a.confidence?'<span class="pc-cb '+(a.confidence>=80?'pch':a.confidence>=60?'pcm':'pcl')+'">'+a.confidence+'%</span>':'')+'</div><div class="pc-body"><div style="font-size:10px;color:var(--sub);margin-bottom:4px">'+(a?'🎯 '+a.text:'⏳ 等待分析')+'</div>'+(a&&a.fullReport?'<div class="rpt" style="padding:0">'+decodeURIComponent(a.fullReport)+'</div>':'')+'</div></div>');
   }
   el.innerHTML=h;
 }
