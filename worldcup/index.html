@@ -362,7 +362,12 @@ function rC(m,mi){
 // ===== 雷达图绘图函数 =====
 function drawRadar(canvasId, homeLabel, awayLabel, homeData, awayData){
   var cv=document.getElementById(canvasId);if(!cv)return;
-  var ctx=cv.getContext('2d');var W=cv.width, H=cv.height, cx=W/2, cy=H/2, R=Math.min(cx,cy)-20;
+  var dpr=window.devicePixelRatio||1;
+  var dispW=170,dispH=155;
+  cv.width=dispW*dpr;cv.height=dispH*dpr;
+  cv.style.width=dispW+'px';cv.style.height=dispH+'px';
+  var ctx=cv.getContext('2d');ctx.scale(dpr,dpr);
+  var W=dispW, H=dispH, cx=W/2, cy=H/2, R=Math.min(cx,cy)-20;
   var cs=getComputedStyle(document.body);var textColor=cs.getPropertyValue('--text').trim()||'#e8e0f0';
   var goldColor=cs.getPropertyValue('--gold').trim()||'#ffd700';
   var accentColor=cs.getPropertyValue('--accent').trim()||'#00d4aa';
