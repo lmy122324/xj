@@ -303,19 +303,19 @@ var AM=[],cV='pred',cF='all',cAv='s',cS='balanced',cMi=0,selParlay={},radarData=
 
 function ld(){
   // Load from cache first (instant render)
-  try{var cached=localStorage.getItem('wcData');if(cached){var cd=JSON.parse(cached);AM=cd.matches||[];document.getElementById('dS').textContent=(cd.analysisCount||0)+'份 '+'(缓存)';uA(cd.prediction_accuracy);rP();}}catch(e){}
+  try{var cached=localStorage.getItem('wcData');if(cached){var cd=JSON.parse(cached);AM=cd.matches||[];document.getElementById('dS').textContent=(cd.analysisCount||0)+'份(缓存'+(cd._cachedAt?' '+cd._cachedAt:'')+')';uA(cd.prediction_accuracy);rP();}}catch(e){}
   // Fetch fresh data in background
   var u=(window.location.origin+(window.location.pathname.replace(/\/[^/]*$/,'')||'/xj/worldcup'))+'/data.json?v='+Date.now();
   fetch(u).then(function(r){return r.json()}).then(function(d){
     AM=d.matches||[];document.getElementById('dS').textContent=(d.analysisCount||0)+'份';
     uA(d.prediction_accuracy);rP();
-    try{localStorage.setItem('wcData',JSON.stringify(d));}catch(e){}
+    try{var wcSave=JSON.parse(JSON.stringify(d));wcSave._cachedAt=new Date().toLocaleString('zh-CN',{hour:'2-digit',minute:'2-digit'});localStorage.setItem('wcData',JSON.stringify(wcSave));}catch(e){}
   }).catch(function(){
     fetch('data.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(d){
       AM=d.matches||[];uA(d.prediction_accuracy);rP();
-      try{localStorage.setItem('wcData',JSON.stringify(d));}catch(e){}
+      try{var wcSave=JSON.parse(JSON.stringify(d));wcSave._cachedAt=new Date().toLocaleString('zh-CN',{hour:'2-digit',minute:'2-digit'});localStorage.setItem('wcData',JSON.stringify(wcSave));}catch(e){}
     }).catch(function(){
-      if(!AM.length)document.getElementById('dS').textContent='等待数据...';
+      if(!AM.length){document.getElementById('dS').textContent='等待数据...';document.getElementById('pC').innerHTML='<div class="empty">网络无法连接，请刷新重试</div>';}
     });
   });
 }
@@ -342,7 +342,7 @@ function rM(){
   if(!AM.length)return '<div class="empty">暂无赛程</div>';
   var days={},mi=0;
   for(var i=0;i<AM.length;i++){var m=AM[i];var d=m.date||'?';if(!days[d])days[d]=[];days[d].push(m);}
-  var sd=Object.keys(days).sort(function(a,b){var ap=a.split('/'),bp=b.split('/');return parseInt(ap[1])-parseInt(bp[1]);});
+  var sd=Object.keys(days).sort(function(a,b){var ap=a.split('/'),bp=b.split('/');var ma=parseInt(ap[0]),mb=parseInt(bp[0]),da=parseInt(ap[1]),db=parseInt(bp[1]);return ma!==mb?ma-mb:da-db;});
   var tD=gT(),tD2=String(parseInt(tD.split('/')[0]))+'/'+String(parseInt(tD.split('/')[1]));
   var h='';
   for(var di=0;di<sd.length;di++){
@@ -362,7 +362,7 @@ function rM(){
   return h;
 }
 function rC(m,mi){
-  var al=m.analyses||[],l=al.length?al[al.length-1]:null,c=l?l.confidence:0,cc=c>=80?'pch':c>=60?'pcm':'pcl';
+  var al=m.analyses||[],l=al.length?al[al.length-1]:null,c=l?l.confidence:0;
   var id='m'+mi,hc=cn(m.home),ac=cn(m.away),hasNew=l&&l.isNew;
   var h='<div class="pc"><div class="pc-head" onclick="tM(\''+id+'\')"><span class="pc-ar" id="ar'+id+'">▶</span><span class="pc-tm"><span class="fl">'+fl(hc)+'</span>'+hc+'<span class="vs">vs</span><span class="fl">'+fl(ac)+'</span>'+ac+'</span><span class="pc-ti">'+(m.date||'')+' '+(m.time||'')+'</span>'+(c?gaugeHTML(c):'')+(hasNew?'<span class="nt">NEW</span>':'')+'</div><div class="pc-body" id="bd'+id+'">';
   if(m.changes){for(var ci=0;ci<m.changes.length;ci++){var cx=m.changes[ci];h+='<div class="chg" style="border-left-color:'+(cx.type==='good'?'var(--accent)':'var(--red)')+'">'+cx.icon+' <b>'+cx.label+'</b> '+cx.text+'</div>';}}
@@ -371,7 +371,7 @@ function rC(m,mi){
     h+='<div class="scards">';
     for(var si=0;si<o.length;si++){
       var sk=o[si],x=sc[sk];if(!x)continue;
-      h+='<div class="sc'+(sk===cS?' sel':'')+'" style="border-color:'+cs[sk]+'" onclick="cS=\''+sk+'\';rP()"><span class="sl" style="color:'+cs[sk]+'">'+x.label+'</span><span class="sp">'+x.pick.replace(/@\d+\.?\d*/g,'').trim()+'</span><span class="so" style="color:'+cs[sk]+'">@'+x.odds+'</span><span class="sr">¥'+x.per_100+'</span></div>';
+      h+='<div class="sc'+(sk===cS?' sel':'')+'" style="border-color:'+cs[sk]+'" onclick="var ops=document.querySelectorAll('.pc-body.open');var oids=[];ops.forEach(function(o){oids.push(o.id.replace('bd',''))});cS=\''+sk+'\';rP();setTimeout(function(){oids.forEach(function(id){var b=document.getElementById('bd'+id);if(b&&!b.classList.contains('open')){b.classList.add('open');var a=document.getElementById('ar'+id);if(a)a.classList.add('open');var ph=b.previousElementSibling;if(ph)ph.classList.add('ex');}});},50)"><span class="sl" style="color:'+cs[sk]+'">'+x.label+'</span><span class="sp">'+x.pick.replace(/@\d+\.?\d*/g,'').trim()+'</span><span class="so" style="color:'+cs[sk]+'">@'+x.odds+'</span><span class="sr">¥'+x.per_100+'</span></div>';
     }
     h+='</div>';
   }
@@ -593,27 +593,6 @@ function rAS(el){
   }else{h+='<div class="empty">暂无未开始比赛</div>';}
   el.innerHTML=h;
 }
-function diffText(a,b){
-  var parts=[];
-  if(!a||!b)return parts;
-  var ra=a.deepAnalysis?a.deepAnalysis.predictedResult:'';
-  var rb=b.deepAnalysis?b.deepAnalysis.predictedResult:'';
-  if(ra&&rb&&ra!==rb)parts.push('▶ 预测方向 ['+ra+'] → ['+rb+']');
-  if(a.confidence!==undefined&&b.confidence!==undefined&&a.confidence!==b.confidence){
-    var dir=b.confidence>a.confidence?'↑升至':'↓降至';
-    parts.push('▶ 信心 '+a.confidence+'% → '+b.confidence+'% ('+dir+')');
-  }
-  var sa=a.possibleScores||[],sb=b.possibleScores||[];
-  if(sa.length&&sb.length&&JSON.stringify(sa)!==JSON.stringify(sb)){
-    parts.push('▶ 波胆 ['+sa.join(',')+'] → ['+sb.join(',')+']');
-  }
-  var ga=a.deepAnalysis?a.deepAnalysis.goalRange:'';
-  var gb=b.deepAnalysis?b.deepAnalysis.goalRange:'';
-  if(ga&&gb&&ga!==gb)parts.push('▶ 总进球 ['+ga+'] → ['+gb+']');
-  if(a.text&&b.text&&a.text!==b.text)parts.push('▶ 分析要点有调整');
-  return parts;
-}
-
 var anaSel={};
 function diffText(a,b){
   var parts=[];
@@ -803,7 +782,7 @@ function tJ(btn){var p=btn.nextElementSibling;p.classList.toggle('open');btn.tex
 function sFR(tit,time,enc){
   var r=decodeURIComponent(enc);
   var m=document.createElement('div');
-  m.style.cssText='position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:100;overflow-y:auto;padding:12px 6px';
+  m.style.cssText='position:fixed;top:0;left:0;width:100%;height:100%;background:'+(document.body.classList.contains('light')?'rgba(200,190,170,.7)':'rgba(0,0,0,.7)')+';z-index:100;overflow-y:auto;padding:12px 6px';
   var box=document.createElement('div');
   box.style.cssText='max-width:660px;margin:0 auto;background:var(--card);border:1px solid var(--gold);border-radius:8px;padding:12px;position:relative';
   var closeBtn=document.createElement('button');
