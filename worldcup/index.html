@@ -533,24 +533,83 @@ function rAS(el){
   }else{h+='<div class="empty">暂无未开始比赛</div>';}
   el.innerHTML=h;
 }
+function diffText(a,b){
+  var parts=[];
+  if(!a||!b)return parts;
+  var ra=a.deepAnalysis?a.deepAnalysis.predictedResult:'';
+  var rb=b.deepAnalysis?b.deepAnalysis.predictedResult:'';
+  if(ra&&rb&&ra!==rb)parts.push('▶ 预测方向 ['+ra+'] → ['+rb+']');
+  if(a.confidence!==undefined&&b.confidence!==undefined&&a.confidence!==b.confidence){
+    var dir=b.confidence>a.confidence?'↑升至':'↓降至';
+    parts.push('▶ 信心 '+a.confidence+'% → '+b.confidence+'% ('+dir+')');
+  }
+  var sa=a.possibleScores||[],sb=b.possibleScores||[];
+  if(sa.length&&sb.length&&JSON.stringify(sa)!==JSON.stringify(sb)){
+    parts.push('▶ 波胆 ['+sa.join(',')+'] → ['+sb.join(',')+']');
+  }
+  var ga=a.deepAnalysis?a.deepAnalysis.goalRange:'';
+  var gb=b.deepAnalysis?b.deepAnalysis.goalRange:'';
+  if(ga&&gb&&ga!==gb)parts.push('▶ 总进球 ['+ga+'] → ['+gb+']');
+  if(a.text&&b.text&&a.text!==b.text)parts.push('▶ 分析要点有调整');
+  return parts;
+}
+
 function rAT(el){
   var tD=gT(),tD2=String(parseInt(tD.split('/')[0]))+'/'+String(parseInt(tD.split('/')[1]));
   var tdM=[];
-  for(var i=0;i<AM.length;i++){var m=AM[i];if(m.date===tD||m.date===tD2)tdM.push(m);}
+  for(var mi=0;mi<AM.length;mi++){var m=AM[mi];if(m.date===tD||m.date===tD2)tdM.push({m:m,idx:mi});}
   if(!tdM.length){el.innerHTML='<div class="empty">今日暂无比赛</div>';return;}
-  var h='<div style="font-size:12px;font-weight:700;padding:5px 0;color:var(--gold)">🔥 今日全部分析</div>';
-  for(var i=0;i<tdM.length;i++){
-    var m=tdM[i],a=m.analyses&&m.analyses.length?m.analyses[m.analyses.length-1]:null;
+  var h='<div style="font-size:12px;font-weight:700;padding:5px 0;color:var(--gold)">🔥 今日全部分析 <span style="font-size:7px;color:var(--sub);font-weight:400">时间轴对比</span></div>';
+  for(var ti=0;ti<tdM.length;ti++){
+    var obj=tdM[ti],m=obj.m;
+    var al=m.analyses||[];
+    if(!al.length)continue;
     var hc=cn(m.home),ac=cn(m.away);
-    var id='ai'+i;
+    var id='ai'+ti;
     h+='<div class="pc"><div class="pc-head" onclick="tM(\''+id+'\')"><span class="pc-ar" id="ar'+id+'">▶</span><span class="pc-tm"><span class="fl">'+fl(hc)+'</span>'+hc+'<span class="vs">vs</span><span class="fl">'+fl(ac)+'</span>'+ac+'</span><span class="pc-ti">'+m.time+'</span></div><div class="pc-body" id="bd'+id+'">';
-    h+='<div style="font-size:9px;color:var(--sub);margin-bottom:3px">'+(a?'🎯 '+a.text:'⏳ 等待分析')+'</div>';
-    if(a&&a.fullReport)h+='<div class="rpt" style="padding:0">'+a.fullReport+'</div>';
-    h+='</div></div>';
+    var sorted=al.slice().sort(function(a,b){return a.time>b.time?1:-1;});
+    var rounds=[];
+    for(var si=0;si<sorted.length;si++){
+      var hr=parseInt((sorted[si].time||'').split(' ')[1]||'0');
+      var found=false;
+      for(var ri=0;ri<rounds.length;ri++){if(rounds[ri].hour===hr){rounds[ri].analyses.push(sorted[si]);found=true;break;}}
+      if(!found)rounds.push({hour:hr,analyses:[sorted[si]]});
+    }
+    var selHour=rounds.length?rounds[rounds.length-1].hour:0;
+    h+='<div class="sub-nav" style="border-bottom:none;padding:0 0 3px">';
+    for(var ri=0;ri<rounds.length;ri++){
+      var r=rounds[ri];
+      var hh=r.hour<10?'0'+r.hour:''+r.hour;
+      h+='<button class="sub-btn'+(r.hour===selHour?' active':'')+'" style="font-size:7px" onclick="(function(btn){var p=btn.parentElement.nextElementSibling;var snaps=p.querySelectorAll(\'.snap\');var diffs=p.querySelectorAll(\'.tdiff\');snaps.forEach(function(s){s.style.display=\"none\"});diffs.forEach(function(d){d.style.display=\"none\"});p.querySelector(\'.snap-h\'+btn.getAttribute(\'data-h\')+\'\').style.display=\"\";p.querySelector(\'.tdiff-h\'+btn.getAttribute(\'data-h\')+\'\').style.display=\"\";btn.parentElement.querySelectorAll(\'.sub-btn\').forEach(function(b){b.classList.remove(\'active\')});btn.classList.add(\'active\');})(this)" data-h="'+r.hour+'">'+hh+':00</button>';
+    }
+    h+='</div><div>';
+    for(var ri=0;ri<rounds.length;ri++){
+      var r=rounds[ri],a=r.analyses[r.analyses.length-1];
+      var disp=ri===rounds.length-1?'':'none';
+      h+='<div class="snap snap-h'+r.hour+'" style="display:'+disp+'">';
+      h+='<div style="font-size:8px;color:var(--sub);margin-bottom:2px"><span style="display:inline-flex;align-items:center;gap:2px">'+gaugeHTML(a.confidence||0)+'</span> 🎯 '+a.text+'</div>';
+      if(a.fullReport)h+='<div style="text-align:right"><button class="sub-btn" style="font-size:6px;padding:1px 5px" onclick="sFR(\''+fl(hc)+hc+' vs '+fl(ac)+ac+'\',\''+(a.time||'')+'\',\''+encodeURIComponent(a.fullReport)+'\')">📄 完整分析</button></div>';
+      h+='</div>';
+    }
+    h+='<div class="tdiff tdiff-h'+selHour+'">';
+    if(rounds.length>=2){
+      for(var ri=1;ri<rounds.length;ri++){
+        var prevA=rounds[ri-1].analyses[rounds[ri-1].analyses.length-1];
+        var currA=rounds[ri].analyses[rounds[ri].analyses.length-1];
+        var diffs=diffText(prevA,currA);
+        if(diffs.length){
+          var ph=rounds[ri-1].hour<10?'0'+rounds[ri-1].hour:''+rounds[ri-1].hour;
+          h+='<div style="border-left:2px solid var(--red);padding:3px 5px;margin:2px 0;background:rgba(255,71,87,.03);border-radius:0 4px 4px 0">';
+          h+='<div style="font-size:7px;color:var(--red);font-weight:700;margin-bottom:2px">🔄 与 '+ph+':00 相比变化：</div>';
+          for(var di=0;di<diffs.length;di++){h+='<div style="font-size:7px;color:var(--red);margin:1px 0">'+diffs[di]+'</div>';}
+          h+='</div>';
+        }
+      }
+    }
+    h+='</div></div></div></div>';
   }
   el.innerHTML=h;
 }
-
 // BETTING VIEW
 function rB(){
   var el=document.getElementById('bC');
