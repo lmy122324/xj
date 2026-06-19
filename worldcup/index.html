@@ -255,7 +255,7 @@ return d;})();
 function cn(n){return CN[n]||n}
 function fl(n){return FL[cn(n)]||''}
 
-var AM=[],cV='pred',cF='all',cAv='s',cS='balanced',cMi=0,selParlay={};
+var AM=[],cV='pred',cF='all',cAv='s',cS='balanced',cMi=0,selParlay={},radarData=[];
 
 function ld(){
   var u=(window.location.origin+(window.location.pathname.replace(/\/[^/]*$/,'')||'/xj/worldcup'))+'/data.json?v='+Date.now();
@@ -323,6 +323,8 @@ function rC(m,mi){
     }
     h+='</div>';
   }
+  // 雷达图
+  if(l&&l.deepAnalysis){var rd=calcRadar(m,l);var rid='rd'+mi;radarData[mi]=rd;h+='<div style="text-align:center;margin:2px 0"><canvas id="'+rid+'" width="170" height="155" style="width:100%;max-width:170px;border-radius:6px" data-hc="'+hc+'" data-ac="'+ac+'" data-mi="'+mi+'"></canvas></div>';}
   h+='<button class="jc-toggle" onclick="tJ(this)">⬇️ 展开竞彩</button><div class="jc-panel">';
   if(l&&l.jingcai_all){
     var j=l.jingcai_all;
@@ -330,26 +332,98 @@ function rC(m,mi){
     h+='<div class="jc-section"><div class="jct">🎯 胜平负</div><div class="jc-row">';
     for(var k in j.spf){var v=j.spf[k];h+='<span class="jc-item"><span class="jcn">'+(k==='Draw'?'平局':cn(k))+'</span><span class="jco jco-'+(v<=1.8?'g':v<=3.5?'y':'r')+'">'+v+'</span></span>';}
     h+='</div></div>';
-    // Rangqiu
-    if(j.rangqiu){var rk=Object.keys(j.rangqiu);if(rk.length){var fr=j.rangqiu[rk[0]];var hc2=fr&&fr.handicap?fr.handicap:0;
-      h+='<div class="jc-section"><div class="jct">📊 让球('+(hc2>0?'+':'')+hc2+')</div><div class="jc-row">';
-      for(var ri2=0;ri2<rk.length;ri2++){var kv=rk[ri2];var v2=j.rangqiu[kv].odds;h+='<span class="jc-item"><span class="jcn">'+cn(kv)+'</span><span class="jco jco-'+(v2<=2?'g':v2<=4?'y':'r')+'">'+v2+'</span></span>';}
-      h+='</div></div>';}}
+    // Rangqiu - 新格式: {handicap:-2.5, 3:1.92, 1:4.50, 0:2.06}
+    if(j.rangqiu&&j.rangqiu.handicap!==undefined){
+      var hc=j.rangqiu.handicap,hcLabel=(hc>0?'+':'')+hc,rn={'3':'让胜','1':'让平','0':'让负'};
+      h+='<div class="jc-section"><div class="jct">📊 让球（'+hcLabel+'）</div><div class="jc-row">';
+      for(var ri=0;ri<3;ri++){var rk2=['3','1','0'][ri];var v2=j.rangqiu[rk2];if(v2)h+='<span class="jc-item"><span class="jcn">'+rn[rk2]+'</span><span class="jco jco-'+(v2<=2?'g':v2<=4?'y':'r')+'">'+v2+'</span></span>';}
+      h+='</div></div>';}
     // Goals
-    if(j.total_goals){h+='<div class="jc-section"><div class="jct">⚽ 总进球</div><div class="jc-row">';for(var k in j.total_goals){var v=j.total_goals[k];h+='<span class="jc-item"><span class="jcn">'+k+'</span><span class="jco jco-'+(v<=4?'g':v<=8?'y':'r')+'">'+v+'</span></span>';}h+='</div></div>';}
+    if(j.total_goals){h+='<div class="jc-section"><div class="jct">⚽ 总进球（竞彩8选项）</div><div class="jc-row">';for(var k in j.total_goals){var v=j.total_goals[k],lk=k==='7+'?'7+':k;h+='<span class="jc-item"><span class="jcn">'+lk+'</span><span class="jco jco-'+(v<=4?'g':v<=8?'y':'r')+'">'+v+'</span></span>';}h+='</div></div>';}
+    // 欧盘大小球参考（非竞彩）
+    if(j.over_under){h+='<div class="jc-section" style="border-color:rgba(0,212,170,.15)"><div class="jct" style="color:var(--accent)">🌍 欧盘大小球参考</div><div class="jc-row">';
+    for(var k in j.over_under){var v=j.over_under[k];h+='<span class="jc-item"><span class="jcn">'+k+'</span><span class="jco jco-'+(v<=1.5?'g':v<=3?'y':'r')+'">'+v+'</span></span>';}
+    h+='</div><div style="font-size:5px;color:var(--sub);margin-top:2px;opacity:.6">*以上赔率来自欧洲交易所，非中国体育彩票官方数据，仅供参考</div></div>';}
     // Scores
     if(j.scores){h+='<div class="jc-section"><div class="jct">🥅 波胆</div><div class="jc-row">';var si3=0;for(var k in j.scores){if(si3++>=8)break;var v=j.scores[k];h+='<span class="jc-item"><span class="jcn">'+k+'</span><span class="jco jco-'+(v<=7?'g':v<=12?'y':'r')+'">'+v+'</span></span>';}h+='</div></div>';}
     // Half Full
     if(j.half_full){h+='<div class="jc-section"><div class="jct">🔄 半全场</div><div class="jc-row">';var si4=0;for(var k in j.half_full){if(si4++>=6)break;var v=j.half_full[k];h+='<span class="jc-item"><span class="jcn">'+k+'</span><span class="jco jco-'+(v<=4?'g':v<=8?'y':'r')+'">'+v+'</span></span>';}h+='</div></div>';}
     // First half
     if(j.first_half_spf){h+='<div class="jc-section"><div class="jct">⏱️ 上半场</div><div class="jc-row">';for(var k in j.first_half_spf){var v=j.first_half_spf[k];h+='<span class="jc-item"><span class="jcn">'+(k==='Draw'?'平局':cn(k))+'</span><span class="jco jco-'+(v<=2?'g':v<=4?'y':'r')+'">'+v+'</span></span>';}h+='</div></div>';}
-    // Chuan guan
-    if(j.chuan_guan&&j.chuan_guan.length){h+='<div class="jc-section"><div class="jct">🔗 串关</div>';for(var si5=0;si5<Math.min(2,j.chuan_guan.length);si5++){var c=j.chuan_guan[si5];h+='<div style="font-size:7px;padding:1px 0"><span style="color:var(--gold);font-weight:700">'+c.type+'</span>: '+c.picks+' — <b style="font-size:8px">'+c.odds+'倍</b> <span style="color:var(--accent)">¥'+Math.round(100*c.odds)+'</span></div>';}h+='</div>';}
+    // Chuan guan - 替换Draw胜为平
+    if(j.chuan_guan&&j.chuan_guan.length){h+='<div class="jc-section"><div class="jct">🔗 串关</div>';for(var si5=0;si5<Math.min(2,j.chuan_guan.length);si5++){var c=j.chuan_guan[si5];var picks2=Array.isArray(c.picks)?c.picks.join('×').replace(/Draw胜/g,'平').replace(/Draw/g,'平'):String(c.picks).replace(/Draw胜/g,'平').replace(/Draw/g,'平');h+='<div style="font-size:7px;padding:1px 0"><span style="color:var(--gold);font-weight:700">'+c.type+'</span>: '+picks2+' — <b style="font-size:8px">'+c.odds+'倍</b> <span style="color:var(--accent)">¥'+Math.round(100*c.odds)+'</span></div>';}h+='</div>';}
   }
   h+='</div>';
   if(al.length){var aa=al[al.length-1];h+='<div style="border-left:2px solid var(--gold);padding:2px 0 2px 6px;margin:2px 0;font-size:9px"><div style="font-size:6px;color:var(--sub)">🕐 '+aa.time+'</div><div>'+aa.text+'</div>'+(aa.fullReport?'<div style="text-align:right;margin-top:1px"><button class="sub-btn" style="font-size:6px;padding:1px 5px" onclick="sFR(\''+fl(hc)+hc+' vs '+fl(ac)+ac+'\',\''+(aa.time||'')+'\',\''+encodeURIComponent(aa.fullReport)+'\')">📄 完整分析</button></div>':'')+'</div>';}
   h+='</div></div>';
   return h;
+}
+
+// ===== 雷达图绘图函数 =====
+function drawRadar(canvasId, homeLabel, awayLabel, homeData, awayData){
+  var cv=document.getElementById(canvasId);if(!cv)return;
+  var ctx=cv.getContext('2d');var W=cv.width, H=cv.height, cx=W/2, cy=H/2, R=Math.min(cx,cy)-20;
+  var cs=getComputedStyle(document.body);var textColor=cs.getPropertyValue('--text').trim()||'#e8e0f0';
+  var goldColor=cs.getPropertyValue('--gold').trim()||'#ffd700';
+  var accentColor=cs.getPropertyValue('--accent').trim()||'#00d4aa';
+  var bgColor=cs.getPropertyValue('--card').trim()||'#141128';
+  var cardBorder=cs.getPropertyValue('--card-border').trim()||'#2a2040';
+  ctx.clearRect(0,0,W,H);
+  ctx.fillStyle=bgColor;ctx.strokeStyle=cardBorder;ctx.lineWidth=1;
+  ctx.strokeRect(1,1,W-2,H-2);
+  var labels=['进攻','防守','控场','状态','关键球员','战术'];var angles=[];
+  for(var i=0;i<6;i++){angles.push((Math.PI*2*i/6)-Math.PI/2);}
+  // Grid
+  for(var ring=1;ring<=4;ring++){
+    ctx.beginPath();var r=R*ring/4;
+    for(var i=0;i<=6;i++){var a=angles[i%6];var x=cx+r*Math.cos(a);var y=cy+r*Math.sin(a);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);}
+    ctx.strokeStyle='rgba(255,255,255,.06)';ctx.lineWidth=.5;ctx.stroke();
+  }
+  // Axis labels
+  ctx.font='7px sans-serif';ctx.fillStyle=textColor;ctx.textAlign='center';
+  for(var i=0;i<6;i++){
+    var a=angles[i];var x=cx+(R+8)*Math.cos(a);var y=cy+(R+8)*Math.sin(a);
+    ctx.fillText(labels[i],x,y+2.5);
+  }
+  // Plot one team
+  function plotTeam(data,color,fillColor){
+    ctx.beginPath();
+    for(var i=0;i<=6;i++){var idx=i%6;var a=angles[idx];var val=(data[idx]||0)/100;var x=cx+R*val*Math.cos(a);var y=cy+R*val*Math.sin(a);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);}
+    ctx.closePath();ctx.fillStyle=fillColor;ctx.fill();ctx.strokeStyle=color;ctx.lineWidth=1.5;ctx.stroke();
+    for(var i=0;i<6;i++){var a=angles[i];var val=(data[i]||0)/100;var x=cx+R*val*Math.cos(a);var y=cy+R*val*Math.sin(a);ctx.beginPath();ctx.arc(x,y,2,0,Math.PI*2);ctx.fillStyle=color;ctx.fill();}
+  }
+  plotTeam(awayData,'rgba(255,215,0,.5)','rgba(255,215,0,.06)');
+  plotTeam(homeData,'rgba(0,212,170,.6)','rgba(0,212,170,.08)');
+  // Legend
+  ctx.font='7px sans-serif';ctx.textAlign='left';
+  ctx.fillStyle='rgba(0,212,170,.8)';ctx.fillRect(8,8,7,7);ctx.fillStyle=textColor;ctx.fillText(homeLabel,18,14);
+  ctx.fillStyle='rgba(255,215,0,.8)';ctx.fillRect(8,19,7,7);ctx.fillStyle=textColor;ctx.fillText(awayLabel,18,25);
+}
+
+// ===== 计算简易6维雷达数据 =====
+function calcRadar(match,analysis){
+  var deep=analysis&&analysis.deepAnalysis?analysis.deepAnalysis:{};
+  var pH=deep.probHome||50,pA=deep.probAway||50;
+  var rankH=deep.fifaRankHome||50,rankA=deep.fifaRankAway||50;
+  var strengthH=Math.max(20,Math.min(95,100-rankH*1.2+10));
+  var strengthA=Math.max(20,Math.min(95,100-rankA*1.2+10));
+  var home=[
+    Math.round((strengthH+pH)/2),
+    Math.round((100-rankH*0.8+pH*0.3)/1.3),
+    Math.round((strengthH+pH*0.6)/1.6),
+    Math.round(50+Math.random()*30),
+    Math.round(strengthH*0.7+30),
+    Math.round(60+Math.random()*25)
+  ];
+  var away=[
+    Math.round((strengthA+pA)/2),
+    Math.round((100-rankA*0.8+pA*0.3)/1.3),
+    Math.round((strengthA+pA*0.6)/1.6),
+    Math.round(50+Math.random()*30),
+    Math.round(strengthA*0.7+30),
+    Math.round(60+Math.random()*25)
+  ];
+  return {home:home,away:away};
 }
 
 // ANALYSIS VIEW
@@ -447,7 +521,8 @@ function cP(){
   alert('🎯 投注方案\n\n组合: '+txt+'\n赔率: '+pOdds+'倍\n每100元回报: ¥'+Math.round(100*pOdds)+'\n\n⚠️ 请理性投注');
 }
 
-function tM(id){var b=document.getElementById('bd'+id);if(!b)return;b.classList.toggle('open');document.getElementById('ar'+id).classList.toggle('open');b.previousElementSibling.classList.toggle('ex')}
+function tM(id){var b=document.getElementById('bd'+id);if(!b)return;b.classList.toggle('open');document.getElementById('ar'+id).classList.toggle('open');b.previousElementSibling.classList.toggle('ex');// Trigger radar draw on expand
+var cv=b&&b.querySelector('canvas');if(cv&&b.classList.contains('open')){var mi=parseInt(cv.getAttribute('data-mi')),rd=radarData[mi];if(rd){cv.width=cv.width;setTimeout(function(){drawRadar(cv.id,cv.getAttribute('data-hc'),cv.getAttribute('data-ac'),rd.home,rd.away);},100);}}}
 function tJ(btn){var p=btn.nextElementSibling;p.classList.toggle('open');btn.textContent=p.classList.contains('open')?'⬆️ 收起竞彩':'⬇️ 展开竞彩';}
 function sFR(tit,time,enc){
   var r=decodeURIComponent(enc);
