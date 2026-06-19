@@ -352,7 +352,7 @@ function rC(m,mi){
     h+='<div class="scards">';
     for(var si=0;si<o.length;si++){
       var sk=o[si],x=sc[sk];if(!x)continue;
-      h+='<div class="sc'+(sk===cS?' sel':'')+'" style="border-color:'+cs[sk]+'" onclick="cS=\''+sk+'\';rP()"><span class="sl" style="color:'+cs[sk]+'">'+x.label+'</span><span class="sp">'+x.pick+'</span><span class="so" style="color:'+cs[sk]+'">@'+x.odds+'</span><span class="sr">¥'+x.per_100+'</span></div>';
+      h+='<div class="sc'+(sk===cS?' sel':'')+'" style="border-color:'+cs[sk]+'" onclick="cS=\''+sk+'\';rP()"><span class="sl" style="color:'+cs[sk]+'">'+x.label+'</span><span class="sp">'+x.pick.replace(/@\d+\.?\d*/g,'').trim()+'</span><span class="so" style="color:'+cs[sk]+'">@'+x.odds+'</span><span class="sr">¥'+x.per_100+'</span></div>';
     }
     h+='</div>';
   }
@@ -616,7 +616,7 @@ if(cv&&rd){drawRadar(cv.id,cv.getAttribute('data-hc'),cv.getAttribute('data-ac')
 // Animate probability bars and goal range
 setTimeout(function(){
   var fills=b.querySelectorAll('.pbar-fill');
-  for(var fi=0;fi<fills.length;fi++){var w=fills[fi].getAttribute('data-w');if(w)fills[fi].style.width=w+'%';}
+  for(var fi=0;fi<fills.length;fi++){var w=fills[fi].getAttribute('data-w');if(w){void fills[fi].offsetHeight;fills[fi].style.width=w+'%';}}
   var hl=b.querySelector('.grange-highlight');
   if(hl){var gl=parseFloat(hl.getAttribute('data-gl')),gh=parseFloat(hl.getAttribute('data-gh'));if(!isNaN(gl)&&!isNaN(gh)){var lp=gl/7*100,rp=(1-gh/7)*100;hl.style.left=lp+'%';hl.style.width=(100-lp-rp)+'%';}}
 },100);}
