@@ -455,6 +455,7 @@ var animLock={};
 // ===== 信心趋势小折线 =====
 function drawTrend(canvasId, confs, animated){
   var cv=document.getElementById(canvasId);if(!cv||!confs||confs.length<2)return;
+  if(cv.offsetWidth===0){setTimeout(function(){drawTrend(canvasId,confs,animated);},200);return;}
   var dpr=window.devicePixelRatio||1;
   var w=36,h=16;
   cv.width=w*dpr;cv.height=h*dpr;cv.style.width=w+'px';cv.style.height=h+'px';
@@ -582,7 +583,7 @@ function rA(){
   if(cAv==='s')rAS(el);else rAT(el);
 }
 function rAS(el){
-  var up=[];for(var i=0;i<AM.length;i++){if(!AM[i].result||AM[i].result==='')up.push(AM[i]);}
+  var up=[];for(var i=0;i<AM.length;i++){var al=AM[i].analyses;if(al&&al.length)up.push(AM[i]);}
   if(cMi>=up.length)cMi=0;
   var h='';
   if(up.length){
@@ -798,16 +799,16 @@ function sFR(tit,time,enc){
   titDiv.textContent=tit+' - '+time;
   box.appendChild(titDiv);
   var bodyDiv=document.createElement('div');
-  bodyDiv.style.cssText='font-size:10px;line-height:1.6';
-  bodyDiv.innerHTML=r;
+  bodyDiv.style.cssText='font-size:10px;line-height:1.6;all:initial';
+  bodyDiv.innerHTML='<div style="font-family:-apple-system,\'PingFang SC\',sans-serif;font-size:10px;line-height:1.6;color:var(--text)">'+r+'</div>';
   box.appendChild(bodyDiv);
   m.appendChild(box);
   document.body.appendChild(m);
   m.onclick=function(e){if(e.target===m)m.remove()};
-}function swV(v,btn){cV=v;document.querySelectorAll('.top-nav-btn').forEach(function(b){b.classList.remove('active')});if(btn)btn.classList.add('active');document.getElementById('vPred').className=(v==='pred'?'':'hide');document.getElementById('vAna').className=(v==='ana'?'':'hide');document.getElementById('vBet').className=(v==='bet'?'':'hide');document.getElementById('ab').style.display=(v==='bet'?'none':'');rP();}
+}function swV(v,btn){cV=v;var oids=[];document.querySelectorAll('.pc-body.open').forEach(function(o){oids.push(o.id.replace('bd',''))});document.querySelectorAll('.top-nav-btn').forEach(function(b){b.classList.remove('active')});if(btn)btn.classList.add('active');document.getElementById('vPred').className=(v==='pred'?'':'hide');document.getElementById('vAna').className=(v==='ana'?'':'hide');document.getElementById('vBet').className=(v==='bet'?'':'hide');document.getElementById('ab').style.display=(v==='bet'?'none':'');rP();setTimeout(function(){oids.forEach(function(id){var b2=document.getElementById('bd'+id);if(b2&&!b2.classList.contains('open')){b2.classList.add('open');var a2=document.getElementById('ar'+id);if(a2)a2.classList.add('open');var ph2=b2.previousElementSibling;if(ph2)ph2.classList.add('ex');}});},50);}
 function fil(f,btn){cF=f;document.getElementById('vPred').querySelectorAll('.sub-btn').forEach(function(b){b.classList.remove('active')});if(btn)btn.classList.add('active');rP();}
 function swAV(v,btn){cAv=v;document.getElementById('vAna').querySelectorAll('.sub-btn').forEach(function(b){b.classList.remove('active')});if(btn)btn.classList.add('active');rA();}
-function tt(){document.body.classList.toggle('light');var isLight=document.body.classList.contains('light');document.getElementById('tb').textContent=isLight?'☀️':'🌙';localStorage.setItem('wcT',isLight?'l':'d')}
+function tt(){document.body.classList.toggle('light');var isLight=document.body.classList.contains('light');document.getElementById('tb').textContent=isLight?'☀️':'🌙';localStorage.setItem('wcT',isLight?'l':'d');setTimeout(function(){document.querySelectorAll('canvas').forEach(function(cv){cv.width=cv.width});},50)}
 if(localStorage.getItem('wcT')==='l'){document.body.classList.add('light');document.getElementById('tb').textContent='☀️';}
 
 function uN(){var n=new Date();var nx=new Date(n);nx.setHours(Math.floor(n.getHours()/8)*8+8,0,0,0);document.getElementById('nU').textContent=nx.toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'});}
