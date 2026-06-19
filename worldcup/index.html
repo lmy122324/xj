@@ -135,13 +135,13 @@ body{
 /* 概率条 */
 .pbar{display:flex;align-items:center;gap:3px;margin:1px 0;height:14px}
 .pbar-tr{flex:1;height:10px;background:rgba(255,255,255,.04);border-radius:5px;overflow:hidden;position:relative}
-.pbar-fill{height:100%;border-radius:5px;transition:width .3s;min-width:2px}
+.pbar-fill{height:100%;border-radius:5px;transition:width .6s cubic-bezier(.25,.46,.45,.94);min-width:0}
 .pbar-label{font-size:6px;color:var(--sub);white-space:nowrap;width:22px;text-align:right;flex-shrink:0}
 .pbar-val{font-size:7px;font-weight:700;width:32px;text-align:right;flex-shrink:0}
 /* 进球区间 */
 .grange{padding:4px 2px}
 .grange-track{position:relative;height:16px;background:rgba(255,255,255,.04);border-radius:8px;margin:2px 0 4px}
-.grange-highlight{position:absolute;top:0;height:100%;border-radius:8px;background:linear-gradient(90deg,rgba(255,215,0,.15),rgba(255,215,0,.3));border:1px solid rgba(255,215,0,.3);z-index:1}
+.grange-highlight{position:absolute;top:0;height:100%;border-radius:8px;background:linear-gradient(90deg,rgba(255,215,0,.15),rgba(255,215,0,.3));border:1px solid rgba(255,215,0,.3);z-index:1;transition:left .5s cubic-bezier(.25,.46,.45,.94),width .5s cubic-bezier(.25,.46,.45,.94)}
 .grange-ticks{display:flex;justify-content:space-between;font-size:6px;color:var(--sub);position:relative;margin-top:-2px}
 .grange-tick{text-align:center;flex:1}
 /* 对位看板 */
@@ -370,7 +370,7 @@ function rC(m,mi){
     // 进球区间滑块
     var gr=deep.goalRange||'1-3球';var grm=gr.match(/(\d+)/g);var gl=parseInt(grm&&grm[0])||1,gh=parseInt(grm&&grm[1])||3;gl=Math.max(0,Math.min(7,gl));gh=Math.max(gl,Math.min(7,gh));
     var lp=gl/7*100,rp=(1-gh/7)*100,midp=(gl+gh)/14*100;
-    h+='<div class="grange"><div style="font-size:6px;color:var(--sub);margin-bottom:1px">总进球: <b style="color:var(--gold)">'+gr+'</b></div><div class="grange-track"><div class="grange-highlight" style="left:'+lp+'%;width:'+(100-lp-rp)+'%"></div></div><div class="grange-ticks">';
+    h+='<div class="grange"><div style="font-size:6px;color:var(--sub);margin-bottom:1px">总进球: <b style="color:var(--gold)">'+gr+'</b></div><div class="grange-track"><div class="grange-highlight" style="left:0%;width:0%" data-gl="'+gl+'" data-gh="'+gh+'"></div></div><div class="grange-ticks">';
     for(var gi=0;gi<=7;gi++){h+='<span class="grange-tick">'+(gi===7?'7+':gi)+'</span>';}
     h+='</div></div></div></div>';
     // 对位看板
@@ -429,8 +429,11 @@ function gaugeHTML(conf){
 }
 
 // ===== 雷达图绘图函数 =====
-function drawRadar(canvasId, homeLabel, awayLabel, homeData, awayData){
+var animLock={};
+function drawRadar(canvasId, homeLabel, awayLabel, homeData, awayData, animated){
   var cv=document.getElementById(canvasId);if(!cv)return;
+  if(animLock[canvasId])return;
+  if(animated===undefined)animated=true;
   var dpr=window.devicePixelRatio||1;
   var dispW=170,dispH=155;
   cv.width=dispW*dpr;cv.height=dispH*dpr;
@@ -438,40 +441,49 @@ function drawRadar(canvasId, homeLabel, awayLabel, homeData, awayData){
   var ctx=cv.getContext('2d');ctx.scale(dpr,dpr);
   var W=dispW, H=dispH, cx=W/2, cy=H/2, R=Math.min(cx,cy)-20;
   var cs=getComputedStyle(document.body);var textColor=cs.getPropertyValue('--text').trim()||'#e8e0f0';
-  var goldColor=cs.getPropertyValue('--gold').trim()||'#ffd700';
-  var accentColor=cs.getPropertyValue('--accent').trim()||'#00d4aa';
   var bgColor=cs.getPropertyValue('--card').trim()||'#141128';
   var cardBorder=cs.getPropertyValue('--card-border').trim()||'#2a2040';
-  ctx.clearRect(0,0,W,H);
-  ctx.fillStyle=bgColor;ctx.strokeStyle=cardBorder;ctx.lineWidth=1;
-  ctx.strokeRect(1,1,W-2,H-2);
   var labels=['进攻','防守','控场','状态','关键球员','战术'];var angles=[];
   for(var i=0;i<6;i++){angles.push((Math.PI*2*i/6)-Math.PI/2);}
-  // Grid
-  for(var ring=1;ring<=4;ring++){
-    ctx.beginPath();var r=R*ring/4;
-    for(var i=0;i<=6;i++){var a=angles[i%6];var x=cx+r*Math.cos(a);var y=cy+r*Math.sin(a);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);}
-    ctx.strokeStyle='rgba(255,255,255,.06)';ctx.lineWidth=.5;ctx.stroke();
+  function drawFrame(t){
+    ctx.clearRect(0,0,W,H);
+    ctx.fillStyle=bgColor;ctx.strokeStyle=cardBorder;ctx.lineWidth=1;
+    ctx.strokeRect(1,1,W-2,H-2);
+    // Grid
+    for(var ring=1;ring<=4;ring++){
+      ctx.beginPath();var r=R*ring/4;
+      for(var i=0;i<=6;i++){var a=angles[i%6];var x=cx+r*Math.cos(a);var y=cy+r*Math.sin(a);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);}
+      ctx.strokeStyle='rgba(255,255,255,.06)';ctx.lineWidth=.5;ctx.stroke();
+    }
+    // Axis labels
+    ctx.font='7px sans-serif';ctx.fillStyle=textColor;ctx.textAlign='center';
+    for(var i=0;i<6;i++){var a=angles[i];var x=cx+(R+8)*Math.cos(a);var y=cy+(R+8)*Math.sin(a);ctx.fillText(labels[i],x,y+2.5);}
+    // Plot with animation
+    var p=t;
+    function plotTeam(data,color,fillColor){
+      ctx.beginPath();
+      for(var i=0;i<=6;i++){var idx=i%6;var a=angles[idx];var val=((data[idx]||0)/100)*p;var x=cx+R*val*Math.cos(a);var y=cy+R*val*Math.sin(a);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);}
+      ctx.closePath();ctx.fillStyle=fillColor;ctx.fill();ctx.strokeStyle=color;ctx.lineWidth=1.5;ctx.stroke();
+      for(var i=0;i<6;i++){var a=angles[i];var val=((data[i]||0)/100)*p;var x=cx+R*val*Math.cos(a);var y=cy+R*val*Math.sin(a);ctx.beginPath();ctx.arc(x,y,2,0,Math.PI*2);ctx.fillStyle=color;ctx.fill();}
+    }
+    plotTeam(awayData,'rgba(255,215,0,.5)','rgba(255,215,0,.06)');
+    plotTeam(homeData,'rgba(0,212,170,.6)','rgba(0,212,170,.08)');
+    // Legend
+    ctx.font='7px sans-serif';ctx.textAlign='left';
+    ctx.fillStyle='rgba(0,212,170,.8)';ctx.fillRect(8,8,7,7);ctx.fillStyle=textColor;ctx.fillText(homeLabel,18,14);
+    ctx.fillStyle='rgba(255,215,0,.8)';ctx.fillRect(8,19,7,7);ctx.fillStyle=textColor;ctx.fillText(awayLabel,18,25);
   }
-  // Axis labels
-  ctx.font='7px sans-serif';ctx.fillStyle=textColor;ctx.textAlign='center';
-  for(var i=0;i<6;i++){
-    var a=angles[i];var x=cx+(R+8)*Math.cos(a);var y=cy+(R+8)*Math.sin(a);
-    ctx.fillText(labels[i],x,y+2.5);
+  if(!animated){drawFrame(1);return;}
+  var startT=null,dur=500;
+  animLock[canvasId]=true;
+  function step(ts){
+    if(!startT)startT=ts;
+    var elapsed=ts-startT,p=Math.min(1,elapsed/dur);
+    var ease=1-Math.pow(1-p,3);
+    drawFrame(ease);
+    if(p<1){requestAnimationFrame(step);}else{animLock[canvasId]=false;}
   }
-  // Plot one team
-  function plotTeam(data,color,fillColor){
-    ctx.beginPath();
-    for(var i=0;i<=6;i++){var idx=i%6;var a=angles[idx];var val=(data[idx]||0)/100;var x=cx+R*val*Math.cos(a);var y=cy+R*val*Math.sin(a);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);}
-    ctx.closePath();ctx.fillStyle=fillColor;ctx.fill();ctx.strokeStyle=color;ctx.lineWidth=1.5;ctx.stroke();
-    for(var i=0;i<6;i++){var a=angles[i];var val=(data[i]||0)/100;var x=cx+R*val*Math.cos(a);var y=cy+R*val*Math.sin(a);ctx.beginPath();ctx.arc(x,y,2,0,Math.PI*2);ctx.fillStyle=color;ctx.fill();}
-  }
-  plotTeam(awayData,'rgba(255,215,0,.5)','rgba(255,215,0,.06)');
-  plotTeam(homeData,'rgba(0,212,170,.6)','rgba(0,212,170,.08)');
-  // Legend
-  ctx.font='7px sans-serif';ctx.textAlign='left';
-  ctx.fillStyle='rgba(0,212,170,.8)';ctx.fillRect(8,8,7,7);ctx.fillStyle=textColor;ctx.fillText(homeLabel,18,14);
-  ctx.fillStyle='rgba(255,215,0,.8)';ctx.fillRect(8,19,7,7);ctx.fillStyle=textColor;ctx.fillText(awayLabel,18,25);
+  requestAnimationFrame(step);
 }
 
 // ===== 计算简易6维雷达数据 =====
@@ -595,8 +607,19 @@ function cP(){
   alert('🎯 投注方案\n\n组合: '+txt+'\n赔率: '+pOdds+'倍\n每100元回报: ¥'+Math.round(100*pOdds)+'\n\n⚠️ 请理性投注');
 }
 
-function tM(id){var b=document.getElementById('bd'+id);if(!b)return;b.classList.toggle('open');document.getElementById('ar'+id).classList.toggle('open');b.previousElementSibling.classList.toggle('ex');// Trigger radar draw on expand
-var cv=b&&b.querySelector('canvas');if(cv&&b.classList.contains('open')){var mi=parseInt(cv.getAttribute('data-mi')),rd=radarData[mi];if(rd){cv.width=cv.width;setTimeout(function(){drawRadar(cv.id,cv.getAttribute('data-hc'),cv.getAttribute('data-ac'),rd.home,rd.away);},100);}}}
+function tM(id){var b=document.getElementById('bd'+id);if(!b)return;b.classList.toggle('open');document.getElementById('ar'+id).classList.toggle('open');b.previousElementSibling.classList.toggle('ex');
+if(!b.classList.contains('open'))return;
+// Animate radar
+var cv=b.querySelector('canvas');var mi=cv?parseInt(cv.getAttribute('data-mi')):-1;
+var rd=mi>=0?radarData[mi]:null;
+if(cv&&rd){drawRadar(cv.id,cv.getAttribute('data-hc'),cv.getAttribute('data-ac'),rd.home,rd.away,true);}
+// Animate probability bars and goal range
+setTimeout(function(){
+  var fills=b.querySelectorAll('.pbar-fill');
+  for(var fi=0;fi<fills.length;fi++){var w=fills[fi].getAttribute('data-w');if(w)fills[fi].style.width=w+'%';}
+  var hl=b.querySelector('.grange-highlight');
+  if(hl){var gl=parseFloat(hl.getAttribute('data-gl')),gh=parseFloat(hl.getAttribute('data-gh'));if(!isNaN(gl)&&!isNaN(gh)){var lp=gl/7*100,rp=(1-gh/7)*100;hl.style.left=lp+'%';hl.style.width=(100-lp-rp)+'%';}}
+},100);}
 function tJ(btn){var p=btn.nextElementSibling;p.classList.toggle('open');btn.textContent=p.classList.contains('open')?'⬆️ 收起竞彩':'⬇️ 展开竞彩';}
 function sFR(tit,time,enc){
   var r=decodeURIComponent(enc);
