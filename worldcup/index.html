@@ -364,9 +364,9 @@ function rC(m,mi){
     h+='<div class="vis-left"><canvas id="'+rid+'" width="170" height="155" style="width:100%;border-radius:6px" data-hc="'+hc+'" data-ac="'+ac+'" data-mi="'+mi+'"></canvas></div>';
     // 右: 概率条 + 进球区间
     h+='<div class="vis-right">';
-    h+='<div class="pbar"><div class="pbar-label">'+hcName+'</div><div class="pbar-tr"><div class="pbar-fill" style="width:'+pH+'%;background:var(--accent)"></div></div><span class="pbar-val" style="color:var(--accent)">'+pH+'%</span></div>';
-    h+='<div class="pbar"><div class="pbar-label">平局</div><div class="pbar-tr"><div class="pbar-fill" style="width:'+pD+'%;background:var(--gold)"></div></div><span class="pbar-val" style="color:var(--gold)">'+pD+'%</span></div>';
-    h+='<div class="pbar"><div class="pbar-label">'+acName+'</div><div class="pbar-tr"><div class="pbar-fill" style="width:'+pA+'%;background:var(--red)"></div></div><span class="pbar-val" style="color:var(--red)">'+pA+'%</span></div>';
+    h+='<div class="pbar"><div class="pbar-label">'+hcName+'</div><div class="pbar-tr"><div class="pbar-fill" style="width:0%;background:var(--accent)" data-w="'+pH+'"></div></div><span class="pbar-val" style="color:var(--accent)">'+pH+'%</span></div>';
+    h+='<div class="pbar"><div class="pbar-label">平局</div><div class="pbar-tr"><div class="pbar-fill" style="width:0%;background:var(--gold)" data-w="'+pD+'"></div></div><span class="pbar-val" style="color:var(--gold)">'+pD+'%</span></div>';
+    h+='<div class="pbar"><div class="pbar-label">'+acName+'</div><div class="pbar-tr"><div class="pbar-fill" style="width:0%;background:var(--red)" data-w="'+pA+'"></div></div><span class="pbar-val" style="color:var(--red)">'+pA+'%</span></div>';
     // 进球区间滑块
     var gr=deep.goalRange||'1-3球';var grm=gr.match(/(\d+)/g);var gl=parseInt(grm&&grm[0])||1,gh=parseInt(grm&&grm[1])||3;gl=Math.max(0,Math.min(7,gl));gh=Math.max(gl,Math.min(7,gh));
     var lp=gl/7*100,rp=(1-gh/7)*100,midp=(gl+gh)/14*100;
