@@ -45,7 +45,7 @@ body{
 .sub-nav{display:flex;gap:2px;padding:2px 4px;flex-wrap:wrap;border-bottom:1px solid var(--card-border)}
 .sub-btn{padding:2px 8px;border-radius:10px;border:1px solid var(--card-border);background:transparent;color:var(--sub);cursor:pointer;font-size:7px;font-weight:600}
 .sub-btn.active{background:rgba(0,212,170,.08);border-color:var(--accent);color:var(--accent)}
-.container{max-width:720px;margin:0 auto;padding:2px 4px 60px}
+.container{max-width:1400px;margin:0 auto;padding:2px 4px 60px;display:block}
 .status-bar{display:flex;justify-content:space-between;padding:3px 6px;background:rgba(255,215,0,.02);border:1px solid rgba(255,215,0,.04);border-radius:4px;margin:2px 0;font-size:7px;color:var(--sub)}
 
 /* ===== MATCH CARDS ===== */
@@ -175,6 +175,8 @@ body{
   .sc{min-width:60px}.bv-c{min-width:90px;padding:6px}
   .header h1{font-size:15px}.bv-c .bvr{font-size:15px}
 }
+@media(min-width:900px){.pc-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px}}
+@media(min-width:1400px){.pc-grid{grid-template-columns:1fr 1fr 1fr}}
 </style>
 </head>
 <body>
@@ -300,14 +302,21 @@ function fl(n){return FL[cn(n)]||''}
 var AM=[],cV='pred',cF='all',cAv='s',cS='balanced',cMi=0,selParlay={},radarData=[];
 
 function ld(){
+  // Load from cache first (instant render)
+  try{var cached=localStorage.getItem('wcData');if(cached){var cd=JSON.parse(cached);AM=cd.matches||[];document.getElementById('dS').textContent=(cd.analysisCount||0)+'份 '+'(缓存)';uA(cd.prediction_accuracy);rP();}}catch(e){}
+  // Fetch fresh data in background
   var u=(window.location.origin+(window.location.pathname.replace(/\/[^/]*$/,'')||'/xj/worldcup'))+'/data.json?v='+Date.now();
   fetch(u).then(function(r){return r.json()}).then(function(d){
     AM=d.matches||[];document.getElementById('dS').textContent=(d.analysisCount||0)+'份';
     uA(d.prediction_accuracy);rP();
+    try{localStorage.setItem('wcData',JSON.stringify(d));}catch(e){}
   }).catch(function(){
     fetch('data.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(d){
       AM=d.matches||[];uA(d.prediction_accuracy);rP();
-    }).catch(function(){document.getElementById('dS').textContent='等待数据...';rP()});
+      try{localStorage.setItem('wcData',JSON.stringify(d));}catch(e){}
+    }).catch(function(){
+      if(!AM.length)document.getElementById('dS').textContent='等待数据...';
+    });
   });
 }
 function uA(ac){
@@ -341,8 +350,9 @@ function rM(){
     if(cF==='today'&&d!==tD&&d!==tD2)continue;
     if(cF==='changes')break;
     var isT=(d===tD||d===tD2);
-    h+='<div class="day-head" style="font-size:12px;font-weight:700;padding:5px 0 2px;color:var(--gold)">'+(isT?'🔥 ':'')+d+' <span style="font-size:7px;color:var(--sub);font-weight:400">'+ms.length+'场</span></div>';
+    h+='<div class="day-head" style="font-size:12px;font-weight:700;padding:5px 0 2px;color:var(--gold)">'+(isT?'🔥 ':'')+d+' <span style="font-size:7px;color:var(--sub);font-weight:400">'+ms.length+'场</span></div><div class="pc-grid">';
     for(var mi2=0;mi2<ms.length;mi2++)h+=rC(ms[mi2],mi++);
+    h+='</div>';
   }
   if(cF==='changes'){
     var has=false;h='<div style="font-size:12px;font-weight:700;padding:5px 0 2px;color:var(--gold)">🔄 变化追踪</div>';
