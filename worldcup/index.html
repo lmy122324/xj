@@ -222,7 +222,7 @@ body{
   <button class="sub-btn active" data-av="s" onclick="swAV('s',this)">🔍 单场</button>
   <button class="sub-btn" data-av="t" onclick="swAV('t',this)">📋 今日全部</button>
 </div>
-<div id="aC"><div class="empty">📊 选择比赛查看分析</div></div>
+<div id="anaC"><div class="empty">📊 选择比赛查看分析</div></div>
 </div></div>
 
 <!-- VIEW: BETTING -->
@@ -323,7 +323,7 @@ function uA(ac){
   if(!ac)return;
   document.getElementById('aT').textContent=ac.total_matches||0;
   document.getElementById('aR').textContent=ac.accuracy_rate||'0%';
-  document.getElementById('aC').textContent=(ac.correct_h2h||0)+'/'+(ac.total_matches||0);
+  document.getElementById('anaC').textContent=(ac.correct_h2h||0)+'/'+(ac.total_matches||0);
   if(ac.history&&ac.history.length){
     var r=ac.history.slice(-5);
     document.getElementById('aD').innerHTML=r.map(function(h){return '<span class="dot '+(h.rate>60?'up':h.rate>45?'flat':'down')+'" title="'+h.date+': '+h.rate+'%"></span>'}).join('');
@@ -574,7 +574,7 @@ function calcRadar(match,analysis){
 
 // ANALYSIS VIEW
 function rA(){
-  var el=document.getElementById('aC');
+  var el=document.getElementById('anaC');
   if(!AM.length){el.innerHTML='<div class="empty">暂无数据</div>';return}
   if(cAv==='s')rAS(el);else rAT(el);
 }
@@ -802,8 +802,8 @@ function sFR(tit,time,enc){
   document.body.appendChild(m);
   m.onclick=function(e){if(e.target===m)m.remove()};
 }function swV(v,btn){cV=v;document.querySelectorAll('.top-nav-btn').forEach(function(b){b.classList.remove('active')});if(btn)btn.classList.add('active');document.getElementById('vPred').className=(v==='pred'?'':'hide');document.getElementById('vAna').className=(v==='ana'?'':'hide');document.getElementById('vBet').className=(v==='bet'?'':'hide');document.getElementById('ab').style.display=(v==='bet'?'none':'');rP();}
-function fil(f,btn){cF=f;document.querySelectorAll('.sub-btn').forEach(function(b){b.classList.remove('active')});if(btn)btn.classList.add('active');rP();}
-function swAV(v,btn){cAv=v;document.querySelectorAll('.sub-btn').forEach(function(b){b.classList.remove('active')});if(btn)btn.classList.add('active');rA();}
+function fil(f,btn){cF=f;document.getElementById('vPred').querySelectorAll('.sub-btn').forEach(function(b){b.classList.remove('active')});if(btn)btn.classList.add('active');rP();}
+function swAV(v,btn){cAv=v;document.getElementById('vAna').querySelectorAll('.sub-btn').forEach(function(b){b.classList.remove('active')});if(btn)btn.classList.add('active');rA();}
 function tt(){document.body.classList.toggle('light');localStorage.setItem('wcT',document.body.classList.contains('light')?'l':'d')}
 if(localStorage.getItem('wcT')==='l')document.body.classList.add('light');
 
