@@ -128,6 +128,39 @@ body{
 .empty{padding:24px 10px;text-align:center;color:var(--sub);font-size:10px}
 .hide{display:none!important}
 
+/* ===== 可视化组件 ===== */
+.vis-row{display:flex;gap:4px;margin:2px 0;flex-wrap:wrap}
+.vis-left{flex:0 0 auto;min-width:120px;max-width:160px}
+.vis-right{flex:1;min-width:140px;display:flex;flex-direction:column;gap:2px}
+/* 概率条 */
+.pbar{display:flex;align-items:center;gap:3px;margin:1px 0;height:14px}
+.pbar-tr{flex:1;height:10px;background:rgba(255,255,255,.04);border-radius:5px;overflow:hidden;position:relative}
+.pbar-fill{height:100%;border-radius:5px;transition:width .3s;min-width:2px}
+.pbar-label{font-size:6px;color:var(--sub);white-space:nowrap;width:22px;text-align:right;flex-shrink:0}
+.pbar-val{font-size:7px;font-weight:700;width:32px;text-align:right;flex-shrink:0}
+/* 进球区间 */
+.grange{padding:4px 2px}
+.grange-track{position:relative;height:16px;background:rgba(255,255,255,.04);border-radius:8px;margin:2px 0 4px}
+.grange-highlight{position:absolute;top:0;height:100%;border-radius:8px;background:linear-gradient(90deg,rgba(255,215,0,.15),rgba(255,215,0,.3));border:1px solid rgba(255,215,0,.3);z-index:1}
+.grange-ticks{display:flex;justify-content:space-between;font-size:6px;color:var(--sub);position:relative;margin-top:-2px}
+.grange-tick{text-align:center;flex:1}
+/* 对位看板 */
+.kb{border:1px solid rgba(255,215,0,.08);border-radius:5px;padding:4px 6px;margin:2px 0;background:rgba(255,215,0,.01)}
+.kb-tit{font-size:7px;font-weight:700;color:var(--gold);margin-bottom:3px}
+.kb-row{display:flex;justify-content:space-between;font-size:7px;padding:1px 0;border-bottom:1px solid rgba(255,255,255,.03)}
+.kb-row:last-child{border-bottom:none}
+.kb-row .kbl{color:var(--sub)}
+.kb-row .kbh{color:var(--text);font-weight:600}
+.kb-row .kba{color:var(--text);font-weight:600;text-align:right}
+/* 仪表盘 */
+.gauge-wrap{display:inline-flex;align-items:center;gap:3px;position:relative}
+.gauge-svg{width:36px;height:36px;display:block}
+.gauge-val{position:absolute;font-size:7px;font-weight:900;text-align:center;line-height:1;width:36px;top:50%;left:50%;transform:translate(-50%,-35%)}
+@media(max-width:480px){
+  .vis-left{max-width:130px}
+  .vis-right{min-width:100px}
+}
+
 @media(max-width:480px){
   .pc-tm{font-size:10px}.pc-tm .fl{font-size:12px}
   .sc{min-width:60px}.bv-c{min-width:90px;padding:6px}
@@ -312,7 +345,7 @@ function rM(){
 function rC(m,mi){
   var al=m.analyses||[],l=al.length?al[al.length-1]:null,c=l?l.confidence:0,cc=c>=80?'pch':c>=60?'pcm':'pcl';
   var id='m'+mi,hc=cn(m.home),ac=cn(m.away),hasNew=l&&l.isNew;
-  var h='<div class="pc"><div class="pc-head" onclick="tM(\''+id+'\')"><span class="pc-ar" id="ar'+id+'">▶</span><span class="pc-tm"><span class="fl">'+fl(hc)+'</span>'+hc+'<span class="vs">vs</span><span class="fl">'+fl(ac)+'</span>'+ac+'</span><span class="pc-ti">'+(m.date||'')+' '+(m.time||'')+'</span>'+(c?'<span class="pc-cb '+cc+'">'+c+'%</span>':'')+(hasNew?'<span class="nt">NEW</span>':'')+'</div><div class="pc-body" id="bd'+id+'">';
+  var h='<div class="pc"><div class="pc-head" onclick="tM(\''+id+'\')"><span class="pc-ar" id="ar'+id+'">▶</span><span class="pc-tm"><span class="fl">'+fl(hc)+'</span>'+hc+'<span class="vs">vs</span><span class="fl">'+fl(ac)+'</span>'+ac+'</span><span class="pc-ti">'+(m.date||'')+' '+(m.time||'')+'</span>'+(c?gaugeHTML(c):'')+(hasNew?'<span class="nt">NEW</span>':'')+'</div><div class="pc-body" id="bd'+id+'">';
   if(m.changes){for(var ci=0;ci<m.changes.length;ci++){var cx=m.changes[ci];h+='<div class="chg" style="border-left-color:'+(cx.type==='good'?'var(--accent)':'var(--red)')+'">'+cx.icon+' <b>'+cx.label+'</b> '+cx.text+'</div>';}}
   if(l&&l.strategies){
     var sc=l.strategies,o=['conservative','balanced','aggressive'],cs={'conservative':'var(--c)','balanced':'var(--b)','aggressive':'var(--a)'};
@@ -323,8 +356,30 @@ function rC(m,mi){
     }
     h+='</div>';
   }
-  // 雷达图
-  if(l&&l.deepAnalysis){var rd=calcRadar(m,l);var rid='rd'+mi;radarData[mi]=rd;h+='<div style="text-align:center;margin:2px 0"><canvas id="'+rid+'" width="170" height="155" style="width:100%;max-width:170px;border-radius:6px" data-hc="'+hc+'" data-ac="'+ac+'" data-mi="'+mi+'"></canvas></div>';}
+  // 可视化布局: 雷达图 + 概率条 + 进球区间 + 对位看板
+  if(l&&l.deepAnalysis){var rd=calcRadar(m,l);var rid='rd'+mi;radarData[mi]=rd;var deep=l.deepAnalysis;
+    var pH=deep.probHome||0,pD=deep.probDraw||0,pA=deep.probAway||0,hcName=cn(m.home),acName=cn(m.away);
+    h+='<div class="vis-row">';
+    // 左: 雷达图
+    h+='<div class="vis-left"><canvas id="'+rid+'" width="170" height="155" style="width:100%;border-radius:6px" data-hc="'+hc+'" data-ac="'+ac+'" data-mi="'+mi+'"></canvas></div>';
+    // 右: 概率条 + 进球区间
+    h+='<div class="vis-right">';
+    h+='<div class="pbar"><div class="pbar-label">'+hcName+'</div><div class="pbar-tr"><div class="pbar-fill" style="width:'+pH+'%;background:var(--accent)"></div></div><span class="pbar-val" style="color:var(--accent)">'+pH+'%</span></div>';
+    h+='<div class="pbar"><div class="pbar-label">平局</div><div class="pbar-tr"><div class="pbar-fill" style="width:'+pD+'%;background:var(--gold)"></div></div><span class="pbar-val" style="color:var(--gold)">'+pD+'%</span></div>';
+    h+='<div class="pbar"><div class="pbar-label">'+acName+'</div><div class="pbar-tr"><div class="pbar-fill" style="width:'+pA+'%;background:var(--red)"></div></div><span class="pbar-val" style="color:var(--red)">'+pA+'%</span></div>';
+    // 进球区间滑块
+    var gr=deep.goalRange||'1-3球';var grm=gr.match(/(\d+)/g);var gl=parseInt(grm&&grm[0])||1,gh=parseInt(grm&&grm[1])||3;gl=Math.max(0,Math.min(7,gl));gh=Math.max(gl,Math.min(7,gh));
+    var lp=gl/7*100,rp=(1-gh/7)*100,midp=(gl+gh)/14*100;
+    h+='<div class="grange"><div style="font-size:6px;color:var(--sub);margin-bottom:1px">总进球: <b style="color:var(--gold)">'+gr+'</b></div><div class="grange-track"><div class="grange-highlight" style="left:'+lp+'%;width:'+(100-lp-rp)+'%"></div></div><div class="grange-ticks">';
+    for(var gi=0;gi<=7;gi++){h+='<span class="grange-tick">'+(gi===7?'7+':gi)+'</span>';}
+    h+='</div></div></div></div>';
+    // 对位看板
+    if(deep.keyBattle&&deep.keyBattle.trim()){
+      var kbParts=deep.keyBattle.split(' vs ');
+      h+='<div class="kb"><div class="kb-tit">⚔️ 关键对位</div>';
+      h+='<div class="kb-row"><span class="kbl">球员</span><span class="kbh">'+kbParts[0]+'</span><span style="color:var(--gold);font-weight:700;text-align:center;flex:0 0 16px">VS</span><span class="kba">'+kbParts[1]+'</span></div>';
+      h+='</div>';}
+  }
   h+='<button class="jc-toggle" onclick="tJ(this)">⬇️ 展开竞彩</button><div class="jc-panel">';
   if(l&&l.jingcai_all){
     var j=l.jingcai_all;
@@ -357,6 +412,20 @@ function rC(m,mi){
   if(al.length){var aa=al[al.length-1];h+='<div style="border-left:2px solid var(--gold);padding:2px 0 2px 6px;margin:2px 0;font-size:9px"><div style="font-size:6px;color:var(--sub)">🕐 '+aa.time+'</div><div>'+aa.text+'</div>'+(aa.fullReport?'<div style="text-align:right;margin-top:1px"><button class="sub-btn" style="font-size:6px;padding:1px 5px" onclick="sFR(\''+fl(hc)+hc+' vs '+fl(ac)+ac+'\',\''+(aa.time||'')+'\',\''+encodeURIComponent(aa.fullReport)+'\')">📄 完整分析</button></div>':'')+'</div>';}
   h+='</div></div>';
   return h;
+}
+
+
+// ===== 仪表盘SVG =====
+function gaugeHTML(conf){
+  var col=conf>=75?'var(--accent)':conf>=60?'var(--gold)':'var(--red)';
+  var r=conf/100*180;
+  var rad=Math.PI/180,x0=18,y0=32,radius=14;
+  var start=-180,end=-180+r;
+  function px(a){return x0+radius*Math.cos((a-90)*rad);}
+  function py(a){return y0+radius*Math.sin((a-90)*rad);}
+  var d='M'+px(start)+','+py(start)+' A'+radius+','+radius+' 0 '+(r>180?1:0)+',1 '+px(end)+','+py(end);
+  var bg='M'+px(-180)+','+py(-180)+' A'+radius+','+radius+' 0 0,1 '+px(0)+','+py(0);
+  return '<span class="gauge-wrap"><svg class="gauge-svg" viewBox="0 0 36 36"><path d="'+bg+'" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="3"></path><path d="'+d+'" fill="none" stroke="'+col+'" stroke-width="3" stroke-linecap="round"></path></svg><span class="gauge-val" style="color:'+col+'">'+conf+'</span></span>';
 }
 
 // ===== 雷达图绘图函数 =====
