@@ -374,7 +374,7 @@ function rC(m,mi){
     h+='<div class="scards">';
     for(var si=0;si<o.length;si++){
       var sk=o[si],x=sc[sk];if(!x)continue;
-      h+='<div class="sc'+(sk===cS?' sel':'')+'" style="border-color:'+cs[sk]+'" onclick="var ops=document.querySelectorAll(\'.pc-body.open\');var oids=[];ops.forEach(function(o){oids.push(o.id.replace(\'bd\',\'\'))});cS=\'\'+sk+\'\';rP();setTimeout(function(){oids.forEach(function(id){var b=document.getElementById(\'bd\'+id);if(b&&!b.classList.contains(\'open\')){b.classList.add(\'open\');var a=document.getElementById(\'ar\'+id);if(a)a.classList.add(\'open\');var ph=b.previousElementSibling;if(ph)ph.classList.add(\'ex\');}});},50)"><span class="sl" style="color:'+cs[sk]+'">'+x.label+'</span><span class="sp">'+x.pick.replace(/@\d+\.?\d*/g,'').trim()+'</span><span class="so" style="color:'+cs[sk]+'">@'+x.odds+'</span><span class="sr">¥'+x.per_100+'</span></div>';
+      h+='<div class="sc'+(sk===cS?' sel':'')+'" style="border-color:'+cs[sk]+'" onclick="var ops=document.querySelectorAll(\'.pc-body.open\');var oids=[];ops.forEach(function(o){oids.push(o.id.replace(\'bd\',\'\'))});cS=\'\'+sk+\'\';rP();setTimeout(function(){oids.forEach(function(id){var b=document.getElementById(\'bd\'+id);if(b&&!b.classList.contains(\'open\')){b.classList.add(\'open\');var a=document.getElementById(\'ar\'+id);if(a)a.classList.add(\'open\');var ph=b.previousElementSibling;if(ph)ph.classList.add(\'ex\');}});},50)"><span class="sl" style="color:'+cs[sk]+'">'+x.label+'</span><span class="sp">'+x.pick.replace(/@\s*\d+\.?\d*/g,'').trim()+'</span><span class="so" style="color:'+cs[sk]+'">@'+x.odds+'</span><span class="sr">¥'+x.per_100+'</span></div>';
     }
     h+='</div>';
   }
@@ -416,7 +416,7 @@ function rC(m,mi){
       for(var ri=0;ri<3;ri++){var rk2=['3','1','0'][ri];var v2=j.rangqiu[rk2];if(v2)h+='<span class="jc-item"><span class="jcn">'+rn[rk2]+'</span><span class="jco jco-'+(v2<=2?'g':v2<=4?'y':'r')+'">'+v2+'</span></span>';}
       h+='</div></div>';}
     // Goals
-    if(j.total_goals){h+='<div class="jc-section"><div class="jct">⚽ 总进球（竞彩8选项）</div><div class="jc-row">';for(var k in j.total_goals){var v=j.total_goals[k],lk=k==='7+'?'7+':k;h+='<span class="jc-item"><span class="jcn">'+lk+'</span><span class="jco jco-'+(v<=4?'g':v<=8?'y':'r')+'">'+v+'</span></span>';}h+='</div></div>';}
+    if(j.total_goals){h+='<div class="jc-section"><div class="jct">⚽ 总进球（竞彩8选项）</div><div class="jc-row">';for(var k in j.total_goals){var v=j.total_goals[k];if(v===0||v===null)continue;var lk=k==='7+'?'7+':k;h+='<span class="jc-item"><span class="jcn">'+lk+'</span><span class="jco jco-'+(v<=4?'g':v<=8?'y':'r')+'">'+v+'</span></span>';}h+='</div></div>';}
     // 欧盘大小球参考（非竞彩）
     if(j.over_under){h+='<div class="jc-section" style="border-color:rgba(0,212,170,.15)"><div class="jct" style="color:var(--accent)">🌍 欧盘大小球参考</div><div class="jc-row">';
     for(var k in j.over_under){var v=j.over_under[k];h+='<span class="jc-item"><span class="jcn">'+k+'</span><span class="jco jco-'+(v<=1.5?'g':v<=3?'y':'r')+'">'+v+'</span></span>';}
