@@ -8,7 +8,7 @@
       "date": "06/20",
       "time": "06/20 06:00",
       "group": "?",
-      "result": null,
+      "result": "摩洛哥胜",
       "odds_h2h": {
         "Scotland": 36.26,
         "Draw": 6.6,
@@ -125,9 +125,26 @@
                 "odds": 4.95
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 29,
+            "awayFifaRank": 14,
+            "homeInfo": "Scott McTominay | Steve Clarke",
+            "awayInfo": "Achraf Hakimi | Walid Regragui",
+            "homeStrength": "身体对抗,团队精神",
+            "awayStrength": "防守组织,反击速度",
+            "homeStyle": "高强度逼抢,定位球",
+            "awayStyle": "防守反击,边翼卫插上",
+            "homeWeakness": "技术粗糙",
+            "awayWeakness": "进攻创造力有限",
+            "predictedResult": "平局",
+            "confidence": 84,
+            "favorite": "摩洛哥",
+            "analysisText": "## 苏格兰 vs 摩洛哥\n\n**FIFA排名**: 苏格兰 #29 | 摩洛哥 #14\n**苏格兰**: ⭐ Scott McTominay | 教练: Steve Clarke | 身体对抗,团队精神 | 高强度逼抢,定位球\n**摩洛哥**: ⭐ Achraf Hakimi | 教练: Walid Regragui | 防守组织,反击速度 | 防守反击,边翼卫插上\n\n**赔率分析**: 苏格兰 (36.26) vs 摩洛哥 (1.14), 平局 (6.6)\n**预测**: 平局 | 信心: 84%\n\n**战术对位**: 苏格兰 高强度逼抢,定位球 vs 摩洛哥 防守反击,边翼卫插上\n摩洛哥是赔率方热门，市场看好其取胜"
           }
         }
-      ]
+      ],
+      "verified": true
     },
     {
       "home": "巴西",
@@ -255,6 +272,22 @@
                 "odds": 0.84
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 3,
+            "awayFifaRank": 51,
+            "homeInfo": "Vinícius Jr | Dorival Jr",
+            "awayInfo": "Duckens Nazon | Gabriel Calderón",
+            "homeStrength": "锋线豪华,技术优势",
+            "awayStrength": "身体素质,斗志旺盛",
+            "homeStyle": "控球进攻,边路突破",
+            "awayStyle": "防守反击,身体对抗",
+            "homeWeakness": "防守纪律性",
+            "awayWeakness": "战术纪律,经验不足",
+            "predictedResult": "巴西胜",
+            "confidence": 88,
+            "favorite": "巴西",
+            "analysisText": "## 巴西 vs 海地\n\n**FIFA排名**: 巴西 #3 | 海地 #51\n**巴西**: ⭐ Vinícius Jr | 教练: Dorival Jr | 锋线豪华,技术优势 | 控球进攻,边路突破\n**海地**: ⭐ Duckens Nazon | 教练: Gabriel Calderón | 身体素质,斗志旺盛 | 防守反击,身体对抗\n\n**赔率分析**: 巴西 (1.12) vs 海地 (22.0), 平局 (11.5)\n**预测**: 巴西胜 | 信心: 88%\n\n**战术对位**: 巴西 控球进攻,边路突破 vs 海地 防守反击,身体对抗\n巴西是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -386,6 +419,22 @@
                 "odds": 1.57
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 26,
+            "awayFifaRank": 27,
+            "homeInfo": "Hakan Çalhanoğlu | Vincenzo Montella",
+            "awayInfo": "Miguel Almirón | Gustavo Alfaro",
+            "homeStrength": "中场技术,远射能力",
+            "awayStrength": "防守强硬,反击犀利",
+            "homeStyle": "技术流,中远距离攻击",
+            "awayStyle": "强硬防守,快速反击",
+            "homeWeakness": "防守纪律",
+            "awayWeakness": "进攻创造力",
+            "predictedResult": "土耳其胜",
+            "confidence": 52,
+            "favorite": "土耳其",
+            "analysisText": "## 土耳其 vs 巴拉圭\n\n**FIFA排名**: 土耳其 #26 | 巴拉圭 #27\n**土耳其**: ⭐ Hakan Çalhanoğlu | 教练: Vincenzo Montella | 中场技术,远射能力 | 技术流,中远距离攻击\n**巴拉圭**: ⭐ Miguel Almirón | 教练: Gustavo Alfaro | 防守强硬,反击犀利 | 强硬防守,快速反击\n\n**赔率分析**: 土耳其 (2.09) vs 巴拉圭 (3.97), 平局 (3.43)\n**预测**: 土耳其胜 | 信心: 52%\n\n**战术对位**: 土耳其 技术流,中远距离攻击 vs 巴拉圭 强硬防守,快速反击\n土耳其是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -517,6 +566,22 @@
                 "odds": 1.28
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 6,
+            "awayFifaRank": 21,
+            "homeInfo": "Virgil van Dijk | Ronald Koeman",
+            "awayInfo": "Alexander Isak | Jon Dahl Tomasson",
+            "homeStrength": "后防稳固,战术纪律",
+            "awayStrength": "身体对抗,空中优势",
+            "homeStyle": "全攻全守,控球压制",
+            "awayStyle": "长传冲吊,边路传中",
+            "homeWeakness": "锋线效率",
+            "awayWeakness": "技术细腻度",
+            "predictedResult": "荷兰胜",
+            "confidence": 60,
+            "favorite": "荷兰",
+            "analysisText": "## 荷兰 vs 瑞典\n\n**FIFA排名**: 荷兰 #6 | 瑞典 #21\n**荷兰**: ⭐ Virgil van Dijk | 教练: Ronald Koeman | 后防稳固,战术纪律 | 全攻全守,控球压制\n**瑞典**: ⭐ Alexander Isak | 教练: Jon Dahl Tomasson | 身体对抗,空中优势 | 长传冲吊,边路传中\n\n**赔率分析**: 荷兰 (1.71) vs 瑞典 (4.69), 平局 (4.2)\n**预测**: 荷兰胜 | 信心: 60%\n\n**战术对位**: 荷兰 全攻全守,控球压制 vs 瑞典 长传冲吊,边路传中\n荷兰是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -648,6 +713,22 @@
                 "odds": 1.14
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 13,
+            "awayFifaRank": 33,
+            "homeInfo": "Jamal Musiala | Julian Nagelsmann",
+            "awayInfo": "Seko Fofana | Emerse Faé",
+            "homeStrength": "年轻化改革,中场创造力",
+            "awayStrength": "身体对抗,中场硬朗",
+            "homeStyle": "高压逼抢,快速传递",
+            "awayStyle": "力量型打法,个人能力",
+            "homeWeakness": "中锋终结能力",
+            "awayWeakness": "防守组织",
+            "predictedResult": "德国胜",
+            "confidence": 67,
+            "favorite": "德国",
+            "analysisText": "## 德国 vs 科特迪瓦\n\n**FIFA排名**: 德国 #13 | 科特迪瓦 #33\n**德国**: ⭐ Jamal Musiala | 教练: Julian Nagelsmann | 年轻化改革,中场创造力 | 高压逼抢,快速传递\n**科特迪瓦**: ⭐ Seko Fofana | 教练: Emerse Faé | 身体对抗,中场硬朗 | 力量型打法,个人能力\n\n**赔率分析**: 德国 (1.52) vs 科特迪瓦 (5.82), 平局 (4.83)\n**预测**: 德国胜 | 信心: 67%\n\n**战术对位**: 德国 高压逼抢,快速传递 vs 科特迪瓦 力量型打法,个人能力\n德国是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -778,6 +859,22 @@
                 "odds": 0.83
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 28,
+            "awayFifaRank": "?",
+            "homeInfo": "Kendry Páez | Gustavo Alfaro",
+            "awayInfo": "",
+            "homeStrength": "年轻天赋,体能充沛",
+            "awayStrength": "",
+            "homeStyle": "跑动积极,中前场压迫",
+            "awayStyle": "",
+            "homeWeakness": "大赛经验",
+            "awayWeakness": "",
+            "predictedResult": "厄瓜多尔胜",
+            "confidence": 87,
+            "favorite": "厄瓜多尔",
+            "analysisText": "## 厄瓜多尔 vs Curaçao\n\n**厄瓜多尔**: ⭐ Kendry Páez | 教练: Gustavo Alfaro | 年轻天赋,体能充沛 | 跑动积极,中前场压迫\n\n**赔率分析**: 厄瓜多尔 (1.1) vs Curaçao (23.28), 平局 (9.98)\n**预测**: 厄瓜多尔胜 | 信心: 87%"
           }
         }
       ]
@@ -909,6 +1006,22 @@
                 "odds": 3.16
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 39,
+            "awayFifaRank": 18,
+            "homeInfo": "Wahbi Khazri | Jalel Kadri",
+            "awayInfo": "Takefusa Kubo | Hajime Moriyasu",
+            "homeStrength": "防守韧性,团队协作",
+            "awayStrength": "团队纪律,快速反击",
+            "homeStyle": "密集防守,快速转换",
+            "awayStyle": "技术传控,耐心组织",
+            "homeWeakness": "创造力不足",
+            "awayWeakness": "身体对抗",
+            "predictedResult": "平局",
+            "confidence": 66,
+            "favorite": "日本",
+            "analysisText": "## 突尼斯 vs 日本\n\n**FIFA排名**: 突尼斯 #39 | 日本 #18\n**突尼斯**: ⭐ Wahbi Khazri | 教练: Jalel Kadri | 防守韧性,团队协作 | 密集防守,快速转换\n**日本**: ⭐ Takefusa Kubo | 教练: Hajime Moriyasu | 团队纪律,快速反击 | 技术传控,耐心组织\n\n**赔率分析**: 突尼斯 (6.91) vs 日本 (1.52), 平局 (4.21)\n**预测**: 平局 | 信心: 66%\n\n**战术对位**: 突尼斯 密集防守,快速转换 vs 日本 技术传控,耐心组织\n日本是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -1039,6 +1152,22 @@
                 "odds": 0.82
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 8,
+            "awayFifaRank": 31,
+            "homeInfo": "Pedri | Luis de la Fuente",
+            "awayInfo": "Salem Al-Dawsari | Roberto Mancini",
+            "homeStrength": "传控体系,中场控制",
+            "awayStrength": "技术细腻,默契配合",
+            "homeStyle": "极致传控,短传渗透",
+            "awayStyle": "控球传导,耐心寻找机会",
+            "homeWeakness": "缺乏高效射手",
+            "awayWeakness": "身体对抗",
+            "predictedResult": "西班牙胜",
+            "confidence": 88,
+            "favorite": "西班牙",
+            "analysisText": "## 西班牙 vs 沙特\n\n**FIFA排名**: 西班牙 #8 | 沙特 #31\n**西班牙**: ⭐ Pedri | 教练: Luis de la Fuente | 传控体系,中场控制 | 极致传控,短传渗透\n**沙特**: ⭐ Salem Al-Dawsari | 教练: Roberto Mancini | 技术细腻,默契配合 | 控球传导,耐心寻找机会\n\n**赔率分析**: 西班牙 (1.09) vs 沙特 (25.55), 平局 (10.67)\n**预测**: 西班牙胜 | 信心: 88%\n\n**战术对位**: 西班牙 极致传控,短传渗透 vs 沙特 控球传导,耐心寻找机会\n西班牙是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -1170,6 +1299,22 @@
                 "odds": 1.07
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 5,
+            "awayFifaRank": 20,
+            "homeInfo": "Kevin De Bruyne | Domenico Tedesco",
+            "awayInfo": "Mehdi Taremi | Amir Ghalenoei",
+            "homeStrength": "中场创造力,经验丰富",
+            "awayStrength": "身体对抗,防守硬朗",
+            "homeStyle": "控球推进,中路渗透",
+            "awayStyle": "防守反击,身体对抗",
+            "homeWeakness": "后防换代",
+            "awayWeakness": "进攻套路单一",
+            "predictedResult": "比利时胜",
+            "confidence": 70,
+            "favorite": "比利时",
+            "analysisText": "## 比利时 vs 伊朗\n\n**FIFA排名**: 比利时 #5 | 伊朗 #20\n**比利时**: ⭐ Kevin De Bruyne | 教练: Domenico Tedesco | 中场创造力,经验丰富 | 控球推进,中路渗透\n**伊朗**: ⭐ Mehdi Taremi | 教练: Amir Ghalenoei | 身体对抗,防守硬朗 | 防守反击,身体对抗\n\n**赔率分析**: 比利时 (1.43) vs 伊朗 (7.67), 平局 (4.77)\n**预测**: 比利时胜 | 信心: 70%\n\n**战术对位**: 比利时 控球推进,中路渗透 vs 伊朗 防守反击,身体对抗\n比利时是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -1301,6 +1446,22 @@
                 "odds": 1.08
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 16,
+            "awayFifaRank": 49,
+            "homeInfo": "Federico Valverde | Marcelo Bielsa",
+            "awayInfo": "Jamiro Monteiro | Bubista",
+            "homeStrength": "中场硬朗,战斗精神",
+            "awayStrength": "技术灵活,团队配合",
+            "homeStyle": "高位压迫,激烈对抗",
+            "awayStyle": "技术流,灵活跑位",
+            "homeWeakness": "锋线老化",
+            "awayWeakness": "整体防守",
+            "predictedResult": "乌拉圭胜",
+            "confidence": 70,
+            "favorite": "乌拉圭",
+            "analysisText": "## 乌拉圭 vs 佛得角\n\n**FIFA排名**: 乌拉圭 #16 | 佛得角 #49\n**乌拉圭**: ⭐ Federico Valverde | 教练: Marcelo Bielsa | 中场硬朗,战斗精神 | 高位压迫,激烈对抗\n**佛得角**: ⭐ Jamiro Monteiro | 教练: Bubista | 技术灵活,团队配合 | 技术流,灵活跑位\n\n**赔率分析**: 乌拉圭 (1.44) vs 佛得角 (8.62), 平局 (4.37)\n**预测**: 乌拉圭胜 | 信心: 70%\n\n**战术对位**: 乌拉圭 高位压迫,激烈对抗 vs 佛得角 技术流,灵活跑位\n乌拉圭是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -1433,6 +1594,22 @@
                 "odds": 3.23
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 50,
+            "awayFifaRank": 34,
+            "homeInfo": "Chris Wood | Darren Bazeley",
+            "awayInfo": "Mohamed Salah | Hossam Hassan",
+            "homeStrength": "身体对抗,空中优势",
+            "awayStrength": "球星个人能力,防线稳固",
+            "homeStyle": "长传冲吊,身体对抗",
+            "awayStyle": "稳固防守,依赖核心",
+            "homeWeakness": "技术粗糙,经验不足",
+            "awayWeakness": "中场创造力",
+            "predictedResult": "平局",
+            "confidence": 63,
+            "favorite": "埃及",
+            "analysisText": "## 新西兰 vs 埃及\n\n**FIFA排名**: 新西兰 #50 | 埃及 #34\n**新西兰**: ⭐ Chris Wood | 教练: Darren Bazeley | 身体对抗,空中优势 | 长传冲吊,身体对抗\n**埃及**: ⭐ Mohamed Salah | 教练: Hossam Hassan | 球星个人能力,防线稳固 | 稳固防守,依赖核心\n\n**赔率分析**: 新西兰 (5.43) vs 埃及 (1.61), 平局 (4.31)\n**预测**: 平局 | 信心: 63%\n\n**战术对位**: 新西兰 长传冲吊,身体对抗 vs 埃及 稳固防守,依赖核心\n埃及是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -1564,6 +1741,22 @@
                 "odds": 1.19
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": "?",
+            "awayFifaRank": 24,
+            "homeInfo": "Lionel Messi | Lionel Scaloni",
+            "awayInfo": "Christoph Baumgartner | Ralf Rangnick",
+            "homeStrength": "进攻组织,大赛经验",
+            "awayStrength": "高压训练,整体跑动",
+            "homeStyle": "传控渗透,前场压迫",
+            "awayStyle": "高位压迫,快速攻防转换",
+            "homeWeakness": "后防老化",
+            "awayWeakness": "大赛经验",
+            "predictedResult": "阿根廷胜",
+            "confidence": 64,
+            "favorite": "阿根廷",
+            "analysisText": "## 阿根廷 vs 奥地利\n\n**阿根廷**: ⭐ Lionel Messi | 教练: Lionel Scaloni | 进攻组织,大赛经验 | 传控渗透,前场压迫\n**奥地利**: ⭐ Christoph Baumgartner | 教练: Ralf Rangnick | 高压训练,整体跑动 | 高位压迫,快速攻防转换\n\n**赔率分析**: 阿根廷 (1.59) vs 奥地利 (6.4), 平局 (3.97)\n**预测**: 阿根廷胜 | 信心: 64%\n\n**战术对位**: 阿根廷 传控渗透,前场压迫 vs 奥地利 高位压迫,快速攻防转换\n阿根廷是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -1694,6 +1887,22 @@
                 "odds": 0.81
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 2,
+            "awayFifaRank": 46,
+            "homeInfo": "Kylian Mbappé | Didier Deschamps",
+            "awayInfo": "Mohamed Qasim | Jesús Casas",
+            "homeStrength": "锋线深度,整体实力",
+            "awayStrength": "团队防守,纪律性",
+            "homeStyle": "快速反击,身体对抗",
+            "awayStyle": "密集防守,长传反击",
+            "homeWeakness": "中场创造力",
+            "awayWeakness": "个人能力差距",
+            "predictedResult": "法国胜",
+            "confidence": 89,
+            "favorite": "法国",
+            "analysisText": "## 法国 vs 伊拉克\n\n**FIFA排名**: 法国 #2 | 伊拉克 #46\n**法国**: ⭐ Kylian Mbappé | 教练: Didier Deschamps | 锋线深度,整体实力 | 快速反击,身体对抗\n**伊拉克**: ⭐ Mohamed Qasim | 教练: Jesús Casas | 团队防守,纪律性 | 密集防守,长传反击\n\n**赔率分析**: 法国 (1.08) vs 伊拉克 (28.31), 平局 (11.34)\n**预测**: 法国胜 | 信心: 89%\n\n**战术对位**: 法国 快速反击,身体对抗 vs 伊拉克 密集防守,长传反击\n法国是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -1825,6 +2034,22 @@
                 "odds": 1.76
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 30,
+            "awayFifaRank": 19,
+            "homeInfo": "Erling Haaland | Ståle Solbakken",
+            "awayInfo": "Sadio Mané | Aliou Cissé",
+            "homeStrength": "锋线终结能力",
+            "awayStrength": "边路速度,身体优势",
+            "homeStyle": "长传冲吊,利用支点",
+            "awayStyle": "快速反击,边路冲击",
+            "homeWeakness": "整体防守",
+            "awayWeakness": "中场控制力",
+            "predictedResult": "挪威胜",
+            "confidence": 47,
+            "favorite": "挪威",
+            "analysisText": "## 挪威 vs 塞内加尔\n\n**FIFA排名**: 挪威 #30 | 塞内加尔 #19\n**挪威**: ⭐ Erling Haaland | 教练: Ståle Solbakken | 锋线终结能力 | 长传冲吊,利用支点\n**塞内加尔**: ⭐ Sadio Mané | 教练: Aliou Cissé | 边路速度,身体优势 | 快速反击,边路冲击\n\n**赔率分析**: 挪威 (2.35) vs 塞内加尔 (3.06), 平局 (3.57)\n**预测**: 挪威胜 | 信心: 47%\n\n**战术对位**: 挪威 长传冲吊,利用支点 vs 塞内加尔 快速反击,边路冲击\n挪威是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -1957,6 +2182,22 @@
                 "odds": 3.18
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 47,
+            "awayFifaRank": 25,
+            "homeInfo": "",
+            "awayInfo": "",
+            "homeStrength": "",
+            "awayStrength": "",
+            "homeStyle": "",
+            "awayStyle": "",
+            "homeWeakness": "",
+            "awayWeakness": "",
+            "predictedResult": "平局",
+            "confidence": 64,
+            "favorite": "阿尔及利亚",
+            "analysisText": "## 约旦 vs 阿尔及利亚\n\n**FIFA排名**: 约旦 #47 | 阿尔及利亚 #25\n\n**赔率分析**: 约旦 (5.9) vs 阿尔及利亚 (1.58), 平局 (4.24)\n**预测**: 平局 | 信心: 64%"
           }
         }
       ]
@@ -2088,6 +2329,22 @@
                 "odds": 0.9
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 7,
+            "awayFifaRank": 48,
+            "homeInfo": "Cristiano Ronaldo | Roberto Martínez",
+            "awayInfo": "",
+            "homeStrength": "攻击火力,阵容深度",
+            "awayStrength": "",
+            "homeStyle": "边路突击,定位球",
+            "awayStyle": "",
+            "homeWeakness": "防守稳定性",
+            "awayWeakness": "",
+            "predictedResult": "葡萄牙胜",
+            "confidence": 82,
+            "favorite": "葡萄牙",
+            "analysisText": "## 葡萄牙 vs 乌兹别克斯坦\n\n**FIFA排名**: 葡萄牙 #7 | 乌兹别克斯坦 #48\n**葡萄牙**: ⭐ Cristiano Ronaldo | 教练: Roberto Martínez | 攻击火力,阵容深度 | 边路突击,定位球\n\n**赔率分析**: 葡萄牙 (1.2) vs 乌兹别克斯坦 (15.81), 平局 (7.24)\n**预测**: 葡萄牙胜 | 信心: 82%"
           }
         }
       ]
@@ -2219,6 +2476,22 @@
                 "odds": 0.92
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 4,
+            "awayFifaRank": 42,
+            "homeInfo": "Harry Kane | Gareth Southgate",
+            "awayInfo": "",
+            "homeStrength": "阵容深度,定位球",
+            "awayStrength": "",
+            "homeStyle": "攻守平衡,边中结合",
+            "awayStyle": "",
+            "homeWeakness": "大赛心理",
+            "awayWeakness": "",
+            "predictedResult": "英格兰胜",
+            "confidence": 80,
+            "favorite": "英格兰",
+            "analysisText": "## 英格兰 vs 加纳\n\n**FIFA排名**: 英格兰 #4 | 加纳 #42\n**英格兰**: ⭐ Harry Kane | 教练: Gareth Southgate | 阵容深度,定位球 | 攻守平衡,边中结合\n\n**赔率分析**: 英格兰 (1.23) vs 加纳 (13.52), 平局 (6.57)\n**预测**: 英格兰胜 | 信心: 80%"
           }
         }
       ]
@@ -2350,6 +2623,22 @@
                 "odds": 3.0
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 41,
+            "awayFifaRank": 10,
+            "homeInfo": "",
+            "awayInfo": "",
+            "homeStrength": "",
+            "awayStrength": "",
+            "homeStyle": "",
+            "awayStyle": "",
+            "homeWeakness": "",
+            "awayWeakness": "",
+            "predictedResult": "平局",
+            "confidence": 65,
+            "favorite": "克罗地亚",
+            "analysisText": "## 巴拿马 vs 克罗地亚\n\n**FIFA排名**: 巴拿马 #41 | 克罗地亚 #10\n\n**赔率分析**: 巴拿马 (6.66) vs 克罗地亚 (1.57), 平局 (4.0)\n**预测**: 平局 | 信心: 65%"
           }
         }
       ]
@@ -2481,6 +2770,22 @@
                 "odds": 1.14
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 17,
+            "awayFifaRank": 44,
+            "homeInfo": "",
+            "awayInfo": "",
+            "homeStrength": "",
+            "awayStrength": "",
+            "homeStyle": "",
+            "awayStyle": "",
+            "homeWeakness": "",
+            "awayWeakness": "",
+            "predictedResult": "哥伦比亚胜",
+            "confidence": 67,
+            "favorite": "哥伦比亚",
+            "analysisText": "## 哥伦比亚 vs 刚果(金)\n\n**FIFA排名**: 哥伦比亚 #17 | 刚果(金) #44\n\n**赔率分析**: 哥伦比亚 (1.52) vs 刚果(金) (6.92), 平局 (4.25)\n**预测**: 哥伦比亚胜 | 信心: 67%"
           }
         }
       ]
@@ -2612,6 +2917,22 @@
                 "odds": 1.09
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 38,
+            "awayFifaRank": 43,
+            "homeInfo": "",
+            "awayInfo": "",
+            "homeStrength": "",
+            "awayStrength": "",
+            "homeStyle": "",
+            "awayStyle": "",
+            "homeWeakness": "",
+            "awayWeakness": "",
+            "predictedResult": "波黑胜",
+            "confidence": 69,
+            "favorite": "波黑",
+            "analysisText": "## 波黑 vs 卡塔尔\n\n**FIFA排名**: 波黑 #38 | 卡塔尔 #43\n\n**赔率分析**: 波黑 (1.45) vs 卡塔尔 (6.65), 平局 (4.87)\n**预测**: 波黑胜 | 信心: 69%"
           }
         }
       ]
@@ -2743,6 +3064,22 @@
                 "odds": 1.88
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 15,
+            "awayFifaRank": 37,
+            "homeInfo": "",
+            "awayInfo": "",
+            "homeStrength": "",
+            "awayStrength": "",
+            "homeStyle": "",
+            "awayStyle": "",
+            "homeWeakness": "",
+            "awayWeakness": "",
+            "predictedResult": "瑞士胜",
+            "confidence": 44,
+            "favorite": "瑞士",
+            "analysisText": "## 瑞士 vs 加拿大\n\n**FIFA排名**: 瑞士 #15 | 加拿大 #37\n\n**赔率分析**: 瑞士 (2.5) vs 加拿大 (3.3), 平局 (2.98)\n**预测**: 瑞士胜 | 信心: 44%"
           }
         }
       ]
@@ -2874,6 +3211,22 @@
                 "odds": 3.94
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 29,
+            "awayFifaRank": 3,
+            "homeInfo": "Scott McTominay | Steve Clarke",
+            "awayInfo": "Vinícius Jr | Dorival Jr",
+            "homeStrength": "身体对抗,团队精神",
+            "awayStrength": "锋线豪华,技术优势",
+            "homeStyle": "高强度逼抢,定位球",
+            "awayStyle": "控球进攻,边路突破",
+            "homeWeakness": "技术粗糙",
+            "awayWeakness": "防守纪律性",
+            "predictedResult": "平局",
+            "confidence": 70,
+            "favorite": "巴西",
+            "analysisText": "## 苏格兰 vs 巴西\n\n**FIFA排名**: 苏格兰 #29 | 巴西 #3\n**苏格兰**: ⭐ Scott McTominay | 教练: Steve Clarke | 身体对抗,团队精神 | 高强度逼抢,定位球\n**巴西**: ⭐ Vinícius Jr | 教练: Dorival Jr | 锋线豪华,技术优势 | 控球进攻,边路突破\n\n**赔率分析**: 苏格兰 (6.36) vs 巴西 (1.37), 平局 (5.26)\n**预测**: 平局 | 信心: 70%\n\n**战术对位**: 苏格兰 高强度逼抢,定位球 vs 巴西 控球进攻,边路突破\n巴西是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -3005,6 +3358,22 @@
                 "odds": 0.92
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 14,
+            "awayFifaRank": 51,
+            "homeInfo": "Achraf Hakimi | Walid Regragui",
+            "awayInfo": "Duckens Nazon | Gabriel Calderón",
+            "homeStrength": "防守组织,反击速度",
+            "awayStrength": "身体素质,斗志旺盛",
+            "homeStyle": "防守反击,边翼卫插上",
+            "awayStyle": "防守反击,身体对抗",
+            "homeWeakness": "进攻创造力有限",
+            "awayWeakness": "战术纪律,经验不足",
+            "predictedResult": "摩洛哥胜",
+            "confidence": 78,
+            "favorite": "摩洛哥",
+            "analysisText": "## 摩洛哥 vs 海地\n\n**FIFA排名**: 摩洛哥 #14 | 海地 #51\n**摩洛哥**: ⭐ Achraf Hakimi | 教练: Walid Regragui | 防守组织,反击速度 | 防守反击,边翼卫插上\n**海地**: ⭐ Duckens Nazon | 教练: Gabriel Calderón | 身体素质,斗志旺盛 | 防守反击,身体对抗\n\n**赔率分析**: 摩洛哥 (1.22) vs 海地 (11.36), 平局 (5.78)\n**预测**: 摩洛哥胜 | 信心: 78%\n\n**战术对位**: 摩洛哥 防守反击,边翼卫插上 vs 海地 防守反击,身体对抗\n摩洛哥是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -3137,6 +3506,22 @@
                 "odds": 2.9
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 40,
+            "awayFifaRank": 12,
+            "homeInfo": "",
+            "awayInfo": "",
+            "homeStrength": "",
+            "awayStrength": "",
+            "homeStyle": "",
+            "awayStyle": "",
+            "homeWeakness": "",
+            "awayWeakness": "",
+            "predictedResult": "平局",
+            "confidence": 52,
+            "favorite": "墨西哥",
+            "analysisText": "## 捷克 vs 墨西哥\n\n**FIFA排名**: 捷克 #40 | 墨西哥 #12\n\n**赔率分析**: 捷克 (3.38) vs 墨西哥 (2.06), 平局 (3.87)\n**预测**: 平局 | 信心: 52%"
           }
         }
       ]
@@ -3269,6 +3654,22 @@
                 "odds": 3.01
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 35,
+            "awayFifaRank": 22,
+            "homeInfo": "",
+            "awayInfo": "",
+            "homeStrength": "",
+            "awayStrength": "",
+            "homeStyle": "",
+            "awayStyle": "",
+            "homeWeakness": "",
+            "awayWeakness": "",
+            "predictedResult": "平局",
+            "confidence": 63,
+            "favorite": "韩国",
+            "analysisText": "## 南非 vs 韩国\n\n**FIFA排名**: 南非 #35 | 韩国 #22\n\n**赔率分析**: 南非 (5.68) vs 韩国 (1.62), 平局 (4.02)\n**预测**: 平局 | 信心: 63%"
           }
         }
       ]
@@ -3399,6 +3800,22 @@
                 "odds": 6.35
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": "?",
+            "awayFifaRank": 33,
+            "homeInfo": "",
+            "awayInfo": "Seko Fofana | Emerse Faé",
+            "homeStrength": "",
+            "awayStrength": "身体对抗,中场硬朗",
+            "homeStyle": "",
+            "awayStyle": "力量型打法,个人能力",
+            "homeWeakness": "",
+            "awayWeakness": "防守组织",
+            "predictedResult": "平局",
+            "confidence": 85,
+            "favorite": "科特迪瓦",
+            "analysisText": "## Curaçao vs 科特迪瓦\n\n**科特迪瓦**: ⭐ Seko Fofana | 教练: Emerse Faé | 身体对抗,中场硬朗 | 力量型打法,个人能力\n\n**赔率分析**: Curaçao (17.58) vs 科特迪瓦 (1.12), 平局 (8.46)\n**预测**: 平局 | 信心: 85%"
           }
         }
       ]
@@ -3531,6 +3948,22 @@
                 "odds": 2.79
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 28,
+            "awayFifaRank": 13,
+            "homeInfo": "Kendry Páez | Gustavo Alfaro",
+            "awayInfo": "Jamal Musiala | Julian Nagelsmann",
+            "homeStrength": "年轻天赋,体能充沛",
+            "awayStrength": "年轻化改革,中场创造力",
+            "homeStyle": "跑动积极,中前场压迫",
+            "awayStyle": "高压逼抢,快速传递",
+            "homeWeakness": "大赛经验",
+            "awayWeakness": "中锋终结能力",
+            "predictedResult": "平局",
+            "confidence": 59,
+            "favorite": "德国",
+            "analysisText": "## 厄瓜多尔 vs 德国\n\n**FIFA排名**: 厄瓜多尔 #28 | 德国 #13\n**厄瓜多尔**: ⭐ Kendry Páez | 教练: Gustavo Alfaro | 年轻天赋,体能充沛 | 跑动积极,中前场压迫\n**德国**: ⭐ Jamal Musiala | 教练: Julian Nagelsmann | 年轻化改革,中场创造力 | 高压逼抢,快速传递\n\n**赔率分析**: 厄瓜多尔 (4.81) vs 德国 (1.68), 平局 (3.72)\n**预测**: 平局 | 信心: 59%\n\n**战术对位**: 厄瓜多尔 跑动积极,中前场压迫 vs 德国 高压逼抢,快速传递\n德国是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -3662,6 +4095,22 @@
                 "odds": 1.59
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 18,
+            "awayFifaRank": 21,
+            "homeInfo": "Takefusa Kubo | Hajime Moriyasu",
+            "awayInfo": "Alexander Isak | Jon Dahl Tomasson",
+            "homeStrength": "团队纪律,快速反击",
+            "awayStrength": "身体对抗,空中优势",
+            "homeStyle": "技术传控,耐心组织",
+            "awayStyle": "长传冲吊,边路传中",
+            "homeWeakness": "身体对抗",
+            "awayWeakness": "技术细腻度",
+            "predictedResult": "日本胜",
+            "confidence": 49,
+            "favorite": "日本",
+            "analysisText": "## 日本 vs 瑞典\n\n**FIFA排名**: 日本 #18 | 瑞典 #21\n**日本**: ⭐ Takefusa Kubo | 教练: Hajime Moriyasu | 团队纪律,快速反击 | 技术传控,耐心组织\n**瑞典**: ⭐ Alexander Isak | 教练: Jon Dahl Tomasson | 身体对抗,空中优势 | 长传冲吊,边路传中\n\n**赔率分析**: 日本 (2.12) vs 瑞典 (3.31), 平局 (3.42)\n**预测**: 日本胜 | 信心: 49%\n\n**战术对位**: 日本 技术传控,耐心组织 vs 瑞典 长传冲吊,边路传中\n日本是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -3792,6 +4241,22 @@
                 "odds": 3.99
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 39,
+            "awayFifaRank": 6,
+            "homeInfo": "Wahbi Khazri | Jalel Kadri",
+            "awayInfo": "Virgil van Dijk | Ronald Koeman",
+            "homeStrength": "防守韧性,团队协作",
+            "awayStrength": "后防稳固,战术纪律",
+            "homeStyle": "密集防守,快速转换",
+            "awayStyle": "全攻全守,控球压制",
+            "homeWeakness": "创造力不足",
+            "awayWeakness": "锋线效率",
+            "predictedResult": "平局",
+            "confidence": 75,
+            "favorite": "荷兰",
+            "analysisText": "## 突尼斯 vs 荷兰\n\n**FIFA排名**: 突尼斯 #39 | 荷兰 #6\n**突尼斯**: ⭐ Wahbi Khazri | 教练: Jalel Kadri | 防守韧性,团队协作 | 密集防守,快速转换\n**荷兰**: ⭐ Virgil van Dijk | 教练: Ronald Koeman | 后防稳固,战术纪律 | 全攻全守,控球压制\n\n**赔率分析**: 突尼斯 (9.08) vs 荷兰 (1.29), 平局 (5.32)\n**预测**: 平局 | 信心: 75%\n\n**战术对位**: 突尼斯 密集防守,快速转换 vs 荷兰 全攻全守,控球压制\n荷兰是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -3923,6 +4388,22 @@
                 "odds": 1.54
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 27,
+            "awayFifaRank": 23,
+            "homeInfo": "Miguel Almirón | Gustavo Alfaro",
+            "awayInfo": "",
+            "homeStrength": "防守强硬,反击犀利",
+            "awayStrength": "",
+            "homeStyle": "强硬防守,快速反击",
+            "awayStyle": "",
+            "homeWeakness": "进攻创造力",
+            "awayWeakness": "",
+            "predictedResult": "巴拉圭胜",
+            "confidence": 50,
+            "favorite": "巴拉圭",
+            "analysisText": "## 巴拉圭 vs 澳大利亚\n\n**FIFA排名**: 巴拉圭 #27 | 澳大利亚 #23\n**巴拉圭**: ⭐ Miguel Almirón | 教练: Gustavo Alfaro | 防守强硬,反击犀利 | 强硬防守,快速反击\n\n**赔率分析**: 巴拉圭 (2.06) vs 澳大利亚 (3.47), 平局 (3.41)\n**预测**: 巴拉圭胜 | 信心: 50%"
           }
         }
       ]
@@ -4055,6 +4536,22 @@
                 "odds": 2.86
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 26,
+            "awayFifaRank": 11,
+            "homeInfo": "Hakan Çalhanoğlu | Vincenzo Montella",
+            "awayInfo": "Christian Pulisic | Gregg Berhalter",
+            "homeStrength": "中场技术,远射能力",
+            "awayStrength": "年轻活力,体能优势",
+            "homeStyle": "技术流,中远距离攻击",
+            "awayStyle": "高速转换,边路冲击",
+            "homeWeakness": "防守纪律",
+            "awayWeakness": "大赛经验",
+            "predictedResult": "平局",
+            "confidence": 44,
+            "favorite": "美国",
+            "analysisText": "## 土耳其 vs 美国\n\n**FIFA排名**: 土耳其 #26 | 美国 #11\n**土耳其**: ⭐ Hakan Çalhanoğlu | 教练: Vincenzo Montella | 中场技术,远射能力 | 技术流,中远距离攻击\n**美国**: ⭐ Christian Pulisic | 教练: Gregg Berhalter | 年轻活力,体能优势 | 高速转换,边路冲击\n\n**赔率分析**: 土耳其 (2.56) vs 美国 (2.42), 平局 (3.81)\n**预测**: 平局 | 信心: 44%\n\n**战术对位**: 土耳其 技术流,中远距离攻击 vs 美国 高速转换,边路冲击\n美国是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -4187,6 +4684,22 @@
                 "odds": 2.82
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 30,
+            "awayFifaRank": 2,
+            "homeInfo": "Erling Haaland | Ståle Solbakken",
+            "awayInfo": "Kylian Mbappé | Didier Deschamps",
+            "homeStrength": "锋线终结能力",
+            "awayStrength": "锋线深度,整体实力",
+            "homeStyle": "长传冲吊,利用支点",
+            "awayStyle": "快速反击,身体对抗",
+            "homeWeakness": "整体防守",
+            "awayWeakness": "中场创造力",
+            "predictedResult": "平局",
+            "confidence": 57,
+            "favorite": "法国",
+            "analysisText": "## 挪威 vs 法国\n\n**FIFA排名**: 挪威 #30 | 法国 #2\n**挪威**: ⭐ Erling Haaland | 教练: Ståle Solbakken | 锋线终结能力 | 长传冲吊,利用支点\n**法国**: ⭐ Kylian Mbappé | 教练: Didier Deschamps | 锋线深度,整体实力 | 快速反击,身体对抗\n\n**赔率分析**: 挪威 (4.14) vs 法国 (1.78), 平局 (3.76)\n**预测**: 平局 | 信心: 57%\n\n**战术对位**: 挪威 长传冲吊,利用支点 vs 法国 快速反击,身体对抗\n法国是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -4318,6 +4831,22 @@
                 "odds": 0.95
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 19,
+            "awayFifaRank": 46,
+            "homeInfo": "Sadio Mané | Aliou Cissé",
+            "awayInfo": "Mohamed Qasim | Jesús Casas",
+            "homeStrength": "边路速度,身体优势",
+            "awayStrength": "团队防守,纪律性",
+            "homeStyle": "快速反击,边路冲击",
+            "awayStyle": "密集防守,长传反击",
+            "homeWeakness": "中场控制力",
+            "awayWeakness": "个人能力差距",
+            "predictedResult": "塞内加尔胜",
+            "confidence": 75,
+            "favorite": "塞内加尔",
+            "analysisText": "## 塞内加尔 vs 伊拉克\n\n**FIFA排名**: 塞内加尔 #19 | 伊拉克 #46\n**塞内加尔**: ⭐ Sadio Mané | 教练: Aliou Cissé | 边路速度,身体优势 | 快速反击,边路冲击\n**伊拉克**: ⭐ Mohamed Qasim | 教练: Jesús Casas | 团队防守,纪律性 | 密集防守,长传反击\n\n**赔率分析**: 塞内加尔 (1.27) vs 伊拉克 (10.02), 平局 (5.22)\n**预测**: 塞内加尔胜 | 信心: 75%\n\n**战术对位**: 塞内加尔 快速反击,边路冲击 vs 伊拉克 密集防守,长传反击\n塞内加尔是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -4450,6 +4979,22 @@
                 "odds": 2.76
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 49,
+            "awayFifaRank": 31,
+            "homeInfo": "Jamiro Monteiro | Bubista",
+            "awayInfo": "Salem Al-Dawsari | Roberto Mancini",
+            "homeStrength": "技术灵活,团队配合",
+            "awayStrength": "技术细腻,默契配合",
+            "homeStyle": "技术流,灵活跑位",
+            "awayStyle": "控球传导,耐心寻找机会",
+            "homeWeakness": "整体防守",
+            "awayWeakness": "身体对抗",
+            "predictedResult": "平局",
+            "confidence": 45,
+            "favorite": "沙特",
+            "analysisText": "## 佛得角 vs 沙特\n\n**FIFA排名**: 佛得角 #49 | 沙特 #31\n**佛得角**: ⭐ Jamiro Monteiro | 教练: Bubista | 技术灵活,团队配合 | 技术流,灵活跑位\n**沙特**: ⭐ Salem Al-Dawsari | 教练: Roberto Mancini | 技术细腻,默契配合 | 控球传导,耐心寻找机会\n\n**赔率分析**: 佛得角 (2.71) vs 沙特 (2.35), 平局 (3.68)\n**预测**: 平局 | 信心: 45%\n\n**战术对位**: 佛得角 技术流,灵活跑位 vs 沙特 控球传导,耐心寻找机会\n沙特是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -4582,6 +5127,22 @@
                 "odds": 3.12
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 16,
+            "awayFifaRank": 8,
+            "homeInfo": "Federico Valverde | Marcelo Bielsa",
+            "awayInfo": "Pedri | Luis de la Fuente",
+            "homeStrength": "中场硬朗,战斗精神",
+            "awayStrength": "传控体系,中场控制",
+            "homeStyle": "高位压迫,激烈对抗",
+            "awayStyle": "极致传控,短传渗透",
+            "homeWeakness": "锋线老化",
+            "awayWeakness": "缺乏高效射手",
+            "predictedResult": "平局",
+            "confidence": 65,
+            "favorite": "西班牙",
+            "analysisText": "## 乌拉圭 vs 西班牙\n\n**FIFA排名**: 乌拉圭 #16 | 西班牙 #8\n**乌拉圭**: ⭐ Federico Valverde | 教练: Marcelo Bielsa | 中场硬朗,战斗精神 | 高位压迫,激烈对抗\n**西班牙**: ⭐ Pedri | 教练: Luis de la Fuente | 传控体系,中场控制 | 极致传控,短传渗透\n\n**赔率分析**: 乌拉圭 (5.84) vs 西班牙 (1.51), 平局 (4.16)\n**预测**: 平局 | 信心: 65%\n\n**战术对位**: 乌拉圭 高位压迫,激烈对抗 vs 西班牙 极致传控,短传渗透\n西班牙是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -4712,6 +5273,22 @@
                 "odds": 4.61
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 50,
+            "awayFifaRank": 5,
+            "homeInfo": "Chris Wood | Darren Bazeley",
+            "awayInfo": "Kevin De Bruyne | Domenico Tedesco",
+            "homeStrength": "身体对抗,空中优势",
+            "awayStrength": "中场创造力,经验丰富",
+            "homeStyle": "长传冲吊,身体对抗",
+            "awayStyle": "控球推进,中路渗透",
+            "homeWeakness": "技术粗糙,经验不足",
+            "awayWeakness": "后防换代",
+            "predictedResult": "平局",
+            "confidence": 79,
+            "favorite": "比利时",
+            "analysisText": "## 新西兰 vs 比利时\n\n**FIFA排名**: 新西兰 #50 | 比利时 #5\n**新西兰**: ⭐ Chris Wood | 教练: Darren Bazeley | 身体对抗,空中优势 | 长传冲吊,身体对抗\n**比利时**: ⭐ Kevin De Bruyne | 教练: Domenico Tedesco | 中场创造力,经验丰富 | 控球推进,中路渗透\n\n**赔率分析**: 新西兰 (11.41) vs 比利时 (1.21), 平局 (6.15)\n**预测**: 平局 | 信心: 79%\n\n**战术对位**: 新西兰 长传冲吊,身体对抗 vs 比利时 控球推进,中路渗透\n比利时是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -4843,6 +5420,22 @@
                 "odds": 1.52
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 34,
+            "awayFifaRank": 20,
+            "homeInfo": "Mohamed Salah | Hossam Hassan",
+            "awayInfo": "Mehdi Taremi | Amir Ghalenoei",
+            "homeStrength": "球星个人能力,防线稳固",
+            "awayStrength": "身体对抗,防守硬朗",
+            "homeStyle": "稳固防守,依赖核心",
+            "awayStyle": "防守反击,身体对抗",
+            "homeWeakness": "中场创造力",
+            "awayWeakness": "进攻套路单一",
+            "predictedResult": "埃及胜",
+            "confidence": 51,
+            "favorite": "埃及",
+            "analysisText": "## 埃及 vs 伊朗\n\n**FIFA排名**: 埃及 #34 | 伊朗 #20\n**埃及**: ⭐ Mohamed Salah | 教练: Hossam Hassan | 球星个人能力,防线稳固 | 稳固防守,依赖核心\n**伊朗**: ⭐ Mehdi Taremi | 教练: Amir Ghalenoei | 身体对抗,防守硬朗 | 防守反击,身体对抗\n\n**赔率分析**: 埃及 (2.03) vs 伊朗 (3.92), 平局 (3.14)\n**预测**: 埃及胜 | 信心: 51%\n\n**战术对位**: 埃及 稳固防守,依赖核心 vs 伊朗 防守反击,身体对抗\n埃及是赔率方热门，市场看好其取胜"
           }
         }
       ]
@@ -4974,6 +5567,22 @@
                 "odds": 1.19
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 10,
+            "awayFifaRank": 42,
+            "homeInfo": "",
+            "awayInfo": "",
+            "homeStrength": "",
+            "awayStrength": "",
+            "homeStyle": "",
+            "awayStyle": "",
+            "homeWeakness": "",
+            "awayWeakness": "",
+            "predictedResult": "克罗地亚胜",
+            "confidence": 62,
+            "favorite": "克罗地亚",
+            "analysisText": "## 克罗地亚 vs 加纳\n\n**FIFA排名**: 克罗地亚 #10 | 加纳 #42\n\n**赔率分析**: 克罗地亚 (1.59) vs 加纳 (5.52), 平局 (3.81)\n**预测**: 克罗地亚胜 | 信心: 62%"
           }
         }
       ]
@@ -5104,6 +5713,22 @@
                 "odds": 5.27
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 41,
+            "awayFifaRank": 4,
+            "homeInfo": "",
+            "awayInfo": "Harry Kane | Gareth Southgate",
+            "homeStrength": "",
+            "awayStrength": "阵容深度,定位球",
+            "homeStyle": "",
+            "awayStyle": "攻守平衡,边中结合",
+            "homeWeakness": "",
+            "awayWeakness": "大赛心理",
+            "predictedResult": "平局",
+            "confidence": 78,
+            "favorite": "英格兰",
+            "analysisText": "## 巴拿马 vs 英格兰\n\n**FIFA排名**: 巴拿马 #41 | 英格兰 #4\n**英格兰**: ⭐ Harry Kane | 教练: Gareth Southgate | 阵容深度,定位球 | 攻守平衡,边中结合\n\n**赔率分析**: 巴拿马 (8.92) vs 英格兰 (1.22), 平局 (7.03)\n**预测**: 平局 | 信心: 78%"
           }
         }
       ]
@@ -5236,6 +5861,22 @@
                 "odds": 2.56
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 17,
+            "awayFifaRank": 7,
+            "homeInfo": "",
+            "awayInfo": "Cristiano Ronaldo | Roberto Martínez",
+            "homeStrength": "",
+            "awayStrength": "攻击火力,阵容深度",
+            "homeStyle": "",
+            "awayStyle": "边路突击,定位球",
+            "homeWeakness": "",
+            "awayWeakness": "防守稳定性",
+            "predictedResult": "平局",
+            "confidence": 51,
+            "favorite": "葡萄牙",
+            "analysisText": "## 哥伦比亚 vs 葡萄牙\n\n**FIFA排名**: 哥伦比亚 #17 | 葡萄牙 #7\n**葡萄牙**: ⭐ Cristiano Ronaldo | 教练: Roberto Martínez | 攻击火力,阵容深度 | 边路突击,定位球\n\n**赔率分析**: 哥伦比亚 (3.63) vs 葡萄牙 (2.01), 平局 (3.41)\n**预测**: 平局 | 信心: 51%"
           }
         }
       ]
@@ -5367,6 +6008,22 @@
                 "odds": 1.58
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 44,
+            "awayFifaRank": 48,
+            "homeInfo": "",
+            "awayInfo": "",
+            "homeStrength": "",
+            "awayStrength": "",
+            "homeStyle": "",
+            "awayStyle": "",
+            "homeWeakness": "",
+            "awayWeakness": "",
+            "predictedResult": "刚果(金)胜",
+            "confidence": 50,
+            "favorite": "刚果(金)",
+            "analysisText": "## 刚果(金) vs 乌兹别克斯坦\n\n**FIFA排名**: 刚果(金) #44 | 乌兹别克斯坦 #48\n\n**赔率分析**: 刚果(金) (2.1) vs 乌兹别克斯坦 (3.16), 平局 (3.64)\n**预测**: 刚果(金)胜 | 信心: 50%"
           }
         }
       ]
@@ -5499,6 +6156,22 @@
                 "odds": 2.24
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 25,
+            "awayFifaRank": 24,
+            "homeInfo": "",
+            "awayInfo": "Christoph Baumgartner | Ralf Rangnick",
+            "homeStrength": "",
+            "awayStrength": "高压训练,整体跑动",
+            "homeStyle": "",
+            "awayStyle": "高位压迫,快速攻防转换",
+            "homeWeakness": "",
+            "awayWeakness": "大赛经验",
+            "predictedResult": "平局",
+            "confidence": 44,
+            "favorite": "奥地利",
+            "analysisText": "## 阿尔及利亚 vs 奥地利\n\n**FIFA排名**: 阿尔及利亚 #25 | 奥地利 #24\n**奥地利**: ⭐ Christoph Baumgartner | 教练: Ralf Rangnick | 高压训练,整体跑动 | 高位压迫,快速攻防转换\n\n**赔率分析**: 阿尔及利亚 (3.05) vs 奥地利 (2.48), 平局 (2.99)\n**预测**: 平局 | 信心: 44%"
           }
         }
       ]
@@ -5629,19 +6302,40 @@
                 "odds": 5.38
               }
             ]
+          },
+          "deepAnalysis": {
+            "homeFifaRank": 47,
+            "awayFifaRank": "?",
+            "homeInfo": "",
+            "awayInfo": "Lionel Messi | Lionel Scaloni",
+            "homeStrength": "",
+            "awayStrength": "进攻组织,大赛经验",
+            "homeStyle": "",
+            "awayStyle": "传控渗透,前场压迫",
+            "homeWeakness": "",
+            "awayWeakness": "后防老化",
+            "predictedResult": "平局",
+            "confidence": 81,
+            "favorite": "阿根廷",
+            "analysisText": "## 约旦 vs 阿根廷\n\n**阿根廷**: ⭐ Lionel Messi | 教练: Lionel Scaloni | 进攻组织,大赛经验 | 传控渗透,前场压迫\n\n**赔率分析**: 约旦 (13.41) vs 阿根廷 (1.17), 平局 (7.17)\n**预测**: 平局 | 信心: 81%"
           }
         }
       ]
     }
   ],
   "prediction_accuracy": {
-    "total_matches": 0,
+    "total_matches": 1,
     "correct_h2h": 0,
-    "accuracy_rate": "0%",
-    "history": []
+    "accuracy_rate": "0.0%",
+    "history": [
+      {
+        "date": "06/20",
+        "rate": 0
+      }
+    ]
   },
-  "lastUpdate": "2026-06-20 08:08 CST",
-  "nextUpdate": "2026-06-20 16:08 CST",
+  "lastUpdate": "2026-06-20 08:11 CST",
+  "nextUpdate": "2026-06-20 16:11 CST",
   "analysisCount": 175,
   "matchCount": 43
 }
