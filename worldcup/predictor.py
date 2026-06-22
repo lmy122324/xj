@@ -639,6 +639,7 @@ def gen_html_report(home, away, pred, strategies, score_pred, match_time):
 
 
 def cleanup_old_matches(existing):
+    """Keep completed matches forever, only remove stale future matches"""
     from datetime import datetime, timezone, timedelta
     now = datetime.now(timezone(timedelta(hours=8)))
     matches = existing.get('matches', [])
@@ -646,12 +647,17 @@ def cleanup_old_matches(existing):
     removed = 0
     for m in matches:
         result = m.get('result')
+        # NEVER delete matches with results
+        if result and result != 'None':
+            kept.append(m)
+            continue
+        # Only clean up old future matches (no result, already passed)
         date_str = m.get('date')
-        if result and date_str and '/' in date_str:
+        if date_str and '/' in date_str:
             try:
                 parts = date_str.split('/')
                 m_date = datetime(now.year, int(parts[0]), int(parts[1]), tzinfo=timezone(timedelta(hours=8)))
-                if (now - m_date) > timedelta(hours=24):
+                if (now - m_date) > timedelta(hours=48):
                     removed += 1
                     continue
             except Exception:
@@ -659,7 +665,7 @@ def cleanup_old_matches(existing):
         kept.append(m)
     existing['matches'] = kept
     if removed:
-        print(f'[CLEANUP] Deleted {removed} old matches')
+        print(f'[CLEANUP] Deleted {removed} old future matches (no result, expired)')
     return existing
 
 # ========== MAIN ==========
@@ -798,11 +804,28 @@ def main():
 
         new_matches.append(match_entry)
     
-    # Merge with existing matches (keep finished results)
-    merged_ids = {(m['home'], m['away']) for m in new_matches}
+    # Merge with existing matches (CRITICAL: preserve completed results)
+    # Build lookup: old matches with results should take priority over new odds matches
+    old_with_results = {}
+    for em in matches:
+        if em.get('result') and em['result'] != 'None':
+            old_with_results[(em.get('home'), em.get('away'))] = em
+    
+    # Replace new matches that already have results in old data
+    final_matches = []
+    for nm in new_matches:
+        key = (nm['home'], nm['away'])
+        if key in old_with_results:
+            final_matches.append(old_with_results[key])  # keep old with result
+        else:
+            final_matches.append(nm)  # keep new with odds
+    
+    # Add old matches that are neither in new data nor already merged
+    merged_ids = {(m['home'], m['away']) for m in final_matches}
     for em in matches:
         if (em.get('home'), em.get('away')) not in merged_ids:
-            new_matches.append(em)
+            final_matches.append(em)
+    new_matches = final_matches
     
     # Calculate accuracy
     correct = 0

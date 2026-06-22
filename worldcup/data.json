@@ -1,13 +1,1493 @@
 {
   "version": "2.1",
-  "generated_at": "2026-06-22 19:23 CST",
+  "generated_at": "2026-06-22 20:14 CST",
   "matches": [
+    {
+      "home": "墨西哥",
+      "away": "南非",
+      "date": "06/11",
+      "time": "已完赛",
+      "group": "A",
+      "result": "2-0",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：墨西哥 2-0"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 2,
+          "possibleScores": [
+            "2-0 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：墨西哥 2-0 南非"
+            }
+          ],
+          "text": "实际结果：墨西哥 2-0 南非 | 墨西哥胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">墨西哥 2-0 南非</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/11 · A组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">墨西哥胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">墨西哥 2-0 南非</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "韩国",
+      "away": "捷克",
+      "date": "06/11",
+      "time": "已完赛",
+      "group": "A",
+      "result": "2-1",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：韩国 2-1"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 3,
+          "possibleScores": [
+            "2-1 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：韩国 2-1 捷克"
+            }
+          ],
+          "text": "实际结果：韩国 2-1 捷克 | 韩国胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">韩国 2-1 捷克</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/11 · A组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">韩国胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">韩国 2-1 捷克</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "加拿大",
+      "away": "波黑",
+      "date": "06/12",
+      "time": "已完赛",
+      "group": "B",
+      "result": "1-1",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "比赛结束 加拿大 1-1 波黑"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 2,
+          "possibleScores": [
+            "1-1 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：加拿大 1-1 波黑"
+            }
+          ],
+          "text": "实际结果：加拿大 1-1 波黑 | 平局",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">加拿大 1-1 波黑</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/12 · B组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">平局</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">加拿大 1-1 波黑</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "美国",
+      "away": "巴拉圭",
+      "date": "06/12",
+      "time": "已完赛",
+      "group": "D",
+      "result": "4-1",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：美国 4-1"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 5,
+          "possibleScores": [
+            "4-1 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：美国 4-1 巴拉圭"
+            }
+          ],
+          "text": "实际结果：美国 4-1 巴拉圭 | 美国胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">美国 4-1 巴拉圭</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/12 · D组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">美国胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">美国 4-1 巴拉圭</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "卡塔尔",
+      "away": "瑞士",
+      "date": "06/13",
+      "time": "已完赛",
+      "group": "B",
+      "result": "1-1",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "比赛结束 卡塔尔 1-1 瑞士"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 2,
+          "possibleScores": [
+            "1-1 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：卡塔尔 1-1 瑞士"
+            }
+          ],
+          "text": "实际结果：卡塔尔 1-1 瑞士 | 平局",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">卡塔尔 1-1 瑞士</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/13 · B组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">平局</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">卡塔尔 1-1 瑞士</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "巴西",
+      "away": "摩洛哥",
+      "date": "06/13",
+      "time": "已完赛",
+      "group": "C",
+      "result": "1-1",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "比赛结束 巴西 1-1 摩洛哥"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 2,
+          "possibleScores": [
+            "1-1 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：巴西 1-1 摩洛哥"
+            }
+          ],
+          "text": "实际结果：巴西 1-1 摩洛哥 | 平局",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">巴西 1-1 摩洛哥</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/13 · C组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">平局</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">巴西 1-1 摩洛哥</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "海地",
+      "away": "苏格兰",
+      "date": "06/13",
+      "time": "已完赛",
+      "group": "C",
+      "result": "0-1",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：苏格兰 0-1"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 1,
+          "possibleScores": [
+            "0-1 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：海地 0-1 苏格兰"
+            }
+          ],
+          "text": "实际结果：海地 0-1 苏格兰 | 苏格兰胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">海地 0-1 苏格兰</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/13 · C组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">苏格兰胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">海地 0-1 苏格兰</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "澳大利亚",
+      "away": "土耳其",
+      "date": "06/13",
+      "time": "已完赛",
+      "group": "D",
+      "result": "2-0",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：澳大利亚 2-0"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 2,
+          "possibleScores": [
+            "2-0 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：澳大利亚 2-0 土耳其"
+            }
+          ],
+          "text": "实际结果：澳大利亚 2-0 土耳其 | 澳大利亚胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">澳大利亚 2-0 土耳其</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/13 · D组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">澳大利亚胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">澳大利亚 2-0 土耳其</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "德国",
+      "away": "库拉索",
+      "date": "06/14",
+      "time": "已完赛",
+      "group": "E",
+      "result": "7-1",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：德国 7-1"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 8,
+          "possibleScores": [
+            "7-1 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：德国 7-1 库拉索"
+            }
+          ],
+          "text": "实际结果：德国 7-1 库拉索 | 德国胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">德国 7-1 库拉索</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/14 · E组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">德国胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">德国 7-1 库拉索</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "科特迪瓦",
+      "away": "厄瓜多尔",
+      "date": "06/14",
+      "time": "已完赛",
+      "group": "E",
+      "result": "1-0",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：科特迪瓦 1-0"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 1,
+          "possibleScores": [
+            "1-0 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：科特迪瓦 1-0 厄瓜多尔"
+            }
+          ],
+          "text": "实际结果：科特迪瓦 1-0 厄瓜多尔 | 科特迪瓦胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">科特迪瓦 1-0 厄瓜多尔</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/14 · E组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">科特迪瓦胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">科特迪瓦 1-0 厄瓜多尔</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "荷兰",
+      "away": "日本",
+      "date": "06/14",
+      "time": "已完赛",
+      "group": "F",
+      "result": "2-2",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "比赛结束 荷兰 2-2 日本"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 4,
+          "possibleScores": [
+            "2-2 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：荷兰 2-2 日本"
+            }
+          ],
+          "text": "实际结果：荷兰 2-2 日本 | 平局",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">荷兰 2-2 日本</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/14 · F组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">平局</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">荷兰 2-2 日本</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "瑞典",
+      "away": "突尼斯",
+      "date": "06/14",
+      "time": "已完赛",
+      "group": "F",
+      "result": "5-1",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：瑞典 5-1"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 6,
+          "possibleScores": [
+            "5-1 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：瑞典 5-1 突尼斯"
+            }
+          ],
+          "text": "实际结果：瑞典 5-1 突尼斯 | 瑞典胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">瑞典 5-1 突尼斯</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/14 · F组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">瑞典胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">瑞典 5-1 突尼斯</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "比利时",
+      "away": "埃及",
+      "date": "06/15",
+      "time": "已完赛",
+      "group": "G",
+      "result": "1-1",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "比赛结束 比利时 1-1 埃及"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 2,
+          "possibleScores": [
+            "1-1 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：比利时 1-1 埃及"
+            }
+          ],
+          "text": "实际结果：比利时 1-1 埃及 | 平局",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">比利时 1-1 埃及</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/15 · G组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">平局</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">比利时 1-1 埃及</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "伊朗",
+      "away": "新西兰",
+      "date": "06/15",
+      "time": "已完赛",
+      "group": "G",
+      "result": "2-2",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "比赛结束 伊朗 2-2 新西兰"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 4,
+          "possibleScores": [
+            "2-2 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：伊朗 2-2 新西兰"
+            }
+          ],
+          "text": "实际结果：伊朗 2-2 新西兰 | 平局",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">伊朗 2-2 新西兰</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/15 · G组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">平局</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">伊朗 2-2 新西兰</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "西班牙",
+      "away": "佛得角",
+      "date": "06/15",
+      "time": "已完赛",
+      "group": "H",
+      "result": "0-0",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "比赛结束 西班牙 0-0 佛得角"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 0,
+          "possibleScores": [
+            "0-0 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：西班牙 0-0 佛得角"
+            }
+          ],
+          "text": "实际结果：西班牙 0-0 佛得角 | 平局",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">西班牙 0-0 佛得角</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/15 · H组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">平局</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">西班牙 0-0 佛得角</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "沙特",
+      "away": "乌拉圭",
+      "date": "06/15",
+      "time": "已完赛",
+      "group": "H",
+      "result": "1-1",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "比赛结束 沙特阿拉伯 1-1 乌拉圭"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 2,
+          "possibleScores": [
+            "1-1 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：沙特阿拉伯 1-1 乌拉圭"
+            }
+          ],
+          "text": "实际结果：沙特阿拉伯 1-1 乌拉圭 | 平局",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">沙特阿拉伯 1-1 乌拉圭</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/15 · H组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">平局</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">沙特阿拉伯 1-1 乌拉圭</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "法国",
+      "away": "塞内加尔",
+      "date": "06/16",
+      "time": "已完赛",
+      "group": "I",
+      "result": "3-1",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：法国 3-1"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 4,
+          "possibleScores": [
+            "3-1 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：法国 3-1 塞内加尔"
+            }
+          ],
+          "text": "实际结果：法国 3-1 塞内加尔 | 法国胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">法国 3-1 塞内加尔</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/16 · I组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">法国胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">法国 3-1 塞内加尔</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "挪威",
+      "away": "伊拉克",
+      "date": "06/16",
+      "time": "已完赛",
+      "group": "I",
+      "result": "4-1",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：挪威 4-1"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 5,
+          "possibleScores": [
+            "4-1 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：挪威 4-1 伊拉克"
+            }
+          ],
+          "text": "实际结果：挪威 4-1 伊拉克 | 挪威胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">挪威 4-1 伊拉克</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/16 · I组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">挪威胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">挪威 4-1 伊拉克</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "阿根廷",
+      "away": "阿尔及利亚",
+      "date": "06/16",
+      "time": "已完赛",
+      "group": "J",
+      "result": "3-0",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：阿根廷 3-0"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 3,
+          "possibleScores": [
+            "3-0 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：阿根廷 3-0 阿尔及利亚"
+            }
+          ],
+          "text": "实际结果：阿根廷 3-0 阿尔及利亚 | 阿根廷胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">阿根廷 3-0 阿尔及利亚</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/16 · J组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">阿根廷胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">阿根廷 3-0 阿尔及利亚</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "奥地利",
+      "away": "约旦",
+      "date": "06/16",
+      "time": "已完赛",
+      "group": "J",
+      "result": "3-1",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：奥地利 3-1"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 4,
+          "possibleScores": [
+            "3-1 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：奥地利 3-1 约旦"
+            }
+          ],
+          "text": "实际结果：奥地利 3-1 约旦 | 奥地利胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">奥地利 3-1 约旦</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/16 · J组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">奥地利胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">奥地利 3-1 约旦</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "葡萄牙",
+      "away": "刚果(金)",
+      "date": "06/17",
+      "time": "已完赛",
+      "group": "K",
+      "result": "1-1",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "比赛结束 葡萄牙 1-1 刚果民主共和国"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 2,
+          "possibleScores": [
+            "1-1 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：葡萄牙 1-1 刚果民主共和国"
+            }
+          ],
+          "text": "实际结果：葡萄牙 1-1 刚果民主共和国 | 平局",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">葡萄牙 1-1 刚果民主共和国</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/17 · K组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">平局</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">葡萄牙 1-1 刚果民主共和国</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "哥伦比亚",
+      "away": "乌兹别克斯坦",
+      "date": "06/17",
+      "time": "已完赛",
+      "group": "K",
+      "result": "3-1",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：哥伦比亚 3-1"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 4,
+          "possibleScores": [
+            "3-1 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：哥伦比亚 3-1 乌兹别克斯坦"
+            }
+          ],
+          "text": "实际结果：哥伦比亚 3-1 乌兹别克斯坦 | 哥伦比亚胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">哥伦比亚 3-1 乌兹别克斯坦</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/17 · K组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">哥伦比亚胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">哥伦比亚 3-1 乌兹别克斯坦</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "英格兰",
+      "away": "克罗地亚",
+      "date": "06/17",
+      "time": "已完赛",
+      "group": "L",
+      "result": "4-2",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：英格兰 4-2"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 6,
+          "possibleScores": [
+            "4-2 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：英格兰 4-2 克罗地亚"
+            }
+          ],
+          "text": "实际结果：英格兰 4-2 克罗地亚 | 英格兰胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">英格兰 4-2 克罗地亚</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/17 · L组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">英格兰胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">英格兰 4-2 克罗地亚</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "加纳",
+      "away": "巴拿马",
+      "date": "06/17",
+      "time": "已完赛",
+      "group": "L",
+      "result": "1-0",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：加纳 1-0"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 1,
+          "possibleScores": [
+            "1-0 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：加纳 1-0 巴拿马"
+            }
+          ],
+          "text": "实际结果：加纳 1-0 巴拿马 | 加纳胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">加纳 1-0 巴拿马</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/17 · L组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">加纳胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">加纳 1-0 巴拿马</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "捷克",
+      "away": "南非",
+      "date": "06/18",
+      "time": "已完赛",
+      "group": "A",
+      "result": "1-1",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "比赛结束 捷克 1-1 南非"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 2,
+          "possibleScores": [
+            "1-1 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：捷克 1-1 南非"
+            }
+          ],
+          "text": "实际结果：捷克 1-1 南非 | 平局",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">捷克 1-1 南非</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/18 · A组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">平局</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">捷克 1-1 南非</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "墨西哥",
+      "away": "韩国",
+      "date": "06/18",
+      "time": "已完赛",
+      "group": "A",
+      "result": "1-0",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：墨西哥 1-0"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 1,
+          "possibleScores": [
+            "1-0 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：墨西哥 1-0 韩国"
+            }
+          ],
+          "text": "实际结果：墨西哥 1-0 韩国 | 墨西哥胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">墨西哥 1-0 韩国</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/18 · A组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">墨西哥胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">墨西哥 1-0 韩国</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "瑞士",
+      "away": "波黑",
+      "date": "06/18",
+      "time": "已完赛",
+      "group": "B",
+      "result": "4-1",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：瑞士 4-1"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 5,
+          "possibleScores": [
+            "4-1 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：瑞士 4-1 波黑"
+            }
+          ],
+          "text": "实际结果：瑞士 4-1 波黑 | 瑞士胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">瑞士 4-1 波黑</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/18 · B组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">瑞士胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">瑞士 4-1 波黑</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "加拿大",
+      "away": "卡塔尔",
+      "date": "06/18",
+      "time": "已完赛",
+      "group": "B",
+      "result": "6-0",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：加拿大 6-0"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 6,
+          "possibleScores": [
+            "6-0 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：加拿大 6-0 卡塔尔"
+            }
+          ],
+          "text": "实际结果：加拿大 6-0 卡塔尔 | 加拿大胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">加拿大 6-0 卡塔尔</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/18 · B组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">加拿大胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">加拿大 6-0 卡塔尔</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "苏格兰",
+      "away": "摩洛哥",
+      "date": "06/19",
+      "time": "已完赛",
+      "group": "C",
+      "result": "0-1",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：摩洛哥 0-1"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 1,
+          "possibleScores": [
+            "0-1 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：苏格兰 0-1 摩洛哥"
+            }
+          ],
+          "text": "实际结果：苏格兰 0-1 摩洛哥 | 摩洛哥胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">苏格兰 0-1 摩洛哥</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/19 · C组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">摩洛哥胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">苏格兰 0-1 摩洛哥</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "巴西",
+      "away": "海地",
+      "date": "06/19",
+      "time": "已完赛",
+      "group": "C",
+      "result": "3-0",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：巴西 3-0"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 3,
+          "possibleScores": [
+            "3-0 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：巴西 3-0 海地"
+            }
+          ],
+          "text": "实际结果：巴西 3-0 海地 | 巴西胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">巴西 3-0 海地</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/19 · C组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">巴西胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">巴西 3-0 海地</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "美国",
+      "away": "澳大利亚",
+      "date": "06/19",
+      "time": "已完赛",
+      "group": "D",
+      "result": "2-0",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：美国 2-0"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 2,
+          "possibleScores": [
+            "2-0 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：美国 2-0 澳大利亚"
+            }
+          ],
+          "text": "实际结果：美国 2-0 澳大利亚 | 美国胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">美国 2-0 澳大利亚</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/19 · D组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">美国胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">美国 2-0 澳大利亚</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "土耳其",
+      "away": "巴拉圭",
+      "date": "06/19",
+      "time": "已完赛",
+      "group": "D",
+      "result": "0-1",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：巴拉圭 0-1"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 1,
+          "possibleScores": [
+            "0-1 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：土耳其 0-1 巴拉圭"
+            }
+          ],
+          "text": "实际结果：土耳其 0-1 巴拉圭 | 巴拉圭胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">土耳其 0-1 巴拉圭</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/19 · D组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">巴拉圭胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">土耳其 0-1 巴拉圭</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "德国",
+      "away": "科特迪瓦",
+      "date": "06/20",
+      "time": "已完赛",
+      "group": "E",
+      "result": "2-1",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：德国 2-1"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 3,
+          "possibleScores": [
+            "2-1 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：德国 2-1 科特迪瓦"
+            }
+          ],
+          "text": "实际结果：德国 2-1 科特迪瓦 | 德国胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">德国 2-1 科特迪瓦</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/20 · E组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">德国胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">德国 2-1 科特迪瓦</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "厄瓜多尔",
+      "away": "库拉索",
+      "date": "06/20",
+      "time": "已完赛",
+      "group": "E",
+      "result": "0-0",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "比赛结束 厄瓜多尔 0-0 库拉索"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 0,
+          "possibleScores": [
+            "0-0 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：厄瓜多尔 0-0 库拉索"
+            }
+          ],
+          "text": "实际结果：厄瓜多尔 0-0 库拉索 | 平局",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">厄瓜多尔 0-0 库拉索</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/20 · E组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">平局</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">厄瓜多尔 0-0 库拉索</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "荷兰",
+      "away": "瑞典",
+      "date": "06/20",
+      "time": "已完赛",
+      "group": "F",
+      "result": "5-1",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：荷兰 5-1"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 6,
+          "possibleScores": [
+            "5-1 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：荷兰 5-1 瑞典"
+            }
+          ],
+          "text": "实际结果：荷兰 5-1 瑞典 | 荷兰胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">荷兰 5-1 瑞典</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/20 · F组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">荷兰胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">荷兰 5-1 瑞典</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "日本",
+      "away": "突尼斯",
+      "date": "06/20",
+      "time": "已完赛",
+      "group": "F",
+      "result": "4-0",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：日本 4-0"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 4,
+          "possibleScores": [
+            "4-0 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：日本 4-0 突尼斯"
+            }
+          ],
+          "text": "实际结果：日本 4-0 突尼斯 | 日本胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">日本 4-0 突尼斯</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/20 · F组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">日本胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">日本 4-0 突尼斯</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "比利时",
+      "away": "伊朗",
+      "date": "06/21",
+      "time": "已完赛",
+      "group": "G",
+      "result": "0-0",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "比赛结束 比利时 0-0 伊朗"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 0,
+          "possibleScores": [
+            "0-0 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：比利时 0-0 伊朗"
+            }
+          ],
+          "text": "实际结果：比利时 0-0 伊朗 | 平局",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">比利时 0-0 伊朗</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/21 · G组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">平局</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">比利时 0-0 伊朗</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "埃及",
+      "away": "新西兰",
+      "date": "06/21",
+      "time": "已完赛",
+      "group": "G",
+      "result": "3-1",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：埃及 3-1"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 4,
+          "possibleScores": [
+            "3-1 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：埃及 3-1 新西兰"
+            }
+          ],
+          "text": "实际结果：埃及 3-1 新西兰 | 埃及胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">埃及 3-1 新西兰</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/21 · G组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">埃及胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">埃及 3-1 新西兰</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "西班牙",
+      "away": "沙特",
+      "date": "06/21",
+      "time": "已完赛",
+      "group": "H",
+      "result": "4-0",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "已完赛：西班牙 4-0"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 4,
+          "possibleScores": [
+            "4-0 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：西班牙 4-0 沙特阿拉伯"
+            }
+          ],
+          "text": "实际结果：西班牙 4-0 沙特阿拉伯 | 西班牙胜",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">西班牙 4-0 沙特阿拉伯</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/21 · H组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">西班牙胜</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">西班牙 4-0 沙特阿拉伯</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
+    {
+      "home": "乌拉圭",
+      "away": "佛得角",
+      "date": "06/21",
+      "time": "已完赛",
+      "group": "H",
+      "result": "2-2",
+      "changes": [
+        {
+          "icon": "🟢",
+          "type": "good",
+          "label": "已完赛",
+          "text": "比赛结束 乌拉圭 2-2 佛得角"
+        }
+      ],
+      "recommendations": [],
+      "analyses": [
+        {
+          "time": "2026-06-22 20:14",
+          "confidence": 100,
+          "isNew": false,
+          "goalCount": 4,
+          "possibleScores": [
+            "2-2 (实际)"
+          ],
+          "factors": [
+            {
+              "type": "good",
+              "icon": "✅",
+              "text": "实际结果已确认：乌拉圭 2-2 佛得角"
+            }
+          ],
+          "text": "实际结果：乌拉圭 2-2 佛得角 | 平局",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(0,255,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#00ff88;\">✅ 已完赛</div>\n      <div style=\"font-size:16px;color:#ffffff;margin:4px 0;\">乌拉圭 2-2 佛得角</div>\n      <div style=\"font-size:12px;color:#7a7090;\">06/21 · H组</div>\n    </div>\n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">结果</span>\n        <span style=\"color:#00ff88;font-weight:700;\">平局</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(0,255,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">比分</span>\n        <span style=\"color:#ffd700;font-weight:700;\">乌拉圭 2-2 佛得角</span>\n      </div>\n    </div>\n    <hr style=\"border:none;border-top:1px solid rgba(0,255,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      比赛已结束 · 数据来源：FIFA / ESPN / BBC\n    </div>\n    </div>\n    "
+        }
+      ]
+    },
     {
       "home": "阿根廷",
       "away": "奥地利",
       "date": "06/23",
       "time": "06/23 01:00",
-      "group": "?",
+      "group": "J",
       "result": null,
       "odds_h2h": {
         "Argentina": 1.49,
@@ -580,7 +2060,7 @@
       "away": "伊拉克",
       "date": "06/23",
       "time": "06/23 05:00",
-      "group": "?",
+      "group": "I",
       "result": null,
       "odds_h2h": {
         "France": 1.09,
@@ -1148,7 +2628,7 @@
       "away": "塞内加尔",
       "date": "06/23",
       "time": "06/23 08:00",
-      "group": "?",
+      "group": "I",
       "result": null,
       "odds_h2h": {
         "Norway": 2.2,
@@ -1721,7 +3201,7 @@
       "away": "阿尔及利亚",
       "date": "06/23",
       "time": "06/23 11:00",
-      "group": "?",
+      "group": "J",
       "result": null,
       "odds_h2h": {
         "Jordan": 6.38,
@@ -2296,7 +3776,7 @@
       "away": "乌兹别克斯坦",
       "date": "06/24",
       "time": "06/24 01:00",
-      "group": "?",
+      "group": "K",
       "result": null,
       "odds_h2h": {
         "Portugal": 1.18,
@@ -2869,7 +4349,7 @@
       "away": "加纳",
       "date": "06/24",
       "time": "06/24 04:00",
-      "group": "?",
+      "group": "L",
       "result": null,
       "odds_h2h": {
         "England": 1.23,
@@ -3442,7 +4922,7 @@
       "away": "克罗地亚",
       "date": "06/24",
       "time": "06/24 07:00",
-      "group": "?",
+      "group": "L",
       "result": null,
       "odds_h2h": {
         "Panama": 6.68,
@@ -4015,7 +5495,7 @@
       "away": "刚果(金)",
       "date": "06/24",
       "time": "06/24 10:00",
-      "group": "?",
+      "group": "K",
       "result": null,
       "odds_h2h": {
         "Colombia": 1.51,
@@ -4588,7 +6068,7 @@
       "away": "卡塔尔",
       "date": "06/25",
       "time": "06/25 03:00",
-      "group": "?",
+      "group": "B",
       "result": null,
       "odds_h2h": {
         "Bosnia & Herzegovina": 1.43,
@@ -5161,7 +6641,7 @@
       "away": "加拿大",
       "date": "06/25",
       "time": "06/25 03:00",
-      "group": "?",
+      "group": "B",
       "result": null,
       "odds_h2h": {
         "Switzerland": 2.5,
@@ -5734,7 +7214,7 @@
       "away": "巴西",
       "date": "06/25",
       "time": "06/25 06:00",
-      "group": "?",
+      "group": "C",
       "result": null,
       "odds_h2h": {
         "Scotland": 7.02,
@@ -6307,7 +7787,7 @@
       "away": "海地",
       "date": "06/25",
       "time": "06/25 06:00",
-      "group": "?",
+      "group": "C",
       "result": null,
       "odds_h2h": {
         "Morocco": 1.17,
@@ -6880,7 +8360,7 @@
       "away": "墨西哥",
       "date": "06/25",
       "time": "06/25 09:00",
-      "group": "?",
+      "group": "A",
       "result": null,
       "odds_h2h": {
         "Czech Republic": 3.65,
@@ -7458,7 +8938,7 @@
       "away": "韩国",
       "date": "06/25",
       "time": "06/25 09:00",
-      "group": "?",
+      "group": "A",
       "result": null,
       "odds_h2h": {
         "South Africa": 5.47,
@@ -8032,11 +9512,11 @@
       ]
     },
     {
-      "home": "Curaçao",
+      "home": "库拉索",
       "away": "科特迪瓦",
       "date": "06/26",
       "time": "06/26 04:00",
-      "group": "?",
+      "group": "E",
       "result": null,
       "odds_h2h": {
         "Curaçao": 17.2,
@@ -8604,7 +10084,7 @@
       "away": "德国",
       "date": "06/26",
       "time": "06/26 04:00",
-      "group": "?",
+      "group": "E",
       "result": null,
       "odds_h2h": {
         "Ecuador": 3.55,
@@ -9182,7 +10662,7 @@
       "away": "瑞典",
       "date": "06/26",
       "time": "06/26 07:00",
-      "group": "?",
+      "group": "F",
       "result": null,
       "odds_h2h": {
         "Japan": 1.93,
@@ -9755,7 +11235,7 @@
       "away": "荷兰",
       "date": "06/26",
       "time": "06/26 07:00",
-      "group": "?",
+      "group": "F",
       "result": null,
       "odds_h2h": {
         "Tunisia": 19.68,
@@ -10321,7 +11801,7 @@
       "away": "澳大利亚",
       "date": "06/26",
       "time": "06/26 10:00",
-      "group": "?",
+      "group": "D",
       "result": null,
       "odds_h2h": {
         "Paraguay": 2.86,
@@ -10894,7 +12374,7 @@
       "away": "美国",
       "date": "06/26",
       "time": "06/26 10:00",
-      "group": "?",
+      "group": "D",
       "result": null,
       "odds_h2h": {
         "Turkey": 3.55,
@@ -11472,7 +12952,7 @@
       "away": "法国",
       "date": "06/27",
       "time": "06/27 03:00",
-      "group": "?",
+      "group": "I",
       "result": null,
       "odds_h2h": {
         "Norway": 4.13,
@@ -12050,7 +13530,7 @@
       "away": "伊拉克",
       "date": "06/27",
       "time": "06/27 03:00",
-      "group": "?",
+      "group": "I",
       "result": null,
       "odds_h2h": {
         "Senegal": 1.27,
@@ -12623,7 +14103,7 @@
       "away": "沙特",
       "date": "06/27",
       "time": "06/27 08:00",
-      "group": "?",
+      "group": "H",
       "result": null,
       "odds_h2h": {
         "Cape Verde": 2.37,
@@ -13199,7 +14679,7 @@
       "away": "西班牙",
       "date": "06/27",
       "time": "06/27 08:00",
-      "group": "?",
+      "group": "H",
       "result": null,
       "odds_h2h": {
         "Uruguay": 7.5,
@@ -13775,7 +15255,7 @@
       "away": "比利时",
       "date": "06/27",
       "time": "06/27 11:00",
-      "group": "?",
+      "group": "G",
       "result": null,
       "odds_h2h": {
         "New Zealand": 12.95,
@@ -14343,7 +15823,7 @@
       "away": "伊朗",
       "date": "06/27",
       "time": "06/27 11:00",
-      "group": "?",
+      "group": "G",
       "result": null,
       "odds_h2h": {
         "Egypt": 2.41,
@@ -14916,7 +16396,7 @@
       "away": "加纳",
       "date": "06/28",
       "time": "06/28 05:00",
-      "group": "?",
+      "group": "L",
       "result": null,
       "odds_h2h": {
         "Croatia": 1.6,
@@ -15489,7 +16969,7 @@
       "away": "英格兰",
       "date": "06/28",
       "time": "06/28 05:00",
-      "group": "?",
+      "group": "L",
       "result": null,
       "odds_h2h": {
         "Panama": 8.92,
@@ -16057,7 +17537,7 @@
       "away": "葡萄牙",
       "date": "06/28",
       "time": "06/28 07:30",
-      "group": "?",
+      "group": "K",
       "result": null,
       "odds_h2h": {
         "Colombia": 3.58,
@@ -16635,7 +18115,7 @@
       "away": "乌兹别克斯坦",
       "date": "06/28",
       "time": "06/28 07:30",
-      "group": "?",
+      "group": "K",
       "result": null,
       "odds_h2h": {
         "DR Congo": 2.09,
@@ -17208,7 +18688,7 @@
       "away": "奥地利",
       "date": "06/28",
       "time": "06/28 10:00",
-      "group": "?",
+      "group": "J",
       "result": null,
       "odds_h2h": {
         "Algeria": 3.09,
@@ -17786,7 +19266,7 @@
       "away": "阿根廷",
       "date": "06/28",
       "time": "06/28 10:00",
-      "group": "?",
+      "group": "J",
       "result": null,
       "odds_h2h": {
         "Jordan": 13.54,
@@ -18354,10 +19834,17 @@
     "total_matches": 0,
     "correct_h2h": 0,
     "accuracy_rate": "—",
-    "history": []
+    "history": [
+      {
+        "date": "06/22",
+        "correct": 0,
+        "total": 0,
+        "rate": 0
+      }
+    ]
   },
-  "lastUpdate": "2026-06-22 17:44 CST",
-  "nextUpdate": "2026-06-23 01:44 CST",
-  "analysisCount": 315,
-  "matchCount": 32
+  "lastUpdate": "2026-06-22 20:14 CST",
+  "nextUpdate": "2026-06-23 04:14 CST",
+  "analysisCount": 200,
+  "matchCount": 72
 }
