@@ -182,6 +182,39 @@ body{
 @media(min-width:900px){.pc-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}}
 @media(min-width:1400px){.pc-grid{grid-template-columns:1fr 1fr 1fr}}
 @media(max-width:899px){.pc-grid{display:block}}
+
+/* === Interactive UX improvements === */
+.pc-head{padding:6px 10px;display:flex;align-items:center;gap:5px;cursor:pointer;user-select:none;transition:background .15s;border-radius:6px 6px 0 0}
+.pc-head:hover{background:rgba(255,215,0,.04);box-shadow:inset 0 0 0 1px rgba(255,215,0,.08)}
+.pc-head.ex{background:rgba(255,215,0,.015)}
+.pc{cursor:default;transition:box-shadow .2s}
+.pc:hover{box-shadow:0 3px 16px rgba(0,0,0,.3)}
+.sc{cursor:pointer;transition:all .15s;border:2px solid var(--card-border);padding:5px 6px;position:relative}
+.sc::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;border-radius:6px;background:rgba(255,215,0,0);transition:background .15s}
+.sc:hover::after{background:rgba(255,215,0,.03)}
+.sc:hover{border-color:var(--gold);transform:translateY(-2px)}
+.sc .sl{font-size:8px;font-weight:700;display:block;margin-bottom:2px}
+.sc .so{font-size:10px;font-weight:900;display:block}
+.sc .sp{font-size:7px;display:block}
+.sc .sr{font-size:6px;color:var(--sub)}
+.sc.sel{box-shadow:0 3px 12px rgba(255,215,0,.15)}
+.bvi-ck{width:18px;height:18px;border-radius:50%;border:2px solid var(--card-border);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:10px;font-weight:700;color:var(--accent);transition:all .15s;flex-shrink:0}
+.bvi-ck:hover{border-color:var(--gold);background:rgba(255,215,0,.03)}
+.bvi-ck.ckd{border-color:var(--accent)!important;background:rgba(0,212,170,.1)!important}
+.bv-item{cursor:default;transition:all .15s;padding:5px 6px;border-radius:6px}
+.bv-item:hover{border-color:rgba(255,215,0,.2);background:rgba(255,215,0,.02);transform:translateY(-1px)}
+.bv-c{cursor:pointer;transition:all .2s;border-radius:10px;position:relative;overflow:hidden}
+.bv-c:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 3px 12px rgba(255,215,0,.06)}
+.bv-c.active{transform:translateY(-1px)}
+.sub-btn{cursor:pointer;transition:all .15s}
+.sub-btn:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-1px)}
+.jc-toggle{cursor:pointer;transition:all .15s;width:100%;padding:4px 8px;margin:3px 0;border-radius:6px;border:1px solid rgba(255,215,0,.1);background:rgba(255,215,0,.02);color:var(--gold);font-size:7px;font-weight:700;text-align:center}
+.jc-toggle:hover{background:rgba(255,215,0,.06);border-color:var(--gold)}
+.top-nav-btn{cursor:pointer;transition:all .2s;position:relative}
+.top-nav-btn:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-1px)}
+.bvp-btn{cursor:pointer;transition:all .2s}
+.bvp-btn:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 3px 12px rgba(240,185,11,.2)}
+.bvp-btn:disabled{opacity:.4;cursor:not-allowed}
 </style>
 </head>
 <body>
@@ -377,40 +410,78 @@ function rM(){
 }
 function rC(m,mi){
   var al=m.analyses||[],l=al.length?al[al.length-1]:null,c=l?l.confidence:0;
-  var id='m'+mi,hc=cn(m.home),ac=cn(m.away),rs=m.result?m.result.split('-'):null;
-  // Card header
-  var h='<div class="pc" style="margin-bottom:4px"><div class="pc-head" onclick="tM(\''+id+'\')" style="padding:5px 8px"><span class="pc-ar" id="ar'+id+'">\u25b6</span>';
-  // Team info
-  h+='<span class="pc-tm" style="font-size:11px"><span class="fl">'+fl(hc)+'</span>'+hc+'<span class="vs" style="font-size:6px;margin:0 2px">vs</span><span class="fl">'+fl(ac)+'</span>'+ac+'</span>';
-  // Result or time
-  if(rs){h+='<span style="color:var(--gold);font-weight:700;font-size:10px;background:rgba(255,215,0,.06);padding:1px 6px;border-radius:4px">'+m.result+'</span>';}
-  else{h+='<span class="pc-ti" style="font-size:7px">'+(m.time||'')+'</span>';}
-  // Prediction snippet (one line)
-  if(l&&l.strategies){
-    var sk=cS||'balanced',s=l.strategies[sk];if(s){h+='<span style="font-size:7px;color:var(--gold);margin-left:3px">'+s.pick.replace(/@.*/,'').trim()+' @'+s.odds+'</span>';}
-  }
-  h+='</div><div class="pc-body" id="bd'+id+'">';
-  // Card body (expanded) - simplified
+  var id='m'+mi,hc=cn(m.home),ac=cn(m.away),hasNew=l&&l.isNew,rs=m.result?m.result.split('-'):null;
+  var h='<div class="pc"><div class="pc-head" onclick="tM(\''+id+'\')"><span class="pc-ar" id="ar'+id+'">▶</span><span class="pc-tm"><span class="fl">'+fl(hc)+'</span>'+hc+'<span class="vs">vs</span><span class="fl">'+fl(ac)+'</span>'+ac+'</span>'+(rs?'<span class="pc-ti" style="color:var(--gold);font-weight:700;background:rgba(255,215,0,.06);padding:1px 6px;border-radius:4px;font-size:9px">'+m.result+'</span>':'<span class="pc-ti">'+(m.date||'')+' '+(m.time||'')+'</span>')+(c?gaugeHTML(c):'')+(hasNew?'<span class="nt">NEW</span>':'')+'</div><div class="pc-body" id="bd'+id+'">';
+  if(m.changes){for(var ci=0;ci<m.changes.length;ci++){var cx=m.changes[ci];h+='<div class="chg" style="border-left-color:'+(cx.type==='good'?'var(--accent)':'var(--red)')+'">'+cx.icon+' <b>'+cx.label+'</b> '+cx.text+'</div>';}}
   if(l&&l.strategies){
     var sc=l.strategies,o=['conservative','balanced','aggressive'],cs={'conservative':'var(--c)','balanced':'var(--b)','aggressive':'var(--a)'};
-    h+='<div class="scards" style="gap:3px">';
+    h+='<div class="scards">';
     for(var si=0;si<o.length;si++){
       var sk=o[si],x=sc[sk];if(!x)continue;
-      h+='<div class="sc'+(sk===cS?' sel':'')+'" style="border-color:'+cs[sk]+';cursor:pointer;min-width:70px" onclick="cS=\''+sk+'\';rP()"><span class="sl" style="color:'+cs[sk]+'">'+x.label+'</span><span class="so" style="color:'+cs[sk]+'">@'+x.odds+'</span><span style="font-size:6px;color:var(--sub)">'+x.pick.replace(/@.*/,'').trim()+'</span></div>';
+      h+='<div class="sc'+(sk===cS?' sel':'')+'" style="border-color:'+cs[sk]+'" onclick="var ops=document.querySelectorAll(\'.pc-body.open\');var oids=[];ops.forEach(function(o){oids.push(o.id.replace(\'bd\',\'\'))});cS=\'\'+sk+\'\';rP();setTimeout(function(){oids.forEach(function(id){var b=document.getElementById(\'bd\'+id);if(b&&!b.classList.contains(\'open\')){b.classList.add(\'open\');var a=document.getElementById(\'ar\'+id);if(a)a.classList.add(\'open\');var ph=b.previousElementSibling;if(ph)ph.classList.add(\'ex\');}});},50)"><span class="sl" style="color:'+cs[sk]+'">'+x.label+'</span><span class="sp">'+x.pick.replace(/@\s*\d+\.?\d*/g,'').trim()+'</span><span class="so" style="color:'+cs[sk]+'">@'+x.odds+'</span><span class="sr">¥'+x.per_100+'</span></div>';
     }
     h+='</div>';
   }
-  // Deep analysis mini
-  if(l&&l.deepAnalysis){
-    var d=l.deepAnalysis;
-    h+='<div style="padding:2px 4px;font-size:6px;color:var(--sub);display:flex;gap:8px">';
-    h+='<span>FIFA: '+d.fifaRankHome+' vs '+d.fifaRankAway+'</span>';
-    if(d.probHome!==undefined)h+='<span>概率: '+d.probHome+'% / '+d.probDraw+'% / '+d.probAway+'%</span>';
-    h+='</div>';
+  // 可视化布局: 雷达图 + 概率条 + 进球区间 + 对位看板
+  if(l&&l.deepAnalysis){var rd=calcRadar(m,l);var rid='rd'+mi;radarData[mi]=rd;var deep=l.deepAnalysis;
+    var pH=deep.probHome||0,pD=deep.probDraw||0,pA=deep.probAway||0,hcName=cn(m.home),acName=cn(m.away);
+    h+='<div class="vis-row">';
+    // 左: 雷达图
+    h+='<div class="vis-left"><canvas id="'+rid+'" width="170" height="155" style="width:100%;border-radius:6px" data-hc="'+hc+'" data-ac="'+ac+'" data-mi="'+mi+'"></canvas></div>';
+    // 右: 概率条 + 进球区间
+    h+='<div class="vis-right">';
+    h+='<div class="pbar"><div class="pbar-label">'+hcName+'</div><div class="pbar-tr"><div class="pbar-fill" style="width:0%;background:var(--accent)" data-w="'+pH+'"></div></div><span class="pbar-val" style="color:var(--accent)">'+pH+'%</span></div>';
+    h+='<div class="pbar"><div class="pbar-label">平局</div><div class="pbar-tr"><div class="pbar-fill" style="width:0%;background:var(--gold)" data-w="'+pD+'"></div></div><span class="pbar-val" style="color:var(--gold)">'+pD+'%</span></div>';
+    h+='<div class="pbar"><div class="pbar-label">'+acName+'</div><div class="pbar-tr"><div class="pbar-fill" style="width:0%;background:var(--red)" data-w="'+pA+'"></div></div><span class="pbar-val" style="color:var(--red)">'+pA+'%</span></div>';
+    // 进球区间滑块
+    var gr=deep.goalRange||'1-3球';var grm=gr.match(/(\d+)/g);var gl=parseInt(grm&&grm[0])||1,gh=parseInt(grm&&grm[1])||3;gl=Math.max(0,Math.min(7,gl));gh=Math.max(gl,Math.min(7,gh));
+    var lp=gl/7*100,rp=(1-gh/7)*100,midp=(gl+gh)/14*100;
+    h+='<div class="grange"><div style="font-size:6px;color:var(--sub);margin-bottom:1px">总进球: <b style="color:var(--gold)">'+gr+'</b></div><div class="grange-track"><div class="grange-highlight" style="left:0%;width:0%" data-gl="'+gl+'" data-gh="'+gh+'"></div></div><div class="grange-ticks">';
+    for(var gi=0;gi<=7;gi++){h+='<span class="grange-tick">'+(gi===7?'7+':gi)+'</span>';}
+    h+='</div></div></div></div>';
+    // 对位看板
+    if(deep.keyBattle&&deep.keyBattle.trim()){
+      var kbParts=deep.keyBattle.split(' vs ');
+      h+='<div class="kb"><div class="kb-tit">⚔️ 关键对位</div>';
+      h+='<div class="kb-row"><span class="kbl">球员</span><span class="kbh">'+kbParts[0]+'</span><span style="color:var(--gold);font-weight:700;text-align:center;flex:0 0 16px">VS</span><span class="kba">'+kbParts[1]+'</span></div>';
+      h+='</div>';}
   }
+  h+='<button class="jc-toggle" onclick="tJ(this)">⬇️ 展开竞彩</button><div class="jc-panel">';
+  if(l&&l.jingcai_all){
+    var j=l.jingcai_all;
+    // SPF
+    h+='<div class="jc-section"><div class="jct">🎯 胜平负</div><div class="jc-row">';
+    for(var k in j.spf){var v=j.spf[k];h+='<span class="jc-item"><span class="jcn">'+(k==='Draw'?'平局':cn(k))+'</span><span class="jco jco-'+(v<=1.8?'g':v<=3.5?'y':'r')+'">'+v+'</span></span>';}
+    h+='</div></div>';
+    // Rangqiu - 新格式: {handicap:-2.5, 3:1.92, 1:4.50, 0:2.06}
+    if(j.rangqiu&&j.rangqiu.handicap!==undefined){
+      var hc=j.rangqiu.handicap,hcLabel=(hc>0?'+':'')+hc,rn={'3':'让胜','1':'让平','0':'让负'};
+      h+='<div class="jc-section"><div class="jct">📊 让球（'+hcLabel+'）</div><div class="jc-row">';
+      for(var ri=0;ri<3;ri++){var rk2=['3','1','0'][ri];var v2=j.rangqiu[rk2];if(v2)h+='<span class="jc-item"><span class="jcn">'+rn[rk2]+'</span><span class="jco jco-'+(v2<=2?'g':v2<=4?'y':'r')+'">'+v2+'</span></span>';}
+      h+='</div></div>';}
+    // Goals
+    if(j.total_goals){h+='<div class="jc-section"><div class="jct">⚽ 总进球（竞彩8选项）</div><div class="jc-row">';for(var k in j.total_goals){var v=j.total_goals[k];if(v===0||v===null)continue;var lk=k==='7+'?'7+':k;h+='<span class="jc-item"><span class="jcn">'+lk+'</span><span class="jco jco-'+(v<=4?'g':v<=8?'y':'r')+'">'+v+'</span></span>';}h+='</div></div>';}
+    // 欧盘大小球参考（非竞彩）
+    if(j.over_under){h+='<div class="jc-section" style="border-color:rgba(0,212,170,.15)"><div class="jct" style="color:var(--accent)">🌍 欧盘大小球参考</div><div class="jc-row">';
+    for(var k in j.over_under){var v=j.over_under[k];h+='<span class="jc-item"><span class="jcn">'+k+'</span><span class="jco jco-'+(v<=1.5?'g':v<=3?'y':'r')+'">'+v+'</span></span>';}
+    h+='</div><div style="font-size:5px;color:var(--sub);margin-top:2px;opacity:.6">*以上赔率来自欧洲交易所，非中国体育彩票官方数据，仅供参考</div></div>';}
+    // Scores
+    if(j.scores){h+='<div class="jc-section"><div class="jct">🥅 波胆</div><div class="jc-row">';var si3=0;for(var k in j.scores){if(si3++>=8)break;var v=j.scores[k];h+='<span class="jc-item"><span class="jcn">'+k+'</span><span class="jco jco-'+(v<=7?'g':v<=12?'y':'r')+'">'+v+'</span></span>';}h+='</div></div>';}
+    // Half Full
+    if(j.half_full){h+='<div class="jc-section"><div class="jct">🔄 半全场</div><div class="jc-row">';var si4=0;for(var k in j.half_full){if(si4++>=6)break;var v=j.half_full[k];h+='<span class="jc-item"><span class="jcn">'+k+'</span><span class="jco jco-'+(v<=4?'g':v<=8?'y':'r')+'">'+v+'</span></span>';}h+='</div></div>';}
+    // First half
+    if(j.first_half_spf){h+='<div class="jc-section"><div class="jct">⏱️ 上半场</div><div class="jc-row">';for(var k in j.first_half_spf){var v=j.first_half_spf[k];h+='<span class="jc-item"><span class="jcn">'+(k==='Draw'?'平局':cn(k))+'</span><span class="jco jco-'+(v<=2?'g':v<=4?'y':'r')+'">'+v+'</span></span>';}h+='</div></div>';}
+    // Chuan guan - 替换Draw胜为平
+    if(j.chuan_guan&&j.chuan_guan.length){h+='<div class="jc-section"><div class="jct">🔗 串关</div>';for(var si5=0;si5<Math.min(2,j.chuan_guan.length);si5++){var c=j.chuan_guan[si5];var picks2=Array.isArray(c.picks)?c.picks.join('×').replace(/Draw胜/g,'平').replace(/Draw/g,'平'):String(c.picks).replace(/Draw胜/g,'平').replace(/Draw/g,'平');h+='<div style="font-size:7px;padding:1px 0"><span style="color:var(--gold);font-weight:700">'+c.type+'</span>: '+picks2+' — <b style="font-size:8px">'+c.odds+'倍</b> <span style="color:var(--accent)">¥'+Math.round(100*c.odds)+'</span></div>';}h+='</div>';}
+  }
+  h+='</div>';
+  if(al.length){var aa=al[al.length-1];h+='<div style="border-left:2px solid var(--gold);padding:2px 0 2px 6px;margin:2px 0;font-size:9px"><div style="font-size:6px;color:var(--sub)">🕐 '+aa.time+'</div><div>'+aa.text+'</div>'+(aa.fullReport?'<div style="text-align:right;margin-top:1px"><button class="sub-btn" style="font-size:6px;padding:1px 5px" onclick="sFR(\''+fl(hc)+hc+' vs '+fl(ac)+ac+'\',\''+(aa.time||'')+'\',\''+encodeURIComponent(aa.fullReport)+'\')">📄 完整分析</button></div>':'')+'</div>';}
   h+='</div></div>';
   return h;
 }
+
+
+// ===== 仪表盘SVG =====
 function gaugeHTML(conf){
   var col=conf>=75?'var(--accent)':conf>=60?'var(--gold)':'var(--red)';
   var r=conf/100*180;
