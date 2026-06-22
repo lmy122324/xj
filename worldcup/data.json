@@ -19834,14 +19834,7 @@
     "total_matches": 0,
     "correct_h2h": 0,
     "accuracy_rate": "—",
-    "history": [
-      {
-        "date": "06/22",
-        "correct": 0,
-        "total": 0,
-        "rate": 0
-      }
-    ]
+    "history": []
   },
   "lastUpdate": "2026-06-22 20:14 CST",
   "nextUpdate": "2026-06-23 04:14 CST",
