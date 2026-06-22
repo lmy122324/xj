@@ -597,27 +597,33 @@ function rAS(el){
   var up=[],done=[];for(var i=0;i<AM.length;i++){var al=AM[i].analyses;if(!al||!al.length)continue;if(AM[i].result)done.push(AM[i]);else up.push(AM[i]);}
   if(cMi>=up.length)cMi=0;
   var h='';
-  // Future matches
   if(up.length){
-    h+='<div style="font-size:10px;font-weight:700;padding:4px 0 2px;color:var(--gold)">🔮 未赛 ('+up.length+'场)</div>';
+    h+='<div style="font-size:10px;font-weight:700;padding:4px 0 2px;color:var(--gold)">\ud83d\udd2e \u672a\u8d5b ('+up.length+'\u573a)</div>';
     h+='<select style="width:100%;padding:4px 6px;border:1px solid var(--card-border);border-radius:4px;background:var(--card);color:var(--text);font-size:9px;margin-bottom:4px" onchange="cMi=parseInt(this.value);rA()">';
     for(var i=0;i<up.length;i++){var m=up[i];h+='<option value="'+i+'"'+(i===cMi?' selected':'')+'>'+fl(cn(m.home))+cn(m.home)+' vs '+fl(cn(m.away))+cn(m.away)+' '+m.date+'</option>';}
     h+='</select>';
     var m=up[cMi],a=m.analyses&&m.analyses.length?m.analyses[m.analyses.length-1]:null;
     if(a&&a.fullReport)h+='<div class="rpt">'+a.fullReport+'</div>';
     else if(a)h+='<div style="font-size:9px;padding:6px">'+a.text+'</div>';
-    else h+='<div class="empty">⏳ 等待分析</div>';
-  }else{h+='<div class="empty">暂无未开始比赛</div>';}
-  // Completed matches (foldable)
+    else h+='<div class="empty">\u23f3 \u7b49\u5f85\u5206\u6790</div>';
+  }else{h+='<div class="empty">\u6682\u65e0\u672a\u5f00\u59cb\u6bd4\u8d5b</div>';}
   if(done.length){
-    h+='<div style="font-size:10px;font-weight:700;padding:6px 0 2px;color:var(--sub);cursor:pointer;user-select:none;margin-top:6px;border-top:1px solid var(--card-border);padding-top:6px" onclick="var p=this.nextElementSibling;var s=p.style.display;p.style.display=s===\'none\'?\'\':\'none\';this.textContent=this.textContent.startsWith(\'📋\')?\'▶ 已赛 ('+done.length+'场)\':\'📋 已赛 ('+done.length+'场)\'">📋 已赛 ('+done.length+'场)</div><div style="display:none">';
-    h+='<select style="width:100%;padding:4px 6px;border:1px solid var(--card-border);border-radius:4px;background:var(--card);color:var(--text);font-size:9px;margin-bottom:4px" onchange="var i=parseInt(this.value);var m=AM[i];var a=m.analyses[m.analyses.length-1];var el=this.parentElement.nextElementSibling;if(a&&a.fullReport){el.innerHTML=\'<div class=\"rpt\">\'+a.fullReport+'\'</div>\';}else if(a){el.innerHTML=a.text;}else{el.innerHTML=\'…\';}">';
-    for(var i=0;i<AM.length;i++){var m=AM[i];if(!m.result)continue;var al=m.analyses;if(!al||!al.length)continue;h+='<option value="'+i+'">'+fl(cn(m.home))+cn(m.home)+' vs '+fl(cn(m.away))+cn(m.away)+' '+m.result+'</option>';}
-    h+='</select><div class="rpt">点击展开查看分析</div></div>';
+    var f=done.length;
+    h+='<div class="done-hdr" onclick="var x=this.nextElementSibling;x.style.display=x.style.display===\"none\"?\"\":\"none\"" style="font-size:10px;font-weight:700;padding:6px 0 2px;color:var(--sub);cursor:pointer;user-select:none;margin-top:6px;border-top:1px solid var(--card-border);padding-top:6px">';
+    h+='\u25b6 \u5df2\u8d5b ('+f+'\u573a)</div>';
+    h+='<div style="display:none">';
+    for(var i=0;i<done.length;i++){
+      var m=done[i],a=m.analyses&&m.analyses.length?m.analyses[m.analyses.length-1]:null;
+      h+='<div class="pc" style="margin-bottom:4px"><div class="pc-head"><span class="pc-tm"><span class="fl">'+fl(cn(m.home))+'</span>'+cn(m.home)+'<span class="vs">vs</span><span class="fl">'+fl(cn(m.away))+'</span>'+cn(m.away)+'</span><span style="color:var(--gold);font-weight:700;font-size:9px">'+m.result+'</span></div>';
+      if(a&&a.fullReport)h+='<div class="rpt" style="padding:4px 8px 6px;max-height:300px;overflow-y:auto">'+a.fullReport+'</div>';
+      else if(a)h+='<div style="padding:4px 8px 6px;font-size:9px;color:var(--sub)">'+a.text+'</div>';
+      else h+='<div style="padding:4px 8px 6px;font-size:8px;color:var(--sub)">\u6682\u65e0\u5206\u6790\u6570\u636e</div>';
+      h+='</div>';
+    }
+    h+='</div>';
   }
   el.innerHTML=h;
-}
-var anaSel={};
+}var anaSel={};
 function diffText(a,b){
   var parts=[];
   if(!a||!b)return parts;
