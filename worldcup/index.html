@@ -299,6 +299,29 @@ body{
 .mdc-table .mdc-conf.m{color:var(--b)}
 .mdc-table .mdc-conf.l{color:var(--a)}
 
+
+/* === spacebet.io inspired === */
+.bv-item{border:1px solid var(--card-border);border-radius:10px;margin-bottom:5px;padding:6px 8px;transition:all .15s;background:var(--card)}
+.bv-item:hover{border-color:rgba(255,215,0,.12)}
+.odds-btn{flex:1;text-align:center;padding:5px 2px;border-radius:8px;cursor:pointer;transition:all .15s;font-size:7px;background:rgba(255,255,255,.015)}
+.odds-btn:hover{transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.odds-btn .lb{font-size:6px;color:var(--sub);margin-bottom:1px}
+.odds-btn .od{font-size:11px;font-weight:800}
+.odds-btn .sub{font-size:5px;color:var(--sub);opacity:.6;margin-top:1px}
+.stratag{display:flex;gap:3px;padding:2px 0}
+.stratag:not(:last-child){border-bottom:1px solid rgba(255,255,255,.02);margin-bottom:2px;padding-bottom:2px}
+.stratag-lb{font-size:6px;font-weight:700;width:36px;display:flex;align-items:center;flex-shrink:0}
+.bet-slip{background:var(--card);border:1px solid var(--card-border);border-radius:10px;padding:8px;margin-top:4px}
+.bet-slip-item{display:flex;align-items:center;gap:4px;padding:3px 0;font-size:7px;border-bottom:1px solid rgba(255,255,255,.03)}
+.bet-slip-item:last-child{border-bottom:none}
+.bet-slip-remove{width:16px;height:16px;border-radius:50%;border:1px solid rgba(255,71,87,.3);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:8px;color:var(--red);transition:all .15s;flex-shrink:0}
+.bet-slip-remove:hover{background:rgba(255,71,87,.1);border-color:var(--red)}
+.bet-summary{display:flex;justify-content:space-between;padding:4px 0;font-size:8px}
+.bet-summary .val{font-weight:700;font-size:12px}
+.mode-tab{padding:4px 12px;border-radius:8px;cursor:pointer;font-size:8px;font-weight:600;transition:all .15s}
+.mode-tab:hover{transform:translateY(-1px)}
+.mode-tab.active{background:rgba(255,215,0,.08);color:var(--gold);border:1px solid var(--gold)}
+.mode-tab:not(.active){color:var(--sub);border:1px solid var(--card-border)}
 </style>
 </head>
 <body>
@@ -1131,80 +1154,90 @@ function rB(){
   var tdM=[];
   for(var i=0;i<AM.length;i++){var m=AM[i];if(!m.result){for(var di=0;di<dc.length;di++){if(m.date===dc[di]){tdM.push(m);break;}}}}
   var isParlay=typeof selMode==='undefined'?true:selMode;
-  var h='<div class="bv"><div class="bv-h">💰 购彩建议</div>';
+  var S={'conservative':{'lb':'🛡️ 保守','cl':'var(--c)','ds':'稳胆'},'balanced':{'lb':'⚡ 均衡','cl':'var(--b)','ds':'博中'},'aggressive':{'lb':'🔥 激进','cl':'var(--a)','ds':'冲高'}};
+  var h='<div class="bv"><div class="bv-h">💰 购彩建议</div><div class="bv-sub">点赔率加入投注单 · 支持跨策略混串</div>';
   // Mode toggle
-  h+='<div style="display:flex;gap:4px;margin-bottom:4px;padding:3px 8px;border:1px solid var(--card-border);border-radius:6px;font-size:7px;align-items:center">';
-  h+='<span style="color:var(--sub)">投注模式:</span>';
-  h+='<span style="cursor:pointer;padding:2px 10px;border-radius:4px;font-weight:'+(isParlay?'700':'400')+';color:'+(isParlay?'var(--gold)':'var(--sub)')+';background:'+(isParlay?'rgba(255,215,0,.08)':'transparent')+'" onclick="selMode=true;rB()">🎯 串关</span>';
-  h+='<span style="cursor:pointer;padding:2px 10px;border-radius:4px;font-weight:'+(isParlay?'400':'700')+';color:'+(isParlay?'var(--sub)':'var(--accent)')+';background:'+(isParlay?'transparent':'rgba(0,212,170,.08)')+'" onclick="selMode=false;rB()">🎯 单关</span>';
-  h+='<span style="margin-left:auto;font-size:6px;color:var(--sub)">'+(isParlay?'选≥2场':'选1场')+'</span>';
+  h+='<div style="display:flex;gap:4px;margin-bottom:4px;padding:3px 8px;border:1px solid var(--card-border);border-radius:8px;font-size:7px;align-items:center">';
+  h+='<span style="color:var(--sub)">玩法:</span>';
+  h+='<span class="mode-tab'+(isParlay?' active':'')+'" onclick="selMode=true;rB()">🔗 串关 (选≥2)</span>';
+  h+='<span class="mode-tab'+(isParlay?'':' active')+'" onclick="selMode=false;rB()">🎯 单关 (选1)</span>';
+  h+='<span style="margin-left:auto;font-size:6px;color:var(--sub)">'+tdM.length+'场可选</span>';
   h+='</div>';
-  h+='<div class="bv-sub" style="margin-bottom:3px">点击赔率加入投注单 · 共'+tdM.length+'场比赛</div>';
-  // Match list with clickable odds buttons
+  // Match list - each with 3 strategy rows
   for(var i=0;i<tdM.length;i++){
     var m=tdM[i],a=m.analyses&&m.analyses.length?m.analyses[m.analyses.length-1]:null;
-    if(!a)continue;
+    if(!a||!a.strategies)continue;
     var hc=cn(m.home),ac=cn(m.away);
-    // Get odds - try jingcai_all.spf first, fall back to strategies
-    var oddsH={},jcO=null;
-    if(a&&a.jingcai_all&&a.jingcai_all.spf)jcO=a.jingcai_all.spf;
-    // Build SPF options: [label, id_key, odds, strategy_name]
-    var spfOpts=[];
-    // Home
-    var home_odds=0,draw_odds=0,away_odds=0;
-    if(jcO){
-      home_odds=jcO[hc]||jcO[m.home]||jcO[m.home_en||'']||0;
-      draw_odds=jcO['Draw']||jcO['draw']||0;
-      away_odds=jcO[ac]||jcO[m.away]||jcO[m.away_en||'']||0;
-    }
-    // Fallback: use strategies
     var strs=a.strategies;
-    if(!home_odds&&strs){
-      for(var sk in strs){
-        var o=strs[sk];if(!o||!o.odds)continue;
-        if(sk==='conservative')home_odds=o.odds;
-        else if(sk==='balanced')draw_odds=o.odds;
-        else away_odds=o.odds;
-        break;
-      }
-    }
-    // Ensure min odds
-    if(!home_odds||home_odds<1)home_odds=1.5;
-    if(!draw_odds||draw_odds<1)draw_odds=3.5;
-    if(!away_odds||away_odds<1)away_odds=6.0;
-    // Card
-    h+='<div style="border:1px solid var(--card-border);border-radius:8px;margin-bottom:4px;padding:5px 6px">';
-    h+='<div style="display:flex;align-items:center;margin-bottom:3px">';
-    h+='<div style="flex:1;font-size:8px;font-weight:700"><span class="fl">'+fl(hc)+'</span>'+hc+' <span style="color:var(--sub);font-weight:400">vs</span> <span class="fl">'+fl(ac)+'</span>'+ac+'</div>';
+    h+='<div class="bv-item">';
+    h+='<div style="display:flex;align-items:center;margin-bottom:3px;gap:4px">';
+    h+='<div style="flex:1;font-size:8px;font-weight:600"><span class="fl">'+fl(hc)+'</span>'+hc+' <span style="color:var(--sub)">vs</span> <span class="fl">'+fl(ac)+'</span>'+ac+'</div>';
     h+='<div style="font-size:6px;color:var(--sub)">'+m.date+' '+m.time+'</div>';
     h+='</div>';
-    // Odds buttons row - clickable
-    h+='<div style="display:flex;gap:3px">';
-    // Home win
-    var hId=m.home+m.away+'_H';
-    var hSel=selParlay[hId]?'1px solid var(--c)':'1px solid var(--card-border)';
-    var hBg=selParlay[hId]?'rgba(0,212,170,.08)':'transparent';
-    h+='<div style="flex:1;text-align:center;padding:4px 2px;border:'+hSel+';border-radius:6px;background:'+hBg+';cursor:pointer" onclick="var k=\''+hId+'\';if(selParlay[k]){delete selParlay[k];}else{selParlay[k]={pick:\''+hc+'胜\',odds:'+home_odds+'}};rB()">';
-    h+='<div style="font-size:6px;color:var(--sub)">'+hc+'胜</div>';
-    h+='<div style="font-size:9px;font-weight:700;color:var(--c)">@'+(home_odds)+'</div>';
+    // Strategy rows
+    var skList=['conservative','balanced','aggressive'];
+    for(var si=0;si<skList.length;si++){
+      var sk=skList[si],opt=strs[sk];if(!opt)continue;
+      var skInfo=S[sk];
+      // Generate multiple clickable options for this strategy
+      var opts=[];  // [{id, pick, odds}]
+      // Main pick
+      var mainId=m.home+m.away+'_'+sk+'_main';
+      opts.push({id:mainId, pick:opt.pick, odds:opt.odds, label:'推荐'});
+      // Additional options from jingcai_all (if available)
+      var jc=a.jingcai_all;
+      if(jc){
+        // For conservative: add under goals
+        if(sk==='conservative'&&jc.total_goals){
+          // Under 2.5
+          var underOdds=jc.total_goals['0']||jc.total_goals['1']||jc.total_goals['2']||0;
+          if(underOdds&&underOdds>1){
+            var uId=m.home+m.away+'_'+sk+'_under';
+            opts.push({id:uId, pick:'总进球<2.5', odds:underOdds, label:'小球'});
+          }
+        }
+        // For balanced: add handicap option
+        if(sk==='balanced'&&jc.rangqiu&&jc.rangqiu.handicap!==undefined){
+          var hcVal=jc.rangqiu.handicap;
+          var hcHomeOdds=jc.rangqiu['3']||0;
+          if(hcHomeOdds&&hcHomeOdds>1){
+            var hId=m.home+m.away+'_'+sk+'_hc';
+            opts.push({id:hId, pick: m.home+'让'+(hcVal>0?'+':'')+hcVal+'胜', odds:hcHomeOdds, label:'让球'});
+          }
+        }
+        // For aggressive: add over goals
+        if(sk==='aggressive'&&jc.total_goals&&jc.over_under){
+          var overOdds=jc.over_under['Over 2.5']||jc.over_under['Over']||0;
+          if(!overOdds){
+            // Try from total_goals: sum of 3+ goals
+            var sum=0,cnt=0;
+            for(var gk in jc.total_goals){var gv=parseInt(gk);if(gv>=3&&jc.total_goals[gk]){sum+=jc.total_goals[gk];cnt++;}}
+            if(cnt>0)overOdds=Math.round(sum/cnt*100)/100;
+          }
+          if(overOdds>1){
+            var oId=m.home+m.away+'_'+sk+'_over';
+            opts.push({id:oId, pick:'总进球>2.5', odds:overOdds, label:'大球'});
+          }
+        }
+      }
+      // Render this strategy row
+      if(opts.length===0)continue;
+      h+='<div class="stratag">';
+      h+='<div class="stratag-lb" style="color:'+skInfo.cl+'">'+skInfo.lb+'</div>';
+      for(var oi=0;oi<opts.length;oi++){
+        var o=opts[oi];
+        var isSel=selParlay[o.id]?'':'';
+        var selStyle=selParlay[o.id]?'2px solid '+skInfo.cl:'1px solid var(--card-border)';
+        var selBg=selParlay[o.id]?skInfo.cl+'15':'transparent';
+        h+='<div class="odds-btn" style="border:'+selStyle+';background:'+selBg+';position:relative" onclick="var k=\''+o.id+'\';if(selParlay[k]){delete selParlay[k];}else{selParlay[k]={pick:\''+(o.pick.replace(/[\'"]/g,''))+'\',odds:'+o.odds+'}};rB()">';
+        h+='<div class="lb">'+o.label+'</div>';
+        h+='<div class="od" style="color:'+skInfo.cl+'">@'+o.odds+'</div>';
+        h+='<div class="sub">'+o.pick.substring(0,12)+'</div>';
+        h+='</div>';
+      }
+      h+='</div>';
+    }
     h+='</div>';
-    // Draw
-    var dId=m.home+m.away+'_D';
-    var dSel=selParlay[dId]?'1px solid var(--b)':'1px solid var(--card-border)';
-    var dBg=selParlay[dId]?'rgba(255,215,0,.08)':'transparent';
-    h+='<div style="flex:1;text-align:center;padding:4px 2px;border:'+dSel+';border-radius:6px;background:'+dBg+';cursor:pointer" onclick="var k=\''+dId+'\';if(selParlay[k]){delete selParlay[k];}else{selParlay[k]={pick:\''+hc+' 平 '+ac+'\',odds:'+draw_odds+'}};rB()">';
-    h+='<div style="font-size:6px;color:var(--sub)">平局</div>';
-    h+='<div style="font-size:9px;font-weight:700;color:var(--b)">@'+(draw_odds)+'</div>';
-    h+='</div>';
-    // Away win
-    var aId=m.home+m.away+'_A';
-    var aSel=selParlay[aId]?'1px solid var(--a)':'1px solid var(--card-border)';
-    var aBg=selParlay[aId]?'rgba(255,71,87,.08)':'transparent';
-    h+='<div style="flex:1;text-align:center;padding:4px 2px;border:'+aSel+';border-radius:6px;background:'+aBg+';cursor:pointer" onclick="var k=\''+aId+'\';if(selParlay[k]){delete selParlay[k];}else{selParlay[k]={pick:\''+ac+'胜\',odds:'+away_odds+'}};rB()">';
-    h+='<div style="font-size:6px;color:var(--sub)">'+ac+'胜</div>';
-    h+='<div style="font-size:9px;font-weight:700;color:var(--a)">@'+(away_odds)+'</div>';
-    h+='</div>';
-    h+='</div></div>';
   }
   // Bet slip
   var pKeys=Object.keys(selParlay),pOdds=1,pCount=pKeys.length,ptxt='';
@@ -1214,25 +1247,25 @@ function rB(){
   }
   pOdds=Math.round(pOdds*100)/100;
   var pRet=Math.round(100*pOdds);
-  h+='<div class="bv-parlay"><div class="bvp-h">📋 投注单 ('+pCount+'项)</div>';
+  h+='<div class="bet-slip"><div style="display:flex;align-items:center;margin-bottom:4px">';
+  h+='<span style="font-size:9px;font-weight:700;color:var(--gold)">📋 投注单</span>';
+  h+='<span style="margin-left:auto;font-size:6px;color:var(--sub)">'+(pCount>0?pCount+'项':'(空)')+'</span>';
+  h+='</div>';
   if(pCount>0){
-    // Show each selected item
     for(var pi=0;pi<pKeys.length;pi++){
       var k=pKeys[pi],item=selParlay[k];if(!item)continue;
-      h+='<div style="display:flex;align-items:center;gap:4px;padding:2px 0;font-size:7px;border-bottom:1px solid rgba(255,255,255,.03)">';
-      h+='<span style="cursor:pointer;color:var(--red);font-size:8px" onclick="delete selParlay[\''+k+'\'];rB()">✕</span>';
+      h+='<div class="bet-slip-item">';
+      h+='<div class="bet-slip-remove" onclick="delete selParlay[\''+k+'\'];rB()">✕</div>';
       h+='<span style="flex:1">'+item.pick+'</span>';
-      h+='<span style="color:var(--gold);font-weight:700">@'+item.odds+'</span>';
+      h+='<span style="color:var(--gold);font-weight:600">@'+item.odds+'</span>';
       h+='</div>';
     }
-    h+='<div class="bvp-row" style="margin-top:3px"><span>'+(isParlay?'串关赔率':'单关赔率')+'</span><span style="color:var(--gold);font-weight:700;font-size:12px">'+pOdds+'倍</span></div>';
-    h+='<div class="bvp-row"><span>每100元回报</span><span style="color:var(--accent);font-weight:700;font-size:12px">¥'+pRet+'</span></div>';
-    h+='<div style="display:flex;gap:4px;margin-top:4px">';
-    h+='<button class="bvp-btn" style="flex:1" onclick="cP()">生成投注单</button>';
-    h+='<button class="sub-btn" style="font-size:7px;padding:4px 8px" onclick="selParlay={};rB()">清空</button>';
-    h+='</div>';
+    h+='<div class="bet-summary"><span>'+(isParlay?'串关赔率':'单关赔率')+'</span><span class="val" style="color:var(--gold)">'+pOdds+'倍</span></div>';
+    h+='<div class="bet-summary" style="border-top:1px solid var(--card-border);padding-top:4px"><span>每100元回报</span><span class="val" style="color:var(--accent)">¥'+pRet+'</span></div>';
+    h+='<button class="bvp-btn" onclick="cP()" style="margin-top:4px">'+(isParlay?'生成串关投注单':'生成单关投注单')+'</button>';
+    h+='<div style="margin-top:2px;text-align:right"><span style="font-size:6px;color:var(--sub);cursor:pointer" onclick="selParlay={};rB()">清空全部</span></div>';
   }else{
-    h+='<div class="bvp-row"><span style="color:var(--sub)">点击上方赔率加入投注单</span></div>';
+    h+='<div style="font-size:7px;color:var(--sub);padding:6px 0;text-align:center">点击上方赔率加入投注单</div>';
   }
   h+='</div></div>';
   el.innerHTML=h;
@@ -1265,9 +1298,13 @@ function cP(){
   for(var i=0;i<pKeys.length;i++){
     var item=selParlay[pKeys[i]];if(!item)continue;
     pOdds*=item.odds;
-    var sn="保守";if(item.strategy==="balanced")sn="均衡";else if(item.strategy==="aggressive")sn="激进";
     txt+=item.pick+(i<pKeys.length-1?" × ":"");
-    details.push(item.pick+" @"+item.odds+" ("+sn+")");
+    var stratLabel="";
+    var k=pKeys[i];
+    if(k.indexOf("_conservative_")>0)stratLabel="保守";
+    else if(k.indexOf("_balanced_")>0)stratLabel="均衡";
+    else if(k.indexOf("_aggressive_")>0)stratLabel="激进";
+    details.push(item.pick+" @"+item.odds+(stratLabel?" ("+stratLabel+")":""));
   }
   pOdds=Math.round(pOdds*100)/100;
   var ret=Math.round(100*pOdds);
