@@ -860,9 +860,9 @@ function rB(){
   // Quick switch strategy
   h+='<div style="margin-top:4px;padding:4px;border:1px solid var(--card-border);border-radius:6px;font-size:7px;text-align:center">';
   h+='<span style="color:var(--sub)">策略切换: </span>';
-  var sl=['conservative','balanced','aggressive'],slb={conservative:'\ud83d\udde1\ufe0f 保守',balanced:'\u26a1 均衡',aggressive:'\ud83d\udd25 激进'};
+  var sl=['conservative','balanced','aggressive'],slb={conservative:'\ud83d\udde1\ufe0f 保守',balanced:'\u26a1 均衡',aggressive:'\ud83d\udd25 激进'},scolors={conservative:'var(--c)',balanced:'var(--b)',aggressive:'var(--a)'};
   for(var si=0;si<sl.length;si++){
-    var cl=sl[si]===cS?'color:var(--gold);font-weight:700':'color:var(--sub)';
+    var cl=sl[si]===cS?'color:'+scolors[sl[si]]+';font-weight:700':'color:var(--sub)';
     h+='<span style="cursor:pointer;'+cl+';padding:1px 6px;border-right:'+(si<sl.length-1?'1px solid var(--card-border)':'none')+'" onclick="cS=\''+sl[si]+'\';rB()">'+slb[sl[si]]+'</span>';
   }
   h+='</div></div></div>';
