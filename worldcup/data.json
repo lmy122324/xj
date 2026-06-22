@@ -18351,15 +18351,10 @@
     }
   ],
   "prediction_accuracy": {
-    "total_matches": 1,
+    "total_matches": 0,
     "correct_h2h": 0,
-    "accuracy_rate": "0.0%",
-    "history": [
-      {
-        "date": "06/20",
-        "rate": 0
-      }
-    ]
+    "accuracy_rate": "—",
+    "history": []
   },
   "lastUpdate": "2026-06-22 17:44 CST",
   "nextUpdate": "2026-06-23 01:44 CST",
