@@ -1209,7 +1209,7 @@ function rB(){
     h+='<div class="bv-item '+scl+'"><div class="bvi-ck '+scl+' '+checked+'" onclick="togP(\''+mid+'\',\''+(sp.replace(/[\'\"]/g,''))+'\','+((f?f.odds:1.5))+',this,this.parentElement)">'+(checked?'✓':'')+'</div><div class="bvi-m"><span class="fl">'+fl(hc)+'</span>'+hc+' vs <span class="fl">'+fl(ac)+'</span>'+ac+'<div class="bv-opts">'+optsHtml+'</div><div style="font-size:6px;color:var(--sub);margin-top:1px">'+m.date+' '+m.time+'</div></div><div style="text-align:right"><div class="bvi-'+scl+'" style="font-size:9px">'+so+'</div><div style="font-size:6px;color:var(--sub)">'+sp+'</div></div></div>';
   }
   // Parlay
-  var pKeys=Object.keys(selParlay),pOdds=1,pCount=pKeys.length,ptxt='';
+  var pKeys=Object.keys(selParlay),pOdds=1,pCount=pKeys.length,ptxt='',pIsSingle=typeof selMode==='undefined'?false:!selMode;
   for(var pi=0;pi<pKeys.length;pi++){pOdds*=selParlay[pKeys[pi]].odds;ptxt+=selParlay[pKeys[pi]].pick+(pi<pKeys.length-1?' x ':'');}
   pOdds=Math.round(pOdds*100)/100;
   var pRet=Math.round(100*pOdds);
