@@ -345,8 +345,11 @@ function rP(){
 }
 function rM(){
   if(!AM.length)return '<div class="empty">暂无赛程</div>';
-  var days={},mi=0;
-  for(var i=0;i<AM.length;i++){var m=AM[i];var d=m.date||'?';if(!days[d])days[d]=[];days[d].push(m);}
+  var days={},mi=0,doneM=[],futureM=[];
+  for(var i=0;i<AM.length;i++){var m=AM[i];if(m.result){doneM.push(m);}else{futureM.push(m);}}
+  // Group future matches by day
+  var days={};
+  for(var i=0;i<futureM.length;i++){var m=futureM[i];var d=m.date||'?';if(!days[d])days[d]=[];days[d].push(m);}
   var sd=Object.keys(days).sort(function(a,b){var ap=a.split('/'),bp=b.split('/');var ma=parseInt(ap[0]),mb=parseInt(bp[0]),da=parseInt(ap[1]),db=parseInt(bp[1]);return ma!==mb?ma-mb:da-db;});
   var tD=gT(),tD2=String(parseInt(tD.split('/')[0]))+'/'+String(parseInt(tD.split('/')[1]));
   var h='';
@@ -359,6 +362,12 @@ function rM(){
     for(var mi2=0;mi2<ms.length;mi2++)h+=rC(ms[mi2],mi++);
     h+='</div>';
   }
+  // Completed matches (collapsible)
+  if(doneM.length){
+    h+='<div class="day-head" style="font-size:12px;font-weight:700;padding:5px 0 2px;color:var(--sub);cursor:pointer;user-select:none" onclick="var p=this.nextElementSibling;var s=p.style.display;p.style.display=s===\'none\'?\'\':\'none\';this.textContent=this.textContent.startsWith(\'📋\')?\'▶ 已赛 ('+doneM.length+'场)\':\'📋 已赛 ('+doneM.length+'场)\'">📋 已赛 ('+doneM.length+'场)</div><div class="pc-grid" style="display:none">';
+    for(var di=0;di<doneM.length;di++)h+=rC(doneM[di],mi++);
+    h+='</div>';
+  }
   if(cF==='changes'){
     var has=false;h='<div style="font-size:12px;font-weight:700;padding:5px 0 2px;color:var(--gold)">🔄 变化追踪</div>';
     for(var i=0;i<AM.length;i++){if(AM[i].changes&&AM[i].changes.length){has=true;h+=rC(AM[i],i);}}
@@ -368,8 +377,8 @@ function rM(){
 }
 function rC(m,mi){
   var al=m.analyses||[],l=al.length?al[al.length-1]:null,c=l?l.confidence:0;
-  var id='m'+mi,hc=cn(m.home),ac=cn(m.away),hasNew=l&&l.isNew;
-  var h='<div class="pc"><div class="pc-head" onclick="tM(\''+id+'\')"><span class="pc-ar" id="ar'+id+'">▶</span><span class="pc-tm"><span class="fl">'+fl(hc)+'</span>'+hc+'<span class="vs">vs</span><span class="fl">'+fl(ac)+'</span>'+ac+'</span><span class="pc-ti">'+(m.date||'')+' '+(m.time||'')+'</span>'+(c?gaugeHTML(c):'')+(hasNew?'<span class="nt">NEW</span>':'')+'</div><div class="pc-body" id="bd'+id+'">';
+  var id='m'+mi,hc=cn(m.home),ac=cn(m.away),hasNew=l&&l.isNew,rs=m.result?m.result.split('-'):null;
+  var h='<div class="pc"><div class="pc-head" onclick="tM(\''+id+'\')"><span class="pc-ar" id="ar'+id+'">▶</span><span class="pc-tm"><span class="fl">'+fl(hc)+'</span>'+hc+'<span class="vs">vs</span><span class="fl">'+fl(ac)+'</span>'+ac+'</span>'+(rs?'<span class="pc-ti" style="color:var(--gold);font-weight:700;background:rgba(255,215,0,.06);padding:1px 6px;border-radius:4px;font-size:9px">'+m.result+'</span>':'<span class="pc-ti">'+(m.date||'')+' '+(m.time||'')+'</span>')+(c?gaugeHTML(c):'')+(hasNew?'<span class="nt">NEW</span>':'')+'</div><div class="pc-body" id="bd'+id+'">';
   if(m.changes){for(var ci=0;ci<m.changes.length;ci++){var cx=m.changes[ci];h+='<div class="chg" style="border-left-color:'+(cx.type==='good'?'var(--accent)':'var(--red)')+'">'+cx.icon+' <b>'+cx.label+'</b> '+cx.text+'</div>';}}
   if(l&&l.strategies){
     var sc=l.strategies,o=['conservative','balanced','aggressive'],cs={'conservative':'var(--c)','balanced':'var(--b)','aggressive':'var(--a)'};
