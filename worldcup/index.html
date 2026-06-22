@@ -594,10 +594,12 @@ function rA(){
   if(cAv==='s')rAS(el);else rAT(el);
 }
 function rAS(el){
-  var up=[];for(var i=0;i<AM.length;i++){var al=AM[i].analyses;if(al&&al.length)up.push(AM[i]);}
+  var up=[],done=[];for(var i=0;i<AM.length;i++){var al=AM[i].analyses;if(!al||!al.length)continue;if(AM[i].result)done.push(AM[i]);else up.push(AM[i]);}
   if(cMi>=up.length)cMi=0;
   var h='';
+  // Future matches
   if(up.length){
+    h+='<div style="font-size:10px;font-weight:700;padding:4px 0 2px;color:var(--gold)">🔮 未赛 ('+up.length+'场)</div>';
     h+='<select style="width:100%;padding:4px 6px;border:1px solid var(--card-border);border-radius:4px;background:var(--card);color:var(--text);font-size:9px;margin-bottom:4px" onchange="cMi=parseInt(this.value);rA()">';
     for(var i=0;i<up.length;i++){var m=up[i];h+='<option value="'+i+'"'+(i===cMi?' selected':'')+'>'+fl(cn(m.home))+cn(m.home)+' vs '+fl(cn(m.away))+cn(m.away)+' '+m.date+'</option>';}
     h+='</select>';
@@ -606,6 +608,13 @@ function rAS(el){
     else if(a)h+='<div style="font-size:9px;padding:6px">'+a.text+'</div>';
     else h+='<div class="empty">⏳ 等待分析</div>';
   }else{h+='<div class="empty">暂无未开始比赛</div>';}
+  // Completed matches (foldable)
+  if(done.length){
+    h+='<div style="font-size:10px;font-weight:700;padding:6px 0 2px;color:var(--sub);cursor:pointer;user-select:none;margin-top:6px;border-top:1px solid var(--card-border);padding-top:6px" onclick="var p=this.nextElementSibling;var s=p.style.display;p.style.display=s===\'none\'?\'\':\'none\';this.textContent=this.textContent.startsWith(\'📋\')?\'▶ 已赛 ('+done.length+'场)\':\'📋 已赛 ('+done.length+'场)\'">📋 已赛 ('+done.length+'场)</div><div style="display:none">';
+    h+='<select style="width:100%;padding:4px 6px;border:1px solid var(--card-border);border-radius:4px;background:var(--card);color:var(--text);font-size:9px;margin-bottom:4px" onchange="var i=parseInt(this.value);var m=AM[i];var a=m.analyses[m.analyses.length-1];var el=this.parentElement.nextElementSibling;if(a&&a.fullReport){el.innerHTML=\'<div class=\"rpt\">\'+a.fullReport+'\'</div>\';}else if(a){el.innerHTML=a.text;}else{el.innerHTML=\'…\';}">';
+    for(var i=0;i<AM.length;i++){var m=AM[i];if(!m.result)continue;var al=m.analyses;if(!al||!al.length)continue;h+='<option value="'+i+'">'+fl(cn(m.home))+cn(m.home)+' vs '+fl(cn(m.away))+cn(m.away)+' '+m.result+'</option>';}
+    h+='</select><div class="rpt">点击展开查看分析</div></div>';
+  }
   el.innerHTML=h;
 }
 var anaSel={};
