@@ -19833,8 +19833,14 @@
   "prediction_accuracy": {
     "total_matches": 0,
     "correct_h2h": 0,
-    "accuracy_rate": "—",
-    "history": []
+    "accuracy_rate": "追踪中",
+    "note": "预测系统从06/23比赛开始启用，之前的比赛无历史预测数据",
+    "history": [
+      {
+        "date": "06/23",
+        "note": "首轮预测开始"
+      }
+    ]
   },
   "lastUpdate": "2026-06-22 20:14 CST",
   "nextUpdate": "2026-06-23 04:14 CST",
