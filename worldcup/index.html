@@ -547,54 +547,95 @@ function drawRadar(canvasId, homeLabel, awayLabel, homeData, awayData, animated)
   cv.width=dispW*dpr;cv.height=dispH*dpr;
   cv.style.width=dispW+'px';cv.style.height=dispH+'px';
   var ctx=cv.getContext('2d');ctx.scale(dpr,dpr);
-  var W=dispW, H=dispH, cx=W/2, cy=H/2, R=Math.min(cx,cy)-20;
-  var cs=getComputedStyle(document.body);var textColor=cs.getPropertyValue('--text').trim()||'#e8e0f0';
-  var bgColor=cs.getPropertyValue('--card').trim()||'#141128';
-  var cardBorder=cs.getPropertyValue('--card-border').trim()||'#2a2040';
-  var labels=['进攻','防守','控场','状态','关键球员','战术'];var angles=[];
-  for(var i=0;i<6;i++){angles.push((Math.PI*2*i/6)-Math.PI/2);}
+  var W=dispW, H=dispH, cx=W/2, cy=H/2, R=Math.min(cx,cy)-22;
+  var cs=getComputedStyle(document.body);
+  var textColor=cs.getPropertyValue('--text').trim()||'#e8e0f0';
+  var bgColor='transparent';
+  var gl=cs.getPropertyValue('--gold').trim()||'#f0b90b';
+  var ac=cs.getPropertyValue('--accent').trim()||'#00c49a';
+  var sub=cs.getPropertyValue('--sub').trim()||'#5f5b72';
+  var labels=[['\u8FDB\u653B','ATK'],['\u9632\u5B88','DEF'],['\u63A7\u573A','MID'],['\u72B6\u6001','FRM'],['\u5173\u952E\u7403\u5458','KEY'],['\u6218\u672F','TAC']];
+  var angles=[];for(var i=0;i<6;i++){angles.push((Math.PI*2*i/6)-Math.PI/2);}
   function drawFrame(t){
     ctx.clearRect(0,0,W,H);
-    ctx.fillStyle=bgColor;ctx.strokeStyle=cardBorder;ctx.lineWidth=1;
-    ctx.strokeRect(1,1,W-2,H-2);
-    // Grid
+    // Outer glow
+    var grd=ctx.createRadialGradient(cx,cy,R*0.3,cx,cy,R*1.2);
+    grd.addColorStop(0,'rgba(255,215,0,0)');
+    grd.addColorStop(0.7,'rgba(255,215,0,0)');
+    grd.addColorStop(1,'rgba(255,215,0,.03)');
+    ctx.fillStyle=grd;ctx.fillRect(0,0,W,H);
+    // Grid rings with labels
     for(var ring=1;ring<=4;ring++){
-      ctx.beginPath();var r=R*ring/4;
-      for(var i=0;i<=6;i++){var a=angles[i%6];var x=cx+r*Math.cos(a);var y=cy+r*Math.sin(a);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);}
-      ctx.strokeStyle='rgba(255,255,255,.06)';ctx.lineWidth=.5;ctx.stroke();
-    }
-    // Axis labels
-    ctx.font='7px sans-serif';ctx.fillStyle=textColor;ctx.textAlign='center';
-    for(var i=0;i<6;i++){var a=angles[i];var x=cx+(R+8)*Math.cos(a);var y=cy+(R+8)*Math.sin(a);ctx.fillText(labels[i],x,y+2.5);}
-    // Plot with animation
-    var p=t;
-    function plotTeam(data,color,fillColor){
+      var r=R*ring/4;
       ctx.beginPath();
-      for(var i=0;i<=6;i++){var idx=i%6;var a=angles[idx];var val=((data[idx]||0)/100)*p;var x=cx+R*val*Math.cos(a);var y=cy+R*val*Math.sin(a);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);}
-      ctx.closePath();ctx.fillStyle=fillColor;ctx.fill();ctx.strokeStyle=color;ctx.lineWidth=1.5;ctx.stroke();
-      for(var i=0;i<6;i++){var a=angles[i];var val=((data[i]||0)/100)*p;var x=cx+R*val*Math.cos(a);var y=cy+R*val*Math.sin(a);ctx.beginPath();ctx.arc(x,y,2,0,Math.PI*2);ctx.fillStyle=color;ctx.fill();}
+      for(var i=0;i<=6;i++){var a=angles[i%6];var x=cx+r*Math.cos(a);var y=cy+r*Math.sin(a);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);}
+      ctx.closePath();
+      ctx.strokeStyle=ring===4?'rgba(255,215,0,.12)':'rgba(255,255,255,.04)';
+      ctx.lineWidth=ring===4?1:.5;
+      ctx.stroke();
+      // Value labels on first axis
+      if(ring%2===0){ctx.font='5px sans-serif';ctx.fillStyle='rgba(255,255,255,.08)';
+        var lx=cx+r*Math.cos(angles[0]);var ly=cy+r*Math.sin(angles[0]);
+        ctx.textAlign='center';ctx.fillText(ring*25,lx-8,ly+2);}
     }
-    plotTeam(awayData,'rgba(255,215,0,.5)','rgba(255,215,0,.06)');
-    plotTeam(homeData,'rgba(0,212,170,.6)','rgba(0,212,170,.08)');
+    // Axis lines
+    for(var i=0;i<6;i++){
+      ctx.beginPath();ctx.moveTo(cx,cy);
+      var x=cx+R*Math.cos(angles[i]);var y=cy+R*Math.sin(angles[i]);
+      ctx.lineTo(x,y);ctx.strokeStyle='rgba(255,255,255,.04)';ctx.lineWidth=.5;ctx.stroke();
+    }
+    // Labels
+    for(var i=0;i<6;i++){
+      var a=angles[i];var x=cx+(R+9)*Math.cos(a);var y=cy+(R+9)*Math.sin(a);
+      ctx.font='bold 6px sans-serif';ctx.fillStyle=textColor;ctx.textAlign='center';
+      ctx.fillText(labels[i][0],x,y+2);
+      ctx.font='5px sans-serif';ctx.fillStyle=sub;
+      ctx.fillText(labels[i][1],x,y+8);
+    }
+    // Center label
+    ctx.font='7px sans-serif';ctx.fillStyle='rgba(255,255,255,.05)';ctx.textAlign='center';ctx.fillText('6\u7EF4\u8BC4\u5206',cx,cy+2.5);
+    // Plot
+    var p=t;
+    function plotTeam(data,color,fillColor,label){
+      ctx.beginPath();
+      for(var i=0;i<=6;i++){var idx=i%6;var a2=angles[idx];var val=((data[idx]||0)/100)*p;var x2=cx+R*val*Math.cos(a2);var y2=cy+R*val*Math.sin(a2);i===0?ctx.moveTo(x2,y2):ctx.lineTo(x2,y2);}
+      ctx.closePath();
+      ctx.fillStyle=fillColor;ctx.fill();
+      ctx.strokeStyle=color;ctx.lineWidth=1.5;ctx.shadowColor=color;ctx.shadowBlur=4;
+      ctx.stroke();ctx.shadowBlur=0;
+      for(var i=0;i<6;i++){var a2=angles[i];var val=((data[i]||0)/100)*p;var x2=cx+R*val*Math.cos(a2);var y2=cy+R*val*Math.sin(a2);
+        ctx.beginPath();ctx.arc(x2,y2,2,0,Math.PI*2);
+        ctx.fillStyle='#fff';ctx.fill();
+        ctx.strokeStyle=color;ctx.lineWidth=1.5;ctx.stroke();
+        ctx.font='5px sans-serif';ctx.fillStyle=color;ctx.textAlign='center';
+        var valText=Math.round(data[i]);
+        ctx.fillText(valText,x2,y2-5);
+      }
+    }
+    // Draw away first (behind), then home (front)
+    plotTeam(awayData,'rgba(255,215,0,.5)','rgba(255,215,0,.08)',awayLabel);
+    plotTeam(homeData,'rgba(0,212,170,.6)','rgba(0,212,170,.1)',homeLabel);
     // Legend
-    ctx.font='7px sans-serif';ctx.textAlign='left';
-    ctx.fillStyle='rgba(0,212,170,.8)';ctx.fillRect(8,8,7,7);ctx.fillStyle=textColor;ctx.fillText(homeLabel,18,14);
-    ctx.fillStyle='rgba(255,215,0,.8)';ctx.fillRect(8,19,7,7);ctx.fillStyle=textColor;ctx.fillText(awayLabel,18,25);
+    ctx.font='bold 6px sans-serif';ctx.textAlign='left';
+    ctx.fillStyle='rgba(0,212,170,.6)';ctx.fillRect(6,5,8,8);
+    ctx.strokeStyle='rgba(0,212,170,.6)';ctx.strokeRect(6,5,8,8);
+    ctx.fillStyle=textColor;ctx.fillText(homeLabel,16,12);
+    ctx.fillStyle='rgba(255,215,0,.6)';ctx.fillRect(6,16,8,8);
+    ctx.strokeStyle='rgba(255,215,0,.6)';ctx.strokeRect(6,16,8,8);
+    ctx.fillStyle=textColor;ctx.fillText(awayLabel,16,23);
   }
   if(!animated){drawFrame(1);return;}
-  var startT=null,dur=500;
+  var startT=null,dur=600;
   animLock[canvasId]=true;
   function step(ts){
     if(!startT)startT=ts;
-    var elapsed=ts-startT,p=Math.min(1,elapsed/dur);
-    var ease=1-Math.pow(1-p,3);
+    var elapsed=ts-startT,p2=Math.min(1,elapsed/dur);
+    var ease=1-Math.pow(1-p2,3);
     drawFrame(ease);
-    if(p<1){requestAnimationFrame(step);}else{animLock[canvasId]=false;}
+    if(p2<1){requestAnimationFrame(step);}else{animLock[canvasId]=false;}
   }
   requestAnimationFrame(step);
-}
-
-// ===== 计算简易6维雷达数据 =====
+}// ===== 计算简易6维雷达数据 =====
 function calcRadar(match,analysis){
   var deep=analysis&&analysis.deepAnalysis?analysis.deepAnalysis:{};
   var pH=deep.probHome||50,pA=deep.probAway||50;
