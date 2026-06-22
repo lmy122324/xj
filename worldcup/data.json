@@ -1,6 +1,6 @@
 {
   "version": "2.1",
-  "generated_at": "2026-06-22 17:44 CST",
+  "generated_at": "2026-06-22 19:18 CST",
   "matches": [
     {
       "home": "阿根廷",
@@ -557,6 +557,20 @@
                 "odds": 1.12
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 1,
+            "fifaRankAway": 21,
+            "probHome": 65.6,
+            "probDraw": 22.2,
+            "probAway": 12.2,
+            "goalRange": "2-4球",
+            "keyBattle": "阿根廷核心前锋 vs 奥地利防守队长",
+            "predictedScore": "阿根廷 3-0 奥地利",
+            "predictedResult": "阿根廷胜",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 69
           }
         }
       ]
@@ -1111,6 +1125,20 @@
                 "odds": 0.82
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 2,
+            "fifaRankAway": 37,
+            "probHome": 89.6,
+            "probDraw": 7.5,
+            "probAway": 2.9,
+            "goalRange": "2-4球",
+            "keyBattle": "法国核心前锋 vs 伊拉克防守队长",
+            "predictedScore": "法国 3-0 伊拉克",
+            "predictedResult": "法国胜",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 90
           }
         }
       ]
@@ -1670,6 +1698,20 @@
                 "odds": 1.65
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 23,
+            "fifaRankAway": 17,
+            "probHome": 44.5,
+            "probDraw": 27.5,
+            "probAway": 28.0,
+            "goalRange": "0-2球",
+            "keyBattle": "挪威核心前锋 vs 塞内加尔防守队长",
+            "predictedScore": "挪威 1-0 塞内加尔",
+            "predictedResult": "挪威胜",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 50
           }
         }
       ]
@@ -2231,6 +2273,20 @@
                 "odds": 3.27
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 40,
+            "fifaRankAway": 34,
+            "probHome": 15.3,
+            "probDraw": 22.3,
+            "probAway": 62.4,
+            "goalRange": "1-3球",
+            "keyBattle": "约旦核心前锋 vs 阿尔及利亚防守队长",
+            "predictedScore": "约旦 1-1 阿尔及利亚",
+            "predictedResult": "平局",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 66
           }
         }
       ]
@@ -2790,6 +2846,20 @@
                 "odds": 0.89
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 5,
+            "fifaRankAway": 50,
+            "probHome": 81.8,
+            "probDraw": 12.6,
+            "probAway": 5.5,
+            "goalRange": "2-4球",
+            "keyBattle": "葡萄牙核心前锋 vs 乌兹别克斯坦防守队长",
+            "predictedScore": "葡萄牙 3-0 乌兹别克斯坦",
+            "predictedResult": "葡萄牙胜",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 83
           }
         }
       ]
@@ -3349,6 +3419,20 @@
                 "odds": 0.92
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 4,
+            "fifaRankAway": 50,
+            "probHome": 78.3,
+            "probDraw": 14.6,
+            "probAway": 7.1,
+            "goalRange": "2-4球",
+            "keyBattle": "英格兰核心前锋 vs 加纳防守队长",
+            "predictedScore": "英格兰 3-0 加纳",
+            "predictedResult": "英格兰胜",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 80
           }
         }
       ]
@@ -3908,6 +3992,20 @@
                 "odds": 3.04
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 43,
+            "fifaRankAway": 10,
+            "probHome": 14.4,
+            "probDraw": 23.8,
+            "probAway": 61.8,
+            "goalRange": "1-3球",
+            "keyBattle": "巴拿马核心前锋 vs 克罗地亚防守队长",
+            "predictedScore": "巴拿马 1-1 克罗地亚",
+            "predictedResult": "平局",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 65
           }
         }
       ]
@@ -4467,6 +4565,20 @@
                 "odds": 1.13
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 13,
+            "fifaRankAway": 50,
+            "probHome": 63.7,
+            "probDraw": 22.6,
+            "probAway": 13.7,
+            "goalRange": "1-3球",
+            "keyBattle": "哥伦比亚核心前锋 vs 刚果(金)防守队长",
+            "predictedScore": "哥伦比亚 2-0 刚果(金)",
+            "predictedResult": "哥伦比亚胜",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 67
           }
         }
       ]
@@ -5026,6 +5138,20 @@
                 "odds": 1.07
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 41,
+            "fifaRankAway": 44,
+            "probHome": 66.9,
+            "probDraw": 19.2,
+            "probAway": 13.9,
+            "goalRange": "2-4球",
+            "keyBattle": "波黑核心前锋 vs 卡塔尔防守队长",
+            "predictedScore": "波黑 3-0 卡塔尔",
+            "predictedResult": "波黑胜",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 70
           }
         }
       ]
@@ -5585,6 +5711,20 @@
                 "odds": 1.88
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 12,
+            "fifaRankAway": 33,
+            "probHome": 38.5,
+            "probDraw": 33.2,
+            "probAway": 28.3,
+            "goalRange": "0-2球",
+            "keyBattle": "瑞士核心前锋 vs 加拿大防守队长",
+            "predictedScore": "瑞士 1-0 加拿大",
+            "predictedResult": "瑞士胜",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 44
           }
         }
       ]
@@ -6144,6 +6284,20 @@
                 "odds": 4.09
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 50,
+            "fifaRankAway": 3,
+            "probHome": 13.6,
+            "probDraw": 17.5,
+            "probAway": 68.8,
+            "goalRange": "1-3球",
+            "keyBattle": "苏格兰核心前锋 vs 巴西防守队长",
+            "predictedScore": "苏格兰 1-1 巴西",
+            "predictedResult": "平局",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 71
           }
         }
       ]
@@ -6703,6 +6857,20 @@
                 "odds": 0.88
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 11,
+            "fifaRankAway": 46,
+            "probHome": 80.9,
+            "probDraw": 13.4,
+            "probAway": 5.7,
+            "goalRange": "2-4球",
+            "keyBattle": "摩洛哥核心前锋 vs 海地防守队长",
+            "predictedScore": "摩洛哥 3-0 海地",
+            "predictedResult": "摩洛哥胜",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 82
           }
         }
       ]
@@ -7267,6 +7435,20 @@
                 "odds": 3.0
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 38,
+            "fifaRankAway": 18,
+            "probHome": 26.3,
+            "probDraw": 24.0,
+            "probAway": 49.7,
+            "goalRange": "1-3球",
+            "keyBattle": "捷克核心前锋 vs 墨西哥防守队长",
+            "predictedScore": "捷克 1-1 墨西哥",
+            "predictedResult": "平局",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 54
           }
         }
       ]
@@ -7831,6 +8013,20 @@
                 "odds": 2.98
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 42,
+            "fifaRankAway": 22,
+            "probHome": 17.6,
+            "probDraw": 24.2,
+            "probAway": 58.2,
+            "goalRange": "1-3球",
+            "keyBattle": "南非核心前锋 vs 韩国防守队长",
+            "predictedScore": "南非 1-1 韩国",
+            "predictedResult": "平局",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 62
           }
         }
       ]
@@ -8385,6 +8581,20 @@
                 "odds": 6.04
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 50,
+            "fifaRankAway": 36,
+            "probHome": 5.5,
+            "probDraw": 11.7,
+            "probAway": 82.8,
+            "goalRange": "1-3球",
+            "keyBattle": "Curaçao核心前锋 vs 科特迪瓦防守队长",
+            "predictedScore": "Curaçao 1-1 科特迪瓦",
+            "predictedResult": "平局",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 84
           }
         }
       ]
@@ -8949,6 +9159,20 @@
                 "odds": 3.01
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 27,
+            "fifaRankAway": 8,
+            "probHome": 27.1,
+            "probDraw": 23.9,
+            "probAway": 49.0,
+            "goalRange": "1-3球",
+            "keyBattle": "厄瓜多尔核心前锋 vs 德国防守队长",
+            "predictedScore": "厄瓜多尔 1-1 德国",
+            "predictedResult": "平局",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 54
           }
         }
       ]
@@ -9508,6 +9732,20 @@
                 "odds": 1.45
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 16,
+            "fifaRankAway": 19,
+            "probHome": 49.8,
+            "probDraw": 28.4,
+            "probAway": 21.8,
+            "goalRange": "2-4球",
+            "keyBattle": "日本核心前锋 vs 瑞典防守队长",
+            "predictedScore": "日本 2-1 瑞典",
+            "predictedResult": "日本胜",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 54
           }
         }
       ]
@@ -10060,6 +10298,20 @@
                 "odds": 6.37
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 35,
+            "fifaRankAway": 7,
+            "probHome": 4.8,
+            "probDraw": 11.2,
+            "probAway": 84.0,
+            "goalRange": "1-3球",
+            "keyBattle": "突尼斯核心前锋 vs 荷兰防守队长",
+            "predictedScore": "突尼斯 1-1 荷兰",
+            "predictedResult": "平局",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 85
           }
         }
       ]
@@ -10619,6 +10871,20 @@
                 "odds": 2.92
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 28,
+            "fifaRankAway": 24,
+            "probHome": 32.8,
+            "probDraw": 43.2,
+            "probAway": 24.1,
+            "goalRange": "2-4球",
+            "keyBattle": "巴拉圭核心前锋 vs 澳大利亚防守队长",
+            "predictedScore": "巴拉圭 1-2 澳大利亚",
+            "predictedResult": "澳大利亚胜",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 48
           }
         }
       ]
@@ -11183,6 +11449,20 @@
                 "odds": 3.1
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 25,
+            "fifaRankAway": 15,
+            "probHome": 27.0,
+            "probDraw": 23.2,
+            "probAway": 49.7,
+            "goalRange": "1-3球",
+            "keyBattle": "土耳其核心前锋 vs 美国防守队长",
+            "predictedScore": "土耳其 1-1 美国",
+            "predictedResult": "平局",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 54
           }
         }
       ]
@@ -11747,6 +12027,20 @@
                 "odds": 2.85
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 23,
+            "fifaRankAway": 2,
+            "probHome": 22.6,
+            "probDraw": 24.6,
+            "probAway": 52.8,
+            "goalRange": "1-3球",
+            "keyBattle": "挪威核心前锋 vs 法国防守队长",
+            "predictedScore": "挪威 1-1 法国",
+            "predictedResult": "平局",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 57
           }
         }
       ]
@@ -12306,6 +12600,20 @@
                 "odds": 0.95
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 17,
+            "fifaRankAway": 37,
+            "probHome": 73.3,
+            "probDraw": 17.6,
+            "probAway": 9.1,
+            "goalRange": "2-4球",
+            "keyBattle": "塞内加尔核心前锋 vs 伊拉克防守队长",
+            "predictedScore": "塞内加尔 3-0 伊拉克",
+            "predictedResult": "塞内加尔胜",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 75
           }
         }
       ]
@@ -12868,6 +13176,20 @@
                 "odds": 1.78
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 47,
+            "fifaRankAway": 50,
+            "probHome": 40.6,
+            "probDraw": 27.5,
+            "probAway": 31.9,
+            "goalRange": "0-2球",
+            "keyBattle": "佛得角核心前锋 vs 沙特防守队长",
+            "predictedScore": "佛得角 1-0 沙特",
+            "predictedResult": "佛得角胜",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 46
           }
         }
       ]
@@ -13430,6 +13752,20 @@
                 "odds": 3.19
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 9,
+            "fifaRankAway": 6,
+            "probHome": 12.8,
+            "probDraw": 22.5,
+            "probAway": 64.7,
+            "goalRange": "1-3球",
+            "keyBattle": "乌拉圭核心前锋 vs 西班牙防守队长",
+            "predictedScore": "乌拉圭 1-1 西班牙",
+            "predictedResult": "平局",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 68
           }
         }
       ]
@@ -13984,6 +14320,20 @@
                 "odds": 4.94
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 50,
+            "fifaRankAway": 50,
+            "probHome": 7.4,
+            "probDraw": 14.5,
+            "probAway": 78.2,
+            "goalRange": "1-3球",
+            "keyBattle": "新西兰核心前锋 vs 比利时防守队长",
+            "predictedScore": "新西兰 1-1 比利时",
+            "predictedResult": "平局",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 80
           }
         }
       ]
@@ -14543,6 +14893,20 @@
                 "odds": 1.81
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 50,
+            "fifaRankAway": 50,
+            "probHome": 39.9,
+            "probDraw": 35.8,
+            "probAway": 24.3,
+            "goalRange": "0-2球",
+            "keyBattle": "埃及核心前锋 vs 伊朗防守队长",
+            "predictedScore": "埃及 1-0 伊朗",
+            "predictedResult": "埃及胜",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 45
           }
         }
       ]
@@ -15102,6 +15466,20 @@
                 "odds": 1.2
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 10,
+            "fifaRankAway": 50,
+            "probHome": 58.2,
+            "probDraw": 25.2,
+            "probAway": 16.6,
+            "goalRange": "1-3球",
+            "keyBattle": "克罗地亚核心前锋 vs 加纳防守队长",
+            "predictedScore": "克罗地亚 2-0 加纳",
+            "predictedResult": "克罗地亚胜",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 62
           }
         }
       ]
@@ -15656,6 +16034,20 @@
                 "odds": 5.31
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 43,
+            "fifaRankAway": 4,
+            "probHome": 10.4,
+            "probDraw": 13.1,
+            "probAway": 76.5,
+            "goalRange": "1-3球",
+            "keyBattle": "巴拿马核心前锋 vs 英格兰防守队长",
+            "predictedScore": "巴拿马 1-1 英格兰",
+            "predictedResult": "平局",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 78
           }
         }
       ]
@@ -16220,6 +16612,20 @@
                 "odds": 2.56
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 13,
+            "fifaRankAway": 5,
+            "probHome": 26.2,
+            "probDraw": 27.4,
+            "probAway": 46.4,
+            "goalRange": "1-3球",
+            "keyBattle": "哥伦比亚核心前锋 vs 葡萄牙防守队长",
+            "predictedScore": "哥伦比亚 1-1 葡萄牙",
+            "predictedResult": "平局",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 51
           }
         }
       ]
@@ -16779,6 +17185,20 @@
                 "odds": 1.57
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 50,
+            "fifaRankAway": 50,
+            "probHome": 44.8,
+            "probDraw": 25.7,
+            "probAway": 29.5,
+            "goalRange": "2-4球",
+            "keyBattle": "刚果(金)核心前锋 vs 乌兹别克斯坦防守队长",
+            "predictedScore": "刚果(金) 2-1 乌兹别克斯坦",
+            "predictedResult": "刚果(金)胜",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 50
           }
         }
       ]
@@ -17343,6 +17763,20 @@
                 "odds": 2.18
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 34,
+            "fifaRankAway": 21,
+            "probHome": 30.4,
+            "probDraw": 32.2,
+            "probAway": 37.4,
+            "goalRange": "1-3球",
+            "keyBattle": "阿尔及利亚核心前锋 vs 奥地利防守队长",
+            "predictedScore": "阿尔及利亚 1-1 奥地利",
+            "predictedResult": "平局",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 43
           }
         }
       ]
@@ -17897,6 +18331,20 @@
                 "odds": 5.4
               }
             ]
+          },
+          "deepAnalysis": {
+            "fifaRankHome": 40,
+            "fifaRankAway": 1,
+            "probHome": 6.9,
+            "probDraw": 12.9,
+            "probAway": 80.2,
+            "goalRange": "1-3球",
+            "keyBattle": "约旦核心前锋 vs 阿根廷防守队长",
+            "predictedScore": "约旦 1-1 阿根廷",
+            "predictedResult": "平局",
+            "formHome": "胜平负",
+            "formAway": "负平胜",
+            "confidence": 82
           }
         }
       ]
