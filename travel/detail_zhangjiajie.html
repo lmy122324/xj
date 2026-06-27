@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>张家界 - 远游旅行网</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.detail-banner{height:300px;display:flex;align-items:center;justify-content:center;color:white;font-size:32px;font-weight:700;background:linear-gradient(135deg,#1D3557,#457B9D)}
+.detail-content{padding:60px 0}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin-bottom:40px}
+.detail-info h2{font-size:28px;color:#1D3557;margin-bottom:15px}
+.detail-info p{color:#666;line-height:1.8;margin-bottom:10px}
+.price-card{background:white;padding:30px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.08);text-align:center}
+.price-card .big-price{font-size:42px;font-weight:700;color:#FF6B35}
+.price-card .big-price small{font-size:16px;font-weight:400;color:#999}
+.itinerary{margin-top:40px}
+.itinerary h2{margin-bottom:20px;font-size:24px;color:#1D3557}
+.day-item{display:flex;gap:20px;padding:20px;background:white;margin-bottom:15px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.day-num{width:50px;height:50px;border-radius:50%;background:#FF6B35;color:white;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;flex-shrink:0}
+.day-text h4{color:#1D3557;margin-bottom:5px}
+.day-text p{color:#666;font-size:14px}
+@media(max-width:768px){.detail-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="header"><div class="container">
+<a href="../index.html" class="logo">远游旅行</a>
+<nav class="nav">
+<a href="../index.html">首页</a><a href="../destinations.html">目的地</a>
+<a href="../packages.html">旅行套餐</a><a href="../about.html">关于我们</a>
+<a href="../contact.html">联系我们</a><a href="../login.html" class="btn-primary">登录</a>
+</nav>
+</div></header>
+
+<div class="detail-banner">张家界 · 阿凡达取景地，奇峰异石</div>
+
+<section class="detail-content"><div class="container">
+<div class="detail-grid">
+<div class="detail-info">
+<h2>张家界</h2>
+<p>张家界国家森林公园是世界自然遗产，以其独特的石英砂岩峰林地貌闻名于世。</p>
+<p>电影《阿凡达》中哈利路亚山的原型就取自这里的乾坤柱。</p>
+<p><strong>行程天数：</strong>4天3晚</p>
+<p><strong>出行方式：</strong>飞机往返</p>
+<p><strong>费用包含：</strong>往返机票+住宿+导游+保险</p>
+</div>
+<div class="price-card">
+<h3 style="color:#666;font-size:14px;margin-bottom:10px">套餐价格</h3>
+<div class="big-price"><small>¥</small>2299</div>
+<p style="color:#999;font-size:14px;margin:10px 0">原价 ¥3899</p>
+<p style="color:#2EC4B6;font-size:14px">已售 345 单</p>
+<a href="../contact.html" class="btn-primary" style="display:block;width:100%;text-align:center;margin-top:20px">立即预订</a>
+</div>
+</div>
+
+<div class="itinerary">
+<h2>行程安排</h2>
+<div class="day-item"><div class="day-num">D1</div><div class="day-text"><h4>抵达张家界</h4><p>抵达张家界荷花机场，入住武陵源区酒店。</p></div></div>
+<div class="day-item"><div class="day-num">D2</div><div class="day-text"><h4>袁家界-天子山</h4><p>乘百龙天梯登顶袁家界，游览乾坤柱、迷魂台，下午天子山。</p></div></div>
+<div class="day-item"><div class="day-num">D3</div><div class="day-text"><h4>金鞭溪-十里画廊</h4><p>上午徒步金鞭溪大峡谷，下午游览十里画廊，晚上观看魅力湘西演出。</p></div></div>
+<div class="day-item"><div class="day-num">D4</div><div class="day-text"><h4>天门山-返程</h4><p>上午乘索道上天门山，走玻璃栈道，下午送机返回。</p></div></div>
+
+</div>
+</div></section>
+
+<footer class="footer"><div class="container">
+<div class="footer-grid">
+<div class="footer-about"><div style="font-size:20px;font-weight:700;margin-bottom:10px">远游旅行</div><p>远游旅行网致力于为每一位旅行者提供优质的旅行体验。</p></div>
+<div class="footer-links"><h4>快速链接</h4><a href="../destinations.html">热门目的地</a><a href="../packages.html">旅行套餐</a></div>
+<div class="footer-links"><h4>联系方式</h4><a>400-888-9999</a><a>service@yylx.com</a></div>
+</div>
+<div class="footer-bottom"><p>&copy; 2024 远游旅行网 版权所有</p></div>
+</div></footer>
+
+<script>
+var views = parseInt(localStorage.getItem('travel_views') || '0');
+localStorage.setItem('travel_views', views + 1);
+</script>
+</body>
+</html>

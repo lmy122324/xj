@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>马尔代夫 - 远游旅行网</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.detail-banner{height:400px;background:linear-gradient(135deg,#0077B6,#00B4D8);display:flex;align-items:center;justify-content:center;color:white;font-size:36px;font-weight:700}
+.detail-content{padding:60px 0}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin-bottom:40px}
+.detail-info h2{font-size:28px;color:#1D3557;margin-bottom:15px}
+.detail-info p{color:#666;line-height:1.8;margin-bottom:10px}
+.price-card{background:white;padding:30px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.08);text-align:center}
+.price-card .big-price{font-size:42px;font-weight:700;color:#FF6B35}
+.price-card .big-price small{font-size:16px;font-weight:400;color:#999}
+.price-card .btn-primary{width:100%;margin-top:20px;text-align:center}
+.itinerary{margin-top:40px}
+.itinerary h2{margin-bottom:20px}
+.day-item{display:flex;gap:20px;padding:20px;background:white;margin-bottom:15px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.day-num{width:50px;height:50px;border-radius:50%;background:#FF6B35;color:white;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;flex-shrink:0}
+.day-text h4{color:#1D3557;margin-bottom:5px}
+.day-text p{color:#666;font-size:14px}
+</style>
+</head>
+<body>
+<header class="header"><div class="container">
+<a href="../index.html" class="logo">远游旅行</a>
+<nav class="nav">
+<a href="../index.html">首页</a><a href="../destinations.html">目的地</a>
+<a href="../packages.html">旅行套餐</a><a href="../about.html">关于我们</a>
+<a href="../contact.html">联系我们</a><a href="../login.html" class="btn-primary">登录</a>
+</nav>
+</div></header>
+
+<div class="detail-banner">马尔代夫 · 印度洋上的珍珠</div>
+
+<section class="detail-content"><div class="container">
+<div class="detail-grid">
+<div class="detail-info">
+<h2>马尔代夫蜜月之旅</h2>
+<p>马尔代夫位于印度洋，由1192个珊瑚岛组成，以其碧蓝的海水、白色的沙滩和豪华的水上别墅闻名于世。</p>
+<p>这里是蜜月旅行和潜水爱好者的天堂。浮潜即可欣赏到五彩缤纷的珊瑚礁和热带鱼类。</p>
+<p><strong>行程天数：</strong>6天5晚</p>
+<p><strong>出行方式：</strong>飞机往返</p>
+<p><strong>最佳季节：</strong>11月至次年4月</p>
+</div>
+<div class="price-card">
+<h3 style="color:#666;font-size:14px;margin-bottom:10px">套餐价格</h3>
+<div class="big-price"><small>¥</small>8999</div>
+<p style="color:#999;font-size:14px;margin:10px 0">原价 ¥12999</p>
+<p style="color:#2EC4B6;font-size:14px">已售 326 单</p>
+<button class="btn-primary" onclick="bookNow('马尔代夫')">立即预订</button>
+</div>
+</div>
+
+<div class="itinerary">
+<h2 style="font-size:24px;color:#1D3557">行程安排</h2>
+<div class="day-item"><div class="day-num">D1</div><div class="day-text"><h4>出发地 → 马累</h4><p>搭乘国际航班飞往马尔代夫首都马累，抵达后专车接机前往酒店，入住水上别墅。</p></div></div>
+<div class="day-item"><div class="day-num">D2</div><div class="day-text"><h4>马累 → 度假岛</h4><p>乘坐水上飞机前往度假岛，抵达后在私人泳池放松，傍晚参加日落海钓活动。</p></div></div>
+<div class="day-item"><div class="day-num">D3</div><div class="day-text"><h4>浮潜探险</h4><p>跟随专业教练出海浮潜，探索色彩斑斓的珊瑚礁和热带鱼群。下午享受SPA按摩。</p></div></div>
+<div class="day-item"><div class="day-num">D4</div><div class="day-text"><h4>无人岛野餐</h4><p>乘船前往无人岛，在纯白沙滩上享用海鲜烧烤大餐，下午自由浮潜。</p></div></div>
+<div class="day-item"><div class="day-num">D5</div><div class="day-text"><h4>自由活动</h4><p>全天自由活动，可选择深潜、风筝冲浪或继续在水上别墅享受悠闲时光。</p></div></div>
+<div class="day-item"><div class="day-num">D6</div><div class="day-text"><h4>返程</h4><p>早餐后乘水上飞机返回马累，转乘国际航班返回温馨的家。</p></div></div>
+</div>
+</div></section>
+
+<div style="max-width:500px;margin:0 auto 60px;padding:0 20px" id="book-form" style="display:none">
+  <div class="form-card">
+    <h2>预订 - 马尔代夫</h2>
+    <form onsubmit="submitBooking(event, '马尔代夫')">
+      <div class="form-group"><label>姓名</label><input type="text" id="bname" required></div>
+      <div class="form-group"><label>电话</label><input type="tel" id="bphone" required></div>
+      <div class="form-group"><label>出发日期</label><input type="date" id="bdate" required></div>
+      <div class="form-group"><label>人数</label><select id="bpeople"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></div>
+      <button type="submit" class="btn-primary" style="width:100%">提交预订</button>
+      <p id="book-msg" style="text-align:center;margin-top:15px"></p>
+    </form>
+  </div>
+</div>
+
+<footer class="footer"><div class="container">
+<div class="footer-grid">
+<div class="footer-about"><div style="font-size:20px;font-weight:700;margin-bottom:10px">远游旅行</div><p>远游旅行网致力于为每一位旅行者提供优质的旅行体验。</p></div>
+<div class="footer-links"><h4>快速链接</h4><a href="../destinations.html">热门目的地</a><a href="../packages.html">旅行套餐</a></div>
+<div class="footer-links"><h4>联系方式</h4><a>400-888-9999</a><a>service@yylx.com</a></div>
+</div>
+<div class="footer-bottom"><p>&copy; 2024 远游旅行网 版权所有</p></div>
+</div></footer>
+
+<script>
+function bookNow(dest){
+  document.getElementById('book-form').scrollIntoView({behavior:'smooth'});
+}
+
+function submitBooking(e, dest){
+  e.preventDefault();
+  var booking = {
+    name: document.getElementById('bname').value,
+    phone: document.getElementById('bphone').value,
+    date: document.getElementById('bdate').value,
+    people: document.getElementById('bpeople').value,
+    dest: dest,
+    time: new Date().toLocaleString('zh-CN')
+  };
+  var bookings = JSON.parse(localStorage.getItem('travel_bookings') || '[]');
+  bookings.push(booking);
+  localStorage.setItem('travel_bookings', JSON.stringify(bookings));
+  document.getElementById('book-msg').textContent = '预订成功！管理员将在后台查看您的订单。';
+  document.getElementById('book-msg').style.color = '#2EC4B6';
+  setTimeout(function(){ document.querySelector('form').reset(); }, 2000);
+}
+
+// Page view counter
+var views = parseInt(localStorage.getItem('travel_views') || '0');
+localStorage.setItem('travel_views', views + 1);
+</script>
+</body>
+</html>

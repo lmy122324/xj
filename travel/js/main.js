@@ -80,14 +80,18 @@
   if(!contactForm) return;
   contactForm.addEventListener('submit', function(e){
     e.preventDefault();
-    var n = document.getElementById('contact-name').value.trim();
-    var t = document.getElementById('contact-phone').value.trim();
-    var em = document.getElementById('contact-email').value.trim();
-    var msg = document.getElementById('contact-msg').value.trim();
-    var out = document.getElementById('message');
-    if(!n || !t || !em || !msg){ out.textContent = '请填写完整信息'; out.style.color='#e74c3c'; return; }
-    out.textContent = '留言已提交，我们会尽快联系您！';
-    out.style.color = '#2EC4B6';
+    var msg = {
+      name: document.getElementById('contact-name').value.trim(),
+      phone: document.getElementById('contact-phone').value.trim(),
+      email: document.getElementById('contact-email').value.trim(),
+      msg: document.getElementById('contact-msg').value.trim(),
+      time: new Date().toLocaleString('zh-CN')
+    };
+    var msgs = JSON.parse(localStorage.getItem('travel_messages') || '[]');
+    msgs.push(msg);
+    localStorage.setItem('travel_messages', JSON.stringify(msgs));
+    document.getElementById('message').textContent = '留言已提交，管理员将在后台查看！';
+    document.getElementById('message').style.color = '#2EC4B6';
     contactForm.reset();
   });
 })();
