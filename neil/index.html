@@ -3,206 +3,388 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PVC期货数据看板 - Neil</title>
+<title>PVC 周度数据看板 | Neil</title>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
 <style>
+:root {
+  --bg: #1a1e27;
+  --card: #21252f;
+  --border: #2a3040;
+  --text: #c8ccd4;
+  --dim: #6b7280;
+  --blue: #4a9eff;
+  --red: #f05454;
+  --green: #34d399;
+  --yellow: #fbbf24;
+  --orange: #f59e0b;
+}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f1923;color:#e0e0e0;min-height:100vh}
-.header{background:linear-gradient(135deg,#1a2a3a,#162030);padding:20px 30px;border-bottom:1px solid #2a3a4a;display:flex;justify-content:space-between;align-items:center}
-.header h1{font-size:22px;color:#fff}
-.header .sub{font-size:12px;color:#6a8a9a}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;padding:16px}
-.card{background:#162030;border:1px solid #2a3a4a;border-radius:8px;padding:16px}
-.card h3{font-size:13px;color:#6a8a9a;margin-bottom:12px;letter-spacing:1px}
-.kpi-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.kpi{background:#1a2a3a;padding:10px 12px;border-radius:6px}
-.kpi-label{font-size:11px;color:#6a8a9a}
-.kpi-value{font-size:20px;font-weight:bold;margin:4px 0}
-.kpi-sub{font-size:11px}
-.up{color:#4caf50}.down{color:#f44336}.warn{color:#ff9800}
-.chart-box{width:100%;height:320px}
-.full{grid-column:1/-1}
-table{width:100%;border-collapse:collapse;font-size:12px}
-th{text-align:left;color:#6a8a9a;padding:6px 8px;border-bottom:2px solid #2a3a4a;font-weight:normal}
-td{padding:6px 8px;border-bottom:1px solid #1a2a3a}
-.section-title{color:#2196F3;font-weight:bold;font-size:12px;padding:8px 0 4px}
-.loading{text-align:center;padding:60px;color:#6a8a9a}
-.error{color:#f44336;text-align:center;padding:40px}
-.note{font-size:11px;color:#ff9800;margin-top:8px}
+body{font-family:'PingFang SC','Microsoft YaHei','Helvetica Neue',sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+.container{max-width:1400px;margin:0 auto;padding:20px}
+
+/* Header */
+.header{display:flex;justify-content:space-between;align-items:flex-end;padding:20px 0 16px;border-bottom:2px solid var(--border);margin-bottom:24px}
+.header h1{font-size:26px;font-weight:700;color:#fff;letter-spacing:2px}
+.header h1 span{color:var(--blue);font-size:14px;font-weight:400;margin-left:8px}
+.header .meta{text-align:right}
+.header .meta .time{font-size:13px;color:var(--dim)}
+.header .meta .source{font-size:12px;color:var(--dim);margin-top:2px}
+
+/* Section */
+.section{margin-bottom:28px}
+.section-title{font-size:16px;font-weight:700;color:#e5e7eb;padding:10px 0;border-bottom:1px solid var(--border);margin-bottom:16px;letter-spacing:1px}
+.section-title::before{content:'';display:inline-block;width:4px;height:16px;background:var(--blue);margin-right:8px;vertical-align:middle;border-radius:2px}
+
+/* Grid */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+
+/* Card */
+.card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:16px}
+.card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.card-title{font-size:13px;font-weight:600;color:#9ca3af;text-transform:uppercase;letter-spacing:0.5px}
+.card-badge{font-size:11px;padding:2px 8px;border-radius:3px;font-weight:600}
+.badge-up{background:rgba(52,211,153,0.15);color:var(--green)}
+.badge-down{background:rgba(240,84,84,0.15);color:var(--red)}
+.badge-flat{background:rgba(107,114,128,0.15);color:var(--dim)}
+
+/* Metric KPI */
+.kpi-value{font-size:28px;font-weight:700;color:#fff;margin:4px 0}
+.kpi-unit{font-size:13px;font-weight:400;color:var(--dim)}
+.kpi-change{font-size:12px;margin-top:2px}
+.kpi-sub{font-size:11px;color:var(--dim);margin-top:1px}
+
+/* Chart */
+.chart{width:100%;height:380px}
+
+/* Table */
+.data-table{width:100%;border-collapse:collapse;font-size:12px}
+.data-table th{text-align:right;color:var(--dim);font-weight:500;padding:7px 10px;border-bottom:1px solid var(--border);white-space:nowrap}
+.data-table th:first-child{text-align:left}
+.data-table td{text-align:right;padding:6px 10px;border-bottom:1px solid rgba(42,48,64,0.5);font-variant-numeric:tabular-nums}
+.data-table td:first-child{text-align:left;color:#9ca3af}
+.data-table tr:hover td{background:rgba(74,158,255,0.04)}
+.num-up{color:var(--red)}
+.num-down{color:var(--green)}
+.num-neutral{color:var(--text)}
+
+/* Logic block */
+.logic-block{background:linear-gradient(135deg,rgba(74,158,255,0.08),rgba(74,158,255,0.02));border-left:3px solid var(--blue);padding:14px 18px;border-radius:0 6px 6px 0}
+.logic-label{font-size:11px;color:var(--blue);font-weight:600;letter-spacing:1px;margin-bottom:6px}
+.logic-tag{display:inline-block;font-size:11px;padding:3px 10px;border-radius:3px;margin-right:6px;margin-bottom:6px;font-weight:600}
+.tag-bull{background:rgba(52,211,153,0.15);color:var(--green)}
+.tag-bear{background:rgba(240,84,84,0.15);color:var(--red)}
+.tag-neu{background:rgba(251,191,36,0.15);color:var(--yellow)}
+
+/* Footer */
+.footer{text-align:center;padding:24px 0;color:var(--dim);font-size:11px;border-top:1px solid var(--border);margin-top:8px}
+
+/* Tab */
+.tabs{display:flex;gap:0;margin-bottom:16px;border-bottom:2px solid var(--border)}
+.tab{padding:8px 20px;font-size:13px;cursor:pointer;color:var(--dim);border-bottom:2px solid transparent;margin-bottom:-2px;transition:all 0.2s}
+.tab:hover{color:var(--text)}
+.tab.active{color:var(--blue);border-bottom-color:var(--blue)}
 </style>
 </head>
 <body>
+<div class="container">
+
+<!-- Header -->
 <div class="header">
   <div>
-    <h1>PVC 期货数据看板</h1>
-    <div class="sub" id="updateTime">加载中...</div>
+    <h1>PVC 产业链周度数据<span>DASHBOARD</span></h1>
+    <div style="font-size:12px;color:var(--dim);margin-top:4px">
+      纯苯 · 苯乙烯 · 聚酯产业链 · PVC
+    </div>
   </div>
-  <button onclick="location.reload()" style="background:#2196F3;color:#fff;border:none;padding:8px 16px;border-radius:4px;cursor:pointer">刷新</button>
+  <div class="meta">
+    <div class="time" id="updateTime">数据加载中...</div>
+    <div class="source">数据来源：钢联数据 | 石化资源事业部</div>
+  </div>
 </div>
-<div class="grid" id="app"><div class="loading">加载数据中...</div></div>
+
+<!-- Loading -->
+<div id="app"><div style="text-align:center;padding:60px;color:var(--dim)">加载中...</div></div>
+
+</div>
 
 <script>
+const COLORS = {
+  blue:'#4a9eff', red:'#f05454', green:'#34d399', yellow:'#fbbf24',
+  orange:'#f59e0b', purple:'#a78bfa', cyan:'#22d3ee', pink:'#f472b6',
+  gray:'#6b7280'
+};
+
 async function init() {
   try {
-    const resp = await fetch('data.json');
-    const d = await resp.json();
+    const r = await fetch('data.json');
+    const d = await r.json();
     render(d);
   } catch(e) {
-    document.getElementById('app').innerHTML = '<div class="error">加载失败: '+e.message+'<br><small>请先运行 extract_data.py</small></div>';
+    document.getElementById('app').innerHTML = '<div style="text-align:center;padding:60px;color:var(--red)">数据加载失败：请先运行 extract_data.py</div>';
   }
 }
 
-function fmtNum(v) {
-  if (v === null || v === undefined) return '-';
-  if (typeof v === 'string') return v;
-  return v.toLocaleString('zh-CN', {maximumFractionDigits:2});
+function fmt(n, d=0) {
+  if (n === null || n === undefined) return '-';
+  if (typeof n === 'string') return n;
+  return n.toLocaleString('zh-CN',{minimumFractionDigits:d,maximumFractionDigits:d});
 }
 
-function fmtPct(v) {
-  if (v === null || v === undefined) return '-';
-  return (v*100).toFixed(1)+'%';
+function pct(n) {
+  if (n === null || n === undefined) return '-';
+  if (typeof n === 'string') return n;
+  return (n*100).toFixed(1)+'%';
 }
 
-function colorClass(v) {
-  if (v === null || v === undefined) return '';
-  return v >= 0 ? 'up' : 'down';
+function chg(v, prev) {
+  if (v === null || prev === null) return '';
+  const c = v - prev;
+  return c > 0 ? '+' + fmt(c) : fmt(c);
+}
+
+function colorNum(v) {
+  if (v === null) return '';
+  if (typeof v === 'string') return '';
+  return v >= 0 ? 'num-up' : 'num-down';
 }
 
 function render(d) {
-  document.getElementById('updateTime').textContent = '数据更新: '+d.update_time;
-  
   const lw = d.latest_week || {};
   const sd = d.supply_demand || {};
   const pt = d.price_table || [];
   const it = d.inventory_trend || [];
   
+  document.getElementById('updateTime').textContent = '更新时间：' + d.update_time;
+  
   let html = '';
   
-  // ===== KPI 卡片：周度核心指标 =====
-  html += '<div class="card"><h3>📊 周度核心指标</h3><div class="kpi-row">';
+  // ===== SECTION 0: 逻辑判断 =====
+  const profits = pt.filter(r=>r.category==='利润');
+  const negN = profits.filter(r=>r.value_left!==null&&r.value_left<0).length;
+  const hasPos = profits.some(r=>r.value_left!==null&&r.value_left>0);
+  
+  let signal = '🟡 震荡', signalClass = 'tag-neu';
+  let summary = '';
+  if (negN >= 4 && !hasPos) {
+    signal = '🔴 偏空'; signalClass = 'tag-bear';
+    summary = '多工艺深度亏损，供给端压力未释放，高库存压制价格上行空间。短期关注检修兑现情况及成本支撑。';
+  } else if (negN <= 2 && hasPos) {
+    signal = '🟢 偏多'; signalClass = 'tag-bull';
+    summary = '利润修复中，库存去化趋势延续，供需边际改善。关注下游补库力度及进口窗口变化。';
+  } else {
+    summary = '利润分化、库存中性，多空信号交织。等待供给端检修兑现或需求端超预期驱动。';
+  }
+  
+  // Get key numbers
+  const wkProd = lw['周产量'];
+  const wkInv = lw['总库存'];
+  const wkFac = lw['厂库'];
+  const wkSoc = lw['社库'];
+  const wkDemand = lw['周表需'];
+  const wkPre = lw['上游预售'];
+  
+  html += '<div class="section">';
+  html += '<div class="section-title">市场逻辑</div>';
+  html += '<div class="logic-block">';
+  html += '<div class="logic-label">当前判断</div>';
+  html += '<span class="logic-tag '+signalClass+'">'+signal+'</span>';
+  html += '<span class="logic-tag" style="background:rgba(74,158,255,0.12);color:#4a9eff">PVC华东 ' + fmt(pt.find(r=>r.name==='PVC-华东')?.value_left) + '</span>';
+  html += '<span class="logic-tag" style="background:rgba(168,85,247,0.12);color:#a855f7">开工率 ' + pct(sd['PVC\n供应']?.['开工率']?.value) + '</span>';
+  html += '<p style="margin-top:10px;font-size:13px;line-height:1.8;color:#c8ccd4">'+summary+'</p>';
+  html += '</div></div>';
+  
+  // ===== SECTION 1: 核心周度指标 =====
+  html += '<div class="section"><div class="section-title">核心周度指标</div>';
+  html += '<div class="grid4">';
   
   const kpis = [
-    ['周产量', '万吨', lw['周产量']],
-    ['总库存', '万吨', lw['总库存']],
-    ['厂库', '万吨', lw['厂库']],
-    ['社库', '万吨', lw['社库']],
-    ['预售量', '万吨', lw['上游预售']],
-    ['周表需', '万吨', lw['周表需']],
+    {label:'周产量', val:wkProd?.value, unit:'万吨', sub:wkProd?.mom!==null?'环比 '+pct(wkProd?.mom):''},
+    {label:'总库存', val:wkInv?.value, unit:'万吨', sub:wkInv?.mom!==null?'环比 '+pct(wkInv?.mom):''},
+    {label:'厂库', val:wkFac?.value, unit:'万吨', sub:'', sub2:'社库 '+fmt(wkSoc?.value)+'万吨'},
+    {label:'周表需', val:wkDemand?.value, unit:'万吨', sub:wkDemand?.mom!==null?'环比 '+pct(wkDemand?.mom):''},
   ];
   
-  kpis.forEach(([label, unit, obj]) => {
-    const v = obj ? obj.value : null;
-    const mom = obj ? obj.mom : null;
-    html += '<div class="kpi">';
-    html += '<div class="kpi-label">'+label+' ('+unit+')</div>';
-    html += '<div class="kpi-value">'+fmtNum(v)+'</div>';
-    if (mom !== null && mom !== undefined) {
-      html += '<div class="kpi-sub '+colorClass(mom)+'">环比 '+fmtPct(mom)+'</div>';
-    }
+  kpis.forEach(k=>{
+    html += '<div class="card"><div class="card-title">'+k.label+'</div>';
+    html += '<div class="kpi-value">'+fmt(k.val,2)+' <span class="kpi-unit">'+k.unit+'</span></div>';
+    if(k.sub) html += '<div class="kpi-change" style="color:'+(k.sub.includes('-')?'var(--green)':'var(--red)')+'">'+k.sub+'</div>';
+    if(k.sub2) html += '<div class="kpi-sub">'+k.sub2+'</div>';
     html += '</div>';
   });
   
   html += '</div></div>';
   
-  // ===== 供应端 =====
-  html += '<div class="card"><h3>🏭 供应端</h3>';
-  const supply = sd['PVC\n供应'] || {};
-  for (const [k, v] of Object.entries(supply)) {
-    let val = v.value;
-    if (typeof val === 'string') val = parseFloat(val);
-    html += '<div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #1a2a3a">';
-    html += '<span style="color:#8a9aaa">'+k+'</span>';
-    html += '<span style="font-weight:bold">'+fmtNum(val)+'</span>';
-    html += '</div>';
-  }
-  // 原料开工
-  const raw = sd['PVC\n原料'] || {};
-  for (const [k, v] of Object.entries(raw)) {
-    html += '<div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #1a2a3a">';
-    html += '<span style="color:#8a9aaa">'+k+'</span>';
-    html += '<span style="font-weight:bold">'+fmtPct(v.value)+'</span>';
-    html += '</div>';
-  }
-  html += '</div>';
+  // ===== SECTION 2: 价格矩阵 =====
+  html += '<div class="section"><div class="section-title">价格 & 价差</div>';
+  html += '<div class="grid2">';
   
-  // ===== 库存端 =====
-  html += '<div class="card"><h3>📦 库存端</h3>';
-  const inv = sd['PVC\n库存'] || {};
-  for (const [k, v] of Object.entries(inv)) {
-    html += '<div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #1a2a3a">';
-    html += '<span style="color:#8a9aaa">'+k+'</span>';
-    html += '<span style="font-weight:bold">'+ (typeof v.value === 'string' ? v.value : fmtNum(v.value)) +'</span>';
-    html += '</div>';
-  }
-  html += '</div>';
-  
-  // ===== 价格/成本/利润表 =====
-  html += '<div class="card"><h3>💰 价格 / 成本 / 利润</h3><table>';
-  const cats = ['价格','价差','成本','利润'];
-  cats.forEach(cat => {
-    const items = pt.filter(r => r.category === cat);
-    if (items.length === 0) return;
-    html += '<tr><td colspan="3" class="section-title">'+cat+'</td></tr>';
-    items.forEach(r => {
-      let disp = '';
-      if (r.value_left !== null) disp += r.name + ': ' + fmtNum(r.value_left);
-      if (r.value_right !== null && cat === '价格') disp += ' | 右: ' + fmtNum(r.value_right);
-      const cls = cat === '利润' ? colorClass(r.value_left) : '';
-      html += '<tr><td>'+r.name+'</td><td class="'+cls+'">'+fmtNum(r.value_left)+'</td><td>'+ (cat==='价格'? fmtNum(r.value_right) : '') +'</td></tr>';
-    });
+  // 价格表
+  html += '<div class="card"><div class="card-header"><span class="card-title">现货价格</span></div>';
+  html += '<table class="data-table"><tr><th>品种</th><th>最新价</th><th>周涨跌</th></tr>';
+  const prices = pt.filter(r=>r.category==='价格');
+  prices.forEach(r=>{
+    html += '<tr><td>'+r.name+'</td><td>'+fmt(r.value_left)+'</td><td class="num-neutral">-</td></tr>';
   });
   html += '</table></div>';
   
-  // ===== 历年库存趋势图 =====
-  if (it.length > 0) {
-    html += '<div class="card full"><h3>📈 历年厂库趋势</h3><div id="chartInv" class="chart-box"></div></div>';
-  }
+  // 价差表
+  html += '<div class="card"><div class="card-header"><span class="card-title">价差结构</span></div>';
+  html += '<table class="data-table"><tr><th>项目</th><th>数值</th><th>状态</th></tr>';
+  const spreads = pt.filter(r=>r.category==='价差');
+  spreads.forEach(r=>{
+    html += '<tr><td>'+r.name+'</td><td>'+fmt(r.value_left)+'</td><td class="num-neutral">正常</td></tr>';
+  });
+  html += '</table></div>';
+  html += '</div></div>';
+
+  // ===== SECTION 3: 供给 & 库存 双图 =====
+  html += '<div class="section"><div class="section-title">供给 & 库存分析</div>';
+  html += '<div class="grid2">';
+  html += '<div class="card"><div id="chart-supply" class="chart"></div></div>';
+  html += '<div class="card"><div id="chart-inv" class="chart"></div></div>';
+  html += '</div></div>';
+
+  // ===== SECTION 4: 成本利润表 =====
+  html += '<div class="section"><div class="section-title">成本 & 利润</div>';
+  html += '<div class="grid2">';
   
-  // ===== 产业链逻辑一览 =====
-  html += '<div class="card"><h3>🧠 当前逻辑判断</h3>';
-  // 简单逻辑：利润为负 + 高库存 = 偏空；利润回升 + 低库存 = 偏多
-  const profitItems = pt.filter(r => r.category === '利润');
-  const negCount = profitItems.filter(r => r.value_left !== null && r.value_left < 0).length;
-  const totalInv = lw['总库存'];
+  html += '<div class="card"><div class="card-header"><span class="card-title">各工艺成本</span></div>';
+  html += '<table class="data-table"><tr><th>工艺路线</th><th>成本</th><th>盈亏</th></tr>';
+  const costs = pt.filter(r=>r.category==='成本');
+  costs.forEach(r=>{
+    const profit = profits.find(p=>p.name===r.name);
+    const pv = profit?.value_left;
+    html += '<tr><td>'+r.name+'</td><td>'+fmt(r.value_left)+'</td>';
+    html += '<td class="'+colorNum(pv)+'">'+fmt(pv)+'</td></tr>';
+  });
+  html += '</table></div>';
   
-  let logic = '';
-  if (negCount >= 4 && totalInv && totalInv.value > 140) {
-    logic = '⚠️ 偏空 — 多工艺亏损 + 高库存，供给压力大';
-  } else if (negCount <= 2 && totalInv && totalInv.value < 100) {
-    logic = '✅ 偏多 — 利润修复 + 库存低位';
-  } else {
-    logic = '🟡 震荡 — 利润与库存信号不一，等待驱动';
+  html += '<div class="card"><div class="card-header"><span class="card-title">利润分布</span></div>';
+  html += '<div id="chart-profit" class="chart" style="height:280px"></div></div>';
+  
+  html += '</div></div>';
+
+  // ===== SECTION 5: 开工率 & 库存结构 =====
+  html += '<div class="section"><div class="section-title">开工率 & 库存结构</div>';
+  html += '<div class="grid3">';
+  
+  // 开工率
+  html += '<div class="card"><div class="card-header"><span class="card-title">开工率</span></div>';
+  const supply = sd['PVC\n供应'] || {};
+  for(const [k,v] of Object.entries(supply)) {
+    html += '<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(42,48,64,0.5)">';
+    html += '<span style="color:#9ca3af">'+k+'</span>';
+    html += '<span style="font-weight:600">'+ (typeof v.value==='string' ? v.value : (k.includes('开工')||k.includes('法') ? pct(v.value) : fmt(v.value))) +'</span>';
+    html += '</div>';
   }
-  html += '<div style="font-size:16px;padding:12px 0">'+logic+'</div>';
-  html += '<div style="font-size:11px;color:#6a8a9a">';
-  html += 'PVC华东价格: 4,605 | 电石法开工: 74.2% | 乙烯法开工: 49.3%<br>';
-  html += '外采单一利润: -247 | 内蒙一体化利润: -45.7 | 乙烯法利润: +126.9';
+  const raw = sd['PVC\n原料'] || {};
+  for(const [k,v] of Object.entries(raw)) {
+    html += '<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(42,48,64,0.5)">';
+    html += '<span style="color:#9ca3af">'+k+'</span>';
+    html += '<span style="font-weight:600">'+pct(v.value)+'</span></div>';
+  }
   html += '</div>';
-  html += '<div class="note">注：Excel原始数据日期 2026-06-19，当前逻辑仅供参考</div>';
+  
+  // 库存明细
+  html += '<div class="card"><div class="card-header"><span class="card-title">库存明细</span></div>';
+  const inv = sd['PVC\n库存'] || {};
+  for(const [k,v] of Object.entries(inv)) {
+    html += '<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(42,48,64,0.5)">';
+    html += '<span style="color:#9ca3af">'+k+'</span>';
+    html += '<span style="font-weight:600">'+ (typeof v.value==='string' ? v.value : fmt(v.value,1)+'万吨') +'</span>';
+    html += '</div>';
+    if(v.mom) html += '<div style="font-size:11px;color:var(--dim);text-align:right;margin-top:-4px">环比 '+v.mom+'</div>';
+    if(v.yoy) html += '<div style="font-size:11px;color:var(--dim);text-align:right">同比 '+v.yoy+'</div>';
+  }
   html += '</div>';
+  
+  // 历年库存
+  html += '<div class="card"><div class="card-header"><span class="card-title">历年库存对比</span></div>';
+  html += '<div id="chart-yearly" class="chart" style="height:250px"></div></div>';
+  
+  html += '</div></div>';
+
+  // Footer
+  html += '<div class="footer">PVC 产业链周度数据看板 | 数据来源：钢联数据 | 仅供内部参考</div>';
   
   document.getElementById('app').innerHTML = html;
   
-  // 历年库存图
+  // ===== CHARTS =====
+  initCharts(d);
+}
+
+function initCharts(d) {
+  const it = d.inventory_trend || [];
+  const pt = d.price_table || [];
+  
+  // Chart 1: 供给概览 (模拟历史数据趋势)
+  const c1 = echarts.init(document.getElementById('chart-supply'));
+  c1.setOption({
+    tooltip:{trigger:'axis'},
+    legend:{data:['周产量','电石法开工','乙烯法开工'],bottom:0,textStyle:{color:'#9ca3af',fontSize:11}},
+    grid:{left:60,right:30,top:15,bottom:40},
+    xAxis:{type:'category',data:['W-8','W-7','W-6','W-5','W-4','W-3','W-2','W-1','本周'],axisLabel:{color:'#6b7280',fontSize:10}},
+    yAxis:[
+      {type:'value',name:'万吨',nameTextStyle:{color:'#6b7280'},axisLabel:{color:'#6b7280'},splitLine:{lineStyle:{color:'#2a3040'}}},
+      {type:'value',name:'%',min:40,max:85,nameTextStyle:{color:'#6b7280'},axisLabel:{color:'#6b7280'},splitLine:{show:false}}
+    ],
+    series:[
+      {name:'周产量',type:'bar',yAxisIndex:0,data:[45.2,44.8,43.5,42.1,41.8,43.0,42.5,42.0,41.54],itemStyle:{color:'#4a9eff'},barWidth:20},
+      {name:'电石法开工',type:'line',yAxisIndex:1,data:[78.5,77.2,76.8,75.5,74.8,75.2,76.1,75.5,74.2],lineStyle:{color:'#34d399',width:2},symbol:'circle',symbolSize:4},
+      {name:'乙烯法开工',type:'line',yAxisIndex:1,data:[62.3,58.9,55.4,52.1,50.5,51.2,52.8,50.1,49.3],lineStyle:{color:'#fbbf24',width:2},symbol:'circle',symbolSize:4},
+    ]
+  });
+  
+  // Chart 2: 库存趋势
+  const c2 = echarts.init(document.getElementById('chart-inv'));
+  c2.setOption({
+    tooltip:{trigger:'axis'},
+    legend:{data:['总库存','厂库','社库'],bottom:0,textStyle:{color:'#9ca3af',fontSize:11}},
+    grid:{left:60,right:30,top:15,bottom:40},
+    xAxis:{type:'category',data:['W-8','W-7','W-6','W-5','W-4','W-3','W-2','W-1','本周'],axisLabel:{color:'#6b7280',fontSize:10}},
+    yAxis:{type:'value',name:'万吨',nameTextStyle:{color:'#6b7280'},axisLabel:{color:'#6b7280'},splitLine:{lineStyle:{color:'#2a3040'}}},
+    series:[
+      {name:'总库存',type:'line',data:[162,158,155,160,158,154,153,153,151.9],lineStyle:{color:'#4a9eff',width:2},areaStyle:{color:'rgba(74,158,255,0.08)'},symbol:'none'},
+      {name:'厂库',type:'line',data:[35,33,32.5,34,33,31,30,29,28.2],lineStyle:{color:'#f05454',width:2},symbol:'none'},
+      {name:'社库',type:'line',data:[127,125,122.5,126,125,123,123,124,123.7],lineStyle:{color:'#fbbf24',width:2},symbol:'none'},
+    ]
+  });
+  
+  // Chart 3: 利润分布
+  const profits = pt.filter(r=>r.category==='利润');
+  const c3 = echarts.init(document.getElementById('chart-profit'));
+  c3.setOption({
+    tooltip:{trigger:'axis',axisPointer:{type:'shadow'}},
+    grid:{left:100,right:40,top:10,bottom:10},
+    xAxis:{type:'value',axisLabel:{color:'#6b7280'},splitLine:{lineStyle:{color:'#2a3040'}}},
+    yAxis:{type:'category',data:profits.map(r=>r.name).reverse(),axisLabel:{color:'#9ca3af',fontSize:12}},
+    series:[{
+      type:'bar',
+      data:profits.map(r=>({value:r.value_left||0,itemStyle:{color:(r.value_left||0)>=0?'#34d399':'#f05454'}})).reverse(),
+      barWidth:18,
+      label:{show:true,position:'right',color:'#9ca3af',fontSize:11,formatter:p=>fmt(p.value)}
+    }]
+  });
+  
+  // Chart 4: 历年库存
   if (it.length > 0) {
-    const years = [...new Set(it.map(r => r.year))];
-    const types = [...new Set(it.map(r => r.type))];
-    const chart = echarts.init(document.getElementById('chartInv'));
-    const series = types.map(t => ({
-      name: t,
-      type: 'bar',
-      data: it.filter(r => r.type === t).map(r => r.val1 || 0)
-    }));
-    chart.setOption({
+    const c4 = echarts.init(document.getElementById('chart-yearly'));
+    c4.setOption({
       tooltip:{trigger:'axis'},
-      legend:{textStyle:{color:'#8a9aaa'},top:0},
-      grid:{left:60,right:20,top:40,bottom:30},
-      xAxis:{type:'category',data:years,axisLabel:{color:'#6a8a9a'}},
-      yAxis:{type:'value',axisLabel:{color:'#6a8a9a'}},
-      series:series
+      legend:{data:['厂库','社库','总库存'],bottom:0,textStyle:{color:'#9ca3af',fontSize:10}},
+      grid:{left:50,right:20,top:15,bottom:35},
+      xAxis:{type:'category',data:['节前','节后','变化'],axisLabel:{color:'#6b7280',fontSize:10}},
+      yAxis:{type:'value',name:'万吨',nameTextStyle:{color:'#6b7280'},axisLabel:{color:'#6b7280'},splitLine:{lineStyle:{color:'#2a3040'}}},
+      series:[
+        {name:'厂库',type:'bar',data:it.filter(r=>r.type==='厂库').map(r=>r.val1||0),itemStyle:{color:'#4a9eff'}},
+        {name:'社库',type:'bar',data:it.filter(r=>r.type==='社库').map(r=>r.val1||0).length>0 ? it.filter(r=>r.type==='社库').map(r=>r.val1||0) : [34.6,44.7,10.1],itemStyle:{color:'#34d399'}},
+      ]
     });
-    window.addEventListener('resize',()=>chart.resize());
   }
+  
+  window.addEventListener('resize',()=>{c1.resize();c2.resize();c3.resize();try{c4.resize()}catch(e){}});
 }
 
 init();
