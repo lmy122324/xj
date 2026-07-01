@@ -1,0 +1,72 @@
+{
+  "total_matches": 7,
+  "correct_h2h": 2,
+  "accuracy_rate": "2/7 (29%)",
+  "accuracy_pct": 28.6,
+  "last_updated": "2026-07-01 22:58 CST",
+  "history": [
+    {
+      "match": "南非 vs 加拿大",
+      "actual_score": "0-1",
+      "actual_result": "加拿大胜",
+      "predicted_result": "N/A",
+      "correct": false,
+      "confidence": null,
+      "time": "2026-06-28T19:00:00Z"
+    },
+    {
+      "match": "巴西 vs 日本",
+      "actual_score": "2-1",
+      "actual_result": "巴西胜",
+      "predicted_result": "N/A",
+      "correct": false,
+      "confidence": null,
+      "time": "2026-06-29T17:00:00Z"
+    },
+    {
+      "match": "德国 vs 巴拉圭",
+      "actual_score": "1-1",
+      "actual_result": "平局",
+      "predicted_result": "N/A",
+      "correct": false,
+      "confidence": null,
+      "time": "2026-06-29T20:30:00Z"
+    },
+    {
+      "match": "荷兰 vs 摩洛哥",
+      "actual_score": "1-1",
+      "actual_result": "平局",
+      "predicted_result": "荷兰胜",
+      "correct": false,
+      "confidence": 76,
+      "time": "2026-06-30T00:59:00Z"
+    },
+    {
+      "match": "科特迪瓦 vs 挪威",
+      "actual_score": "1-2",
+      "actual_result": "挪威胜",
+      "predicted_result": "平局",
+      "correct": false,
+      "confidence": 50,
+      "time": "2026-06-30T17:00:00Z"
+    },
+    {
+      "match": "法国 vs 瑞典",
+      "actual_score": "3-0",
+      "actual_result": "法国胜",
+      "predicted_result": "法国胜",
+      "correct": true,
+      "confidence": 76,
+      "time": "2026-06-30T21:00:00Z"
+    },
+    {
+      "match": "墨西哥 vs 厄瓜多尔",
+      "actual_score": "2-0",
+      "actual_result": "墨西哥胜",
+      "predicted_result": "墨西哥胜",
+      "correct": true,
+      "confidence": 47,
+      "time": "2026-07-01T02:00:00Z"
+    }
+  ]
+}
