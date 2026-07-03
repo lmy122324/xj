@@ -1,6 +1,6 @@
 {
   "version": "2.1",
-  "generated_at": "2026-07-03 13:27 CST",
+  "generated_at": "2026-07-03 22:26 CST",
   "matches": [
     {
       "home": "澳大利亚",
@@ -10,147 +10,46 @@
       "group": "?",
       "result": null,
       "odds_h2h": {
-        "Australia": 3.68,
-        "Draw": 2.89,
-        "Egypt": 2.41
+        "Australia": 3.81,
+        "Draw": 2.93,
+        "Egypt": 2.39
       },
       "odds_handicap": {
-        "Australia +0.25": 1.89,
-        "Egypt -0.25": 2.02
+        "Australia +0.25": 1.93,
+        "Egypt -0.25": 1.99
       },
       "odds_overunder": {
-        "Over 1.75球": 1.82,
-        "Under 1.75球": 2.09
+        "Over 2.0球": 2.01,
+        "Under 2.0球": 1.89
       },
       "changes": [
         {
           "icon": "📈",
           "type": "bad",
           "label": "澳大利亚胜赔率变动",
-          "text": "3.44 → 3.68"
+          "text": "3.68 → 3.81"
         },
         {
           "icon": "📈",
           "type": "bad",
           "label": "平局赔率变动",
-          "text": "2.85 → 2.89"
+          "text": "2.89 → 2.93"
         },
         {
           "icon": "📉",
           "type": "good",
           "label": "埃及胜赔率变动",
-          "text": "2.56 → 2.41"
+          "text": "2.41 → 2.39"
         }
       ],
       "recommendations": [
         {
           "title": "平局",
-          "odds": "@2.89",
-          "reason": "凯莉0%·CV2.76%·信心★★☆☆☆"
+          "odds": "@2.93",
+          "reason": "凯莉0%·CV2.66%·信心★★☆☆☆"
         }
       ],
       "analyses": [
-        {
-          "time": "2026-06-30 10:46",
-          "confidence": 44,
-          "isNew": false,
-          "goalCount": 2,
-          "possibleScores": [
-            "1-1",
-            "澳大利亚 2-1 埃及",
-            "埃及 2-1 澳大利亚"
-          ],
-          "factors": [],
-          "text": "预测方向：Draw | 比分：澳大利亚 1-1 埃及 | 信心：★★☆☆☆",
-          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(255,215,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#ffd700;\">🎯 预测：平局</div>\n      <div style=\"font-size:13px;color:#e8e0f0;margin:4px 0;\">澳大利亚 1-1 埃及</div>\n      <div style=\"font-size:11px;color:#7a7090;\">信心 ★★☆☆☆ | 44%</div>\n    </div>\n    \n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">公平概率</span>\n        <span style=\"color:#ffd700;font-weight:700;\">28.5%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">凯莉比例</span>\n        <span style=\"color:#7a7090;font-weight:700;\">-0.8%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">市场共识 (CV)</span>\n        <span style=\"color:#66d4aa;font-weight:700;\">高 (2.75%)</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">价值值</span>\n        <span style=\"color:#ff4757;font-weight:700;\">-2.0%</span>\n      </div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"font-size:12px;color:#e8e0f0;margin:8px 0;\">\n      <div style=\"color:#ffd700;font-size:13px;font-weight:700;margin-bottom:6px;\">💶 赔率对比</div>\n      <table style=\"width:100%;border-collapse:collapse;\">\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.1);\">\n          <td style=\"padding:4px 8px;color:#7a7090;\">选项</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">欧洲赔率</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">竞彩赔率</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">澳大利亚</td>\n          <td style=\"padding:4px 8px;color:;\">3.44</td>\n          <td style=\"padding:4px 8px;color:;\">2.58</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">平局</td>\n          <td style=\"padding:4px 8px;\">2.91</td>\n          <td style=\"padding:4px 8px;\">2.18</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">埃及</td>\n          <td style=\"padding:4px 8px;\">2.51</td>\n          <td style=\"padding:4px 8px;\">1.88</td>\n        </tr>\n      </table>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #00d4aa;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#00d4aa;\">🛡️ 保守策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 平局 <span style=\"color:#00d4aa;\">@2.91</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥291  |  单关</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ffd700;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ffd700;\">⚡ 均衡策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 平局 @ 2.91 <span style=\"color:#ffd700;\">@2.18</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥218  |  竞彩</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ff4757;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ff4757;\">🔥 激进策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 波胆 澳大利亚 1-1 <span style=\"color:#ff4757;\">@6.0</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥600  |  波胆</div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      生成于 2026-06-30 10:46  |  ⚠️ 仅供参考，理性投注\n    </div>\n    </div>\n    ",
-          "strategies": {
-            "conservative": {
-              "label": "🛡️ 保守策略",
-              "desc": "稳字当头",
-              "pick": "平局",
-              "odds": 2.91,
-              "per_100": 291,
-              "type": "单关"
-            },
-            "balanced": {
-              "label": "⚡ 均衡策略",
-              "desc": "收益风险兼顾",
-              "pick": "平局 @ 2.91",
-              "odds": 2.18,
-              "per_100": 218,
-              "type": "竞彩"
-            },
-            "aggressive": {
-              "label": "🔥 激进策略",
-              "desc": "追求高回报",
-              "pick": "波胆 澳大利亚 1-1",
-              "odds": 8.0,
-              "per_100": 800,
-              "type": "波胆"
-            }
-          },
-          "jingcai_all": {
-            "spf": {
-              "澳大利亚": 2.58,
-              "Draw": 2.18,
-              "埃及": 1.88
-            },
-            "rangqiu": {
-              "澳大利亚": {
-                "odds": 3.35,
-                "handicap": -0.5
-              },
-              "埃及": {
-                "odds": 2.45,
-                "handicap": 0.5
-              }
-            },
-            "total_goals": {
-              "0": 2.49,
-              "1": 2.08,
-              "2": 3.46,
-              "3": 8.65,
-              "4": 28.82,
-              "5": 75.0,
-              "6_plus": 75.0
-            },
-            "scores": {
-              "1-0": 10.32,
-              "2-0": 12.9,
-              "2-1": 14.33,
-              "1-1": 6.25,
-              "0-0": 12.5,
-              "3-0": 32.25,
-              "3-1": 43.0,
-              "0-1": 9.41
-            },
-            "half_full": {
-              "胜-胜": 2.06,
-              "胜-平": 15.48,
-              "胜-负": 77.4,
-              "平-胜": 3.87,
-              "平-平": 5.65,
-              "平-负": 11.29,
-              "负-胜": 47.06,
-              "负-平": 37.65,
-              "负-负": 1.51
-            },
-            "first_half_spf": {
-              "home": 5.16,
-              "Draw": 2.26,
-              "away": 1.41
-            },
-            "chuan_guan": [
-              {
-                "type": "单关",
-                "picks": [
-                  "平局"
-                ],
-                "odds": 2.18
-              }
-            ]
-          }
-        },
         {
           "time": "2026-07-01 22:55",
           "confidence": 44,
@@ -457,7 +356,7 @@
         {
           "time": "2026-07-03 13:27",
           "confidence": 46,
-          "isNew": true,
+          "isNew": false,
           "goalCount": 2,
           "possibleScores": [
             "1-1",
@@ -554,6 +453,107 @@
               }
             ]
           }
+        },
+        {
+          "time": "2026-07-03 22:26",
+          "confidence": 46,
+          "isNew": true,
+          "goalCount": 2,
+          "possibleScores": [
+            "1-1",
+            "澳大利亚 2-1 埃及",
+            "埃及 2-1 澳大利亚"
+          ],
+          "factors": [],
+          "text": "预测方向：Draw | 比分：澳大利亚 1-1 埃及 | 信心：★★☆☆☆",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(255,215,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#ffd700;\">🎯 预测：平局</div>\n      <div style=\"font-size:13px;color:#e8e0f0;margin:4px 0;\">澳大利亚 1-1 埃及</div>\n      <div style=\"font-size:11px;color:#7a7090;\">信心 ★★☆☆☆ | 46%</div>\n    </div>\n    \n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">公平概率</span>\n        <span style=\"color:#ffd700;font-weight:700;\">26.2%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">凯莉比例</span>\n        <span style=\"color:#7a7090;font-weight:700;\">-0.0%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">市场共识 (CV)</span>\n        <span style=\"color:#66d4aa;font-weight:700;\">高 (2.66%)</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">价值值</span>\n        <span style=\"color:#ff4757;font-weight:700;\">-0.2%</span>\n      </div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"font-size:12px;color:#e8e0f0;margin:8px 0;\">\n      <div style=\"color:#ffd700;font-size:13px;font-weight:700;margin-bottom:6px;\">💶 赔率对比</div>\n      <table style=\"width:100%;border-collapse:collapse;\">\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.1);\">\n          <td style=\"padding:4px 8px;color:#7a7090;\">选项</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">欧洲赔率</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">竞彩赔率</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">澳大利亚</td>\n          <td style=\"padding:4px 8px;color:;\">3.81</td>\n          <td style=\"padding:4px 8px;color:;\">2.86</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">平局</td>\n          <td style=\"padding:4px 8px;\">2.93</td>\n          <td style=\"padding:4px 8px;\">2.2</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">埃及</td>\n          <td style=\"padding:4px 8px;\">2.39</td>\n          <td style=\"padding:4px 8px;\">1.79</td>\n        </tr>\n      </table>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #00d4aa;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#00d4aa;\">🛡️ 保守策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 平局 <span style=\"color:#00d4aa;\">@2.93</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥293  |  单关</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ffd700;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ffd700;\">⚡ 均衡策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 平局 @ 2.93 <span style=\"color:#ffd700;\">@2.2</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥220  |  竞彩</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ff4757;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ff4757;\">🔥 激进策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 波胆 澳大利亚 1-1 <span style=\"color:#ff4757;\">@6.0</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥600  |  波胆</div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      生成于 2026-07-03 22:26  |  ⚠️ 仅供参考，理性投注\n    </div>\n    </div>\n    ",
+          "strategies": {
+            "conservative": {
+              "label": "🛡️ 保守策略",
+              "desc": "稳字当头",
+              "pick": "平局",
+              "odds": 2.93,
+              "per_100": 293,
+              "type": "单关"
+            },
+            "balanced": {
+              "label": "⚡ 均衡策略",
+              "desc": "收益风险兼顾",
+              "pick": "平局 @ 2.93",
+              "odds": 2.2,
+              "per_100": 220,
+              "type": "竞彩"
+            },
+            "aggressive": {
+              "label": "🔥 激进策略",
+              "desc": "追求高回报",
+              "pick": "波胆 澳大利亚 1-1",
+              "odds": 8.0,
+              "per_100": 800,
+              "type": "波胆"
+            }
+          },
+          "jingcai_all": {
+            "spf": {
+              "澳大利亚": 2.86,
+              "Draw": 2.2,
+              "埃及": 1.79
+            },
+            "rangqiu": {
+              "澳大利亚": {
+                "odds": 3.71,
+                "handicap": -1.5
+              },
+              "埃及": {
+                "odds": 2.33,
+                "handicap": 1.5
+              }
+            },
+            "total_goals": {
+              "0": 2.49,
+              "1": 2.08,
+              "2": 3.46,
+              "3": 8.65,
+              "4": 28.82,
+              "5": 75.0,
+              "6_plus": 75.0
+            },
+            "scores": {
+              "1-0": 11.43,
+              "2-0": 14.29,
+              "2-1": 15.88,
+              "1-1": 6.25,
+              "0-0": 12.5,
+              "3-0": 35.72,
+              "3-1": 47.62,
+              "0-1": 8.96
+            },
+            "half_full": {
+              "胜-胜": 2.29,
+              "胜-平": 17.14,
+              "胜-负": 85.72,
+              "平-胜": 4.29,
+              "平-平": 5.38,
+              "平-负": 10.75,
+              "负-胜": 44.81,
+              "负-平": 35.85,
+              "负-负": 1.43
+            },
+            "first_half_spf": {
+              "home": 5.71,
+              "Draw": 2.15,
+              "away": 1.34
+            },
+            "chuan_guan": [
+              {
+                "type": "单关",
+                "picks": [
+                  "平局"
+                ],
+                "odds": 2.2
+              }
+            ]
+          }
         }
       ]
     },
@@ -566,139 +566,39 @@
       "result": null,
       "odds_h2h": {
         "Argentina": 1.15,
-        "Draw": 8.58,
-        "Cape Verde": 20.42
+        "Draw": 8.85,
+        "Cape Verde": 21.0
       },
       "odds_handicap": {
-        "Argentina -2.0": 1.87,
-        "Cape Verde +2.0": 2.04
+        "Argentina -2.0": 1.79,
+        "Cape Verde +2.0": 2.14
       },
       "odds_overunder": {
-        "Over 3.0球": 2.06,
-        "Under 3.0球": 1.84
+        "Over 3.0球": 2.05,
+        "Under 3.0球": 1.85
       },
       "changes": [
         {
           "icon": "📈",
           "type": "bad",
           "label": "平局赔率变动",
-          "text": "8.51 → 8.58"
+          "text": "8.58 → 8.85"
         },
         {
           "icon": "📈",
           "type": "bad",
           "label": "佛得角胜赔率变动",
-          "text": "20.33 → 20.42"
+          "text": "20.42 → 21.0"
         }
       ],
       "recommendations": [
         {
           "title": "阿根廷胜",
           "odds": "@1.15",
-          "reason": "凯莉-24%·CV7.44%·信心★★★★☆"
+          "reason": "凯莉-21%·CV6.76%·信心★★★★☆"
         }
       ],
       "analyses": [
-        {
-          "time": "2026-06-30 10:46",
-          "confidence": 84,
-          "isNew": false,
-          "goalCount": 3,
-          "possibleScores": [
-            "3-0",
-            "佛得角 3-0"
-          ],
-          "factors": [],
-          "text": "预测方向：阿根廷 | 比分：阿根廷 3-0 佛得角 | 信心：★★★★☆",
-          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(255,215,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#ffd700;\">🎯 预测：阿根廷胜</div>\n      <div style=\"font-size:13px;color:#e8e0f0;margin:4px 0;\">阿根廷 3-0 佛得角</div>\n      <div style=\"font-size:11px;color:#7a7090;\">信心 ★★★★☆ | 84%</div>\n    </div>\n    \n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">公平概率</span>\n        <span style=\"color:#ffd700;font-weight:700;\">82.2%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">凯莉比例</span>\n        <span style=\"color:#7a7090;font-weight:700;\">-29.3%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">市场共识 (CV)</span>\n        <span style=\"color:#ffd700;font-weight:700;\">中 (7.35%)</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">价值值</span>\n        <span style=\"color:#ff4757;font-weight:700;\">-4.6%</span>\n      </div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"font-size:12px;color:#e8e0f0;margin:8px 0;\">\n      <div style=\"color:#ffd700;font-size:13px;font-weight:700;margin-bottom:6px;\">💶 赔率对比</div>\n      <table style=\"width:100%;border-collapse:collapse;\">\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.1);\">\n          <td style=\"padding:4px 8px;color:#7a7090;\">选项</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">欧洲赔率</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">竞彩赔率</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">阿根廷</td>\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">1.16</td>\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">0.87</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">平局</td>\n          <td style=\"padding:4px 8px;\">8.13</td>\n          <td style=\"padding:4px 8px;\">6.1</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">佛得角</td>\n          <td style=\"padding:4px 8px;\">18.92</td>\n          <td style=\"padding:4px 8px;\">14.19</td>\n        </tr>\n      </table>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #00d4aa;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#00d4aa;\">🛡️ 保守策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 阿根廷胜 <span style=\"color:#00d4aa;\">@1.16</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥115  |  单关</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ffd700;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ffd700;\">⚡ 均衡策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 阿根廷胜 @ 1.16 <span style=\"color:#ffd700;\">@0.87</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥87  |  竞彩</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ff4757;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ff4757;\">🔥 激进策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 波胆 阿根廷 3-0 <span style=\"color:#ff4757;\">@6.0</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥600  |  波胆</div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      生成于 2026-06-30 10:46  |  ⚠️ 仅供参考，理性投注\n    </div>\n    </div>\n    ",
-          "strategies": {
-            "conservative": {
-              "label": "🛡️ 保守策略",
-              "desc": "稳字当头，只推最稳选项",
-              "pick": "阿根廷胜",
-              "odds": 1.16,
-              "per_100": 115,
-              "type": "单关"
-            },
-            "balanced": {
-              "label": "⚡ 均衡策略",
-              "desc": "收益风险兼顾",
-              "pick": "阿根廷胜 @ 1.16",
-              "odds": 0.87,
-              "per_100": 87,
-              "type": "竞彩"
-            },
-            "aggressive": {
-              "label": "🔥 激进策略",
-              "desc": "追求高回报",
-              "pick": "波胆 阿根廷 3-0",
-              "odds": 6.0,
-              "per_100": 600,
-              "type": "波胆"
-            }
-          },
-          "jingcai_all": {
-            "spf": {
-              "阿根廷": 0.87,
-              "Draw": 6.1,
-              "佛得角": 14.19
-            },
-            "rangqiu": {
-              "佛得角": {
-                "odds": 1.3,
-                "handicap": 1.5
-              },
-              "阿根廷": {
-                "odds": 21.29,
-                "handicap": -1.5
-              }
-            },
-            "total_goals": {
-              "0": 3.83,
-              "1": 2.35,
-              "2": 2.88,
-              "3": 5.3,
-              "4": 12.99,
-              "5": 39.84,
-              "6_plus": 75.0
-            },
-            "scores": {
-              "1-0": 3.48,
-              "2-0": 4.35,
-              "2-1": 4.83,
-              "1-1": 6.25,
-              "0-0": 12.5,
-              "3-0": 10.87,
-              "3-1": 14.5,
-              "0-1": 70.95
-            },
-            "half_full": {
-              "胜-胜": 1.01,
-              "胜-平": 5.22,
-              "胜-负": 26.1,
-              "平-胜": 1.3,
-              "平-平": 2.61,
-              "平-负": 85.14,
-              "负-胜": 354.75,
-              "负-平": 283.8,
-              "负-负": 11.35
-            },
-            "first_half_spf": {
-              "home": 1.01,
-              "Draw": 1.04,
-              "away": 35.48
-            },
-            "chuan_guan": [
-              {
-                "type": "单关",
-                "picks": [
-                  "阿根廷胜"
-                ],
-                "odds": 0.87
-              }
-            ]
-          }
-        },
         {
           "time": "2026-07-01 22:55",
           "confidence": 85,
@@ -1001,7 +901,7 @@
         {
           "time": "2026-07-03 13:27",
           "confidence": 85,
-          "isNew": true,
+          "isNew": false,
           "goalCount": 3,
           "possibleScores": [
             "3-0",
@@ -1096,6 +996,105 @@
               }
             ]
           }
+        },
+        {
+          "time": "2026-07-03 22:26",
+          "confidence": 85,
+          "isNew": true,
+          "goalCount": 3,
+          "possibleScores": [
+            "3-0",
+            "佛得角 3-0"
+          ],
+          "factors": [],
+          "text": "预测方向：阿根廷 | 比分：阿根廷 3-0 佛得角 | 信心：★★★★☆",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(255,215,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#ffd700;\">🎯 预测：阿根廷胜</div>\n      <div style=\"font-size:13px;color:#e8e0f0;margin:4px 0;\">阿根廷 3-0 佛得角</div>\n      <div style=\"font-size:11px;color:#7a7090;\">信心 ★★★★☆ | 85%</div>\n    </div>\n    \n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">公平概率</span>\n        <span style=\"color:#ffd700;font-weight:700;\">84.2%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">凯莉比例</span>\n        <span style=\"color:#7a7090;font-weight:700;\">-21.4%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">市场共识 (CV)</span>\n        <span style=\"color:#ffd700;font-weight:700;\">中 (6.76%)</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">价值值</span>\n        <span style=\"color:#ff4757;font-weight:700;\">-3.2%</span>\n      </div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"font-size:12px;color:#e8e0f0;margin:8px 0;\">\n      <div style=\"color:#ffd700;font-size:13px;font-weight:700;margin-bottom:6px;\">💶 赔率对比</div>\n      <table style=\"width:100%;border-collapse:collapse;\">\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.1);\">\n          <td style=\"padding:4px 8px;color:#7a7090;\">选项</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">欧洲赔率</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">竞彩赔率</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">阿根廷</td>\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">1.15</td>\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">0.86</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">平局</td>\n          <td style=\"padding:4px 8px;\">8.85</td>\n          <td style=\"padding:4px 8px;\">6.64</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">佛得角</td>\n          <td style=\"padding:4px 8px;\">21.0</td>\n          <td style=\"padding:4px 8px;\">15.75</td>\n        </tr>\n      </table>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #00d4aa;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#00d4aa;\">🛡️ 保守策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 阿根廷胜 <span style=\"color:#00d4aa;\">@1.15</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥114  |  单关</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ffd700;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ffd700;\">⚡ 均衡策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 阿根廷胜 @ 1.15 <span style=\"color:#ffd700;\">@0.86</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥86  |  竞彩</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ff4757;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ff4757;\">🔥 激进策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 波胆 阿根廷 3-0 <span style=\"color:#ff4757;\">@6.0</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥600  |  波胆</div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      生成于 2026-07-03 22:26  |  ⚠️ 仅供参考，理性投注\n    </div>\n    </div>\n    ",
+          "strategies": {
+            "conservative": {
+              "label": "🛡️ 保守策略",
+              "desc": "稳字当头，只推最稳选项",
+              "pick": "阿根廷胜",
+              "odds": 1.15,
+              "per_100": 114,
+              "type": "单关"
+            },
+            "balanced": {
+              "label": "⚡ 均衡策略",
+              "desc": "收益风险兼顾",
+              "pick": "阿根廷胜 @ 1.15",
+              "odds": 0.86,
+              "per_100": 86,
+              "type": "竞彩"
+            },
+            "aggressive": {
+              "label": "🔥 激进策略",
+              "desc": "追求高回报",
+              "pick": "波胆 阿根廷 3-0",
+              "odds": 6.0,
+              "per_100": 600,
+              "type": "波胆"
+            }
+          },
+          "jingcai_all": {
+            "spf": {
+              "阿根廷": 0.86,
+              "Draw": 6.64,
+              "佛得角": 15.75
+            },
+            "rangqiu": {
+              "佛得角": {
+                "odds": 1.29,
+                "handicap": 1.5
+              },
+              "阿根廷": {
+                "odds": 23.62,
+                "handicap": -1.5
+              }
+            },
+            "total_goals": {
+              "0": 3.85,
+              "1": 2.35,
+              "2": 2.88,
+              "3": 5.28,
+              "4": 12.92,
+              "5": 39.53,
+              "6_plus": 75.0
+            },
+            "scores": {
+              "1-0": 3.45,
+              "2-0": 4.31,
+              "2-1": 4.79,
+              "1-1": 6.25,
+              "0-0": 12.5,
+              "3-0": 10.78,
+              "3-1": 14.37
+            },
+            "half_full": {
+              "胜-胜": 1.01,
+              "胜-平": 5.17,
+              "胜-负": 25.88,
+              "平-胜": 1.29,
+              "平-平": 2.59,
+              "平-负": 94.5,
+              "负-胜": 393.75,
+              "负-平": 315.0,
+              "负-负": 12.6
+            },
+            "first_half_spf": {
+              "home": 1.01,
+              "Draw": 1.03,
+              "away": 39.38
+            },
+            "chuan_guan": [
+              {
+                "type": "单关",
+                "picks": [
+                  "阿根廷胜"
+                ],
+                "odds": 0.86
+              }
+            ]
+          }
         }
       ]
     },
@@ -1107,146 +1106,46 @@
       "group": "?",
       "result": null,
       "odds_h2h": {
-        "Colombia": 1.44,
-        "Draw": 4.36,
-        "Ghana": 8.78
+        "Colombia": 1.45,
+        "Draw": 4.4,
+        "Ghana": 9.25
       },
       "odds_handicap": {
-        "Colombia -1.25": 2.03,
-        "Ghana +1.25": 1.88
+        "Colombia -1.25": 2.08,
+        "Ghana +1.25": 1.85
       },
       "odds_overunder": {
-        "Over 2.25球": 1.88,
-        "Under 2.25球": 2.0
+        "Over 2.25球": 1.85,
+        "Under 2.25球": 2.06
       },
       "changes": [
         {
-          "icon": "📉",
-          "type": "good",
+          "icon": "📈",
+          "type": "bad",
           "label": "哥伦比亚胜赔率变动",
-          "text": "1.48 → 1.44"
+          "text": "1.44 → 1.45"
         },
         {
           "icon": "📈",
           "type": "bad",
           "label": "平局赔率变动",
-          "text": "4.21 → 4.36"
+          "text": "4.36 → 4.4"
         },
         {
           "icon": "📈",
           "type": "bad",
           "label": "加纳胜赔率变动",
-          "text": "7.99 → 8.78"
+          "text": "8.78 → 9.25"
         }
       ],
       "recommendations": [
         {
           "title": "哥伦比亚胜",
-          "odds": "@1.44",
-          "reason": "凯莉-8%·CV3.99%·信心★★★★☆"
+          "odds": "@1.45",
+          "reason": "凯莉-7%·CV4.31%·信心★★★★☆"
         }
       ],
       "analyses": [
-        {
-          "time": "2026-06-30 10:46",
-          "confidence": 66,
-          "isNew": false,
-          "goalCount": 2,
-          "possibleScores": [
-            "2-0",
-            "加纳 2-0"
-          ],
-          "factors": [],
-          "text": "预测方向：哥伦比亚 | 比分：哥伦比亚 2-0 加纳 | 信心：★★★☆☆",
-          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(255,215,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#ffd700;\">🎯 预测：哥伦比亚胜</div>\n      <div style=\"font-size:13px;color:#e8e0f0;margin:4px 0;\">哥伦比亚 2-0 加纳</div>\n      <div style=\"font-size:11px;color:#7a7090;\">信心 ★★★☆☆ | 66%</div>\n    </div>\n    \n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">公平概率</span>\n        <span style=\"color:#ffd700;font-weight:700;\">63.2%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">凯莉比例</span>\n        <span style=\"color:#7a7090;font-weight:700;\">-4.9%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">市场共识 (CV)</span>\n        <span style=\"color:#66d4aa;font-weight:700;\">高 (4.5%)</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">价值值</span>\n        <span style=\"color:#ff4757;font-weight:700;\">-2.7%</span>\n      </div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"font-size:12px;color:#e8e0f0;margin:8px 0;\">\n      <div style=\"color:#ffd700;font-size:13px;font-weight:700;margin-bottom:6px;\">💶 赔率对比</div>\n      <table style=\"width:100%;border-collapse:collapse;\">\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.1);\">\n          <td style=\"padding:4px 8px;color:#7a7090;\">选项</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">欧洲赔率</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">竞彩赔率</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">哥伦比亚</td>\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">1.54</td>\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">1.16</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">平局</td>\n          <td style=\"padding:4px 8px;\">3.99</td>\n          <td style=\"padding:4px 8px;\">2.99</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">加纳</td>\n          <td style=\"padding:4px 8px;\">7.33</td>\n          <td style=\"padding:4px 8px;\">5.5</td>\n        </tr>\n      </table>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #00d4aa;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#00d4aa;\">🛡️ 保守策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 哥伦比亚胜 <span style=\"color:#00d4aa;\">@1.54</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥154  |  单关</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ffd700;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ffd700;\">⚡ 均衡策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 哥伦比亚胜 @ 1.54 <span style=\"color:#ffd700;\">@1.16</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥115  |  竞彩</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ff4757;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ff4757;\">🔥 激进策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 波胆 哥伦比亚 2-0 <span style=\"color:#ff4757;\">@6.0</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥600  |  波胆</div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      生成于 2026-06-30 10:46  |  ⚠️ 仅供参考，理性投注\n    </div>\n    </div>\n    ",
-          "strategies": {
-            "conservative": {
-              "label": "🛡️ 保守策略",
-              "desc": "稳字当头，只推最稳选项",
-              "pick": "哥伦比亚胜",
-              "odds": 1.54,
-              "per_100": 154,
-              "type": "单关"
-            },
-            "balanced": {
-              "label": "⚡ 均衡策略",
-              "desc": "收益风险兼顾",
-              "pick": "哥伦比亚胜 @ 1.54",
-              "odds": 1.16,
-              "per_100": 115,
-              "type": "竞彩"
-            },
-            "aggressive": {
-              "label": "🔥 激进策略",
-              "desc": "追求高回报",
-              "pick": "波胆 哥伦比亚 2-0",
-              "odds": 6.0,
-              "per_100": 600,
-              "type": "波胆"
-            }
-          },
-          "jingcai_all": {
-            "spf": {
-              "哥伦比亚": 1.16,
-              "Draw": 2.99,
-              "加纳": 5.5
-            },
-            "rangqiu": {
-              "加纳": {
-                "odds": 1.73,
-                "handicap": 1.5
-              },
-              "哥伦比亚": {
-                "odds": 8.25,
-                "handicap": -1.5
-              }
-            },
-            "total_goals": {
-              "0": 3.48,
-              "1": 2.27,
-              "2": 2.96,
-              "3": 5.78,
-              "4": 15.09,
-              "5": 49.2,
-              "6_plus": 75.0
-            },
-            "scores": {
-              "1-0": 4.62,
-              "2-0": 5.77,
-              "2-1": 6.42,
-              "1-1": 6.25,
-              "0-0": 12.5,
-              "3-0": 14.44,
-              "3-1": 19.25,
-              "0-1": 27.49
-            },
-            "half_full": {
-              "胜-胜": 1.01,
-              "胜-平": 6.93,
-              "胜-负": 34.65,
-              "平-胜": 1.73,
-              "平-平": 3.46,
-              "平-负": 32.98,
-              "负-胜": 137.44,
-              "负-平": 109.95,
-              "负-负": 4.4
-            },
-            "first_half_spf": {
-              "home": 1.01,
-              "Draw": 1.39,
-              "away": 13.74
-            },
-            "chuan_guan": [
-              {
-                "type": "单关",
-                "picks": [
-                  "哥伦比亚胜"
-                ],
-                "odds": 1.16
-              }
-            ]
-          }
-        },
         {
           "time": "2026-07-01 22:55",
           "confidence": 66,
@@ -1550,7 +1449,7 @@
         {
           "time": "2026-07-03 13:27",
           "confidence": 70,
-          "isNew": true,
+          "isNew": false,
           "goalCount": 3,
           "possibleScores": [
             "3-0",
@@ -1646,6 +1545,106 @@
               }
             ]
           }
+        },
+        {
+          "time": "2026-07-03 22:26",
+          "confidence": 70,
+          "isNew": true,
+          "goalCount": 3,
+          "possibleScores": [
+            "3-0",
+            "加纳 3-0"
+          ],
+          "factors": [],
+          "text": "预测方向：哥伦比亚 | 比分：哥伦比亚 3-0 加纳 | 信心：★★★★☆",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(255,215,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#ffd700;\">🎯 预测：哥伦比亚胜</div>\n      <div style=\"font-size:13px;color:#e8e0f0;margin:4px 0;\">哥伦比亚 3-0 加纳</div>\n      <div style=\"font-size:11px;color:#7a7090;\">信心 ★★★★☆ | 70%</div>\n    </div>\n    \n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">公平概率</span>\n        <span style=\"color:#ffd700;font-weight:700;\">66.9%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">凯莉比例</span>\n        <span style=\"color:#7a7090;font-weight:700;\">-6.5%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">市场共识 (CV)</span>\n        <span style=\"color:#66d4aa;font-weight:700;\">高 (4.31%)</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">价值值</span>\n        <span style=\"color:#ff4757;font-weight:700;\">-3.0%</span>\n      </div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"font-size:12px;color:#e8e0f0;margin:8px 0;\">\n      <div style=\"color:#ffd700;font-size:13px;font-weight:700;margin-bottom:6px;\">💶 赔率对比</div>\n      <table style=\"width:100%;border-collapse:collapse;\">\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.1);\">\n          <td style=\"padding:4px 8px;color:#7a7090;\">选项</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">欧洲赔率</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">竞彩赔率</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">哥伦比亚</td>\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">1.45</td>\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">1.09</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">平局</td>\n          <td style=\"padding:4px 8px;\">4.4</td>\n          <td style=\"padding:4px 8px;\">3.3</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">加纳</td>\n          <td style=\"padding:4px 8px;\">9.25</td>\n          <td style=\"padding:4px 8px;\">6.94</td>\n        </tr>\n      </table>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #00d4aa;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#00d4aa;\">🛡️ 保守策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 哥伦比亚胜 <span style=\"color:#00d4aa;\">@1.45</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥145  |  单关</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ffd700;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ffd700;\">⚡ 均衡策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 哥伦比亚胜 @ 1.45 <span style=\"color:#ffd700;\">@1.09</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥109  |  竞彩</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ff4757;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ff4757;\">🔥 激进策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 波胆 哥伦比亚 3-0 <span style=\"color:#ff4757;\">@6.0</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥600  |  波胆</div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      生成于 2026-07-03 22:26  |  ⚠️ 仅供参考，理性投注\n    </div>\n    </div>\n    ",
+          "strategies": {
+            "conservative": {
+              "label": "🛡️ 保守策略",
+              "desc": "稳字当头，只推最稳选项",
+              "pick": "哥伦比亚胜",
+              "odds": 1.45,
+              "per_100": 145,
+              "type": "单关"
+            },
+            "balanced": {
+              "label": "⚡ 均衡策略",
+              "desc": "收益风险兼顾",
+              "pick": "哥伦比亚胜 @ 1.45",
+              "odds": 1.09,
+              "per_100": 109,
+              "type": "竞彩"
+            },
+            "aggressive": {
+              "label": "🔥 激进策略",
+              "desc": "追求高回报",
+              "pick": "波胆 哥伦比亚 3-0",
+              "odds": 6.0,
+              "per_100": 600,
+              "type": "波胆"
+            }
+          },
+          "jingcai_all": {
+            "spf": {
+              "哥伦比亚": 1.09,
+              "Draw": 3.3,
+              "加纳": 6.94
+            },
+            "rangqiu": {
+              "加纳": {
+                "odds": 1.63,
+                "handicap": 1.5
+              },
+              "哥伦比亚": {
+                "odds": 10.41,
+                "handicap": -1.5
+              }
+            },
+            "total_goals": {
+              "0": 3.52,
+              "1": 2.28,
+              "2": 2.95,
+              "3": 5.72,
+              "4": 14.81,
+              "5": 47.95,
+              "6_plus": 75.0
+            },
+            "scores": {
+              "1-0": 4.35,
+              "2-0": 5.44,
+              "2-1": 6.04,
+              "1-1": 6.25,
+              "0-0": 12.5,
+              "3-0": 13.59,
+              "3-1": 18.12,
+              "0-1": 34.69
+            },
+            "half_full": {
+              "胜-胜": 1.01,
+              "胜-平": 6.52,
+              "胜-负": 32.62,
+              "平-胜": 1.63,
+              "平-平": 3.26,
+              "平-负": 41.62,
+              "负-胜": 173.44,
+              "负-平": 138.75,
+              "负-负": 5.55
+            },
+            "first_half_spf": {
+              "home": 1.01,
+              "Draw": 1.3,
+              "away": 17.34
+            },
+            "chuan_guan": [
+              {
+                "type": "单关",
+                "picks": [
+                  "哥伦比亚胜"
+                ],
+                "odds": 1.09
+              }
+            ]
+          }
         }
       ]
     },
@@ -1657,43 +1656,37 @@
       "group": "?",
       "result": null,
       "odds_h2h": {
-        "Canada": 5.22,
-        "Draw": 3.53,
+        "Canada": 5.25,
+        "Draw": 3.54,
         "Morocco": 1.78
       },
       "odds_handicap": {
-        "Canada +0.75": 1.85,
-        "Morocco -0.75": 2.06
+        "Canada +0.75": 1.86,
+        "Morocco -0.75": 2.05
       },
       "odds_overunder": {
         "Over 2.25球": 2.03,
-        "Under 2.25球": 1.86
+        "Under 2.25球": 1.87
       },
       "changes": [
         {
           "icon": "📈",
           "type": "bad",
           "label": "加拿大胜赔率变动",
-          "text": "5.2 → 5.22"
+          "text": "5.22 → 5.25"
         },
         {
           "icon": "📈",
           "type": "bad",
           "label": "平局赔率变动",
-          "text": "3.5 → 3.53"
-        },
-        {
-          "icon": "📉",
-          "type": "good",
-          "label": "摩洛哥胜赔率变动",
-          "text": "1.79 → 1.78"
+          "text": "3.53 → 3.54"
         }
       ],
       "recommendations": [
         {
           "title": "平局",
-          "odds": "@3.53",
-          "reason": "凯莉-1%·CV3.62%·信心★★★☆☆"
+          "odds": "@3.54",
+          "reason": "凯莉0%·CV3.1%·信心★★★☆☆"
         }
       ],
       "analyses": [
@@ -2003,7 +1996,7 @@
         {
           "time": "2026-07-03 13:27",
           "confidence": 58,
-          "isNew": true,
+          "isNew": false,
           "goalCount": 2,
           "possibleScores": [
             "1-1",
@@ -2100,6 +2093,107 @@
               }
             ]
           }
+        },
+        {
+          "time": "2026-07-03 22:26",
+          "confidence": 58,
+          "isNew": true,
+          "goalCount": 2,
+          "possibleScores": [
+            "1-1",
+            "加拿大 2-1 摩洛哥",
+            "摩洛哥 2-1 加拿大"
+          ],
+          "factors": [],
+          "text": "预测方向：Draw | 比分：加拿大 1-1 摩洛哥 | 信心：★★★☆☆",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(255,215,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#ffd700;\">🎯 预测：平局</div>\n      <div style=\"font-size:13px;color:#e8e0f0;margin:4px 0;\">加拿大 1-1 摩洛哥</div>\n      <div style=\"font-size:11px;color:#7a7090;\">信心 ★★★☆☆ | 58%</div>\n    </div>\n    \n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">公平概率</span>\n        <span style=\"color:#ffd700;font-weight:700;\">18.7%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">凯莉比例</span>\n        <span style=\"color:#7a7090;font-weight:700;\">-0.5%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">市场共识 (CV)</span>\n        <span style=\"color:#66d4aa;font-weight:700;\">高 (3.1%)</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">价值值</span>\n        <span style=\"color:#ff4757;font-weight:700;\">-1.8%</span>\n      </div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"font-size:12px;color:#e8e0f0;margin:8px 0;\">\n      <div style=\"color:#ffd700;font-size:13px;font-weight:700;margin-bottom:6px;\">💶 赔率对比</div>\n      <table style=\"width:100%;border-collapse:collapse;\">\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.1);\">\n          <td style=\"padding:4px 8px;color:#7a7090;\">选项</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">欧洲赔率</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">竞彩赔率</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">加拿大</td>\n          <td style=\"padding:4px 8px;color:;\">5.25</td>\n          <td style=\"padding:4px 8px;color:;\">3.94</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">平局</td>\n          <td style=\"padding:4px 8px;\">3.54</td>\n          <td style=\"padding:4px 8px;\">2.66</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">摩洛哥</td>\n          <td style=\"padding:4px 8px;\">1.78</td>\n          <td style=\"padding:4px 8px;\">1.33</td>\n        </tr>\n      </table>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #00d4aa;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#00d4aa;\">🛡️ 保守策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 平局 <span style=\"color:#00d4aa;\">@3.54</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥354  |  单关</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ffd700;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ffd700;\">⚡ 均衡策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 平局 @ 3.54 <span style=\"color:#ffd700;\">@2.66</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥266  |  竞彩</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ff4757;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ff4757;\">🔥 激进策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 波胆 加拿大 1-1 <span style=\"color:#ff4757;\">@6.0</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥600  |  波胆</div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      生成于 2026-07-03 22:26  |  ⚠️ 仅供参考，理性投注\n    </div>\n    </div>\n    ",
+          "strategies": {
+            "conservative": {
+              "label": "🛡️ 保守策略",
+              "desc": "稳字当头",
+              "pick": "平局",
+              "odds": 3.54,
+              "per_100": 354,
+              "type": "单关"
+            },
+            "balanced": {
+              "label": "⚡ 均衡策略",
+              "desc": "收益风险兼顾",
+              "pick": "平局 @ 3.54",
+              "odds": 2.66,
+              "per_100": 266,
+              "type": "竞彩"
+            },
+            "aggressive": {
+              "label": "🔥 激进策略",
+              "desc": "追求高回报",
+              "pick": "波胆 加拿大 1-1",
+              "odds": 8.0,
+              "per_100": 800,
+              "type": "波胆"
+            }
+          },
+          "jingcai_all": {
+            "spf": {
+              "加拿大": 3.94,
+              "Draw": 2.66,
+              "摩洛哥": 1.33
+            },
+            "rangqiu": {
+              "加拿大": {
+                "odds": 5.12,
+                "handicap": -1.5
+              },
+              "摩洛哥": {
+                "odds": 1.74,
+                "handicap": 1.5
+              }
+            },
+            "total_goals": {
+              "0": 2.49,
+              "1": 2.08,
+              "2": 3.46,
+              "3": 8.65,
+              "4": 28.82,
+              "5": 75.0,
+              "6_plus": 75.0
+            },
+            "scores": {
+              "1-0": 15.75,
+              "2-0": 19.69,
+              "2-1": 21.88,
+              "1-1": 6.25,
+              "0-0": 12.5,
+              "3-0": 49.22,
+              "3-1": 65.63,
+              "0-1": 6.67
+            },
+            "half_full": {
+              "胜-胜": 3.15,
+              "胜-平": 23.62,
+              "胜-负": 118.12,
+              "平-胜": 5.91,
+              "平-平": 4.0,
+              "平-负": 8.01,
+              "负-胜": 33.38,
+              "负-平": 26.7,
+              "负-负": 1.07
+            },
+            "first_half_spf": {
+              "home": 7.88,
+              "Draw": 1.6,
+              "away": 1.01
+            },
+            "chuan_guan": [
+              {
+                "type": "单关",
+                "picks": [
+                  "平局"
+                ],
+                "odds": 2.66
+              }
+            ]
+          }
         }
       ]
     },
@@ -2111,43 +2205,37 @@
       "group": "?",
       "result": null,
       "odds_h2h": {
-        "Paraguay": 16.17,
-        "Draw": 6.88,
+        "Paraguay": 16.74,
+        "Draw": 6.82,
         "France": 1.21
       },
       "odds_handicap": {
-        "France -1.75": 1.83,
-        "Paraguay +1.75": 2.1
+        "France -1.75": 1.85,
+        "Paraguay +1.75": 2.06
       },
       "odds_overunder": {
-        "Over 2.75球": 1.84,
-        "Under 2.75球": 2.06
+        "Over 2.75球": 1.93,
+        "Under 2.75球": 1.95
       },
       "changes": [
         {
-          "icon": "📉",
-          "type": "good",
+          "icon": "📈",
+          "type": "bad",
           "label": "巴拉圭胜赔率变动",
-          "text": "17.51 → 16.17"
+          "text": "16.17 → 16.74"
         },
         {
           "icon": "📉",
           "type": "good",
           "label": "平局赔率变动",
-          "text": "7.19 → 6.88"
-        },
-        {
-          "icon": "📈",
-          "type": "bad",
-          "label": "法国胜赔率变动",
-          "text": "1.19 → 1.21"
+          "text": "6.88 → 6.82"
         }
       ],
       "recommendations": [
         {
           "title": "平局",
-          "odds": "@6.88",
-          "reason": "凯莉-1%·CV6.81%·信心★★★★☆"
+          "odds": "@6.82",
+          "reason": "凯莉0%·CV7.84%·信心★★★★☆"
         }
       ],
       "analyses": [
@@ -2451,7 +2539,7 @@
         {
           "time": "2026-07-03 13:27",
           "confidence": 81,
-          "isNew": true,
+          "isNew": false,
           "goalCount": 2,
           "possibleScores": [
             "1-1",
@@ -2546,6 +2634,105 @@
               }
             ]
           }
+        },
+        {
+          "time": "2026-07-03 22:26",
+          "confidence": 82,
+          "isNew": true,
+          "goalCount": 2,
+          "possibleScores": [
+            "1-1",
+            "巴拉圭 2-1 法国",
+            "法国 2-1 巴拉圭"
+          ],
+          "factors": [],
+          "text": "预测方向：Draw | 比分：巴拉圭 1-1 法国 | 信心：★★★★☆",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(255,215,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#ffd700;\">🎯 预测：平局</div>\n      <div style=\"font-size:13px;color:#e8e0f0;margin:4px 0;\">巴拉圭 1-1 法国</div>\n      <div style=\"font-size:11px;color:#7a7090;\">信心 ★★★★☆ | 82%</div>\n    </div>\n    \n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">公平概率</span>\n        <span style=\"color:#ffd700;font-weight:700;\">5.7%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">凯莉比例</span>\n        <span style=\"color:#7a7090;font-weight:700;\">-0.3%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">市场共识 (CV)</span>\n        <span style=\"color:#ffd700;font-weight:700;\">中 (7.84%)</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">价值值</span>\n        <span style=\"color:#ff4757;font-weight:700;\">-4.6%</span>\n      </div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"font-size:12px;color:#e8e0f0;margin:8px 0;\">\n      <div style=\"color:#ffd700;font-size:13px;font-weight:700;margin-bottom:6px;\">💶 赔率对比</div>\n      <table style=\"width:100%;border-collapse:collapse;\">\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.1);\">\n          <td style=\"padding:4px 8px;color:#7a7090;\">选项</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">欧洲赔率</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">竞彩赔率</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">巴拉圭</td>\n          <td style=\"padding:4px 8px;color:;\">16.74</td>\n          <td style=\"padding:4px 8px;color:;\">12.55</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">平局</td>\n          <td style=\"padding:4px 8px;\">6.82</td>\n          <td style=\"padding:4px 8px;\">5.12</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">法国</td>\n          <td style=\"padding:4px 8px;\">1.21</td>\n          <td style=\"padding:4px 8px;\">0.91</td>\n        </tr>\n      </table>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #00d4aa;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#00d4aa;\">🛡️ 保守策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 平局 <span style=\"color:#00d4aa;\">@6.82</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥682  |  单关</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ffd700;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ffd700;\">⚡ 均衡策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 平局 @ 6.82 <span style=\"color:#ffd700;\">@5.12</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥512  |  竞彩</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ff4757;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ff4757;\">🔥 激进策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 波胆 巴拉圭 1-1 <span style=\"color:#ff4757;\">@6.0</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥600  |  波胆</div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      生成于 2026-07-03 22:26  |  ⚠️ 仅供参考，理性投注\n    </div>\n    </div>\n    ",
+          "strategies": {
+            "conservative": {
+              "label": "🛡️ 保守策略",
+              "desc": "稳字当头",
+              "pick": "平局",
+              "odds": 6.82,
+              "per_100": 682,
+              "type": "单关"
+            },
+            "balanced": {
+              "label": "⚡ 均衡策略",
+              "desc": "收益风险兼顾",
+              "pick": "平局 @ 6.82",
+              "odds": 5.12,
+              "per_100": 512,
+              "type": "竞彩"
+            },
+            "aggressive": {
+              "label": "🔥 激进策略",
+              "desc": "追求高回报",
+              "pick": "波胆 巴拉圭 1-1",
+              "odds": 8.0,
+              "per_100": 800,
+              "type": "波胆"
+            }
+          },
+          "jingcai_all": {
+            "spf": {
+              "巴拉圭": 12.55,
+              "Draw": 5.12,
+              "法国": 0.91
+            },
+            "rangqiu": {
+              "巴拉圭": {
+                "odds": 16.32,
+                "handicap": -1.5
+              },
+              "法国": {
+                "odds": 1.18,
+                "handicap": 1.5
+              }
+            },
+            "total_goals": {
+              "0": 2.61,
+              "1": 2.09,
+              "2": 3.35,
+              "3": 8.07,
+              "4": 25.85,
+              "5": 75.0,
+              "6_plus": 75.0
+            },
+            "scores": {
+              "1-0": 50.22,
+              "2-0": 62.77,
+              "2-1": 69.75,
+              "1-1": 6.25,
+              "0-0": 12.5,
+              "0-1": 4.54
+            },
+            "half_full": {
+              "胜-胜": 10.04,
+              "胜-平": 75.33,
+              "胜-负": 376.65,
+              "平-胜": 18.83,
+              "平-平": 2.72,
+              "平-负": 5.45,
+              "负-胜": 22.69,
+              "负-平": 18.15,
+              "负-负": 1.01
+            },
+            "first_half_spf": {
+              "home": 25.11,
+              "Draw": 1.09,
+              "away": 1.01
+            },
+            "chuan_guan": [
+              {
+                "type": "单关",
+                "picks": [
+                  "平局"
+                ],
+                "odds": 5.12
+              }
+            ]
+          }
         }
       ]
     },
@@ -2566,34 +2753,15 @@
         "Norway +0.5": 2.03
       },
       "odds_overunder": {
-        "Over 2.75球": 2.0,
+        "Over 2.75球": 1.99,
         "Under 2.75球": 1.89
       },
-      "changes": [
-        {
-          "icon": "📈",
-          "type": "bad",
-          "label": "巴西胜赔率变动",
-          "text": "1.86 → 1.87"
-        },
-        {
-          "icon": "📉",
-          "type": "good",
-          "label": "平局赔率变动",
-          "text": "3.74 → 3.72"
-        },
-        {
-          "icon": "📉",
-          "type": "good",
-          "label": "挪威胜赔率变动",
-          "text": "4.32 → 4.31"
-        }
-      ],
+      "changes": [],
       "recommendations": [
         {
           "title": "巴西胜",
           "odds": "@1.87",
-          "reason": "凯莉-5%·CV3.01%·信心★★★☆☆"
+          "reason": "凯莉-5%·CV2.82%·信心★★★☆☆"
         }
       ],
       "analyses": [
@@ -2900,7 +3068,7 @@
         {
           "time": "2026-07-03 13:27",
           "confidence": 56,
-          "isNew": true,
+          "isNew": false,
           "goalCount": 3,
           "possibleScores": [
             "2-1",
@@ -2909,6 +3077,106 @@
           "factors": [],
           "text": "预测方向：巴西 | 比分：巴西 2-1 挪威 | 信心：★★★☆☆",
           "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(255,215,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#ffd700;\">🎯 预测：巴西胜</div>\n      <div style=\"font-size:13px;color:#e8e0f0;margin:4px 0;\">巴西 2-1 挪威</div>\n      <div style=\"font-size:11px;color:#7a7090;\">信心 ★★★☆☆ | 56%</div>\n    </div>\n    \n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">公平概率</span>\n        <span style=\"color:#ffd700;font-weight:700;\">51.1%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">凯莉比例</span>\n        <span style=\"color:#7a7090;font-weight:700;\">-5.2%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">市场共识 (CV)</span>\n        <span style=\"color:#66d4aa;font-weight:700;\">高 (3.01%)</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">价值值</span>\n        <span style=\"color:#ff4757;font-weight:700;\">-4.4%</span>\n      </div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"font-size:12px;color:#e8e0f0;margin:8px 0;\">\n      <div style=\"color:#ffd700;font-size:13px;font-weight:700;margin-bottom:6px;\">💶 赔率对比</div>\n      <table style=\"width:100%;border-collapse:collapse;\">\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.1);\">\n          <td style=\"padding:4px 8px;color:#7a7090;\">选项</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">欧洲赔率</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">竞彩赔率</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">巴西</td>\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">1.87</td>\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">1.4</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">平局</td>\n          <td style=\"padding:4px 8px;\">3.72</td>\n          <td style=\"padding:4px 8px;\">2.79</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">挪威</td>\n          <td style=\"padding:4px 8px;\">4.31</td>\n          <td style=\"padding:4px 8px;\">3.23</td>\n        </tr>\n      </table>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #00d4aa;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#00d4aa;\">🛡️ 保守策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 巴西胜 <span style=\"color:#00d4aa;\">@1.87</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥187  |  单关</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ffd700;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ffd700;\">⚡ 均衡策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 巴西胜 @ 1.87 <span style=\"color:#ffd700;\">@1.4</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥140  |  竞彩</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ff4757;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ff4757;\">🔥 激进策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 波胆 巴西 2-1 <span style=\"color:#ff4757;\">@6.0</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥600  |  波胆</div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      生成于 2026-07-03 13:27  |  ⚠️ 仅供参考，理性投注\n    </div>\n    </div>\n    ",
+          "strategies": {
+            "conservative": {
+              "label": "🛡️ 保守策略",
+              "desc": "稳字当头，只推最稳选项",
+              "pick": "巴西胜",
+              "odds": 1.87,
+              "per_100": 187,
+              "type": "单关"
+            },
+            "balanced": {
+              "label": "⚡ 均衡策略",
+              "desc": "收益风险兼顾",
+              "pick": "巴西胜 @ 1.87",
+              "odds": 1.4,
+              "per_100": 140,
+              "type": "竞彩"
+            },
+            "aggressive": {
+              "label": "🔥 激进策略",
+              "desc": "追求高回报",
+              "pick": "波胆 巴西 2-1",
+              "odds": 6.0,
+              "per_100": 600,
+              "type": "波胆"
+            }
+          },
+          "jingcai_all": {
+            "spf": {
+              "巴西": 1.4,
+              "Draw": 2.79,
+              "挪威": 3.23
+            },
+            "rangqiu": {
+              "挪威": {
+                "odds": 2.1,
+                "handicap": 1.5
+              },
+              "巴西": {
+                "odds": 4.85,
+                "handicap": -1.5
+              }
+            },
+            "total_goals": {
+              "0": 3.48,
+              "1": 2.27,
+              "2": 2.96,
+              "3": 5.78,
+              "4": 15.09,
+              "5": 49.2,
+              "6_plus": 75.0
+            },
+            "scores": {
+              "1-0": 5.61,
+              "2-0": 7.01,
+              "2-1": 7.79,
+              "1-1": 6.25,
+              "0-0": 12.5,
+              "3-0": 17.53,
+              "3-1": 23.38,
+              "0-1": 16.16
+            },
+            "half_full": {
+              "胜-胜": 1.12,
+              "胜-平": 8.42,
+              "胜-负": 42.08,
+              "平-胜": 2.1,
+              "平-平": 4.21,
+              "平-负": 19.39,
+              "负-胜": 80.81,
+              "负-平": 64.65,
+              "负-负": 2.59
+            },
+            "first_half_spf": {
+              "home": 1.05,
+              "Draw": 1.68,
+              "away": 8.08
+            },
+            "chuan_guan": [
+              {
+                "type": "单关",
+                "picks": [
+                  "巴西胜"
+                ],
+                "odds": 1.4
+              }
+            ]
+          }
+        },
+        {
+          "time": "2026-07-03 22:26",
+          "confidence": 56,
+          "isNew": true,
+          "goalCount": 3,
+          "possibleScores": [
+            "2-1",
+            "挪威 2-1"
+          ],
+          "factors": [],
+          "text": "预测方向：巴西 | 比分：巴西 2-1 挪威 | 信心：★★★☆☆",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(255,215,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#ffd700;\">🎯 预测：巴西胜</div>\n      <div style=\"font-size:13px;color:#e8e0f0;margin:4px 0;\">巴西 2-1 挪威</div>\n      <div style=\"font-size:11px;color:#7a7090;\">信心 ★★★☆☆ | 56%</div>\n    </div>\n    \n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">公平概率</span>\n        <span style=\"color:#ffd700;font-weight:700;\">51.3%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">凯莉比例</span>\n        <span style=\"color:#7a7090;font-weight:700;\">-4.7%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">市场共识 (CV)</span>\n        <span style=\"color:#66d4aa;font-weight:700;\">高 (2.82%)</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">价值值</span>\n        <span style=\"color:#ff4757;font-weight:700;\">-4.1%</span>\n      </div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"font-size:12px;color:#e8e0f0;margin:8px 0;\">\n      <div style=\"color:#ffd700;font-size:13px;font-weight:700;margin-bottom:6px;\">💶 赔率对比</div>\n      <table style=\"width:100%;border-collapse:collapse;\">\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.1);\">\n          <td style=\"padding:4px 8px;color:#7a7090;\">选项</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">欧洲赔率</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">竞彩赔率</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">巴西</td>\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">1.87</td>\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">1.4</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">平局</td>\n          <td style=\"padding:4px 8px;\">3.72</td>\n          <td style=\"padding:4px 8px;\">2.79</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">挪威</td>\n          <td style=\"padding:4px 8px;\">4.31</td>\n          <td style=\"padding:4px 8px;\">3.23</td>\n        </tr>\n      </table>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #00d4aa;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#00d4aa;\">🛡️ 保守策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 巴西胜 <span style=\"color:#00d4aa;\">@1.87</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥187  |  单关</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ffd700;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ffd700;\">⚡ 均衡策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 巴西胜 @ 1.87 <span style=\"color:#ffd700;\">@1.4</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥140  |  竞彩</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ff4757;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ff4757;\">🔥 激进策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 波胆 巴西 2-1 <span style=\"color:#ff4757;\">@6.0</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥600  |  波胆</div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      生成于 2026-07-03 22:26  |  ⚠️ 仅供参考，理性投注\n    </div>\n    </div>\n    ",
           "strategies": {
             "conservative": {
               "label": "🛡️ 保守策略",
@@ -3007,13 +3275,13 @@
       "group": "?",
       "result": null,
       "odds_h2h": {
-        "Mexico": 3.2,
-        "Draw": 3.28,
-        "England": 2.41
+        "Mexico": 3.19,
+        "Draw": 3.25,
+        "England": 2.42
       },
       "odds_handicap": {
-        "England -0.25": 2.06,
-        "Mexico +0.25": 1.85
+        "England -0.25": 2.08,
+        "Mexico +0.25": 1.84
       },
       "odds_overunder": {
         "Over 2.0球": 1.83,
@@ -3024,20 +3292,20 @@
           "icon": "📉",
           "type": "good",
           "label": "墨西哥胜赔率变动",
-          "text": "3.25 → 3.2"
+          "text": "3.2 → 3.19"
         },
         {
-          "icon": "📈",
-          "type": "bad",
+          "icon": "📉",
+          "type": "good",
           "label": "平局赔率变动",
-          "text": "3.22 → 3.28"
+          "text": "3.28 → 3.25"
         }
       ],
       "recommendations": [
         {
           "title": "平局",
-          "odds": "@3.28",
-          "reason": "凯莉-1%·CV2.73%·信心★★☆☆☆"
+          "odds": "@3.25",
+          "reason": "凯莉-1%·CV2.49%·信心★★☆☆☆"
         }
       ],
       "analyses": [
@@ -3246,7 +3514,7 @@
         {
           "time": "2026-07-03 13:27",
           "confidence": 46,
-          "isNew": true,
+          "isNew": false,
           "goalCount": 2,
           "possibleScores": [
             "1-1",
@@ -3343,6 +3611,107 @@
               }
             ]
           }
+        },
+        {
+          "time": "2026-07-03 22:26",
+          "confidence": 45,
+          "isNew": true,
+          "goalCount": 2,
+          "possibleScores": [
+            "1-1",
+            "墨西哥 2-1 英格兰",
+            "英格兰 2-1 墨西哥"
+          ],
+          "factors": [],
+          "text": "预测方向：Draw | 比分：墨西哥 1-1 英格兰 | 信心：★★☆☆☆",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(255,215,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#ffd700;\">🎯 预测：平局</div>\n      <div style=\"font-size:13px;color:#e8e0f0;margin:4px 0;\">墨西哥 1-1 英格兰</div>\n      <div style=\"font-size:11px;color:#7a7090;\">信心 ★★☆☆☆ | 45%</div>\n    </div>\n    \n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">公平概率</span>\n        <span style=\"color:#ffd700;font-weight:700;\">30.4%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">凯莉比例</span>\n        <span style=\"color:#7a7090;font-weight:700;\">-1.4%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">市场共识 (CV)</span>\n        <span style=\"color:#66d4aa;font-weight:700;\">高 (2.49%)</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">价值值</span>\n        <span style=\"color:#ff4757;font-weight:700;\">-3.0%</span>\n      </div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"font-size:12px;color:#e8e0f0;margin:8px 0;\">\n      <div style=\"color:#ffd700;font-size:13px;font-weight:700;margin-bottom:6px;\">💶 赔率对比</div>\n      <table style=\"width:100%;border-collapse:collapse;\">\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.1);\">\n          <td style=\"padding:4px 8px;color:#7a7090;\">选项</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">欧洲赔率</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">竞彩赔率</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">墨西哥</td>\n          <td style=\"padding:4px 8px;color:;\">3.19</td>\n          <td style=\"padding:4px 8px;color:;\">2.39</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">平局</td>\n          <td style=\"padding:4px 8px;\">3.25</td>\n          <td style=\"padding:4px 8px;\">2.44</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">英格兰</td>\n          <td style=\"padding:4px 8px;\">2.42</td>\n          <td style=\"padding:4px 8px;\">1.81</td>\n        </tr>\n      </table>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #00d4aa;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#00d4aa;\">🛡️ 保守策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 平局 <span style=\"color:#00d4aa;\">@3.25</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥325  |  单关</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ffd700;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ffd700;\">⚡ 均衡策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 平局 @ 3.25 <span style=\"color:#ffd700;\">@2.44</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥244  |  竞彩</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ff4757;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ff4757;\">🔥 激进策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 波胆 墨西哥 1-1 <span style=\"color:#ff4757;\">@6.0</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥600  |  波胆</div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      生成于 2026-07-03 22:26  |  ⚠️ 仅供参考，理性投注\n    </div>\n    </div>\n    ",
+          "strategies": {
+            "conservative": {
+              "label": "🛡️ 保守策略",
+              "desc": "稳字当头",
+              "pick": "平局",
+              "odds": 3.25,
+              "per_100": 325,
+              "type": "单关"
+            },
+            "balanced": {
+              "label": "⚡ 均衡策略",
+              "desc": "收益风险兼顾",
+              "pick": "平局 @ 3.25",
+              "odds": 2.44,
+              "per_100": 244,
+              "type": "竞彩"
+            },
+            "aggressive": {
+              "label": "🔥 激进策略",
+              "desc": "追求高回报",
+              "pick": "波胆 墨西哥 1-1",
+              "odds": 8.0,
+              "per_100": 800,
+              "type": "波胆"
+            }
+          },
+          "jingcai_all": {
+            "spf": {
+              "墨西哥": 2.39,
+              "Draw": 2.44,
+              "英格兰": 1.81
+            },
+            "rangqiu": {
+              "墨西哥": {
+                "odds": 3.11,
+                "handicap": -0.5
+              },
+              "英格兰": {
+                "odds": 2.36,
+                "handicap": 0.5
+              }
+            },
+            "total_goals": {
+              "0": 2.49,
+              "1": 2.08,
+              "2": 3.46,
+              "3": 8.65,
+              "4": 28.82,
+              "5": 75.0,
+              "6_plus": 75.0
+            },
+            "scores": {
+              "1-0": 9.57,
+              "2-0": 11.96,
+              "2-1": 13.29,
+              "1-1": 6.25,
+              "0-0": 12.5,
+              "3-0": 29.91,
+              "3-1": 39.88,
+              "0-1": 9.07
+            },
+            "half_full": {
+              "胜-胜": 1.91,
+              "胜-平": 14.36,
+              "胜-负": 71.78,
+              "平-胜": 3.59,
+              "平-平": 5.45,
+              "平-负": 10.89,
+              "负-胜": 45.38,
+              "负-平": 36.3,
+              "负-负": 1.45
+            },
+            "first_half_spf": {
+              "home": 4.79,
+              "Draw": 2.18,
+              "away": 1.36
+            },
+            "chuan_guan": [
+              {
+                "type": "单关",
+                "picks": [
+                  "平局"
+                ],
+                "odds": 2.44
+              }
+            ]
+          }
         }
       ]
     },
@@ -3354,31 +3723,50 @@
       "group": "?",
       "result": null,
       "odds_h2h": {
-        "Portugal": 4.09,
-        "Draw": 3.58,
-        "Spain": 1.96
+        "Portugal": 4.15,
+        "Draw": 3.64,
+        "Spain": 1.93
       },
       "odds_handicap": {
-        "Portugal +0.5": 1.93,
-        "Spain -0.5": 1.97
+        "Portugal +0.5": 1.97,
+        "Spain -0.5": 1.93
       },
       "odds_overunder": {
-        "Over 2.5球": 2.0,
-        "Under 2.5球": 1.89
+        "Over 2.5球": 1.93,
+        "Under 2.5球": 1.95
       },
-      "changes": [],
+      "changes": [
+        {
+          "icon": "📈",
+          "type": "bad",
+          "label": "葡萄牙胜赔率变动",
+          "text": "4.09 → 4.15"
+        },
+        {
+          "icon": "📈",
+          "type": "bad",
+          "label": "平局赔率变动",
+          "text": "3.58 → 3.64"
+        },
+        {
+          "icon": "📉",
+          "type": "good",
+          "label": "西班牙胜赔率变动",
+          "text": "1.96 → 1.93"
+        }
+      ],
       "recommendations": [
         {
           "title": "平局",
-          "odds": "@3.58",
-          "reason": "凯莉-1%·CV3.3%·信心★★★☆☆"
+          "odds": "@3.64",
+          "reason": "凯莉-1%·CV2.7%·信心★★★☆☆"
         }
       ],
       "analyses": [
         {
           "time": "2026-07-03 13:27",
           "confidence": 54,
-          "isNew": true,
+          "isNew": false,
           "goalCount": 2,
           "possibleScores": [
             "1-1",
@@ -3475,6 +3863,107 @@
               }
             ]
           }
+        },
+        {
+          "time": "2026-07-03 22:26",
+          "confidence": 55,
+          "isNew": true,
+          "goalCount": 2,
+          "possibleScores": [
+            "1-1",
+            "葡萄牙 2-1 西班牙",
+            "西班牙 2-1 葡萄牙"
+          ],
+          "factors": [],
+          "text": "预测方向：Draw | 比分：葡萄牙 1-1 西班牙 | 信心：★★★☆☆",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(255,215,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#ffd700;\">🎯 预测：平局</div>\n      <div style=\"font-size:13px;color:#e8e0f0;margin:4px 0;\">葡萄牙 1-1 西班牙</div>\n      <div style=\"font-size:11px;color:#7a7090;\">信心 ★★★☆☆ | 55%</div>\n    </div>\n    \n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">公平概率</span>\n        <span style=\"color:#ffd700;font-weight:700;\">23.3%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">凯莉比例</span>\n        <span style=\"color:#7a7090;font-weight:700;\">-1.0%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">市场共识 (CV)</span>\n        <span style=\"color:#66d4aa;font-weight:700;\">高 (2.7%)</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">价值值</span>\n        <span style=\"color:#ff4757;font-weight:700;\">-3.3%</span>\n      </div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"font-size:12px;color:#e8e0f0;margin:8px 0;\">\n      <div style=\"color:#ffd700;font-size:13px;font-weight:700;margin-bottom:6px;\">💶 赔率对比</div>\n      <table style=\"width:100%;border-collapse:collapse;\">\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.1);\">\n          <td style=\"padding:4px 8px;color:#7a7090;\">选项</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">欧洲赔率</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">竞彩赔率</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">葡萄牙</td>\n          <td style=\"padding:4px 8px;color:;\">4.15</td>\n          <td style=\"padding:4px 8px;color:;\">3.11</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">平局</td>\n          <td style=\"padding:4px 8px;\">3.64</td>\n          <td style=\"padding:4px 8px;\">2.73</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">西班牙</td>\n          <td style=\"padding:4px 8px;\">1.93</td>\n          <td style=\"padding:4px 8px;\">1.45</td>\n        </tr>\n      </table>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #00d4aa;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#00d4aa;\">🛡️ 保守策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 平局 <span style=\"color:#00d4aa;\">@3.64</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥364  |  单关</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ffd700;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ffd700;\">⚡ 均衡策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 平局 @ 3.64 <span style=\"color:#ffd700;\">@2.73</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥273  |  竞彩</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ff4757;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ff4757;\">🔥 激进策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 波胆 葡萄牙 1-1 <span style=\"color:#ff4757;\">@6.0</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥600  |  波胆</div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      生成于 2026-07-03 22:26  |  ⚠️ 仅供参考，理性投注\n    </div>\n    </div>\n    ",
+          "strategies": {
+            "conservative": {
+              "label": "🛡️ 保守策略",
+              "desc": "稳字当头",
+              "pick": "平局",
+              "odds": 3.64,
+              "per_100": 364,
+              "type": "单关"
+            },
+            "balanced": {
+              "label": "⚡ 均衡策略",
+              "desc": "收益风险兼顾",
+              "pick": "平局 @ 3.64",
+              "odds": 2.73,
+              "per_100": 273,
+              "type": "竞彩"
+            },
+            "aggressive": {
+              "label": "🔥 激进策略",
+              "desc": "追求高回报",
+              "pick": "波胆 葡萄牙 1-1",
+              "odds": 8.0,
+              "per_100": 800,
+              "type": "波胆"
+            }
+          },
+          "jingcai_all": {
+            "spf": {
+              "葡萄牙": 3.11,
+              "Draw": 2.73,
+              "西班牙": 1.45
+            },
+            "rangqiu": {
+              "葡萄牙": {
+                "odds": 4.05,
+                "handicap": -1.5
+              },
+              "西班牙": {
+                "odds": 1.88,
+                "handicap": 1.5
+              }
+            },
+            "total_goals": {
+              "0": 2.49,
+              "1": 2.08,
+              "2": 3.46,
+              "3": 8.65,
+              "4": 28.82,
+              "5": 75.0,
+              "6_plus": 75.0
+            },
+            "scores": {
+              "1-0": 12.45,
+              "2-0": 15.56,
+              "2-1": 17.29,
+              "1-1": 6.25,
+              "0-0": 12.5,
+              "3-0": 38.91,
+              "3-1": 51.88,
+              "0-1": 7.24
+            },
+            "half_full": {
+              "胜-胜": 2.49,
+              "胜-平": 18.68,
+              "胜-负": 93.38,
+              "平-胜": 4.67,
+              "平-平": 4.34,
+              "平-负": 8.69,
+              "负-胜": 36.19,
+              "负-平": 28.95,
+              "负-负": 1.16
+            },
+            "first_half_spf": {
+              "home": 6.23,
+              "Draw": 1.74,
+              "away": 1.09
+            },
+            "chuan_guan": [
+              {
+                "type": "单关",
+                "picks": [
+                  "平局"
+                ],
+                "odds": 2.73
+              }
+            ]
+          }
         }
       ]
     },
@@ -3487,36 +3976,30 @@
       "result": null,
       "odds_h2h": {
         "USA": 2.68,
-        "Draw": 3.41,
-        "Belgium": 2.73
+        "Draw": 3.43,
+        "Belgium": 2.72
       },
       "odds_handicap": {
         "Belgium +-0.0": 1.97,
         "USA +0.0": 1.93
       },
       "odds_overunder": {
-        "Over 2.75球": 2.02,
-        "Under 2.75球": 1.87
+        "Over 2.75球": 2.0,
+        "Under 2.75球": 1.89
       },
       "changes": [
         {
-          "icon": "📉",
-          "type": "good",
-          "label": "平局赔率变动",
-          "text": "3.46 → 3.41"
-        },
-        {
           "icon": "📈",
           "type": "bad",
-          "label": "比利时胜赔率变动",
-          "text": "2.68 → 2.73"
+          "label": "平局赔率变动",
+          "text": "3.41 → 3.43"
         }
       ],
       "recommendations": [
         {
           "title": "美国胜",
           "odds": "@2.68",
-          "reason": "凯莉-1%·CV2.68%·信心★★☆☆☆"
+          "reason": "凯莉-2%·CV2.58%·信心★★☆☆☆"
         }
       ],
       "analyses": [
@@ -3724,7 +4207,7 @@
         {
           "time": "2026-07-03 13:27",
           "confidence": 42,
-          "isNew": true,
+          "isNew": false,
           "goalCount": 1,
           "possibleScores": [
             "1-0",
@@ -3820,6 +4303,106 @@
               }
             ]
           }
+        },
+        {
+          "time": "2026-07-03 22:26",
+          "confidence": 42,
+          "isNew": true,
+          "goalCount": 1,
+          "possibleScores": [
+            "1-0",
+            "比利时 1-0"
+          ],
+          "factors": [],
+          "text": "预测方向：美国 | 比分：美国 1-0 比利时 | 信心：★★☆☆☆",
+          "fullReport": "\n    <div style=\"font-family: sans-serif; max-width: 640px;\">\n    <div style=\"text-align:center;padding:12px;background:linear-gradient(135deg,#1a1040,#0c0a1a);border-radius:12px;margin-bottom:12px;border:1px solid rgba(255,215,0,.2);\">\n      <div style=\"font-size:20px;font-weight:700;color:#ffd700;\">🎯 预测：美国胜</div>\n      <div style=\"font-size:13px;color:#e8e0f0;margin:4px 0;\">美国 1-0 比利时</div>\n      <div style=\"font-size:11px;color:#7a7090;\">信心 ★★☆☆☆ | 42%</div>\n    </div>\n    \n    <div style=\"margin:8px 0;\">\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">公平概率</span>\n        <span style=\"color:#ffd700;font-weight:700;\">36.1%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">凯莉比例</span>\n        <span style=\"color:#7a7090;font-weight:700;\">-2.0%</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">市场共识 (CV)</span>\n        <span style=\"color:#66d4aa;font-weight:700;\">高 (2.58%)</span>\n      </div>\n      <div style=\"display:flex;justify-content:space-between;padding:6px 10px;background:rgba(255,215,0,.03);border-radius:6px;margin:2px 0;\">\n        <span style=\"color:#7a7090;\">价值值</span>\n        <span style=\"color:#ff4757;font-weight:700;\">-3.3%</span>\n      </div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"font-size:12px;color:#e8e0f0;margin:8px 0;\">\n      <div style=\"color:#ffd700;font-size:13px;font-weight:700;margin-bottom:6px;\">💶 赔率对比</div>\n      <table style=\"width:100%;border-collapse:collapse;\">\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.1);\">\n          <td style=\"padding:4px 8px;color:#7a7090;\">选项</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">欧洲赔率</td>\n          <td style=\"padding:4px 8px;color:#7a7090;\">竞彩赔率</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">美国</td>\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">2.68</td>\n          <td style=\"padding:4px 8px;color:#00d4aa;font-weight:700;\">2.01</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">平局</td>\n          <td style=\"padding:4px 8px;\">3.43</td>\n          <td style=\"padding:4px 8px;\">2.57</td>\n        </tr>\n        <tr style=\"border-bottom:1px solid rgba(255,215,0,.05);\">\n          <td style=\"padding:4px 8px;color:;\">比利时</td>\n          <td style=\"padding:4px 8px;\">2.72</td>\n          <td style=\"padding:4px 8px;\">2.04</td>\n        </tr>\n      </table>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #00d4aa;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#00d4aa;\">🛡️ 保守策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 美国胜 <span style=\"color:#00d4aa;\">@2.68</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥268  |  单关</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ffd700;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ffd700;\">⚡ 均衡策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 美国胜 @ 2.68 <span style=\"color:#ffd700;\">@2.01</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥200  |  竞彩</div>\n    </div>\n    \n    <div style=\"background:rgba(255,215,0,.02);border-left:3px solid #ff4757;border-radius:0 6px 6px 0;padding:8px 10px;margin:6px 0;\">\n      <div style=\"font-size:11px;font-weight:700;color:#ff4757;\">🔥 激进策略</div>\n      <div style=\"font-size:12px;color:#e8e0f0;margin:2px 0;\">🎯 波胆 美国 1-0 <span style=\"color:#ff4757;\">@6.0</span></div>\n      <div style=\"font-size:10px;color:#7a7090;\">💰 每100元 → ¥600  |  波胆</div>\n    </div>\n    \n    <hr style=\"border:none;border-top:1px solid rgba(255,215,0,.1);margin:10px 0;\">\n    <div style=\"font-size:10px;color:#7a7090;text-align:center;\">\n      生成于 2026-07-03 22:26  |  ⚠️ 仅供参考，理性投注\n    </div>\n    </div>\n    ",
+          "strategies": {
+            "conservative": {
+              "label": "🛡️ 保守策略",
+              "desc": "稳字当头，只推最稳选项",
+              "pick": "美国胜",
+              "odds": 2.68,
+              "per_100": 268,
+              "type": "单关"
+            },
+            "balanced": {
+              "label": "⚡ 均衡策略",
+              "desc": "收益风险兼顾",
+              "pick": "美国胜 @ 2.68",
+              "odds": 2.01,
+              "per_100": 200,
+              "type": "竞彩"
+            },
+            "aggressive": {
+              "label": "🔥 激进策略",
+              "desc": "追求高回报",
+              "pick": "波胆 美国 1-0",
+              "odds": 6.0,
+              "per_100": 600,
+              "type": "波胆"
+            }
+          },
+          "jingcai_all": {
+            "spf": {
+              "美国": 2.01,
+              "Draw": 2.57,
+              "比利时": 2.04
+            },
+            "rangqiu": {
+              "比利时": {
+                "odds": 3.02,
+                "handicap": 0.5
+              },
+              "美国": {
+                "odds": 3.06,
+                "handicap": -0.5
+              }
+            },
+            "total_goals": {
+              "0": 3.48,
+              "1": 2.27,
+              "2": 2.96,
+              "3": 5.78,
+              "4": 15.09,
+              "5": 49.2,
+              "6_plus": 75.0
+            },
+            "scores": {
+              "1-0": 8.04,
+              "2-0": 10.05,
+              "2-1": 11.17,
+              "1-1": 6.25,
+              "0-0": 12.5,
+              "3-0": 25.12,
+              "3-1": 33.5,
+              "0-1": 10.2
+            },
+            "half_full": {
+              "胜-胜": 1.61,
+              "胜-平": 12.06,
+              "胜-负": 60.3,
+              "平-胜": 3.02,
+              "平-平": 6.03,
+              "平-负": 12.24,
+              "负-胜": 51.0,
+              "负-平": 40.8,
+              "负-负": 1.63
+            },
+            "first_half_spf": {
+              "home": 1.51,
+              "Draw": 2.41,
+              "away": 5.1
+            },
+            "chuan_guan": [
+              {
+                "type": "单关",
+                "picks": [
+                  "美国胜"
+                ],
+                "odds": 2.01
+              }
+            ]
+          }
         }
       ]
     }
@@ -3896,8 +4479,8 @@
       }
     ]
   },
-  "lastUpdate": "2026-07-03 13:27 CST",
-  "nextUpdate": "2026-07-03 21:27 CST",
-  "analysisCount": 571,
+  "lastUpdate": "2026-07-03 22:26 CST",
+  "nextUpdate": "2026-07-04 06:26 CST",
+  "analysisCount": 580,
   "matchCount": 9
 }
