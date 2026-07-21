@@ -2,645 +2,1093 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>英语单词消消乐 - 快乐背单词</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>单词消消乐 - 科学背单词</title>
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 16px;
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: #f5f6fa;
+  min-height:100vh;
+  display:flex; justify-content:center; align-items:flex-start;
+  padding:16px;
+  -webkit-tap-highlight-color: transparent;
 }
-.container {
-  width: 100%;
-  max-width: 500px;
-  background: #fff;
-  border-radius: 24px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-  overflow: hidden;
+.app{
+  width:100%; max-width:480px;
+  background:#fff; border-radius:20px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  overflow:hidden; min-height:90vh;
+  display:flex; flex-direction:column;
 }
 
-/* Header */
-.header {
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: #fff;
-  padding: 24px 24px 16px;
-  text-align: center;
+/* ===== 导航栏 ===== */
+.nav{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 20px; border-bottom:1px solid #f0f0f0;
+  min-height:52px;
 }
-.header h1 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
-.header .subtitle { font-size: 13px; opacity: 0.85; }
+.nav-title{ font-size:16px; font-weight:700; color:#333; }
+.nav-back{ font-size:22px; cursor:pointer; color:#666; padding:4px; display:none; }
+.nav-action{ font-size:13px; color:#667eea; cursor:pointer; font-weight:600; }
 
-/* Level Selector */
-.level-bar {
-  display: flex;
-  gap: 8px;
-  padding: 12px 24px;
-  background: #f8f9ff;
-  border-bottom: 1px solid #eee;
+/* ===== 书选择页 ===== */
+.book-page{ padding:16px 20px; flex:1; display:flex; flex-direction:column; }
+.book-page h2{ font-size:18px; color:#333; margin-bottom:4px; }
+.book-page .sub{ font-size:13px; color:#999; margin-bottom:16px; }
+.book-list{ flex:1; overflow-y:auto; }
+.book-category{ margin-bottom:20px; }
+.book-cat-title{ font-size:13px; color:#aaa; font-weight:700; margin-bottom:8px; text-transform:uppercase; }
+.book-item{
+  display:flex; align-items:center; padding:14px 16px;
+  background:#f8f9ff; border-radius:14px; margin-bottom:8px;
+  cursor:pointer; transition:all 0.2s;
 }
-.level-btn {
-  flex: 1;
-  padding: 8px 0;
-  border: 2px solid #e0e0e0;
-  border-radius: 12px;
-  background: #fff;
-  font-size: 13px;
-  cursor: pointer;
-  transition: all 0.2s;
-  font-weight: 600;
-  color: #666;
-}
-.level-btn:hover { border-color: #667eea; color: #667eea; }
-.level-btn.active {
-  background: #667eea;
-  color: #fff;
-  border-color: #667eea;
-}
+.book-item:hover{ background:#eef0ff; }
+.book-item:active{ transform:scale(0.98); }
+.book-icon{ font-size:28px; margin-right:12px; }
+.book-info{ flex:1; }
+.book-name{ font-size:15px; font-weight:600; color:#333; }
+.book-desc{ font-size:12px; color:#999; margin-top:2px; }
+.book-count{ font-size:12px; color:#667eea; font-weight:600; }
+.book-item .arrow{ color:#ccc; font-size:18px; }
 
-/* Mode Tabs */
-.mode-tabs {
-  display: flex;
-  border-bottom: 1px solid #eee;
+/* 上传区 */
+.upload-area{
+  margin-top:12px; padding:20px;
+  border:2px dashed #ddd; border-radius:14px;
+  text-align:center; cursor:pointer; transition:all 0.2s;
 }
-.mode-tab {
-  flex: 1;
-  padding: 14px 0;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  color: #999;
-  border-bottom: 3px solid transparent;
-  transition: all 0.2s;
-  background: none;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-.mode-tab.active { color: #667eea; border-bottom-color: #667eea; }
-.mode-tab:hover { color: #667eea; }
+.upload-area:hover{ border-color:#667eea; background:#fafbff; }
+.upload-area .icon{ font-size:32px; margin-bottom:8px; }
+.upload-area .text{ font-size:13px; color:#999; }
+.upload-area .hint{ font-size:11px; color:#ccc; margin-top:4px; }
+.upload-area input{ display:none; }
 
-/* Stats Row */
-.stats-row {
-  display: flex;
-  justify-content: space-around;
-  padding: 12px 24px;
-  font-size: 12px;
-  color: #888;
-  background: #fafafa;
-  border-bottom: 1px solid #f0f0f0;
-}
-.stat-item { text-align: center; }
-.stat-value { font-size: 20px; font-weight: 700; color: #333; }
-.stat-label { font-size: 11px; color: #999; margin-top: 2px; }
-.stat-value.correct { color: #4caf50; }
-.stat-value.wrong { color: #f44336; }
-.stat-value.streak { color: #ff9800; }
+/* ===== 学习页 ===== */
+.learn-page{ display:none; flex:1; flex-direction:column; }
+.learn-page.active{ display:flex; }
 
-/* Main Content Area */
-.main-area {
-  padding: 24px;
-  min-height: 360px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+/* 进度条 */
+.progress-bar-wrap{
+  padding:12px 20px; background:#fafafa;
+  border-bottom:1px solid #f0f0f0;
+}
+.progress-info{
+  display:flex; justify-content:space-between;
+  font-size:12px; color:#999; margin-bottom:6px;
+}
+.progress-bar{
+  height:6px; background:#e8e8e8; border-radius:3px; overflow:hidden;
+}
+.progress-fill{
+  height:100%; background:linear-gradient(90deg,#667eea,#764ba2);
+  border-radius:3px; transition:width 0.4s;
 }
 
-/* Flashcard */
-.flashcard {
-  width: 100%;
-  max-width: 380px;
-  min-height: 220px;
-  perspective: 1000px;
-  margin-bottom: 20px;
+/* 学习卡片 */
+.card-area{ flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:24px 20px; }
+.word-card{
+  width:100%; max-width:360px;
+  background:#fff; border-radius:20px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  padding:32px 24px 24px;
+  text-align:center;
+  transition:transform 0.4s, opacity 0.4s;
+  min-height:240px;
+  display:flex; flex-direction:column;
+  justify-content:center;
 }
-.flashcard-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 220px;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-style: preserve-3d;
-}
-.flashcard-inner.flipped { transform: rotateY(180deg); }
-.flashcard-front, .flashcard-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  min-height: 220px;
-  backface-visibility: hidden;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  text-align: center;
-}
-.flashcard-front {
-  background: linear-gradient(145deg, #f8f9ff, #eef0ff);
-  border: 2px solid #e8eaff;
-}
-.flashcard-back {
-  background: linear-gradient(145deg, #f0f4ff, #e8ecff);
-  border: 2px solid #dde3ff;
-  transform: rotateY(180deg);
-}
-.card-word {
-  font-size: 36px;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 8px;
-}
-.card-phonetic {
-  font-size: 14px;
-  color: #999;
-  margin-bottom: 16px;
-}
-.card-meaning {
-  font-size: 22px;
-  color: #667eea;
-  font-weight: 600;
-}
-.card-tag {
-  font-size: 12px;
-  color: #aaa;
-  margin-top: 12px;
-}
-.speak-btn {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 2px solid #667eea;
-  background: #fff;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 0.2s;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.speak-btn:hover { background: #667eea; color: #fff; }
-.speak-btn.speaking { background: #667eea; color: #fff; animation: pulse 1s infinite; }
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-}
-.flash-hint { font-size: 13px; color: #bbb; margin-top: 12px; }
+.word-card.flip-out{ transform:scale(0.9); opacity:0; }
 
-/* Card Actions */
-.card-actions {
-  display: flex;
-  gap: 12px;
-  width: 100%;
-  max-width: 380px;
+.word-en{ font-size:34px; font-weight:700; color:#222; letter-spacing:1px; }
+.word-phonetic{ font-size:14px; color:#aaa; margin:8px 0; }
+.word-speaker{ 
+  width:40px; height:40px; border-radius:50%;
+  border:1.5px solid #ddd; background:#fff;
+  font-size:18px; cursor:pointer; margin:0 auto 12px;
+  display:flex; align-items:center; justify-content:center;
+  transition:all 0.2s;
 }
-.btn {
-  flex: 1;
-  padding: 14px 0;
-  border-radius: 14px;
-  border: none;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-.btn-primary { background: #667eea; color: #fff; }
-.btn-primary:hover { background: #5a6fd6; }
-.btn-secondary { background: #f0f0f0; color: #666; }
-.btn-secondary:hover { background: #e0e0e0; }
+.word-speaker:hover{ border-color:#667eea; color:#667eea; }
+.word-speaker.playing{ background:#667eea; border-color:#667eea; color:#fff; animation:pulse 0.8s infinite; }
+@keyframes pulse{ 0%,100%{transform:scale(1)} 50%{transform:scale(1.12)} }
 
-/* Quiz Mode */
-.quiz-word {
-  font-size: 34px;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 24px;
-  text-align: center;
+/* 显示释义区域 */
+.word-reveal{ display:none; margin-top:8px; }
+.word-reveal.show{ display:block; }
+.word-cn{ font-size:20px; color:#667eea; font-weight:600; margin-bottom:8px; }
+.word-example{
+  margin-top:12px; padding:12px 16px;
+  background:#f8f9ff; border-radius:12px;
+  text-align:left; font-size:13px; line-height:1.6;
 }
-.quiz-options {
-  width: 100%;
-  max-width: 380px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.quiz-option {
-  padding: 16px 20px;
-  border: 2px solid #e8e8e8;
-  border-radius: 14px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.2s;
-  background: #fff;
-  text-align: left;
-  font-family: inherit;
-}
-.quiz-option:hover { border-color: #667eea; background: #f8f9ff; }
-.quiz-option.correct-answer { border-color: #4caf50; background: #e8f5e9; color: #2e7d32; }
-.quiz-option.wrong-answer { border-color: #f44336; background: #ffebee; color: #c62828; }
+.word-example .ex-en{ color:#333; }
+.word-example .ex-cn{ color:#888; margin-top:4px; }
+.word-pos{ font-size:12px; color:#bbb; margin-bottom:4px; }
 
-/* Spelling Mode */
-.spell-input-area {
-  width: 100%;
-  max-width: 380px;
-  text-align: center;
+/* 操作按钮 */
+.action-row{
+  display:flex; gap:12px; padding:16px 20px 24px;
+  width:100%; max-width:400px;
 }
-.spell-hint {
-  font-size: 16px;
-  color: #999;
-  margin-bottom: 8px;
+.btn{
+  flex:1; padding:16px 0; border-radius:14px;
+  border:none; font-size:15px; font-weight:700; cursor:pointer;
+  transition:all 0.2s; font-family:inherit;
+  display:flex; flex-direction:column; align-items:center; gap:2px;
 }
-.spell-word-cn {
-  font-size: 28px;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 20px;
-}
-.spell-input {
-  width: 100%;
-  padding: 16px;
-  border: 3px solid #e0e0e0;
-  border-radius: 14px;
-  font-size: 22px;
-  text-align: center;
-  outline: none;
-  transition: border-color 0.2s;
-  font-family: inherit;
-  letter-spacing: 3px;
-}
-.spell-input:focus { border-color: #667eea; }
-.spell-input.correct { border-color: #4caf50; background: #f1f8e9; }
-.spell-input.wrong { border-color: #f44336; background: #fff5f5; }
-.spell-feedback {
-  margin-top: 12px;
-  font-size: 16px;
-  font-weight: 600;
-  min-height: 24px;
-}
-.spell-feedback.correct { color: #4caf50; }
-.spell-feedback.wrong { color: #f44336; }
+.btn:active{ transform:scale(0.96); }
+.btn .label{ font-size:15px; }
+.btn .sub-label{ font-size:10px; opacity:0.7; font-weight:400; }
 
-/* Result Overlay */
-.result-overlay {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
-  animation: fadeIn 0.3s;
-}
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-.result-card {
-  background: #fff;
-  border-radius: 24px;
-  padding: 32px 24px;
-  text-align: center;
-  max-width: 360px;
-  width: 90%;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-  animation: slideUp 0.3s;
-}
-@keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-.result-emoji { font-size: 56px; margin-bottom: 12px; }
-.result-title { font-size: 22px; font-weight: 700; color: #333; margin-bottom: 8px; }
-.result-stats { display: flex; gap: 24px; justify-content: center; margin: 16px 0; }
-.result-stat { text-align: center; }
-.result-stat-value { font-size: 28px; font-weight: 700; }
-.result-stat-label { font-size: 12px; color: #999; }
+.btn-know{ background:#e8f5e9; color:#2e7d32; }
+.btn-know:hover{ background:#c8e6c9; }
+.btn-unsure{ background:#fff3e0; color:#e65100; }
+.btn-unsure:hover{ background:#ffe0b2; }
+.btn-dunno{ background:#ffebee; color:#c62828; }
+.btn-dunno:hover{ background:#ffcdd2; }
 
-/* Wrong Words Section */
-.wrong-section {
-  padding: 0 24px 24px;
-  display: none;
+/* ===== 结果页 ===== */
+.result-overlay{
+  position:fixed; top:0;left:0;right:0;bottom:0;
+  background:rgba(0,0,0,0.4);
+  display:flex; align-items:center; justify-content:center;
+  z-index:100;
 }
-.wrong-section.show { display: block; }
-.wrong-title {
-  font-size: 15px;
-  font-weight: 700;
-  color: #666;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.result-card{
+  background:#fff; border-radius:24px; padding:28px 24px;
+  text-align:center; width:90%; max-width:360px;
 }
-.wrong-list { max-height: 200px; overflow-y: auto; }
-.wrong-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 14px;
-  background: #fff5f5;
-  border-radius: 10px;
-  margin-bottom: 6px;
-  font-size: 14px;
-}
-.wrong-item .en { font-weight: 700; color: #333; }
-.wrong-item .cn { color: #888; }
-.clear-wrong-btn {
-  margin-top: 12px;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  background: #fff;
-  font-size: 13px;
-  color: #999;
-  cursor: pointer;
-}
-.clear-wrong-btn:hover { color: #f44336; border-color: #f44336; }
+.result-emoji{ font-size:48px; margin-bottom:8px; }
+.result-title{ font-size:20px; font-weight:700; color:#333; margin-bottom:16px; }
+.result-grid{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-bottom:20px; }
+.result-cell{ text-align:center; }
+.result-cell .val{ font-size:26px; font-weight:700; }
+.result-cell .lbl{ font-size:11px; color:#999; margin-top:2px; }
 
-/* Settings bar */
-.settings-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 24px;
-  background: #fafafa;
-  border-top: 1px solid #f0f0f0;
-  font-size: 13px;
-  color: #999;
-}
-.words-per-round {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.words-per-round select {
-  padding: 4px 8px;
-  border: 1px solid #e0e0e0;
-  border-radius: 6px;
-  font-size: 13px;
-  font-family: inherit;
+/* 复习提示 */
+.review-badge{
+  display:inline-block; padding:4px 10px;
+  background:#fff3e0; color:#e65100;
+  border-radius:20px; font-size:11px; font-weight:600;
+  margin-bottom:8px;
 }
 
-/* Mobile tweaks */
-@media (max-width: 400px) {
-  .container { border-radius: 16px; }
-  .header { padding: 20px 16px 14px; }
-  .header h1 { font-size: 18px; }
-  .level-bar { padding: 10px 16px; gap: 6px; }
-  .level-btn { font-size: 12px; padding: 6px 0; border-radius: 8px; }
-  .main-area { padding: 16px; min-height: 300px; }
-  .card-word { font-size: 28px; }
-  .quiz-word { font-size: 26px; }
-  .quiz-option { padding: 14px 16px; font-size: 14px; }
-  .spell-input { font-size: 18px; padding: 14px; }
+/* 完成页 */
+.all-done{
+  text-align:center; padding:40px 20px;
+}
+.all-done .emoji{ font-size:56px; margin-bottom:12px; }
+.all-done .title{ font-size:20px; font-weight:700; color:#333; margin-bottom:8px; }
+.all-done .sub{ font-size:14px; color:#888; margin-bottom:20px; }
+
+/* 上传词库预览 */
+.custom-preview{
+  margin-top:8px; padding:12px; background:#fffbe6; border-radius:10px;
+  font-size:12px; color:#666; display:none;
 }
 
-/* Confetti */
-@keyframes confetti-fall {
-  0% { transform: translateY(-100%) rotate(0deg); opacity: 1; }
-  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+/* 加载弹窗 */
+.loading-mask{
+  position:fixed; top:0;left:0;right:0;bottom:0;
+  background:rgba(255,255,255,0.8);
+  display:flex; align-items:center; justify-content:center;
+  z-index:200; display:none;
 }
-.confetti-piece {
-  position: fixed;
-  width: 10px;
-  height: 10px;
-  top: -10px;
-  animation: confetti-fall 2s ease-in forwards;
-  z-index: 200;
-  pointer-events: none;
+.loading-mask.show{ display:flex; }
+.spinner{
+  width:40px; height:40px; border:3px solid #eee;
+  border-top-color:#667eea; border-radius:50%;
+  animation:spin 0.8s linear infinite;
+}
+@keyframes spin{ to{transform:rotate(360deg)} }
+
+/* Toast */
+.toast{
+  position:fixed; top:20px; left:50%; transform:translateX(-50%);
+  background:#333; color:#fff; padding:10px 24px; border-radius:20px;
+  font-size:14px; z-index:300; opacity:0; transition:opacity 0.3s;
+  pointer-events:none;
+}
+.toast.show{ opacity:1; }
+
+@media(max-width:400px){
+  .word-en{ font-size:28px; }
+  .btn{ padding:14px 0; }
+  .btn .label{ font-size:13px; }
 }
 </style>
 </head>
 <body>
-
-<div class="container">
-  <div class="header">
-    <h1>📚 英语单词消消乐</h1>
-    <div class="subtitle">每天背一背，英语更自信！</div>
+<div class="app" id="app">
+  <!-- 导航 -->
+  <div class="nav">
+    <span class="nav-back" id="navBack" onclick="goBack()">←</span>
+    <span class="nav-title" id="navTitle">📚 单词消消乐</span>
+    <span class="nav-action" id="navAction"></span>
   </div>
 
-  <div class="level-bar">
-    <button class="level-btn active" onclick="setLevel('primary')">🏫 小学</button>
-    <button class="level-btn" onclick="setLevel('middle')">📖 初中</button>
-    <button class="level-btn" onclick="setLevel('high')">🎓 高中</button>
+  <!-- 词书选择页 -->
+  <div class="book-page" id="bookPage">
+    <h2>选择词书</h2>
+    <div class="sub">选一本开始今天的学习吧</div>
+    <div class="book-list" id="bookList"></div>
+    <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+      <div class="icon">📂</div>
+      <div class="text">上传自定义词库</div>
+      <div class="hint">支持 .txt / .csv（英文,中文 每行一个）</div>
+      <input type="file" id="fileInput" accept=".txt,.csv" onchange="handleUpload(event)">
+    </div>
+    <div class="custom-preview" id="customPreview"></div>
   </div>
 
-  <div class="mode-tabs">
-    <button class="mode-tab active" onclick="setMode('flashcard')">🃏 闪卡记忆</button>
-    <button class="mode-tab" onclick="setMode('quiz')">✅ 选择测试</button>
-    <button class="mode-tab" onclick="setMode('spelling')">✍️ 拼写练习</button>
-  </div>
-
-  <div class="stats-row">
-    <div class="stat-item">
-      <div class="stat-value" id="statTotal">0</div>
-      <div class="stat-label">本轮单词</div>
+  <!-- 学习页 -->
+  <div class="learn-page" id="learnPage">
+    <div class="progress-bar-wrap">
+      <div class="progress-info">
+        <span id="progressLabel">新学 0 / 20</span>
+        <span id="progressPct">0%</span>
+      </div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
     </div>
-    <div class="stat-item">
-      <div class="stat-value correct" id="statCorrect">0</div>
-      <div class="stat-label">✓ 正确</div>
+    <div class="card-area" id="cardArea"></div>
+    <div class="action-row" id="actionRow" style="display:none;">
+      <button class="btn btn-dunno" onclick="answer('forgot')">
+        <span class="label">不认识</span>
+        <span class="sub-label">下次再来</span>
+      </button>
+      <button class="btn btn-unsure" onclick="answer('unsure')">
+        <span class="label">模糊</span>
+        <span class="sub-label">见过但忘了</span>
+      </button>
+      <button class="btn btn-know" onclick="answer('known')">
+        <span class="label">认识</span>
+        <span class="sub-label">直接过</span>
+      </button>
     </div>
-    <div class="stat-item">
-      <div class="stat-value wrong" id="statWrong">0</div>
-      <div class="stat-label">✗ 错误</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-value streak" id="statStreak">0</div>
-      <div class="stat-label">🔥 连对</div>
-    </div>
-  </div>
-
-  <div class="main-area" id="mainArea"></div>
-
-  <div class="wrong-section" id="wrongSection">
-    <div class="wrong-title">📝 错题本（<span id="wrongCount">0</span>个）</div>
-    <div class="wrong-list" id="wrongList"></div>
-    <button class="clear-wrong-btn" onclick="clearWrongWords()">清空错题本</button>
-  </div>
-
-  <div class="settings-bar">
-    <div class="words-per-round">
-      每轮 <select id="roundSize" onchange="resetRound()">
-        <option value="10">10个</option>
-        <option value="15">15个</option>
-        <option value="20" selected>20个</option>
-        <option value="0">全部</option>
-      </select>
-    </div>
-    <span id="totalVocab">词库: 0词</span>
   </div>
 </div>
 
-<!-- Confetti container -->
-<div id="confettiContainer"></div>
+<div class="toast" id="toast"></div>
+<div class="loading-mask" id="loading"><div class="spinner"></div></div>
 
 <script>
-// ====== 词库 ======
-const VOCAB = {
-  primary: [
-    { en: "hello", cn: "你好", phonetic: "/hə'ləʊ/" },
-    { en: "goodbye", cn: "再见", phonetic: "/ɡʊd'baɪ/" },
-    { en: "thank you", cn: "谢谢", phonetic: "/θæŋk juː/" },
-    { en: "sorry", cn: "对不起", phonetic: "/'sɒri/" },
-    { en: "please", cn: "请", phonetic: "/pliːz/" },
-    { en: "yes", cn: "是的", phonetic: "/jes/" },
-    { en: "no", cn: "不是", phonetic: "/nəʊ/" },
-    { en: "friend", cn: "朋友", phonetic: "/frend/" },
-    { en: "family", cn: "家庭", phonetic: "/'fæməli/" },
-    { en: "school", cn: "学校", phonetic: "/skuːl/" },
-    { en: "teacher", cn: "老师", phonetic: "/'tiːtʃə(r)/" },
-    { en: "student", cn: "学生", phonetic: "/'stjuːdnt/" },
-    { en: "book", cn: "书", phonetic: "/bʊk/" },
-    { en: "pencil", cn: "铅笔", phonetic: "/'pensl/" },
-    { en: "water", cn: "水", phonetic: "/'wɔːtə(r)/" },
-    { en: "apple", cn: "苹果", phonetic: "/'æpl/" },
-    { en: "banana", cn: "香蕉", phonetic: "/bə'nɑːnə/" },
-    { en: "dog", cn: "狗", phonetic: "/dɒɡ/" },
-    { en: "cat", cn: "猫", phonetic: "/kæt/" },
-    { en: "big", cn: "大的", phonetic: "/bɪɡ/" },
-    { en: "small", cn: "小的", phonetic: "/smɔːl/" },
-    { en: "happy", cn: "快乐的", phonetic: "/'hæpi/" },
-    { en: "sad", cn: "难过的", phonetic: "/sæd/" },
-    { en: "red", cn: "红色", phonetic: "/red/" },
-    { en: "blue", cn: "蓝色", phonetic: "/bluː/" },
-    { en: "green", cn: "绿色", phonetic: "/ɡriːn/" },
-    { en: "one", cn: "一", phonetic: "/wʌn/" },
-    { en: "two", cn: "二", phonetic: "/tuː/" },
-    { en: "three", cn: "三", phonetic: "/θriː/" },
-    { en: "mother", cn: "妈妈", phonetic: "/'mʌðə(r)/" },
-    { en: "father", cn: "爸爸", phonetic: "/'fɑːðə(r)/" },
-    { en: "brother", cn: "兄弟", phonetic: "/'brʌðə(r)/" },
-    { en: "sister", cn: "姐妹", phonetic: "/'sɪstə(r)/" },
-    { en: "morning", cn: "早上", phonetic: "/'mɔːnɪŋ/" },
-    { en: "night", cn: "晚上", phonetic: "/naɪt/" },
-    { en: "sun", cn: "太阳", phonetic: "/sʌn/" },
-    { en: "moon", cn: "月亮", phonetic: "/muːn/" },
-    { en: "star", cn: "星星", phonetic: "/stɑː(r)/" },
-    { en: "flower", cn: "花", phonetic: "/'flaʊə(r)/" },
-    { en: "tree", cn: "树", phonetic: "/triː/" },
-  ],
-  middle: [
-    { en: "beautiful", cn: "美丽的", phonetic: "/'bjuːtɪfl/" },
-    { en: "important", cn: "重要的", phonetic: "/ɪm'pɔːtnt/" },
-    { en: "different", cn: "不同的", phonetic: "/'dɪfrənt/" },
-    { en: "experience", cn: "经验；经历", phonetic: "/ɪk'spɪəriəns/" },
-    { en: "knowledge", cn: "知识", phonetic: "/'nɒlɪdʒ/" },
-    { en: "environment", cn: "环境", phonetic: "/ɪn'vaɪrənmənt/" },
-    { en: "government", cn: "政府", phonetic: "/'ɡʌvənmənt/" },
-    { en: "education", cn: "教育", phonetic: "/ˌedʒu'keɪʃn/" },
-    { en: "technology", cn: "技术", phonetic: "/tek'nɒlədʒi/" },
-    { en: "pronunciation", cn: "发音", phonetic: "/prəˌnʌnsi'eɪʃn/" },
-    { en: "conversation", cn: "对话", phonetic: "/ˌkɒnvə'seɪʃn/" },
-    { en: "excellent", cn: "优秀的", phonetic: "/'eksələnt/" },
-    { en: "wonderful", cn: "精彩的", phonetic: "/'wʌndəfl/" },
-    { en: "comfortable", cn: "舒服的", phonetic: "/'kʌmftəbl/" },
-    { en: "dangerous", cn: "危险的", phonetic: "/'deɪndʒərəs/" },
-    { en: "necessary", cn: "必要的", phonetic: "/'nesəsəri/" },
-    { en: "possible", cn: "可能的", phonetic: "/'pɒsəbl/" },
-    { en: "surprise", cn: "惊讶；惊喜", phonetic: "/sə'praɪz/" },
-    { en: "practice", cn: "练习", phonetic: "/'præktɪs/" },
-    { en: "imagine", cn: "想象", phonetic: "/ɪ'mædʒɪn/" },
-    { en: "believe", cn: "相信", phonetic: "/bɪ'liːv/" },
-    { en: "decide", cn: "决定", phonetic: "/dɪ'saɪd/" },
-    { en: "continue", cn: "继续", phonetic: "/kən'tɪnjuː/" },
-    { en: "protect", cn: "保护", phonetic: "/prə'tekt/" },
-    { en: "achieve", cn: "实现；达到", phonetic: "/ə'tʃiːv/" },
-    { en: "discover", cn: "发现", phonetic: "/dɪ'skʌvə(r)/" },
-    { en: "produce", cn: "生产；制造", phonetic: "/prə'djuːs/" },
-    { en: "receive", cn: "收到", phonetic: "/rɪ'siːv/" },
-    { en: "require", cn: "需要；要求", phonetic: "/rɪ'kwaɪə(r)/" },
-    { en: "suggest", cn: "建议", phonetic: "/sə'dʒest/" },
-    { en: "describe", cn: "描述", phonetic: "/dɪ'skraɪb/" },
-    { en: "explain", cn: "解释", phonetic: "/ɪk'spleɪn/" },
-    { en: "encourage", cn: "鼓励", phonetic: "/ɪn'kʌrɪdʒ/" },
-    { en: "promise", cn: "承诺", phonetic: "/'prɒmɪs/" },
-    { en: "situation", cn: "情况；形势", phonetic: "/ˌsɪtʃu'eɪʃn/" },
-    { en: "opportunity", cn: "机会", phonetic: "/ˌɒpə'tjuːnəti/" },
-    { en: "difficulty", cn: "困难", phonetic: "/'dɪfɪkəlti/" },
-    { en: "advantage", cn: "优势", phonetic: "/əd'vɑːntɪdʒ/" },
-    { en: "challenge", cn: "挑战", phonetic: "/'tʃælɪndʒ/" },
-    { en: "celebrate", cn: "庆祝", phonetic: "/'selɪbreɪt/" },
-    { en: "especially", cn: "尤其；特别", phonetic: "/ɪ'speʃəli/" },
-    { en: "probably", cn: "大概；很可能", phonetic: "/'prɒbəbli/" },
-    { en: "certainly", cn: "当然；肯定", phonetic: "/'sɜːtnli/" },
-    { en: "recently", cn: "最近", phonetic: "/'riːsntli/" },
-    { en: "immediately", cn: "立刻", phonetic: "/ɪ'miːdiətli/" },
-  ],
-  high: [
-    { en: "phenomenon", cn: "现象", phonetic: "/fɪ'nɒmɪnən/" },
-    { en: "philosophy", cn: "哲学", phonetic: "/fɪ'lɒsəfi/" },
-    { en: "psychology", cn: "心理学", phonetic: "/saɪ'kɒlədʒi/" },
-    { en: "architecture", cn: "建筑学；建筑", phonetic: "/'ɑːkɪtektʃə(r)/" },
-    { en: "atmosphere", cn: "大气层；氛围", phonetic: "/'ætməsfɪə(r)/" },
-    { en: "civilization", cn: "文明", phonetic: "/ˌsɪvəlaɪ'zeɪʃn/" },
-    { en: "consequence", cn: "后果；结果", phonetic: "/'kɒnsɪkwəns/" },
-    { en: "contemporary", cn: "当代的", phonetic: "/kən'temprəri/" },
-    { en: "controversial", cn: "有争议的", phonetic: "/ˌkɒntrə'vɜːʃl/" },
-    { en: "correspondence", cn: "通信；对应", phonetic: "/ˌkɒrə'spɒndəns/" },
-    { en: "demonstrate", cn: "证明；演示", phonetic: "/'demənstreɪt/" },
-    { en: "distinguish", cn: "区分；辨别", phonetic: "/dɪ'stɪŋɡwɪʃ/" },
-    { en: "embarrassment", cn: "尴尬", phonetic: "/ɪm'bærəsmənt/" },
-    { en: "enthusiasm", cn: "热情", phonetic: "/ɪn'θjuːziæzəm/" },
-    { en: "establishment", cn: "建立；机构", phonetic: "/ɪ'stæblɪʃmənt/" },
-    { en: "extraordinary", cn: "非凡的", phonetic: "/ɪk'strɔːdnri/" },
-    { en: "fundamental", cn: "基本的；根本的", phonetic: "/ˌfʌndə'mentl/" },
-    { en: "guarantee", cn: "保证；担保", phonetic: "/ˌɡærən'tiː/" },
-    { en: "illustrate", cn: "说明；阐明", phonetic: "/'ɪləstreɪt/" },
-    { en: "independent", cn: "独立的", phonetic: "/ˌɪndɪ'pendənt/" },
-    { en: "interpret", cn: "解释；口译", phonetic: "/ɪn'tɜːprɪt/" },
-    { en: "investigate", cn: "调查", phonetic: "/ɪn'vestɪɡeɪt/" },
-    { en: "negotiate", cn: "谈判；协商", phonetic: "/nɪ'ɡəʊʃieɪt/" },
-    { en: "participate", cn: "参加；参与", phonetic: "/pɑː'tɪsɪpeɪt/" },
-    { en: "perspective", cn: "视角；观点", phonetic: "/pə'spektɪv/" },
-    { en: "prejudice", cn: "偏见", phonetic: "/'predʒʊdɪs/" },
-    { en: "prescription", cn: "处方；药方", phonetic: "/prɪ'skrɪpʃn/" },
-    { en: "preservation", cn: "保护；保存", phonetic: "/ˌprezə'veɪʃn/" },
-    { en: "privilege", cn: "特权；荣幸", phonetic: "/'prɪvəlɪdʒ/" },
-    { en: "provocative", cn: "挑衅的；煽动性的", phonetic: "/prə'vɒkətɪv/" },
-    { en: "recommend", cn: "推荐；建议", phonetic: "/ˌrekə'mend/" },
-    { en: "reservation", cn: "预定；保留", phonetic: "/ˌrezə'veɪʃn/" },
-    { en: "significant", cn: "重要的；显著的", phonetic: "/sɪɡ'nɪfɪkənt/" },
-    { en: "spontaneous", cn: "自发的；自然的", phonetic: "/spɒn'teɪniəs/" },
-    { en: "statistics", cn: "统计数据；统计学", phonetic: "/stə'tɪstɪks/" },
-    { en: "substantial", cn: "大量的；实质的", phonetic: "/səb'stænʃl/" },
-    { en: "sufficient", cn: "足够的", phonetic: "/sə'fɪʃnt/" },
-    { en: "symphony", cn: "交响乐", phonetic: "/'sɪmfəni/" },
-    { en: "theoretical", cn: "理论的", phonetic: "/ˌθɪə'retɪkl/" },
-    { en: "transparent", cn: "透明的；明显的", phonetic: "/træns'pærənt/" },
-    { en: "tremendous", cn: "巨大的；惊人的", phonetic: "/trɪ'mendəs/" },
-    { en: "unanimous", cn: "一致的；全体同意的", phonetic: "/ju'nænɪməs/" },
-    { en: "undergraduate", cn: "本科生", phonetic: "/ˌʌndə'ɡrædʒuət/" },
-    { en: "unfortunately", cn: "不幸地", phonetic: "/ʌn'fɔːtʃənətli/" },
-    { en: "vulnerable", cn: "脆弱的；易受伤的", phonetic: "/'vʌlnərəbl/" },
-    { en: "widespread", cn: "广泛的；普遍的", phonetic: "/'waɪdspred/" },
-    { en: "acknowledge", cn: "承认；确认", phonetic: "/ək'nɒlɪdʒ/" },
-    { en: "accomplish", cn: "完成；实现", phonetic: "/ə'kʌmplɪʃ/" },
-    { en: "accumulate", cn: "积累；积聚", phonetic: "/ə'kjuːmjəleɪt/" },
-    { en: "anticipate", cn: "预期；预料", phonetic: "/æn'tɪsɪpeɪt/" },
-  ],
+// ====== 词书数据 ======
+const BOOKS = {
+  'pep-primary': {
+    name: '人教版小学英语', icon:'🏫', cat:'小学', count:40,
+    desc:'PEP三年级起点，覆盖小学核心词汇',
+    words: [
+      {en:'hello',cn:'你好',phonetic:'/həˈləʊ/',pos:'感叹词',ex_en:"'Hello, how are you?' she said with a smile.",ex_cn:'"你好，你怎么样？"她微笑着说。'},
+      {en:'goodbye',cn:'再见',phonetic:'/ɡʊdˈbaɪ/',pos:'感叹词',ex_en:'He waved goodbye to his friends at the school gate.',ex_cn:'他在校门口向朋友们挥手告别。'},
+      {en:'thank you',cn:'谢谢',phonetic:'/θæŋk juː/',pos:'短语',ex_en:'Thank you for helping me with my homework.',ex_cn:'谢谢你帮我做作业。'},
+      {en:'please',cn:'请',phonetic:'/pliːz/',pos:'感叹词',ex_en:'Please pass me the salt.',ex_cn:'请把盐递给我。'},
+      {en:'sorry',cn:'对不起',phonetic:'/ˈsɒri/',pos:'形容词',ex_en:"I'm sorry I broke your pencil.",ex_cn:'对不起，我弄坏了你的铅笔。'},
+      {en:'friend',cn:'朋友',phonetic:'/frend/',pos:'名词',ex_en:'She is my best friend since kindergarten.',ex_cn:'她从幼儿园起就是我最好的朋友。'},
+      {en:'family',cn:'家庭',phonetic:'/ˈfæməli/',pos:'名词',ex_en:'My family has four members.',ex_cn:'我家有四口人。'},
+      {en:'school',cn:'学校',phonetic:'/skuːl/',pos:'名词',ex_en:'I go to school by bus every day.',ex_cn:'我每天坐公交去上学。'},
+      {en:'teacher',cn:'老师',phonetic:'/ˈtiːtʃə(r)/',pos:'名词',ex_en:'Our English teacher is very kind.',ex_cn:'我们的英语老师很和蔼。'},
+      {en:'student',cn:'学生',phonetic:'/ˈstjuːdnt/',pos:'名词',ex_en:'There are forty students in our class.',ex_cn:'我们班有四十个学生。'},
+      {en:'book',cn:'书',phonetic:'/bʊk/',pos:'名词',ex_en:'I read a story book before bed.',ex_cn:'我睡前读了一本故事书。'},
+      {en:'pencil',cn:'铅笔',phonetic:'/ˈpensl/',pos:'名词',ex_en:'She draws pictures with a pencil.',ex_cn:'她用铅笔画画。'},
+      {en:'apple',cn:'苹果',phonetic:'/ˈæpl/',pos:'名词',ex_en:'An apple a day keeps the doctor away.',ex_cn:'一天一苹果，医生远离我。'},
+      {en:'banana',cn:'香蕉',phonetic:'/bəˈnɑːnə/',pos:'名词',ex_en:'Monkeys like eating bananas.',ex_cn:'猴子喜欢吃香蕉。'},
+      {en:'dog',cn:'狗',phonetic:'/dɒɡ/',pos:'名词',ex_en:'The dog is running in the park.',ex_cn:'狗正在公园里奔跑。'},
+      {en:'cat',cn:'猫',phonetic:'/kæt/',pos:'名词',ex_en:'My cat likes to sleep on the sofa.',ex_cn:'我的猫喜欢睡在沙发上。'},
+      {en:'big',cn:'大的',phonetic:'/bɪɡ/',pos:'形容词',ex_en:'There is a big tree in front of our house.',ex_cn:'我家门前有一棵大树。'},
+      {en:'small',cn:'小的',phonetic:'/smɔːl/',pos:'形容词',ex_en:'The small bird is singing on the branch.',ex_cn:'小鸟在树枝上唱歌。'},
+      {en:'happy',cn:'快乐的',phonetic:'/ˈhæpi/',pos:'形容词',ex_en:'The children look very happy today.',ex_cn:'孩子们今天看起来很开心。'},
+      {en:'sad',cn:'难过的',phonetic:'/sæd/',pos:'形容词',ex_en:'She felt sad when her pet died.',ex_cn:'她的宠物去世时她感到很难过。'},
+      {en:'red',cn:'红色',phonetic:'/red/',pos:'形容词',ex_en:'She is wearing a red dress.',ex_cn:'她穿着一条红色的裙子。'},
+      {en:'blue',cn:'蓝色',phonetic:'/bluː/',pos:'形容词',ex_en:'The sky is very blue today.',ex_cn:'今天的天空很蓝。'},
+      {en:'green',cn:'绿色',phonetic:'/ɡriːn/',pos:'形容词',ex_en:'The grass turns green in spring.',ex_cn:'春天草地变绿了。'},
+      {en:'one',cn:'一',phonetic:'/wʌn/',pos:'数词',ex_en:'I have one brother and two sisters.',ex_cn:'我有一个哥哥和两个姐姐。'},
+      {en:'two',cn:'二',phonetic:'/tuː/',pos:'数词',ex_en:'There are two cats on the roof.',ex_cn:'屋顶上有两只猫。'},
+      {en:'three',cn:'三',phonetic:'/θriː/',pos:'数词',ex_en:'Three birds are flying in the sky.',ex_cn:'三只鸟在天空中飞翔。'},
+      {en:'mother',cn:'妈妈',phonetic:'/ˈmʌðə(r)/',pos:'名词',ex_en:'My mother cooks delicious food for us.',ex_cn:'我妈妈给我们做好吃的饭菜。'},
+      {en:'father',cn:'爸爸',phonetic:'/ˈfɑːðə(r)/',pos:'名词',ex_en:'My father drives me to school every morning.',ex_cn:'爸爸每天早上开车送我上学。'},
+      {en:'brother',cn:'兄弟',phonetic:'/ˈbrʌðə(r)/',pos:'名词',ex_en:'My brother plays basketball with me on weekends.',ex_cn:'周末哥哥和我一起打篮球。'},
+      {en:'sister',cn:'姐妹',phonetic:'/ˈsɪstə(r)/',pos:'名词',ex_en:'My sister is good at drawing pictures.',ex_cn:'我姐姐很擅长画画。'},
+      {en:'morning',cn:'早上',phonetic:'/ˈmɔːnɪŋ/',pos:'名词',ex_en:'Good morning! Did you sleep well?',ex_cn:'早上好！你睡得好吗？'},
+      {en:'night',cn:'晚上',phonetic:'/naɪt/',pos:'名词',ex_en:'Good night and sweet dreams!',ex_cn:'晚安，做个好梦！'},
+      {en:'sun',cn:'太阳',phonetic:'/sʌn/',pos:'名词',ex_en:'The sun rises in the east every morning.',ex_cn:'太阳每天早上从东方升起。'},
+      {en:'moon',cn:'月亮',phonetic:'/muːn/',pos:'名词',ex_en:'The moon is bright tonight.',ex_cn:'今晚的月亮很亮。'},
+      {en:'star',cn:'星星',phonetic:'/stɑː(r)/',pos:'名词',ex_en:'We can see many stars in the night sky.',ex_cn:'我们能在夜空中看到很多星星。'},
+      {en:'flower',cn:'花',phonetic:'/ˈflaʊə(r)/',pos:'名词',ex_en:'The flowers in the garden are blooming.',ex_cn:'花园里的花正在盛开。'},
+      {en:'tree',cn:'树',phonetic:'/triː/',pos:'名词',ex_en:'The old tree provides shade in summer.',ex_cn:'老树在夏天提供阴凉。'},
+      {en:'hot',cn:'热的',phonetic:'/hɒt/',pos:'形容词',ex_en:'It is very hot today. Let us drink some water.',ex_cn:'今天很热。我们喝点水吧。'},
+      {en:'cold',cn:'冷的',phonetic:'/kəʊld/',pos:'形容词',ex_en:'Put on your coat. It is cold outside.',ex_cn:'穿上外套。外面很冷。'},
+      {en:'run',cn:'跑',phonetic:'/rʌn/',pos:'动词',ex_en:'The children run fast on the playground.',ex_cn:'孩子们在操场上跑得很快。'},
+    ]
+  },
+  'pep-middle': {
+    name: '人教版初中英语', icon:'📖', cat:'初中', count:50,
+    desc:'中考考纲词汇，人教版7-9年级',
+    words: [
+      {en:'beautiful',cn:'美丽的',phonetic:'/ˈbjuːtɪfl/',pos:'形容词',ex_en:'The sunset was so beautiful that everyone stopped to watch.',ex_cn:'日落太美了，大家都停下来观看。'},
+      {en:'important',cn:'重要的',phonetic:'/ɪmˈpɔːtnt/',pos:'形容词',ex_en:'It is important to eat healthy food every day.',ex_cn:'每天吃健康的食物很重要。'},
+      {en:'different',cn:'不同的',phonetic:'/ˈdɪfrənt/',pos:'形容词',ex_en:'The twins look the same but their personalities are quite different.',ex_cn:'这对双胞胎长得很像但性格大不相同。'},
+      {en:'experience',cn:'经验；经历',phonetic:'/ɪkˈspɪəriəns/',pos:'名词/动词',ex_en:'Traveling abroad was the best experience of my life.',ex_cn:'出国旅行是我人生中最棒的经历。'},
+      {en:'knowledge',cn:'知识',phonetic:'/ˈnɒlɪdʒ/',pos:'名词',ex_en:'Reading books is a great way to gain knowledge.',ex_cn:'读书是获取知识的绝佳途径。'},
+      {en:'environment',cn:'环境',phonetic:'/ɪnˈvaɪrənmənt/',pos:'名词',ex_en:'We should all help protect the environment.',ex_cn:'我们都应该帮助保护环境。'},
+      {en:'government',cn:'政府',phonetic:'/ˈɡʌvənmənt/',pos:'名词',ex_en:'The government has made new laws to reduce pollution.',ex_cn:'政府制定了新法律来减少污染。'},
+      {en:'education',cn:'教育',phonetic:'/ˌedʒuˈkeɪʃn/',pos:'名词',ex_en:'Education is the key to a better future.',ex_cn:'教育是通向更美好未来的钥匙。'},
+      {en:'technology',cn:'技术',phonetic:'/tekˈnɒlədʒi/',pos:'名词',ex_en:'Modern technology has changed the way we communicate.',ex_cn:'现代技术改变了我们的沟通方式。'},
+      {en:'conversation',cn:'对话',phonetic:'/ˌkɒnvəˈseɪʃn/',pos:'名词',ex_en:'We had a long conversation about our future plans.',ex_cn:'我们关于未来计划进行了长谈。'},
+      {en:'excellent',cn:'优秀的',phonetic:'/ˈeksələnt/',pos:'形容词',ex_en:'She did an excellent job on her science project.',ex_cn:'她的科学项目做得很出色。'},
+      {en:'wonderful',cn:'精彩的',phonetic:'/ˈwʌndəfl/',pos:'形容词',ex_en:'We had a wonderful time at the amusement park.',ex_cn:'我们在游乐园玩得很开心。'},
+      {en:'comfortable',cn:'舒服的',phonetic:'/ˈkʌmftəbl/',pos:'形容词',ex_en:'This sofa is very comfortable to sit on.',ex_cn:'这张沙发坐上去很舒服。'},
+      {en:'dangerous',cn:'危险的',phonetic:'/ˈdeɪndʒərəs/',pos:'形容词',ex_en:'It is dangerous to swim in this river alone.',ex_cn:'独自在这条河里游泳很危险。'},
+      {en:'necessary',cn:'必要的',phonetic:'/ˈnesəsəri/',pos:'形容词',ex_en:'It is necessary to drink enough water in summer.',ex_cn:'夏天喝足够的水是必要的。'},
+      {en:'possible',cn:'可能的',phonetic:'/ˈpɒsəbl/',pos:'形容词',ex_en:'Is it possible to finish the work by Friday?',ex_cn:'周五前完成工作可能吗？'},
+      {en:'surprise',cn:'惊讶；惊喜',phonetic:'/səˈpraɪz/',pos:'名词/动词',ex_en:'They threw a surprise party for her birthday.',ex_cn:'他们为她的生日办了一个惊喜派对。'},
+      {en:'practice',cn:'练习',phonetic:'/ˈpræktɪs/',pos:'名词/动词',ex_en:'Practice makes perfect. Keep trying!',ex_cn:'熟能生巧。继续努力！'},
+      {en:'imagine',cn:'想象',phonetic:'/ɪˈmædʒɪn/',pos:'动词',ex_en:'Can you imagine life without the Internet?',ex_cn:'你能想象没有互联网的生活吗？'},
+      {en:'believe',cn:'相信',phonetic:'/bɪˈliːv/',pos:'动词',ex_en:'I believe you can achieve your dream.',ex_cn:'我相信你能实现你的梦想。'},
+      {en:'decide',cn:'决定',phonetic:'/dɪˈsaɪd/',pos:'动词',ex_en:'She decided to study abroad after graduation.',ex_cn:'她决定毕业后出国留学。'},
+      {en:'continue',cn:'继续',phonetic:'/kənˈtɪnjuː/',pos:'动词',ex_en:'Let us continue with the lesson after a short break.',ex_cn:'短暂休息后我们再继续上课。'},
+      {en:'protect',cn:'保护',phonetic:'/prəˈtekt/',pos:'动词',ex_en:'We must protect the endangered animals.',ex_cn:'我们必须保护濒危动物。'},
+      {en:'achieve',cn:'实现；达到',phonetic:'/əˈtʃiːv/',pos:'动词',ex_en:'She worked hard and achieved her goal.',ex_cn:'她努力奋斗实现了自己的目标。'},
+      {en:'discover',cn:'发现',phonetic:'/dɪˈskʌvə(r)/',pos:'动词',ex_en:'Scientists discovered a new planet last month.',ex_cn:'科学家上个月发现了一颗新行星。'},
+      {en:'receive',cn:'收到',phonetic:'/rɪˈsiːv/',pos:'动词',ex_en:'I received a letter from my pen pal in England.',ex_cn:'我收到了英国笔友的来信。'},
+      {en:'require',cn:'需要；要求',phonetic:'/rɪˈkwaɪə(r)/',pos:'动词',ex_en:'This job requires good communication skills.',ex_cn:'这份工作需要良好的沟通能力。'},
+      {en:'suggest',cn:'建议',phonetic:'/səˈdʒest/',pos:'动词',ex_en:'I suggest we go to the new restaurant tonight.',ex_cn:'我建议今晚去那家新餐厅。'},
+      {en:'describe',cn:'描述',phonetic:'/dɪˈskraɪb/',pos:'动词',ex_en:'Can you describe the person you saw?',ex_cn:'你能描述一下你看到的那个人吗？'},
+      {en:'explain',cn:'解释',phonetic:'/ɪkˈspleɪn/',pos:'动词',ex_en:'The teacher explained the math problem patiently.',ex_cn:'老师耐心地解释了这道数学题。'},
+      {en:'encourage',cn:'鼓励',phonetic:'/ɪnˈkʌrɪdʒ/',pos:'动词',ex_en:'Parents should encourage their children to try new things.',ex_cn:'家长应该鼓励孩子尝试新事物。'},
+      {en:'promise',cn:'承诺',phonetic:'/ˈprɒmɪs/',pos:'名词/动词',ex_en:'He promised to come back before dinner.',ex_cn:'他承诺晚饭前回来。'},
+      {en:'situation',cn:'情况；形势',phonetic:'/ˌsɪtʃuˈeɪʃn/',pos:'名词',ex_en:'We need to deal with this difficult situation.',ex_cn:'我们需要应对这个困难的情况。'},
+      {en:'opportunity',cn:'机会',phonetic:'/ˌɒpəˈtjuːnəti/',pos:'名词',ex_en:'This is a great opportunity to show your talent.',ex_cn:'这是展示你才华的好机会。'},
+      {en:'difficulty',cn:'困难',phonetic:'/ˈdɪfɪkəlti/',pos:'名词',ex_en:'He overcame many difficulties to become successful.',ex_cn:'他克服了很多困难才成功。'},
+      {en:'advantage',cn:'优势',phonetic:'/ədˈvɑːntɪdʒ/',pos:'名词',ex_en:'What is the advantage of living in a big city?',ex_cn:'住在大城市有什么优势？'},
+      {en:'challenge',cn:'挑战',phonetic:'/ˈtʃælɪndʒ/',pos:'名词/动词',ex_en:'Learning a new language is a big challenge.',ex_cn:'学习一门新语言是一个巨大的挑战。'},
+      {en:'celebrate',cn:'庆祝',phonetic:'/ˈselɪbreɪt/',pos:'动词',ex_en:'How do you usually celebrate the Spring Festival?',ex_cn:'你通常怎么庆祝春节？'},
+      {en:'especially',cn:'尤其',phonetic:'/ɪˈspeʃəli/',pos:'副词',ex_en:'I like fruit, especially strawberries.',ex_cn:'我喜欢水果，尤其是草莓。'},
+      {en:'probably',cn:'大概',phonetic:'/ˈprɒbəbli/',pos:'副词',ex_en:'She is probably still at work. Let us wait a bit.',ex_cn:'她大概还在上班。我们再等等。'},
+      {en:'certainly',cn:'当然',phonetic:'/ˈsɜːtnli/',pos:'副词',ex_en:'You can certainly come to the party with us.',ex_cn:'你当然可以跟我们一起参加派对。'},
+      {en:'recently',cn:'最近',phonetic:'/ˈriːsntli/',pos:'副词',ex_en:'I have recently started learning to play the guitar.',ex_cn:'我最近开始学弹吉他。'},
+      {en:'immediately',cn:'立刻',phonetic:'/ɪˈmiːdiətli/',pos:'副词',ex_en:'When the fire alarm rang, everyone left immediately.',ex_cn:'火警响起时，大家立刻撤离了。'},
+      {en:'volunteer',cn:'志愿者',phonetic:'/ˌvɒlənˈtɪə(r)/',pos:'名词/动词',ex_en:'Many volunteers helped clean up the beach.',ex_cn:'很多志愿者帮忙清理了海滩。'},
+      {en:'community',cn:'社区',phonetic:'/kəˈmjuːnəti/',pos:'名词',ex_en:'Our community has a very nice library.',ex_cn:'我们社区有一个很棒的图书馆。'},
+      {en:'patient',cn:'耐心的；病人',phonetic:'/ˈpeɪʃnt/',pos:'形容词/名词',ex_en:'You need to be patient when learning a new skill.',ex_cn:'学新技能时需要耐心。'},
+      {en:'natural',cn:'自然的',phonetic:'/ˈnætʃrəl/',pos:'形容词',ex_en:'This park is a great place to enjoy natural beauty.',ex_cn:'这个公园是享受自然美景的好地方。'},
+      {en:'scientist',cn:'科学家',phonetic:'/ˈsaɪəntɪst/',pos:'名词',ex_en:'She wants to be a scientist when she grows up.',ex_cn:'她长大后想成为一名科学家。'},
+      {en:'research',cn:'研究',phonetic:'/rɪˈsɜːtʃ/',pos:'名词/动词',ex_en:'The research shows that exercise is good for the brain.',ex_cn:'研究表明运动对大脑有好处。'},
+      {en:'disappear',cn:'消失',phonetic:'/ˌdɪsəˈpɪə(r)/',pos:'动词',ex_en:'The sun disappeared behind the clouds.',ex_cn:'太阳消失在云层后面。'},
+    ]
+  },
+  'pep-high': {
+    name: '人教版高中英语', icon:'🎓', cat:'高中', count:50,
+    desc:'高考考纲核心词汇，人教版必修+选修',
+    words: [
+      {en:'phenomenon',cn:'现象',phonetic:'/fɪˈnɒmɪnən/',pos:'名词',ex_en:'Global warming is a serious phenomenon that affects all of us.',ex_cn:'全球变暖是一个影响我们所有人的严重现象。'},
+      {en:'philosophy',cn:'哲学',phonetic:'/fɪˈlɒsəfi/',pos:'名词',ex_en:'His philosophy of life is to always stay positive.',ex_cn:'他的人生哲学是永远保持积极。'},
+      {en:'psychology',cn:'心理学',phonetic:'/saɪˈkɒlədʒi/',pos:'名词',ex_en:'She is studying psychology at university.',ex_cn:'她在大学里学习心理学。'},
+      {en:'atmosphere',cn:'大气层；氛围',phonetic:'/ˈætməsfɪə(r)/',pos:'名词',ex_en:'The restaurant has a warm and friendly atmosphere.',ex_cn:'这家餐厅有一种温馨友好的氛围。'},
+      {en:'civilization',cn:'文明',phonetic:'/ˌsɪvəlaɪˈzeɪʃn/',pos:'名词',ex_en:'Ancient Chinese civilization made great contributions to the world.',ex_cn:'中国古代文明为世界做出了巨大贡献。'},
+      {en:'consequence',cn:'后果',phonetic:'/ˈkɒnsɪkwəns/',pos:'名词',ex_en:'Think about the consequences before making a decision.',ex_cn:'做决定之前先想想后果。'},
+      {en:'contemporary',cn:'当代的',phonetic:'/kənˈtemprəri/',pos:'形容词',ex_en:'She enjoys contemporary art more than classical art.',ex_cn:'比起古典艺术，她更喜欢当代艺术。'},
+      {en:'controversial',cn:'有争议的',phonetic:'/ˌkɒntrəˈvɜːʃl/',pos:'形容词',ex_en:'The new law remains highly controversial.',ex_cn:'这项新法律仍然极富争议。'},
+      {en:'demonstrate',cn:'证明；演示',phonetic:'/ˈdemənstreɪt/',pos:'动词',ex_en:'The experiment demonstrates how gravity works.',ex_cn:'这个实验演示了重力的原理。'},
+      {en:'distinguish',cn:'区分；辨别',phonetic:'/dɪˈstɪŋɡwɪʃ/',pos:'动词',ex_en:'Can you distinguish between the two paintings?',ex_cn:'你能分辨这两幅画吗？'},
+      {en:'enthusiasm',cn:'热情',phonetic:'/ɪnˈθjuːziæzəm/',pos:'名词',ex_en:'Her enthusiasm for learning English is amazing.',ex_cn:'她学英语的热情令人惊叹。'},
+      {en:'extraordinary',cn:'非凡的',phonetic:'/ɪkˈstrɔːdnri/',pos:'形容词',ex_en:'She has an extraordinary memory for numbers.',ex_cn:'她对数字有非凡的记忆力。'},
+      {en:'fundamental',cn:'基本的',phonetic:'/ˌfʌndəˈmentl/',pos:'形容词',ex_en:'Reading is a fundamental skill for learning.',ex_cn:'阅读是学习的基本技能。'},
+      {en:'guarantee',cn:'保证',phonetic:'/ˌɡærənˈtiː/',pos:'动词/名词',ex_en:'Hard work does not guarantee success, but it helps.',ex_cn:'努力不保证成功，但有帮助。'},
+      {en:'illustrate',cn:'说明；阐明',phonetic:'/ˈɪləstreɪt/',pos:'动词',ex_en:'Let me illustrate my point with an example.',ex_cn:'让我用一个例子来说明我的观点。'},
+      {en:'independent',cn:'独立的',phonetic:'/ˌɪndɪˈpendənt/',pos:'形容词',ex_en:'She became financially independent at the age of 22.',ex_cn:'她22岁时就经济独立了。'},
+      {en:'interpret',cn:'解释；口译',phonetic:'/ɪnˈtɜːprɪt/',pos:'动词',ex_en:'Could you interpret this poem for me?',ex_cn:'你能为我解读这首诗吗？'},
+      {en:'investigate',cn:'调查',phonetic:'/ɪnˈvestɪɡeɪt/',pos:'动词',ex_en:'The police are investigating the cause of the fire.',ex_cn:'警方正在调查火灾原因。'},
+      {en:'negotiate',cn:'谈判',phonetic:'/nɪˈɡəʊʃieɪt/',pos:'动词',ex_en:'The two companies are negotiating a new contract.',ex_cn:'两家公司正在谈判一份新合同。'},
+      {en:'participate',cn:'参加',phonetic:'/pɑːˈtɪsɪpeɪt/',pos:'动词',ex_en:'Everyone is encouraged to participate in the discussion.',ex_cn:'鼓励每个人都参与讨论。'},
+      {en:'perspective',cn:'视角；观点',phonetic:'/pəˈspektɪv/',pos:'名词',ex_en:'Looking at the problem from a different perspective helps.',ex_cn:'从不同角度看问题会有帮助。'},
+      {en:'prejudice',cn:'偏见',phonetic:'/ˈpredʒʊdɪs/',pos:'名词',ex_en:'We should judge people fairly without prejudice.',ex_cn:'我们应该公平地评判他人，不要有偏见。'},
+      {en:'privilege',cn:'特权；荣幸',phonetic:'/ˈprɪvəlɪdʒ/',pos:'名词',ex_en:'It is a privilege to study at this university.',ex_cn:'能在这所大学学习是一种荣幸。'},
+      {en:'recommend',cn:'推荐',phonetic:'/ˌrekəˈmend/',pos:'动词',ex_en:'I highly recommend this book to anyone learning English.',ex_cn:'我强烈推荐这本书给学英语的人。'},
+      {en:'significant',cn:'重要的；显著的',phonetic:'/sɪɡˈnɪfɪkənt/',pos:'形容词',ex_en:'There has been a significant improvement in her grades.',ex_cn:'她的成绩有了显著提高。'},
+      {en:'spontaneous',cn:'自发的',phonetic:'/spɒnˈteɪniəs/',pos:'形容词',ex_en:'The audience burst into spontaneous applause.',ex_cn:'观众自发地爆发出掌声。'},
+      {en:'substantial',cn:'大量的',phonetic:'/səbˈstænʃl/',pos:'形容词',ex_en:'A substantial amount of money was donated to charity.',ex_cn:'一大笔钱被捐给了慈善机构。'},
+      {en:'sufficient',cn:'足够的',phonetic:'/səˈfɪʃnt/',pos:'形容词',ex_en:'Do you have sufficient evidence to support your claim?',ex_cn:'你有足够的证据支撑你的说法吗？'},
+      {en:'theoretical',cn:'理论的',phonetic:'/ˌθɪəˈretɪkl/',pos:'形容词',ex_en:'The course covers both theoretical and practical aspects.',ex_cn:'这门课程涵盖理论和实践两个方面。'},
+      {en:'transparent',cn:'透明的',phonetic:'/trænsˈpærənt/',pos:'形容词',ex_en:'The government promised a more transparent decision process.',ex_cn:'政府承诺更加透明的决策过程。'},
+      {en:'tremendous',cn:'巨大的',phonetic:'/trɪˈmendəs/',pos:'形容词',ex_en:'She has made tremendous progress in her English speaking.',ex_cn:'她的英语口语有了巨大的进步。'},
+      {en:'unanimous',cn:'一致的',phonetic:'/juˈnænɪməs/',pos:'形容词',ex_en:'The decision to hire her was unanimous.',ex_cn:'录用她的决定是一致通过的。'},
+      {en:'unfortunately',cn:'不幸地',phonetic:'/ʌnˈfɔːtʃənətli/',pos:'副词',ex_en:'Unfortunately, the concert was cancelled due to rain.',ex_cn:'不幸的是，演唱会因下雨取消了。'},
+      {en:'vulnerable',cn:'脆弱的',phonetic:'/ˈvʌlnərəbl/',pos:'形容词',ex_en:'Children are especially vulnerable to online dangers.',ex_cn:'儿童特别容易受到网络危险的伤害。'},
+      {en:'widespread',cn:'广泛的',phonetic:'/ˈwaɪdspred/',pos:'形容词',ex_en:'The use of smartphones has become widespread around the world.',ex_cn:'智能手机的使用已在全球普及。'},
+      {en:'acknowledge',cn:'承认',phonetic:'/əkˈnɒlɪdʒ/',pos:'动词',ex_en:'He acknowledged his mistake and apologized.',ex_cn:'他承认了错误并道了歉。'},
+      {en:'accomplish',cn:'完成',phonetic:'/əˈkʌmplɪʃ/',pos:'动词',ex_en:'What do you hope to accomplish this year?',ex_cn:'你今年希望完成什么？'},
+      {en:'accumulate',cn:'积累',phonetic:'/əˈkjuːmjəleɪt/',pos:'动词',ex_en:'Over the years, he has accumulated a lot of experience.',ex_cn:'多年来，他积累了丰富的经验。'},
+      {en:'anticipate',cn:'预期',phonetic:'/ænˈtɪsɪpeɪt/',pos:'动词',ex_en:'We anticipate that the project will be finished next month.',ex_cn:'我们预计项目下个月完成。'},
+      {en:'compromise',cn:'妥协',phonetic:'/ˈkɒmprəmaɪz/',pos:'名词/动词',ex_en:'A successful marriage requires compromise from both sides.',ex_cn:'成功的婚姻需要双方妥协。'},
+      {en:'conscious',cn:'有意识的',phonetic:'/ˈkɒnʃəs/',pos:'形容词',ex_en:'She is very conscious of her health and exercises daily.',ex_cn:'她非常注重健康，每天锻炼。'},
+      {en:'contradict',cn:'矛盾；反驳',phonetic:'/ˌkɒntrəˈdɪkt/',pos:'动词',ex_en:'His actions contradict his words.',ex_cn:'他的行为与他的言语矛盾。'},
+      {en:'curriculum',cn:'课程',phonetic:'/kəˈrɪkjələm/',pos:'名词',ex_en:'The school has updated its English curriculum.',ex_cn:'学校更新了英语课程。'},
+      {en:'deliberate',cn:'故意的',phonetic:'/dɪˈlɪbərət/',pos:'形容词',ex_en:'Was this a deliberate choice or an accident?',ex_cn:'这是故意的选择还是意外？'},
+      {en:'desperate',cn:'绝望的',phonetic:'/ˈdespərət/',pos:'形容词',ex_en:'The situation is bad but not desperate.',ex_cn:'情况很糟但还没到绝望的地步。'},
+      {en:'domestic',cn:'国内的',phonetic:'/dəˈmestɪk/',pos:'形容词',ex_en:'The domestic economy has been growing steadily.',ex_cn:'国内经济一直在稳步增长。'},
+      {en:'elaborate',cn:'精心制作的',phonetic:'/ɪˈlæbərət/',pos:'形容词',ex_en:'They made elaborate preparations for the wedding.',ex_cn:'他们为婚礼做了精心的准备。'},
+      {en:'equivalent',cn:'等价的',phonetic:'/ɪˈkwɪvələnt/',pos:'形容词',ex_en:'One US dollar is roughly equivalent to seven Chinese yuan.',ex_cn:'一美元大约相当于七元人民币。'},
+      {en:'inevitable',cn:'不可避免的',phonetic:'/ɪnˈevɪtəbl/',pos:'形容词',ex_en:'Change is an inevitable part of life.',ex_cn:'变化是生活中不可避免的一部分。'},
+      {en:'sophisticated',cn:'精密的；老练的',phonetic:'/səˈfɪstɪkeɪtɪd/',pos:'形容词',ex_en:'The laboratory is equipped with sophisticated instruments.',ex_cn:'实验室配备了精密的仪器。'},
+    ]
+  },
+  'nce1': {
+    name: '新概念英语 第一册', icon:'🟢', cat:'新概念', count:30,
+    desc:'英语初阶，适合小学高年级和初中入门',
+    words: [
+      {en:'excuse',cn:'原谅；借口',phonetic:'/ɪkˈskjuːs/',pos:'名词/动词',ex_en:'Excuse me, where is the nearest bank?',ex_cn:'打扰一下，最近的银行在哪？'},
+      {en:'handbag',cn:'手提包',phonetic:'/ˈhændbæɡ/',pos:'名词',ex_en:'She left her handbag on the bus.',ex_cn:'她把提包落在公交车上了。'},
+      {en:'umbrella',cn:'雨伞',phonetic:'/ʌmˈbrelə/',pos:'名词',ex_en:'Take an umbrella with you. It might rain.',ex_cn:'带把伞吧。可能要下雨。'},
+      {en:'nationality',cn:'国籍',phonetic:'/ˌnæʃəˈnæləti/',pos:'名词',ex_en:'What nationality are you?',ex_cn:'你是什么国籍？'},
+      {en:'mechanic',cn:'机械师',phonetic:'/mɪˈkænɪk/',pos:'名词',ex_en:'The mechanic fixed my car in an hour.',ex_cn:'机械师一小时就修好了我的车。'},
+      {en:'magazine',cn:'杂志',phonetic:'/ˌmæɡəˈziːn/',pos:'名词',ex_en:'I bought a fashion magazine at the airport.',ex_cn:'我在机场买了一本时尚杂志。'},
+      {en:'sharp',cn:'锋利的',phonetic:'/ʃɑːp/',pos:'形容词',ex_en:'Be careful! The knife is very sharp.',ex_cn:'小心！这把刀很锋利。'},
+      {en:'blunt',cn:'钝的',phonetic:'/blʌnt/',pos:'形容词',ex_en:'These scissors are blunt. I need new ones.',ex_cn:'这把剪刀钝了。我需要新的。'},
+      {en:'stereo',cn:'立体声音响',phonetic:'/ˈsteriəʊ/',pos:'名词',ex_en:'He bought a new stereo for his living room.',ex_cn:'他为客厅买了一套新音响。'},
+      {en:'television',cn:'电视',phonetic:'/ˈtelɪvɪʒn/',pos:'名词',ex_en:'We watched the news on television last night.',ex_cn:'我们昨晚在电视上看了新闻。'},
+      {en:'thirsty',cn:'渴的',phonetic:'/ˈθɜːsti/',pos:'形容词',ex_en:'I am very thirsty. Could I have some water?',ex_cn:'我很渴。能给我点水吗？'},
+      {en:'vase',cn:'花瓶',phonetic:'/vɑːz/',pos:'名词',ex_en:'She put fresh flowers in the vase.',ex_cn:'她把鲜花插进了花瓶。'},
+      {en:'hammer',cn:'锤子',phonetic:'/ˈhæmə(r)/',pos:'名词',ex_en:'Can I borrow your hammer? I need to hang a picture.',ex_cn:'能借用你的锤子吗？我要挂一幅画。'},
+      {en:'pink',cn:'粉色',phonetic:'/pɪŋk/',pos:'形容词',ex_en:'She painted her room pink.',ex_cn:'她把房间涂成了粉色。'},
+      {en:'upstairs',cn:'楼上',phonetic:'/ˌʌpˈsteəz/',pos:'副词',ex_en:'The bedroom is upstairs on the second floor.',ex_cn:'卧室在楼上的二楼。'},
+      {en:'downstairs',cn:'楼下',phonetic:'/ˌdaʊnˈsteəz/',pos:'副词',ex_en:'Come downstairs! Dinner is ready.',ex_cn:'下楼来！晚饭好了。'},
+      {en:'customer',cn:'顾客',phonetic:'/ˈkʌstəmə(r)/',pos:'名词',ex_en:'The shop assistant greeted the customer with a smile.',ex_cn:'店员微笑着迎接顾客。'},
+      {en:'appointment',cn:'预约',phonetic:'/əˈpɔɪntmənt/',pos:'名词',ex_en:'I have a doctor\'s appointment at 3 o\'clock.',ex_cn:'我三点钟有医生的预约。'},
+      {en:'urgent',cn:'紧急的',phonetic:'/ˈɜːdʒənt/',pos:'形容词',ex_en:'This is an urgent matter. Please reply quickly.',ex_cn:'这是紧急事项。请尽快回复。'},
+      {en:'groceries',cn:'食品杂货',phonetic:'/ˈɡrəʊsəriz/',pos:'名词',ex_en:'I need to buy some groceries at the supermarket.',ex_cn:'我要去超市买些食品杂货。'},
+      {en:'stationery',cn:'文具',phonetic:'/ˈsteɪʃənri/',pos:'名词',ex_en:'You can buy stationery at the shop next to the school.',ex_cn:'你可以在学校旁边的店里买文具。'},
+      {en:'newsagent',cn:'报刊亭',phonetic:'/ˈnjuːzeɪdʒənt/',pos:'名词',ex_en:'I got the newspaper from the newsagent on the corner.',ex_cn:'我在街角的报刊亭买的报纸。'},
+      {en:'chemist',cn:'药店；化学家',phonetic:'/ˈkemɪst/',pos:'名词',ex_en:'You can get medicine at the chemist on High Street.',ex_cn:'你可以在高街的药店里买到药。'},
+      {en:'bath',cn:'洗澡',phonetic:'/bɑːθ/',pos:'名词',ex_en:'I usually take a bath before going to bed.',ex_cn:'我通常睡前洗个澡。'},
+      {en:'nearly',cn:'几乎',phonetic:'/ˈnɪəli/',pos:'副词',ex_en:'I nearly missed the bus this morning.',ex_cn:'我今天早上差点错过公交车。'},
+      {en:'busy',cn:'忙碌的',phonetic:'/ˈbɪzi/',pos:'形容词',ex_en:'The restaurant is always busy on weekends.',ex_cn:'这家餐厅周末总是很忙。'},
+      {en:'torch',cn:'手电筒',phonetic:'/tɔːtʃ/',pos:'名词',ex_en:'Take a torch when you go camping.',ex_cn:'去野营时带个手电筒。'},
+      {en:'voice',cn:'声音；嗓音',phonetic:'/vɔɪs/',pos:'名词',ex_en:'She has a beautiful singing voice.',ex_cn:'她的嗓音很美。'},
+      {en:'dentist',cn:'牙医',phonetic:'/ˈdentɪst/',pos:'名词',ex_en:'I have a toothache. I need to see a dentist.',ex_cn:'我牙疼。我需要看牙医。'},
+      {en:'medicine',cn:'药',phonetic:'/ˈmedsn/',pos:'名词',ex_en:'Take this medicine three times a day after meals.',ex_cn:'这药一天三次，饭后服用。'},
+    ]
+  },
+  'nce2': {
+    name: '新概念英语 第二册', icon:'🔵', cat:'新概念', count:30,
+    desc:'实践与进步，适合初中高年级和高中',
+    words: [
+      {en:'private',cn:'私人的',phonetic:'/ˈpraɪvət/',pos:'形容词',ex_en:'This is a private conversation. Please leave us alone.',ex_cn:'这是私人谈话。请让我们单独待着。'},
+      {en:'conversation',cn:'对话',phonetic:'/ˌkɒnvəˈseɪʃn/',pos:'名词',ex_en:'We had an interesting conversation about travel.',ex_cn:'我们进行了一次有趣的旅行对话。'},
+      {en:'theatre',cn:'剧院',phonetic:'/ˈθɪətə(r)/',pos:'名词',ex_en:'We went to the theatre to see a Shakespeare play.',ex_cn:'我们去剧院看了莎士比亚的戏剧。'},
+      {en:'seat',cn:'座位',phonetic:'/siːt/',pos:'名词',ex_en:'Please take a seat and make yourself comfortable.',ex_cn:'请坐，别客气。'},
+      {en:'angry',cn:'生气的',phonetic:'/ˈæŋɡri/',pos:'形容词',ex_en:'He was angry because the bus was late again.',ex_cn:'公交车又晚点了他很生气。'},
+      {en:'attention',cn:'注意力',phonetic:'/əˈtenʃn/',pos:'名词',ex_en:'Please pay attention to what the teacher is saying.',ex_cn:'请注意老师在说什么。'},
+      {en:'bear',cn:'忍受',phonetic:'/beə(r)/',pos:'动词',ex_en:'I cannot bear the noise anymore. Please be quiet.',ex_cn:'我受不了这噪音了。请安静。'},
+      {en:'business',cn:'生意；事务',phonetic:'/ˈbɪznəs/',pos:'名词',ex_en:'He went to London on business last week.',ex_cn:'他上周去伦敦出差了。'},
+      {en:'rude',cn:'粗鲁的',phonetic:'/ruːd/',pos:'形容词',ex_en:'It is rude to interrupt others when they are speaking.',ex_cn:'打断别人说话是很粗鲁的。'},
+      {en:'museum',cn:'博物馆',phonetic:'/mjuˈziːəm/',pos:'名词',ex_en:'The museum is free to visit on Sundays.',ex_cn:'博物馆周日免费参观。'},
+      {en:'spoil',cn:'破坏；宠坏',phonetic:'/spɔɪl/',pos:'动词',ex_en:'Too much sugar will spoil your appetite.',ex_cn:'吃太多糖会破坏你的食欲。'},
+      {en:'decision',cn:'决定',phonetic:'/dɪˈsɪʒn/',pos:'名词',ex_en:'Making a decision without enough information is risky.',ex_cn:'信息不足就做决定是有风险的。'},
+      {en:'whole',cn:'整个的',phonetic:'/həʊl/',pos:'形容词',ex_en:'I spent the whole day cleaning the house.',ex_cn:'我花了一整天打扫房子。'},
+      {en:'single',cn:'单一的',phonetic:'/ˈsɪŋɡl/',pos:'形容词',ex_en:'Not a single person came to the meeting.',ex_cn:'没有一个人来开会。'},
+      {en:'expect',cn:'期望；预料',phonetic:'/ɪkˈspekt/',pos:'动词',ex_en:'I expect to finish the project by Friday.',ex_cn:'我预计周五前完成这个项目。'},
+      {en:'valuable',cn:'有价值的',phonetic:'/ˈvæljuəbl/',pos:'形容词',ex_en:'Thank you for your valuable advice.',ex_cn:'感谢你的宝贵建议。'},
+      {en:'service',cn:'服务',phonetic:'/ˈsɜːvɪs/',pos:'名词',ex_en:'The service in this hotel is excellent.',ex_cn:'这家酒店的服务很出色。'},
+      {en:'beggar',cn:'乞丐',phonetic:'/ˈbeɡə(r)/',pos:'名词',ex_en:'The beggar asked for some food and water.',ex_cn:'乞丐要了些食物和水。'},
+      {en:'pocket',cn:'口袋',phonetic:'/ˈpɒkɪt/',pos:'名词',ex_en:'He put the key in his pocket and left.',ex_cn:'他把钥匙放进口袋就走了。'},
+      {en:'detective',cn:'侦探',phonetic:'/dɪˈtektɪv/',pos:'名词',ex_en:'The detective solved the mystery in just three days.',ex_cn:'侦探仅用三天就解开了谜团。'},
+      {en:'competition',cn:'比赛',phonetic:'/ˌkɒmpəˈtɪʃn/',pos:'名词',ex_en:'She won first prize in the singing competition.',ex_cn:'她在唱歌比赛中获得了一等奖。'},
+      {en:'neat',cn:'整洁的',phonetic:'/niːt/',pos:'形容词',ex_en:'Her room is always clean and neat.',ex_cn:'她的房间总是干净整洁。'},
+      {en:'path',cn:'小路',phonetic:'/pɑːθ/',pos:'名词',ex_en:'There is a beautiful path through the forest.',ex_cn:'有一条穿过森林的美丽小径。'},
+      {en:'wood',cn:'树林',phonetic:'/wʊd/',pos:'名词',ex_en:'We went for a walk in the wood near our house.',ex_cn:'我们去房子附近的树林里散步了。'},
+      {en:'fortune',cn:'财富；运气',phonetic:'/ˈfɔːtʃuːn/',pos:'名词',ex_en:'He made a fortune by investing in technology companies.',ex_cn:'他通过投资科技公司发了大财。'},
+      {en:'realize',cn:'意识到',phonetic:'/ˈriːəlaɪz/',pos:'动词',ex_en:'I did not realize how late it was until I looked at the clock.',ex_cn:'直到看了钟我才意识到有多晚了。'},
+      {en:'beneath',cn:'在……下方',phonetic:'/bɪˈniːθ/',pos:'介词',ex_en:'The cat was sleeping beneath the table.',ex_cn:'猫在桌子下面睡觉。'},
+      {en:'measure',cn:'测量',phonetic:'/ˈmeʒə(r)/',pos:'动词',ex_en:'Can you measure the length of this table for me?',ex_cn:'你能帮我量一下这张桌子的长度吗？'},
+      {en:'possess',cn:'拥有',phonetic:'/pəˈzes/',pos:'动词',ex_en:'She possesses a rare talent for music.',ex_cn:'她拥有罕见的音乐天赋。'},
+      {en:'rapid',cn:'快速的',phonetic:'/ˈræpɪd/',pos:'形容词',ex_en:'The city has seen rapid development in recent years.',ex_cn:'近年来这座城市发展迅速。'},
+    ]
+  },
+  'cet4': {
+    name: '大学英语四级核心', icon:'🎯', cat:'大学', count:50,
+    desc:'CET-4高频词汇，大学英语四级必背',
+    words: [
+      {en:'abandon',cn:'放弃',phonetic:'/əˈbændən/',pos:'动词',ex_en:'Never abandon your dream no matter how hard it gets.',ex_cn:'无论多难，永远不要放弃你的梦想。'},
+      {en:'absolute',cn:'绝对的',phonetic:'/ˈæbsəluːt/',pos:'形容词',ex_en:'The experiment requires absolute accuracy.',ex_cn:'这个实验要求绝对的精确。'},
+      {en:'absorb',cn:'吸收',phonetic:'/əbˈzɔːb/',pos:'动词',ex_en:'Plants absorb carbon dioxide and release oxygen.',ex_cn:'植物吸收二氧化碳并释放氧气。'},
+      {en:'abstract',cn:'抽象的',phonetic:'/ˈæbstrækt/',pos:'形容词',ex_en:'The concept of time is abstract and hard to define.',ex_cn:'时间这个概念很抽象，很难定义。'},
+      {en:'abundant',cn:'丰富的',phonetic:'/əˈbʌndənt/',pos:'形容词',ex_en:'The region is abundant in natural resources.',ex_cn:'这个地区自然资源丰富。'},
+      {en:'abuse',cn:'滥用',phonetic:'/əˈbjuːs/',pos:'名词/动词',ex_en:'Drug abuse is a serious social problem.',ex_cn:'药物滥用是一个严重的社会问题。'},
+      {en:'academic',cn:'学术的',phonetic:'/ˌækəˈdemɪk/',pos:'形容词',ex_en:'She published several academic papers last year.',ex_cn:'她去年发表了几篇学术论文。'},
+      {en:'accelerate',cn:'加速',phonetic:'/əkˈseləreɪt/',pos:'动词',ex_en:'The company plans to accelerate its expansion into new markets.',ex_cn:'公司计划加速向新市场扩张。'},
+      {en:'access',cn:'进入；通道',phonetic:'/ˈækses/',pos:'名词',ex_en:'Students have free access to the online library.',ex_cn:'学生可以免费访问在线图书馆。'},
+      {en:'accommodate',cn:'容纳；适应',phonetic:'/əˈkɒmədeɪt/',pos:'动词',ex_en:'The new stadium can accommodate 50,000 people.',ex_cn:'新体育场能容纳五万人。'},
+      {en:'accompany',cn:'陪伴',phonetic:'/əˈkʌmpəni/',pos:'动词',ex_en:'She asked me to accompany her to the concert.',ex_cn:'她让我陪她去听音乐会。'},
+      {en:'account',cn:'账户；解释',phonetic:'/əˈkaʊnt/',pos:'名词',ex_en:'Please give a detailed account of what happened.',ex_cn:'请详细描述发生了什么。'},
+      {en:'accurate',cn:'准确的',phonetic:'/ˈækjərət/',pos:'形容词',ex_en:'The weather forecast turned out to be accurate.',ex_cn:'天气预报结果很准确。'},
+      {en:'accuse',cn:'指责',phonetic:'/əˈkjuːz/',pos:'动词',ex_en:'He was accused of stealing money from the company.',ex_cn:'他被指控偷了公司的钱。'},
+      {en:'adapt',cn:'适应',phonetic:'/əˈdæpt/',pos:'动词',ex_en:'It takes time to adapt to a new environment.',ex_cn:'适应新环境需要时间。'},
+      {en:'adequate',cn:'足够的',phonetic:'/ˈædɪkwət/',pos:'形容词',ex_en:'Make sure you get adequate sleep before the exam.',ex_cn:'考试前确保充足的睡眠。'},
+      {en:'adjust',cn:'调整',phonetic:'/əˈdʒʌst/',pos:'动词',ex_en:'You need to adjust your study habits to improve your grades.',ex_cn:'你需要调整学习习惯来提高成绩。'},
+      {en:'administration',cn:'管理；行政',phonetic:'/ədˌmɪnɪˈstreɪʃn/',pos:'名词',ex_en:'The school administration decided to hire more teachers.',ex_cn:'学校行政决定招聘更多老师。'},
+      {en:'admire',cn:'钦佩',phonetic:'/ədˈmaɪə(r)/',pos:'动词',ex_en:'I really admire her courage to speak up.',ex_cn:'我真的很钦佩她敢于发声的勇气。'},
+      {en:'adopt',cn:'采纳；收养',phonetic:'/əˈdɒpt/',pos:'动词',ex_en:'The company decided to adopt a new marketing strategy.',ex_cn:'公司决定采用新的营销策略。'},
+      {en:'advanced',cn:'高级的',phonetic:'/ədˈvɑːnst/',pos:'形容词',ex_en:'This course is for advanced learners of English.',ex_cn:'这门课程面向高级英语学习者。'},
+      {en:'aggressive',cn:'激进的',phonetic:'/əˈɡresɪv/',pos:'形容词',ex_en:'Some people think that an aggressive sales approach works best.',ex_cn:'有些人认为激进的销售方式效果最好。'},
+      {en:'aid',cn:'帮助；援助',phonetic:'/eɪd/',pos:'名词/动词',ex_en:'The organization provides financial aid to poor students.',ex_cn:'该组织为贫困学生提供经济援助。'},
+      {en:'alter',cn:'改变',phonetic:'/ˈɔːltə(r)/',pos:'动词',ex_en:'We had to alter our plans because of the bad weather.',ex_cn:'由于天气不好我们不得不改变计划。'},
+      {en:'alternative',cn:'替代方案',phonetic:'/ɔːlˈtɜːnətɪv/',pos:'名词',ex_en:'We need to find an alternative to plastic bags.',ex_cn:'我们需要找到塑料袋的替代品。'},
+      {en:'amaze',cn:'使惊讶',phonetic:'/əˈmeɪz/',pos:'动词',ex_en:'Her ability to learn languages quickly never ceases to amaze me.',ex_cn:'她快速学习语言的能力总是让我惊讶。'},
+      {en:'ambition',cn:'雄心；抱负',phonetic:'/æmˈbɪʃn/',pos:'名词',ex_en:'His ambition is to become a world-famous scientist.',ex_cn:'他的抱负是成为世界著名的科学家。'},
+      {en:'anxiety',cn:'焦虑',phonetic:'/æŋˈzaɪəti/',pos:'名词',ex_en:'Many students suffer from test anxiety.',ex_cn:'许多学生都有考试焦虑。'},
+      {en:'apparent',cn:'明显的',phonetic:'/əˈpærənt/',pos:'形容词',ex_en:'It soon became apparent that something was wrong.',ex_cn:'很快就明显看出出了问题。'},
+      {en:'appeal',cn:'吸引；呼吁',phonetic:'/əˈpiːl/',pos:'动词/名词',ex_en:'The idea of working abroad appeals to many young people.',ex_cn:'出国工作的想法吸引了很多年轻人。'},
+      {en:'appetite',cn:'食欲',phonetic:'/ˈæpɪtaɪt/',pos:'名词',ex_en:'Fresh air and exercise will give you a good appetite.',ex_cn:'新鲜空气和运动会让你食欲大增。'},
+      {en:'appliance',cn:'电器',phonetic:'/əˈplaɪəns/',pos:'名词',ex_en:'Kitchen appliances make our lives much easier.',ex_cn:'厨房电器让我们的生活轻松多了。'},
+      {en:'application',cn:'申请；应用',phonetic:'/ˌæplɪˈkeɪʃn/',pos:'名词',ex_en:'I submitted my job application last week.',ex_cn:'我上周提交了工作申请。'},
+      {en:'appreciate',cn:'感激；欣赏',phonetic:'/əˈpriːʃieɪt/',pos:'动词',ex_en:'I really appreciate your help with this project.',ex_cn:'我真的很感激你在这个项目上的帮助。'},
+      {en:'approach',cn:'方法；接近',phonetic:'/əˈprəʊtʃ/',pos:'名词/动词',ex_en:'A new approach to teaching math has been introduced.',ex_cn:'一种新的数学教学方法被引入了。'},
+      {en:'appropriate',cn:'适当的',phonetic:'/əˈprəʊpriət/',pos:'形容词',ex_en:'Please wear appropriate clothing for the interview.',ex_cn:'请穿着适合面试的衣服。'},
+      {en:'approve',cn:'批准；同意',phonetic:'/əˈpruːv/',pos:'动词',ex_en:'The manager approved my request for a day off.',ex_cn:'经理批准了我请一天假的请求。'},
+      {en:'arise',cn:'出现',phonetic:'/əˈraɪz/',pos:'动词',ex_en:'Problems often arise when you least expect them.',ex_cn:'问题往往在你最意想不到的时候出现。'},
+      {en:'artificial',cn:'人造的',phonetic:'/ˌɑːtɪˈfɪʃl/',pos:'形容词',ex_en:'Artificial intelligence is changing the world rapidly.',ex_cn:'人工智能正在快速改变世界。'},
+      {en:'aspect',cn:'方面',phonetic:'/ˈæspekt/',pos:'名词',ex_en:'We should consider every aspect of the problem.',ex_cn:'我们应该考虑问题的每一个方面。'},
+      {en:'assemble',cn:'组装；集合',phonetic:'/əˈsembl/',pos:'动词',ex_en:'The students assembled in the hall for the morning meeting.',ex_cn:'学生们在大厅集合开晨会。'},
+      {en:'assess',cn:'评估',phonetic:'/əˈses/',pos:'动词',ex_en:'Teachers need to assess students\' progress regularly.',ex_cn:'老师需要定期评估学生的进展。'},
+      {en:'assign',cn:'分配',phonetic:'/əˈsaɪn/',pos:'动词',ex_en:'The teacher assigned us a lot of homework over the weekend.',ex_cn:'老师给我们布置了很多周末作业。'},
+      {en:'assist',cn:'协助',phonetic:'/əˈsɪst/',pos:'动词',ex_en:'Can you assist me in carrying these boxes upstairs?',ex_cn:'你能帮我把这些箱子搬上楼吗？'},
+      {en:'associate',cn:'联系；联想',phonetic:'/əˈsəʊʃieɪt/',pos:'动词',ex_en:'People often associate red roses with love.',ex_cn:'人们常把红玫瑰和爱情联系在一起。'},
+      {en:'assume',cn:'假设',phonetic:'/əˈsjuːm/',pos:'动词',ex_en:'Do not assume that you will pass the exam without studying.',ex_cn:'不要假设不学习就能通过考试。'},
+      {en:'attain',cn:'达到',phonetic:'/əˈteɪn/',pos:'动词',ex_en:'He worked hard to attain his professional goals.',ex_cn:'他努力工作以达到职业目标。'},
+      {en:'attribute',cn:'属性；归因于',phonetic:'/əˈtrɪbjuːt/',pos:'名词/动词',ex_en:'She attributes her success to hard work and persistence.',ex_cn:'她把成功归因于努力和坚持。'},
+      {en:'authority',cn:'权威；当局',phonetic:'/ɔːˈθɒrəti/',pos:'名词',ex_en:'The local authorities are investigating the accident.',ex_cn:'当地政府正在调查这起事故。'},
+      {en:'available',cn:'可获得的；有空的',phonetic:'/əˈveɪləbl/',pos:'形容词',ex_en:'Is the manager available to speak with me now?',ex_cn:'经理现在有空和我说话吗？'},
+    ]
+  },
+  'cet6': {
+    name: '大学英语六级核心', icon:'🏅', cat:'大学', count:50,
+    desc:'CET-6进阶词汇，六级高分必备',
+    words: [
+      {en:'abnormal',cn:'异常的',phonetic:'/æbˈnɔːml/',pos:'形容词',ex_en:'The test results showed abnormal levels of sugar in his blood.',ex_cn:'检测结果显示他血糖水平异常。'},
+      {en:'abolish',cn:'废除',phonetic:'/əˈbɒlɪʃ/',pos:'动词',ex_en:'Many countries have abolished the death penalty.',ex_cn:'许多国家已经废除了死刑。'},
+      {en:'absurd',cn:'荒谬的',phonetic:'/əbˈsɜːd/',pos:'形容词',ex_en:'It is absurd to judge a person by their appearance alone.',ex_cn:'仅凭外表评判一个人是荒谬的。'},
+      {en:'acquaint',cn:'使熟悉',phonetic:'/əˈkweɪnt/',pos:'动词',ex_en:'You should acquaint yourself with the rules before playing.',ex_cn:'你应该先熟悉规则再开始玩。'},
+      {en:'adhere',cn:'坚持；粘附',phonetic:'/ədˈhɪə(r)/',pos:'动词',ex_en:'We must adhere to the original plan despite difficulties.',ex_cn:'尽管有困难，我们必须坚持原计划。'},
+      {en:'adjacent',cn:'相邻的',phonetic:'/əˈdʒeɪsnt/',pos:'形容词',ex_en:'The hotel is adjacent to the train station.',ex_cn:'酒店紧邻火车站。'},
+      {en:'administer',cn:'管理；执行',phonetic:'/ədˈmɪnɪstə(r)/',pos:'动词',ex_en:'The nurse administered the medicine to the patient.',ex_cn:'护士给病人服了药。'},
+      {en:'adolescent',cn:'青少年',phonetic:'/ˌædəˈlesnt/',pos:'名词/形容词',ex_en:'Adolescents often face pressure from peers and school.',ex_cn:'青少年常面临来自同伴和学校的压力。'},
+      {en:'adverse',cn:'不利的',phonetic:'/ˈædvɜːs/',pos:'形容词',ex_en:'The medicine may have some adverse side effects.',ex_cn:'这种药可能有一些不良副作用。'},
+      {en:'aesthetic',cn:'美学的',phonetic:'/iːsˈθetɪk/',pos:'形容词',ex_en:'The design combines functionality with aesthetic appeal.',ex_cn:'这个设计结合了功能性和美学吸引力。'},
+      {en:'affiliate',cn:'附属机构',phonetic:'/əˈfɪlieɪt/',pos:'动词/名词',ex_en:'Our hospital is affiliated with the medical university.',ex_cn:'我们的医院附属于医科大学。'},
+      {en:'aggravate',cn:'加重',phonetic:'/ˈæɡrəveɪt/',pos:'动词',ex_en:'Smoking will only aggravate your cough.',ex_cn:'吸烟只会加重你的咳嗽。'},
+      {en:'aggregate',cn:'总计',phonetic:'/ˈæɡrɪɡət/',pos:'名词/动词',ex_en:'The aggregate cost of the project exceeded one million dollars.',ex_cn:'项目的总成本超过了一百万美元。'},
+      {en:'agony',cn:'极度痛苦',phonetic:'/ˈæɡəni/',pos:'名词',ex_en:'He was in agony after breaking his leg.',ex_cn:'摔断腿后他痛苦不堪。'},
+      {en:'alien',cn:'外国的；外星人',phonetic:'/ˈeɪliən/',pos:'形容词/名词',ex_en:'The culture felt completely alien to her at first.',ex_cn:'起初这种文化对她来说完全陌生。'},
+      {en:'allege',cn:'声称',phonetic:'/əˈledʒ/',pos:'动词',ex_en:'The newspaper alleges that the company broke the law.',ex_cn:'报纸声称这家公司违法了。'},
+      {en:'alleviate',cn:'减轻',phonetic:'/əˈliːvieɪt/',pos:'动词',ex_en:'This medicine should alleviate your back pain.',ex_cn:'这种药应该能减轻你的背痛。'},
+      {en:'allocate',cn:'分配',phonetic:'/ˈæləkeɪt/',pos:'动词',ex_en:'The government will allocate more funds to education.',ex_cn:'政府将向教育分配更多资金。'},
+      {en:'ambiguous',cn:'模棱两可的',phonetic:'/æmˈbɪɡjuəs/',pos:'形容词',ex_en:'The contract contains some ambiguous terms that need clarification.',ex_cn:'合同中包含一些需要澄清的模糊条款。'},
+      {en:'amend',cn:'修改',phonetic:'/əˈmend/',pos:'动词',ex_en:'The committee decided to amend the rules for next season.',ex_cn:'委员会决定修改下赛季的规则。'},
+      {en:'analogy',cn:'类比',phonetic:'/əˈnælədʒi/',pos:'名词',ex_en:'She drew an analogy between the human brain and a computer.',ex_cn:'她把人类大脑和计算机做了类比。'},
+      {en:'anonymous',cn:'匿名的',phonetic:'/əˈnɒnɪməs/',pos:'形容词',ex_en:'The donation was made by an anonymous supporter.',ex_cn:'这笔捐款来自一位匿名支持者。'},
+      {en:'apparatus',cn:'设备',phonetic:'/ˌæpəˈreɪtəs/',pos:'名词',ex_en:'The laboratory is equipped with modern scientific apparatus.',ex_cn:'实验室配备了现代科学仪器。'},
+      {en:'applaud',cn:'鼓掌；称赞',phonetic:'/əˈplɔːd/',pos:'动词',ex_en:'The audience stood up to applaud the performers.',ex_cn:'观众起立为表演者鼓掌。'},
+      {en:'apt',cn:'恰当的；有……倾向的',phonetic:'/æpt/',pos:'形容词',ex_en:'Young children are apt to catch colds in winter.',ex_cn:'小孩冬天容易感冒。'},
+      {en:'array',cn:'一系列',phonetic:'/əˈreɪ/',pos:'名词',ex_en:'The store offers a wide array of products for customers.',ex_cn:'这家商店为顾客提供琳琅满目的商品。'},
+      {en:'articulate',cn:'清楚表达的',phonetic:'/ɑːˈtɪkjuleɪt/',pos:'形容词/动词',ex_en:'She is very articulate when presenting her ideas.',ex_cn:'她表达观点时口齿非常清晰。'},
+      {en:'ascend',cn:'上升',phonetic:'/əˈsend/',pos:'动词',ex_en:'The elevator ascended slowly to the top floor.',ex_cn:'电梯缓缓升到了顶楼。'},
+      {en:'assault',cn:'攻击',phonetic:'/əˈsɔːlt/',pos:'名词/动词',ex_en:'The army launched a surprise assault on the enemy base.',ex_cn:'军队对敌方基地发动了突然袭击。'},
+      {en:'assert',cn:'断言；主张',phonetic:'/əˈsɜːt/',pos:'动词',ex_en:'He continued to assert his innocence despite the evidence.',ex_cn:'尽管有证据，他仍坚称自己无辜。'},
+      {en:'asset',cn:'资产；优势',phonetic:'/ˈæset/',pos:'名词',ex_en:'Her language skills are a great asset to the company.',ex_cn:'她的语言技能是公司的一大资产。'},
+      {en:'assimilate',cn:'吸收；同化',phonetic:'/əˈsɪməleɪt/',pos:'动词',ex_en:'Immigrants often take time to assimilate into a new culture.',ex_cn:'移民通常需要时间来融入新文化。'},
+      {en:'authorize',cn:'授权',phonetic:'/ˈɔːθəraɪz/',pos:'动词',ex_en:'Only the manager can authorize such a large payment.',ex_cn:'只有经理才能批准这么大额的付款。'},
+      {en:'automate',cn:'使自动化',phonetic:'/ˈɔːtəmeɪt/',pos:'动词',ex_en:'The factory plans to automate its production line next year.',ex_cn:'工厂计划明年实现生产线自动化。'},
+      {en:'autonomy',cn:'自治',phonetic:'/ɔːˈtɒnəmi/',pos:'名词',ex_en:'Students should be given more autonomy in choosing courses.',ex_cn:'学生应该在选课上获得更多自主权。'},
+      {en:'avail',cn:'有帮助；利用',phonetic:'/əˈveɪl/',pos:'名词/动词',ex_en:'All our efforts were to no avail. Nothing changed.',ex_cn:'我们所有的努力都白费了。什么都没变。'},
+      {en:'avert',cn:'避免',phonetic:'/əˈvɜːt/',pos:'动词',ex_en:'Quick action averted a major disaster.',ex_cn:'迅速的行动避免了一场大灾难。'},
+      {en:'baffle',cn:'使困惑',phonetic:'/ˈbæfl/',pos:'动词',ex_en:'The strange behavior of the animal baffled scientists.',ex_cn:'这种动物的奇怪行为让科学家们困惑不已。'},
+      {en:'barren',cn:'贫瘠的',phonetic:'/ˈbærən/',pos:'形容词',ex_en:'Nothing grows on this barren land.',ex_cn:'这片贫瘠的土地上什么也不长。'},
+      {en:'beforehand',cn:'事先',phonetic:'/bɪˈfɔːhænd/',pos:'副词',ex_en:'Please let me know beforehand if you cannot come.',ex_cn:'如果你不能来请事先告诉我。'},
+      {en:'betray',cn:'背叛',phonetic:'/bɪˈtreɪ/',pos:'动词',ex_en:'He felt deeply hurt when his best friend betrayed him.',ex_cn:'被最好的朋友背叛时他感到深深的伤害。'},
+      {en:'bewilder',cn:'使迷惑',phonetic:'/bɪˈwɪldə(r)/',pos:'动词',ex_en:'The complex instructions bewildered many of the students.',ex_cn:'复杂的说明让许多学生感到困惑。'},
+      {en:'bias',cn:'偏见',phonetic:'/ˈbaɪəs/',pos:'名词',ex_en:'The media should report news without bias.',ex_cn:'媒体应该不带偏见地报道新闻。'},
+      {en:'bizarre',cn:'奇怪的',phonetic:'/bɪˈzɑː(r)/',pos:'形容词',ex_en:'He told us a bizarre story about his trip to the jungle.',ex_cn:'他给我们讲了一个关于丛林之旅的离奇故事。'},
+      {en:'bleak',cn:'暗淡的',phonetic:'/bliːk/',pos:'形容词',ex_en:'The future may seem bleak now, but things will improve.',ex_cn:'未来现在可能看起来很暗淡，但情况会好转的。'},
+      {en:'blunder',cn:'大错',phonetic:'/ˈblʌndə(r)/',pos:'名词/动词',ex_en:'Sending the email to the wrong person was a serious blunder.',ex_cn:'把邮件发错人是一个严重的错误。'},
+      {en:'boast',cn:'夸耀',phonetic:'/bəʊst/',pos:'动词',ex_en:'He always boasts about how much money he makes.',ex_cn:'他总是吹嘘自己赚了多少钱。'},
+      {en:'bonus',cn:'奖金',phonetic:'/ˈbəʊnəs/',pos:'名词',ex_en:'Employees received a year-end bonus for their hard work.',ex_cn:'员工因辛勤工作得到了年终奖金。'},
+      {en:'boom',cn:'繁荣',phonetic:'/buːm/',pos:'名词/动词',ex_en:'The IT industry experienced a boom in the early 2000s.',ex_cn:'IT行业在21世纪初经历了一次繁荣。'},
+      {en:'boycott',cn:'抵制',phonetic:'/ˈbɔɪkɒt/',pos:'动词/名词',ex_en:'Many consumers decided to boycott the company over its policies.',ex_cn:'许多消费者因公司政策决定抵制该公司。'},
+    ]
+  },
+  'kaoyan': {
+    name: '考研英语核心', icon:'📘', cat:'大学', count:50,
+    desc:'考研英语大纲核心词汇，冲刺高分',
+    words: [
+      {en:'abdomen',cn:'腹部',phonetic:'/ˈæbdəmən/',pos:'名词',ex_en:'He felt a sharp pain in his abdomen after eating.',ex_cn:'吃完饭后他感到腹部剧痛。'},
+      {en:'abide',cn:'遵守；忍受',phonetic:'/əˈbaɪd/',pos:'动词',ex_en:'All members must abide by the club rules.',ex_cn:'所有成员都必须遵守俱乐部规则。'},
+      {en:'abound',cn:'大量存在',phonetic:'/əˈbaʊnd/',pos:'动词',ex_en:'Wild animals abound in this national park.',ex_cn:'这个国家公园里野生动物比比皆是。'},
+      {en:'abreast',cn:'并肩；了解',phonetic:'/əˈbrest/',pos:'副词',ex_en:'It is important to keep abreast of the latest developments.',ex_cn:'跟上最新发展很重要。'},
+      {en:'abrupt',cn:'突然的',phonetic:'/əˈbrʌpt/',pos:'形容词',ex_en:'The meeting came to an abrupt end when the fire alarm went off.',ex_cn:'火警响起时会议戛然而止。'},
+      {en:'abstain',cn:'戒绝；弃权',phonetic:'/əbˈsteɪn/',pos:'动词',ex_en:'He decided to abstain from alcohol for a month.',ex_cn:'他决定戒酒一个月。'},
+      {en:'acclaim',cn:'称赞',phonetic:'/əˈkleɪm/',pos:'动词/名词',ex_en:'The new movie was widely acclaimed by critics.',ex_cn:'这部新片受到评论界广泛好评。'},
+      {en:'accommodation',cn:'住宿',phonetic:'/əˌkɒməˈdeɪʃn/',pos:'名词',ex_en:'The university provides accommodation for all first-year students.',ex_cn:'大学为所有大一新生提供住宿。'},
+      {en:'accord',cn:'一致；协议',phonetic:'/əˈkɔːd/',pos:'名词/动词',ex_en:'The two sides reached an accord after long negotiations.',ex_cn:'经过长时间谈判，双方达成了协议。'},
+      {en:'accountability',cn:'问责制',phonetic:'/əˌkaʊntəˈbɪləti/',pos:'名词',ex_en:'There must be greater accountability in public spending.',ex_cn:'公共支出必须有更大的问责制。'},
+      {en:'acquaintance',cn:'熟人',phonetic:'/əˈkweɪntəns/',pos:'名词',ex_en:'He is just an acquaintance, not a close friend.',ex_cn:'他只是个熟人，不是亲密朋友。'},
+      {en:'acquisition',cn:'获得；收购',phonetic:'/ˌækwɪˈzɪʃn/',pos:'名词',ex_en:'Language acquisition is easier for young children.',ex_cn:'小孩子习得语言更容易。'},
+      {en:'addict',cn:'上瘾者',phonetic:'/ˈædɪkt/',pos:'名词',ex_en:'He became a video game addict during the summer break.',ex_cn:'他暑假期间成了游戏迷。'},
+      {en:'adept',cn:'熟练的',phonetic:'/əˈdept/',pos:'形容词',ex_en:'She is adept at handling difficult customers.',ex_cn:'她擅长应付难缠的顾客。'},
+      {en:'adjacent',cn:'相邻的',phonetic:'/əˈdʒeɪsnt/',pos:'形容词',ex_en:'The library is adjacent to the student center.',ex_cn:'图书馆紧邻学生中心。'},
+      {en:'adjoin',cn:'毗连',phonetic:'/əˈdʒɔɪn/',pos:'动词',ex_en:'The two gardens adjoin each other.',ex_cn:'两个花园彼此相邻。'},
+      {en:'administer',cn:'管理；执行',phonetic:'/ədˈmɪnɪstə(r)/',pos:'动词',ex_en:'The UN will administer the peace agreement between the two countries.',ex_cn:'联合国将监督执行两国的和平协议。'},
+      {en:'adolescent',cn:'青少年',phonetic:'/ˌædəˈlesnt/',pos:'名词/形容词',ex_en:'Adolescent depression is a growing concern among parents.',ex_cn:'青少年抑郁是父母越来越关注的问题。'},
+      {en:'advent',cn:'到来',phonetic:'/ˈædvent/',pos:'名词',ex_en:'The advent of the Internet changed the world forever.',ex_cn:'互联网的到来永远改变了世界。'},
+      {en:'adversary',cn:'对手',phonetic:'/ˈædvəsəri/',pos:'名词',ex_en:'He faced a formidable adversary in the final match.',ex_cn:'在决赛中他面对一个强大的对手。'},
+      {en:'adverse',cn:'不利的',phonetic:'/ˈædvɜːs/',pos:'形容词',ex_en:'The drug has no adverse effects on most patients.',ex_cn:'这种药对多数患者没有不良影响。'},
+      {en:'advocate',cn:'提倡；拥护者',phonetic:'/ˈædvəkeɪt/',pos:'动词/名词',ex_en:'She is a strong advocate of environmental protection.',ex_cn:'她是环境保护的坚定倡导者。'},
+      {en:'aerial',cn:'空中的',phonetic:'/ˈeəriəl/',pos:'形容词',ex_en:'The city looks beautiful from an aerial view.',ex_cn:'从空中俯瞰，这座城市很美。'},
+      {en:'affection',cn:'喜爱',phonetic:'/əˈfekʃn/',pos:'名词',ex_en:'She has a deep affection for her hometown.',ex_cn:'她对家乡有着深厚的感情。'},
+      {en:'affiliate',cn:'附属机构',phonetic:'/əˈfɪlieɪt/',pos:'动词/名词',ex_en:'The hospital is affiliated with the top medical school.',ex_cn:'这家医院附属于顶尖医学院。'},
+      {en:'affirm',cn:'确认',phonetic:'/əˈfɜːm/',pos:'动词',ex_en:'The court affirmed the lower court\'s decision.',ex_cn:'法院维持了下级法院的判决。'},
+      {en:'affluent',cn:'富裕的',phonetic:'/ˈæfluənt/',pos:'形容词',ex_en:'He grew up in an affluent family in Shanghai.',ex_cn:'他在上海一个富裕家庭长大。'},
+      {en:'aftermath',cn:'后果',phonetic:'/ˈɑːftəmæθ/',pos:'名词',ex_en:'In the aftermath of the earthquake, volunteers rushed to help.',ex_cn:'地震之后，志愿者蜂拥而至。'},
+      {en:'agenda',cn:'议程',phonetic:'/əˈdʒendə/',pos:'名词',ex_en:'What is on the agenda for today\'s meeting?',ex_cn:'今天会议的议程是什么？'},
+      {en:'aggravate',cn:'加重',phonetic:'/ˈæɡrəveɪt/',pos:'动词',ex_en:'Staying up late will only aggravate your headache.',ex_cn:'熬夜只会加重你的头痛。'},
+      {en:'aggregate',cn:'总计',phonetic:'/ˈæɡrɪɡət/',pos:'名词',ex_en:'The company\'s aggregate sales reached one billion dollars.',ex_cn:'公司总销售额达到十亿美元。'},
+      {en:'agitate',cn:'煽动；使焦虑',phonetic:'/ˈædʒɪteɪt/',pos:'动词',ex_en:'The workers agitated for better working conditions.',ex_cn:'工人们鼓动要求改善工作条件。'},
+      {en:'alarm',cn:'警报；惊恐',phonetic:'/əˈlɑːm/',pos:'名词/动词',ex_en:'She looked at me in alarm when she heard the news.',ex_cn:'听到消息时她惊恐地看着我。'},
+      {en:'allege',cn:'声称',phonetic:'/əˈledʒ/',pos:'动词',ex_en:'The report alleges that the company misled investors.',ex_cn:'报告声称公司误导了投资者。'},
+      {en:'alleviate',cn:'减轻',phonetic:'/əˈliːvieɪt/',pos:'动词',ex_en:'Yoga can help alleviate stress and anxiety.',ex_cn:'瑜伽有助于减轻压力和焦虑。'},
+      {en:'allocate',cn:'分配',phonetic:'/ˈæləkeɪt/',pos:'动词',ex_en:'How should we allocate the limited resources among the projects?',ex_cn:'我们应该如何在各项目间分配有限资源？'},
+      {en:'alloy',cn:'合金',phonetic:'/ˈælɔɪ/',pos:'名词',ex_en:'Steel is an alloy of iron and carbon.',ex_cn:'钢是铁和碳的合金。'},
+      {en:'ally',cn:'盟友',phonetic:'/ˈælaɪ/',pos:'名词',ex_en:'The two countries became close allies after the war.',ex_cn:'战后两国成为了亲密盟友。'},
+      {en:'alongside',cn:'在……旁边',phonetic:'/əˌlɒŋˈsaɪd/',pos:'副词/介词',ex_en:'She worked alongside some of the best scientists in the field.',ex_cn:'她与该领域一些最优秀的科学家并肩工作。'},
+      {en:'alteration',cn:'改动',phonetic:'/ˌɔːltəˈreɪʃn/',pos:'名词',ex_en:'The dress needs a few alterations before the wedding.',ex_cn:'这条裙子在婚礼前需要几处改动。'},
+      {en:'alternate',cn:'交替的',phonetic:'/ɔːlˈtɜːnət/',pos:'形容词/动词',ex_en:'The weather alternated between sunshine and rain all week.',ex_cn:'这一整周天气在晴天和雨天之间交替。'},
+      {en:'amateur',cn:'业余的',phonetic:'/ˈæmətə(r)/',pos:'形容词/名词',ex_en:'Even an amateur can take good photos with this camera.',ex_cn:'即便是业余爱好者用这台相机也能拍出好照片。'},
+      {en:'ambassador',cn:'大使',phonetic:'/æmˈbæsədə(r)/',pos:'名词',ex_en:'She was appointed as the ambassador to France.',ex_cn:'她被任命为驻法国大使。'},
+      {en:'ambiguous',cn:'模棱两可的',phonetic:'/æmˈbɪɡjuəs/',pos:'形容词',ex_en:'The politician gave an ambiguous answer to the question.',ex_cn:'政治家对这个问题给出了模棱两可的回答。'},
+      {en:'amend',cn:'修改',phonetic:'/əˈmend/',pos:'动词',ex_en:'The constitution was amended to allow women to vote.',ex_cn:'宪法被修改以允许女性投票。'},
+      {en:'ample',cn:'充足的',phonetic:'/ˈæmpl/',pos:'形容词',ex_en:'There is ample evidence to support this theory.',ex_cn:'有充分证据支持这个理论。'},
+      {en:'analogy',cn:'类比',phonetic:'/əˈnælədʒi/',pos:'名词',ex_en:'By analogy, the human brain functions like a complex network.',ex_cn:'以此类推，人脑就像一个复杂网络的运作。'},
+      {en:'analytical',cn:'分析的',phonetic:'/ˌænəˈlɪtɪkl/',pos:'形容词',ex_en:'The job requires strong analytical skills.',ex_cn:'这份工作需要很强的分析能力。'},
+      {en:'anecdote',cn:'轶事',phonetic:'/ˈænɪkdəʊt/',pos:'名词',ex_en:'He told an amusing anecdote about his trip to Japan.',ex_cn:'他讲了一段关于日本之行的趣闻。'},
+      {en:'anguish',cn:'极度痛苦',phonetic:'/ˈæŋɡwɪʃ/',pos:'名词',ex_en:'The mother\'s face showed her anguish at losing her child.',ex_cn:'母亲脸上流露出失去孩子的巨大痛苦。'},
+    ]
+  }
 };
 
 // ====== 状态 ======
-let currentLevel = 'primary';
-let currentMode = 'flashcard';
-let words = [];
-let currentIndex = 0;
-let correctCount = 0;
-let wrongCount = 0;
-let streakCount = 0;
-let answered = false;   // quiz/spelling lock
-let wrongWords = JSON.parse(localStorage.getItem('vocabWrongWords') || '[]');
-let roundSize = 20;
+let currentBook = null;
+let currentWords = [];
+let currentIdx = 0;
+let learned = 0;
+let totalWords = 0;
+let reviewQueue = [];
+let isReviewMode = false;
 
-// ====== 初始化 ======
-function init() {
-  document.getElementById('roundSize').value = roundSize;
-  loadWrongWords();
-  resetRound();
+// ====== 学习记录 (localStorage) ======
+function getStudyData() {
+  try { return JSON.parse(localStorage.getItem('vocab_v2_study') || '{}'); }
+  catch(e) { return {}; }
+}
+function saveStudyData(data) {
+  localStorage.setItem('vocab_v2_study', JSON.stringify(data));
 }
 
-function shuffle(arr) {
+// ====== 艾宾浩斯间隔(天) ======
+const EBBINGHAUS = [1, 2, 4, 7, 15, 30];
+
+function getNextReviewDate(stage) {
+  let days = EBBINGHAUS[Math.min(stage, EBBINGHAUS.length - 1)];
+  return Date.now() + days * 86400000;
+}
+
+// ====== 页面切换 ======
+function showBookPage() {
+  document.getElementById('bookPage').style.display = 'flex';
+  document.getElementById('learnPage').classList.remove('active');
+  document.getElementById('navTitle').textContent = '📚 单词消消乐';
+  document.getElementById('navBack').style.display = 'none';
+  document.getElementById('navAction').textContent = '';
+  document.getElementById('actionRow').style.display = 'none';
+}
+
+function showLearnPage() {
+  document.getElementById('bookPage').style.display = 'none';
+  document.getElementById('learnPage').classList.add('active');
+  document.getElementById('navBack').style.display = 'block';
+  document.getElementById('actionRow').style.display = 'flex';
+}
+
+function goBack() {
+  currentBook = null;
+  currentWords = [];
+  currentIdx = 0;
+  learned = 0;
+  reviewQueue = [];
+  isReviewMode = false;
+  showBookPage();
+}
+
+// ====== 渲染词书列表 ======
+function renderBookList() {
+  let html = '';
+  let cats = {};
+  for (let [key, book] of Object.entries(BOOKS)) {
+    if (!cats[book.cat]) cats[book.cat] = [];
+    cats[book.cat].push({key, ...book});
+  }
+  for (let [cat, books] of Object.entries(cats)) {
+    html += `<div class="book-category"><div class="book-cat-title">${cat}</div>`;
+    for (let b of books) {
+      let studyData = getStudyData();
+      let bookData = studyData[b.key] || { learned: 0, total: b.count };
+      let pct = bookData.total > 0 ? Math.round(bookData.learned / bookData.total * 100) : 0;
+      html += `
+        <div class="book-item" onclick="selectBook('${b.key}')">
+          <span class="book-icon">${b.icon}</span>
+          <div class="book-info">
+            <div class="book-name">${b.name}</div>
+            <div class="book-desc">${b.desc}</div>
+          </div>
+          <span class="book-count">${pct > 0 ? pct + '%' : b.count + '词'}</span>
+          <span class="arrow">›</span>
+        </div>`;
+    }
+    html += '</div>';
+  }
+  document.getElementById('bookList').innerHTML = html;
+
+  // check custom books
+  let customBooks = JSON.parse(localStorage.getItem('vocab_custom_books') || '[]');
+  if (customBooks.length > 0) {
+    let preview = document.getElementById('customPreview');
+    preview.style.display = 'block';
+    preview.innerHTML = '<b>已上传词库：</b><br>' + customBooks.map((b,i) =>
+      `${b.name}（${b.words.length}词）<button onclick="deleteCustomBook(${i})" style="margin-left:8px;border:none;background:none;color:#f44336;cursor:pointer;">删除</button>`
+    ).join('<br>');
+  }
+}
+
+// ====== 选择词书 ======
+function selectBook(bookKey) {
+  let book = BOOKS[bookKey];
+  if (!book) {
+    // check custom
+    let customBooks = JSON.parse(localStorage.getItem('vocab_custom_books') || '[]');
+    let found = customBooks.find(b => b.key === bookKey);
+    if (found) { book = found; }
+    else return;
+  }
+  currentBook = bookKey;
+  totalWords = book.words.length;
+  currentIdx = 0;
+  learned = 0;
+
+  // build queue: new words first, then reviews
+  let studyData = getStudyData();
+  let bookData = studyData[bookKey] || { learned: [], reviews: {} };
+  let learnedSet = new Set(bookData.learned || []);
+
+  // words not yet fully learned
+  currentWords = book.words.filter((w, i) => !learnedSet.has(i));
+
+  // check for review due
+  reviewQueue = [];
+  let now = Date.now();
+  let reviews = bookData.reviews || {};
+  for (let [idx, review] of Object.entries(reviews)) {
+    if (review.nextReview && review.nextReview <= now) {
+      reviewQueue.push({ ...book.words[parseInt(idx)], _origIdx: parseInt(idx), _stage: review.stage });
+    }
+  }
+
+  // shuffle new words
+  currentWords = shuffleArr(currentWords);
+
+  isReviewMode = false;
+  if (reviewQueue.length > 0) {
+    // Interleave reviews with new words
+    reviewQueue = shuffleArr(reviewQueue);
+    currentWords = [...reviewQueue, ...currentWords];
+  }
+
+  updateProgress();
+  renderCard();
+  showLearnPage();
+  document.getElementById('navTitle').textContent = book.name || book.name_zh || '背单词';
+}
+
+// ====== 渲染单词卡片 ======
+function renderCard() {
+  let card = document.getElementById('cardArea');
+  if (currentIdx >= currentWords.length) {
+    showAllDone();
+    return;
+  }
+
+  let w = currentWords[currentIdx];
+  let isReview = w._origIdx !== undefined;
+
+  card.innerHTML = `
+    ${isReview ? '<div class="review-badge">🔄 复习</div>' : ''}
+    <div class="word-card" id="wordCard">
+      <div class="word-en">${w.en}</div>
+      <div class="word-phonetic">${w.phonetic || ''}</div>
+      <button class="word-speaker" id="speakerBtn" onclick="speakWord('${w.en.replace(/'/g,"\\'")}')">🔊</button>
+      <div class="word-reveal" id="wordReveal">
+        <div class="word-pos">${w.pos || ''}</div>
+        <div class="word-cn">${w.cn}</div>
+        ${w.ex_en ? `<div class="word-example">
+          <div class="ex-en">📖 ${w.ex_en}</div>
+          ${w.ex_cn ? `<div class="ex-cn">${w.ex_cn}</div>` : ''}
+        </div>` : ''}
+      </div>
+    </div>
+  `;
+
+  // Auto-speak if available
+  setTimeout(() => {
+    let spk = document.getElementById('speakerBtn');
+    if (spk) spk.style.opacity = '1';
+  }, 200);
+}
+
+// ====== 回答 ======
+function answer(grade) {
+  let w = currentWords[currentIdx];
+  let card = document.getElementById('wordCard');
+  let reveal = document.getElementById('wordReveal');
+
+  // Show meaning
+  if (reveal && !reveal.classList.contains('show')) {
+    reveal.classList.add('show');
+  }
+
+  if (grade === 'known') {
+    // Mark as learned
+    markLearned(w);
+    learned++;
+    updateProgress();
+    animateNext();
+  } else if (grade === 'unsure') {
+    // Show meaning, add to review queue
+    markReview(w, 0);
+    updateProgress();
+    // Wait a moment so they can read
+    setTimeout(() => animateNext(), 800);
+  } else if (grade === 'forgot') {
+    // Show meaning, mark for review
+    markReview(w, 0);
+    updateProgress();
+    setTimeout(() => animateNext(), 800);
+  }
+}
+
+function animateNext() {
+  let card = document.getElementById('wordCard');
+  if (card) card.classList.add('flip-out');
+  setTimeout(() => {
+    currentIdx++;
+    renderCard();
+    updateProgress();
+    document.getElementById('wordCard')?.classList.remove('flip-out');
+  }, 300);
+}
+
+// ====== 标记掌握 ======
+function markLearned(w) {
+  if (!currentBook) return;
+  let data = getStudyData();
+  if (!data[currentBook]) data[currentBook] = { learned: [], reviews: {} };
+  let wordIdx = w._origIdx !== undefined ? w._origIdx : findWordIndex(w);
+  if (!data[currentBook].learned.includes(wordIdx)) {
+    data[currentBook].learned.push(wordIdx);
+  }
+  // remove from reviews if present
+  delete data[currentBook].reviews[wordIdx];
+  saveStudyData(data);
+}
+
+function markReview(w, stage) {
+  if (!currentBook) return;
+  let data = getStudyData();
+  if (!data[currentBook]) data[currentBook] = { learned: [], reviews: {} };
+  let wordIdx = w._origIdx !== undefined ? w._origIdx : findWordIndex(w);
+  data[currentBook].reviews[wordIdx] = {
+    stage: stage,
+    nextReview: getNextReviewDate(stage),
+    lastSeen: Date.now()
+  };
+  saveStudyData(data);
+}
+
+function findWordIndex(w) {
+  let book = BOOKS[currentBook];
+  if (!book) {
+    let customBooks = JSON.parse(localStorage.getItem('vocab_custom_books') || '[]');
+    let found = customBooks.find(b => b.key === currentBook);
+    if (found) book = found;
+    else return -1;
+  }
+  return book.words.findIndex(x => x.en === w.en);
+}
+
+// ====== 进度 ======
+function updateProgress() {
+  let pct = totalWords > 0 ? Math.round((learned / totalWords) * 100) : 0;
+  document.getElementById('progressLabel').textContent = `已学 ${learned} / ${totalWords}`;
+  document.getElementById('progressPct').textContent = pct + '%';
+  document.getElementById('progressFill').style.width = pct + '%';
+}
+
+// ====== 完成页 ======
+function showAllDone() {
+  let card = document.getElementById('cardArea');
+  let pct = totalWords > 0 ? Math.round((learned / totalWords) * 100) : 0;
+  let emoji = pct >= 90 ? '🏆' : pct >= 70 ? '🎉' : pct >= 50 ? '💪' : '📚';
+  let msg = pct >= 90 ? '太厉害了！全部掌握！' : pct >= 70 ? '很不错，继续加油！' : pct >= 50 ? '还有进步空间，再来一轮！' : '别灰心，坚持就是胜利！';
+
+  card.innerHTML = `
+    <div class="all-done">
+      <div class="emoji">${emoji}</div>
+      <div class="title">${msg}</div>
+      <div class="sub">本轮完成 ${learned}/${totalWords} 词 · 正确率 ${pct}%</div>
+      <button class="btn btn-know" style="width:100%;max-width:300px;padding:16px;" onclick="restartRound()">🔄 再来一轮</button>
+      <button class="btn btn-unsure" style="width:100%;max-width:300px;padding:16px;margin-top:8px;" onclick="restartRound(true)">📝 只复习错词</button>
+      <button class="btn" style="width:100%;max-width:300px;padding:16px;margin-top:8px;background:#f0f0f0;color:#666;" onclick="goBack()">📚 换一本词书</button>
+    </div>
+  `;
+  document.getElementById('actionRow').style.display = 'none';
+  document.getElementById('progressFill').style.width = '100%';
+  document.getElementById('progressPct').textContent = '100%';
+}
+
+function restartRound(reviewOnly) {
+  let book = BOOKS[currentBook];
+  if (!book) {
+    let customBooks = JSON.parse(localStorage.getItem('vocab_custom_books') || '[]');
+    let found = customBooks.find(b => b.key === currentBook);
+    if (found) book = found;
+    else return goBack();
+  }
+
+  if (reviewOnly) {
+    let data = getStudyData();
+    let bookData = data[currentBook] || { reviews: {} };
+    let reviews = bookData.reviews || {};
+    let entries = Object.entries(reviews);
+    if (entries.length === 0) {
+      showToast('没有需要复习的单词！');
+      return;
+    }
+    currentWords = entries.map(([idx, r]) => ({
+      ...book.words[parseInt(idx)],
+      _origIdx: parseInt(idx),
+      _stage: r.stage
+    }));
+    currentWords = shuffleArr(currentWords);
+    totalWords = currentWords.length;
+  } else {
+    let data = getStudyData();
+    let bookData = data[currentBook] || { learned: [] };
+    let learnedSet = new Set(bookData.learned || []);
+    currentWords = book.words.filter((w, i) => !learnedSet.has(i));
+    currentWords = shuffleArr(currentWords);
+    totalWords = currentWords.length;
+  }
+
+  currentIdx = 0;
+  learned = 0;
+  isReviewMode = reviewOnly;
+  updateProgress();
+  renderCard();
+  document.getElementById('actionRow').style.display = 'flex';
+}
+
+// ====== 发音 ======
+function speakWord(word) {
+  if (!('speechSynthesis' in window)) return;
+  window.speechSynthesis.cancel();
+  let u = new SpeechSynthesisUtterance(word);
+  u.lang = 'en-US';
+  u.rate = 0.85;
+  let btn = document.getElementById('speakerBtn');
+  if (btn) btn.classList.add('playing');
+  u.onend = () => { if (btn) btn.classList.remove('playing'); };
+  u.onerror = () => { if (btn) btn.classList.remove('playing'); };
+  window.speechSynthesis.speak(u);
+}
+
+// ====== 上传词库 ======
+function handleUpload(e) {
+  let file = e.target.files[0];
+  if (!file) return;
+  let reader = new FileReader();
+  reader.onload = function(ev) {
+    let text = ev.target.result;
+    let lines = text.split(/[\r\n]+/).filter(l => l.trim());
+    let words = [];
+    for (let line of lines) {
+      let parts = line.split(/[,，\t]/);
+      if (parts.length >= 2 && parts[0].trim() && parts[1].trim()) {
+        words.push({
+          en: parts[0].trim(),
+          cn: parts[1].trim(),
+          phonetic: parts[2] ? parts[2].trim() : '',
+          pos: parts[3] ? parts[3].trim() : '',
+          ex_en: parts[4] ? parts[4].trim() : '',
+          ex_cn: parts[5] ? parts[5].trim() : '',
+        });
+      }
+    }
+    if (words.length === 0) {
+      showToast('未能解析词库，请检查格式：英文,中文 每行一个');
+      return;
+    }
+    let bookName = file.name.replace(/\.(txt|csv)$/i, '');
+    let bookKey = 'custom_' + Date.now();
+    let customBook = {
+      key: bookKey,
+      name: bookName,
+      icon: '📂',
+      cat: '自定义',
+      count: words.length,
+      desc: `用户上传 · ${words.length}词`,
+      words: words
+    };
+
+    let customBooks = JSON.parse(localStorage.getItem('vocab_custom_books') || '[]');
+    customBooks.push(customBook);
+    localStorage.setItem('vocab_custom_books', JSON.stringify(customBooks));
+
+    // Add to BOOKS temporarily
+    BOOKS[bookKey] = customBook;
+
+    showToast(`✅ 已导入「${bookName}」${words.length}词`);
+    renderBookList();
+  };
+  reader.readAsText(file);
+  e.target.value = '';
+}
+
+function deleteCustomBook(index) {
+  let customBooks = JSON.parse(localStorage.getItem('vocab_custom_books') || '[]');
+  let book = customBooks[index];
+  if (book) {
+    delete BOOKS[book.key];
+    if (currentBook === book.key) {
+      currentBook = null;
+      showBookPage();
+    }
+  }
+  customBooks.splice(index, 1);
+  localStorage.setItem('vocab_custom_books', JSON.stringify(customBooks));
+  showToast('已删除');
+  renderBookList();
+}
+
+// ====== 工具函数 ======
+function shuffleArr(arr) {
   let a = arr.slice();
   for (let i = a.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
@@ -649,359 +1097,25 @@ function shuffle(arr) {
   return a;
 }
 
-function resetRound() {
-  roundSize = parseInt(document.getElementById('roundSize').value);
-  let pool = VOCAB[currentLevel];
-  let size = roundSize === 0 ? pool.length : Math.min(roundSize, pool.length);
-  words = shuffle(pool).slice(0, size);
-  currentIndex = 0;
-  correctCount = 0;
-  wrongCount = 0;
-  streakCount = 0;
-  answered = false;
-  updateStats();
-  render();
-  document.getElementById('totalVocab').textContent = '词库: ' + pool.length + '词';
-}
-
-function setLevel(level) {
-  currentLevel = level;
-  document.querySelectorAll('.level-btn').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.level-btn').forEach(b => {
-    if ((level === 'primary' && b.textContent.includes('小学')) ||
-        (level === 'middle' && b.textContent.includes('初中')) ||
-        (level === 'high' && b.textContent.includes('高中'))) {
-      b.classList.add('active');
-    }
-  });
-  resetRound();
-}
-
-function setMode(mode) {
-  currentMode = mode;
-  document.querySelectorAll('.mode-tab').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.mode-tab').forEach(b => {
-    if ((mode === 'flashcard' && b.textContent.includes('闪卡')) ||
-        (mode === 'quiz' && b.textContent.includes('选择')) ||
-        (mode === 'spelling' && b.textContent.includes('拼写'))) {
-      b.classList.add('active');
-    }
-  });
-  answered = false;
-  render();
-}
-
-function updateStats() {
-  document.getElementById('statTotal').textContent = correctCount + wrongCount;
-  document.getElementById('statCorrect').textContent = correctCount;
-  document.getElementById('statWrong').textContent = wrongCount;
-  document.getElementById('statStreak').textContent = streakCount;
-}
-
-// ====== 发音 ======
-function speak(word) {
-  if (!('speechSynthesis' in window)) return;
-  window.speechSynthesis.cancel();
-  let u = new SpeechSynthesisUtterance(word);
-  u.lang = 'en-US';
-  u.rate = 0.85;
-  u.pitch = 1.1;
-  let btn = document.querySelector('.speak-btn');
-  if (btn) btn.classList.add('speaking');
-  u.onend = () => { if (btn) btn.classList.remove('speaking'); };
-  u.onerror = () => { if (btn) btn.classList.remove('speaking'); };
-  window.speechSynthesis.speak(u);
-}
-
-// ====== 渲染 ======
-function render() {
-  if (words.length === 0) {
-    document.getElementById('mainArea').innerHTML = '<div style="text-align:center;color:#999;"><p style="font-size:40px;">📭</p><p>词库为空</p></div>';
-    return;
-  }
-  if (currentIndex >= words.length) {
-    showResult();
-    return;
-  }
-  let w = words[currentIndex];
-  if (currentMode === 'flashcard') renderFlashcard(w);
-  else if (currentMode === 'quiz') renderQuiz(w);
-  else if (currentMode === 'spelling') renderSpelling(w);
-}
-
-function renderFlashcard(w) {
-  document.getElementById('mainArea').innerHTML = `
-    <div class="flashcard">
-      <div class="flashcard-inner" id="flashcardInner" onclick="flipCard()">
-        <div class="flashcard-front">
-          <button class="speak-btn" onclick="event.stopPropagation();speak('${w.en.replace(/'/g, "\\'")}')">🔊</button>
-          <div class="card-word">${w.en}</div>
-          <div class="card-phonetic">${w.phonetic || ''}</div>
-          <div class="flash-hint">👆 点击卡片翻转查看释义</div>
-        </div>
-        <div class="flashcard-back">
-          <div class="card-meaning">${w.cn}</div>
-          <div class="card-tag">${w.en}</div>
-        </div>
-      </div>
-    </div>
-    <div class="card-actions">
-      <button class="btn btn-secondary" onclick="prevCard()">👈 上一个</button>
-      <button class="btn btn-primary" onclick="nextCard()">下一个 👉</button>
-    </div>
-  `;
-}
-
-function flipCard() {
-  let inner = document.getElementById('flashcardInner');
-  if (inner) inner.classList.toggle('flipped');
-}
-
-function prevCard() {
-  if (currentIndex > 0) {
-    currentIndex--;
-    render();
-  }
-}
-
-function nextCard() {
-  if (currentIndex < words.length - 1) {
-    currentIndex++;
-    render();
-  } else {
-    showResult();
-  }
-}
-
-// ====== 选择题 ======
-function renderQuiz(w) {
-  let pool = VOCAB[currentLevel];
-  let options = [w];
-  // pick 3 distractors from same level
-  let others = pool.filter(x => x.en !== w.en);
-  others = shuffle(others).slice(0, 3);
-  options = shuffle(options.concat(others));
-
-  answered = false;
-
-  let html = `<div class="quiz-word">${w.en}</div>
-    <button class="speak-btn" onclick="speak('${w.en.replace(/'/g, "\\'")}')" style="margin-bottom:16px;">🔊</button>
-    <div class="quiz-options">`;
-  options.forEach((opt, i) => {
-    html += `<button class="quiz-option" id="opt${i}" onclick="checkQuiz('${opt.cn.replace(/'/g, "\\'")}', ${i}, '${w.cn.replace(/'/g, "\\'")}')">${String.fromCharCode(65+i)}. ${opt.cn}</button>`;
-  });
-  html += '</div>';
-  document.getElementById('mainArea').innerHTML = html;
-}
-
-function checkQuiz(selectedCn, optIdx, correctCn) {
-  if (answered) return;
-  answered = true;
-  let w = words[currentIndex];
-  let isCorrect = selectedCn === correctCn;
-
-  // find correct option index
-  let options = document.querySelectorAll('.quiz-option');
-  let correctIdx = -1;
-  options.forEach((opt, i) => {
-    if (opt.textContent.includes(correctCn)) correctIdx = i;
-  });
-
-  if (isCorrect) {
-    document.getElementById('opt' + optIdx).classList.add('correct-answer');
-    correctCount++;
-    streakCount++;
-    if (streakCount % 5 === 0) spawnConfetti();
-  } else {
-    document.getElementById('opt' + optIdx).classList.add('wrong-answer');
-    if (correctIdx >= 0) document.getElementById('opt' + correctIdx).classList.add('correct-answer');
-    wrongCount++;
-    streakCount = 0;
-    addWrongWord(w);
-  }
-  updateStats();
-
-  setTimeout(() => {
-    currentIndex++;
-    answered = false;
-    render();
-  }, 1200);
-}
-
-// ====== 拼写 ======
-function renderSpelling(w) {
-  answered = false;
-  document.getElementById('mainArea').innerHTML = `
-    <div class="spell-input-area">
-      <button class="speak-btn" onclick="speak('${w.en.replace(/'/g, "\\'")}')" style="margin-bottom:12px;">🔊 听发音</button>
-      <div class="spell-word-cn">${w.cn}</div>
-      <div class="spell-hint" style="margin-bottom:8px;font-size:13px;color:#bbb;">请输入对应的英文单词</div>
-      <input type="text" class="spell-input" id="spellInput" placeholder="输入英文单词..." autocomplete="off" autocorrect="off" autocapitalize="off" onkeydown="if(event.key==='Enter')checkSpell()">
-      <div class="spell-feedback" id="spellFeedback"></div>
-      <button class="btn btn-primary" style="margin-top:16px;width:100%;" onclick="checkSpell()">✅ 确认</button>
-    </div>
-  `;
-  setTimeout(() => {
-    let inp = document.getElementById('spellInput');
-    if (inp) inp.focus();
-  }, 100);
-}
-
-function checkSpell() {
-  if (answered) return;
-  let inp = document.getElementById('spellInput');
-  let fb = document.getElementById('spellFeedback');
-  if (!inp || !fb) return;
-  let userAnswer = inp.value.trim();
-  if (!userAnswer) return;
-  answered = true;
-  let w = words[currentIndex];
-  let correctAnswer = w.en.toLowerCase();
-  let isCorrect = userAnswer.toLowerCase() === correctAnswer;
-
-  if (isCorrect) {
-    inp.classList.add('correct');
-    fb.className = 'spell-feedback correct';
-    fb.textContent = '✅ 正确！' + w.en;
-    correctCount++;
-    streakCount++;
-    if (streakCount % 5 === 0) spawnConfetti();
-  } else {
-    inp.classList.add('wrong');
-    fb.className = 'spell-feedback wrong';
-    fb.textContent = '❌ 正确答案: ' + w.en;
-    wrongCount++;
-    streakCount = 0;
-    addWrongWord(w);
-  }
-  updateStats();
-
-  setTimeout(() => {
-    currentIndex++;
-    answered = false;
-    render();
-  }, 1500);
-}
-
-// ====== 结果页 ======
-function showResult() {
-  let total = correctCount + wrongCount;
-  if (total === 0) { resetRound(); return; }
-  let pct = Math.round(correctCount / total * 100);
-  let emoji = pct >= 90 ? '🏆' : pct >= 70 ? '👍' : pct >= 50 ? '💪' : '📚';
-  let title = pct >= 90 ? '太棒了！' : pct >= 70 ? '做得不错！' : pct >= 50 ? '继续加油！' : '多多练习！';
-
-  document.getElementById('mainArea').innerHTML = `
-    <div class="result-overlay" style="position:relative;background:none;">
-      <div class="result-card">
-        <div class="result-emoji">${emoji}</div>
-        <div class="result-title">${title}</div>
-        <div class="result-stats">
-          <div class="result-stat">
-            <div class="result-stat-value" style="color:#4caf50;">${correctCount}</div>
-            <div class="result-stat-label">✓ 正确</div>
-          </div>
-          <div class="result-stat">
-            <div class="result-stat-value" style="color:#f44336;">${wrongCount}</div>
-            <div class="result-stat-label">✗ 错误</div>
-          </div>
-          <div class="result-stat">
-            <div class="result-stat-value" style="color:#667eea;">${pct}%</div>
-            <div class="result-stat-label">正确率</div>
-          </div>
-        </div>
-        <button class="btn btn-primary" style="width:100%;" onclick="resetRound()">🔄 再来一轮</button>
-        <button class="btn btn-secondary" style="width:100%;margin-top:8px;" onclick="setMode('flashcard')">📖 去背单词</button>
-      </div>
-    </div>
-  `;
-  loadWrongWords();
-}
-
-// ====== 错题本 ======
-function addWrongWord(w) {
-  // avoid duplicates
-  if (!wrongWords.find(x => x.en === w.en)) {
-    wrongWords.push({ en: w.en, cn: w.cn });
-  }
-  saveWrongWords();
-  loadWrongWords();
-}
-
-function saveWrongWords() {
-  localStorage.setItem('vocabWrongWords', JSON.stringify(wrongWords));
-}
-
-function clearWrongWords() {
-  wrongWords = [];
-  saveWrongWords();
-  loadWrongWords();
-}
-
-function loadWrongWords() {
-  document.getElementById('wrongCount').textContent = wrongWords.length;
-  let list = document.getElementById('wrongList');
-  let section = document.getElementById('wrongSection');
-  if (wrongWords.length > 0) {
-    section.classList.add('show');
-    list.innerHTML = wrongWords.map(w =>
-      `<div class="wrong-item"><span class="en">${w.en}</span><span class="cn">${w.cn}</span><span style="cursor:pointer;color:#ccc;" onclick="removeWrong('${w.en.replace(/'/g, "\\'")}')">✕</span></div>`
-    ).join('');
-  } else {
-    section.classList.remove('show');
-  }
-}
-
-function removeWrong(en) {
-  wrongWords = wrongWords.filter(x => x.en !== en);
-  saveWrongWords();
-  loadWrongWords();
-}
-
-// ====== 🎉 撒花 ======
-function spawnConfetti() {
-  let container = document.getElementById('confettiContainer');
-  let colors = ['#ff6b6b','#ffd93d','#6bcb77','#4d96ff','#ff8c00','#a855f7','#ff69b4'];
-  for (let i = 0; i < 30; i++) {
-    let piece = document.createElement('div');
-    piece.className = 'confetti-piece';
-    piece.style.left = Math.random() * 100 + '%';
-    piece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-    piece.style.animationDelay = Math.random() * 0.5 + 's';
-    piece.style.animationDuration = (1.5 + Math.random() * 2) + 's';
-    piece.style.width = (6 + Math.random() * 10) + 'px';
-    piece.style.height = (6 + Math.random() * 10) + 'px';
-    piece.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
-    container.appendChild(piece);
-    setTimeout(() => piece.remove(), 3000);
-  }
+function showToast(msg) {
+  let t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2000);
 }
 
 // ====== 键盘快捷键 ======
 document.addEventListener('keydown', function(e) {
-  if (currentMode === 'flashcard') {
-    if (e.key === ' ' || e.key === 'Spacebar') {
-      e.preventDefault();
-      flipCard();
-    } else if (e.key === 'ArrowRight') {
-      nextCard();
-    } else if (e.key === 'ArrowLeft') {
-      prevCard();
-    }
-  }
-  if (currentMode === 'quiz' && !answered) {
-    let keys = ['a','b','c','d','1','2','3','4'];
-    let idx = keys.indexOf(e.key.toLowerCase());
-    if (idx >= 0) {
-      let optIdx = idx % 4;
-      let w = words[currentIndex];
-      let opt = document.getElementById('opt' + optIdx);
-      if (opt) checkQuiz(opt.textContent.substring(3).trim(), optIdx, w.cn);
-    }
-  }
+  if (!currentBook) return;
+  if (e.key === '1' || e.key === 'ArrowLeft') answer('forgot');
+  else if (e.key === '2' || e.key === 'ArrowDown') answer('unsure');
+  else if (e.key === '3' || e.key === 'ArrowRight') answer('known');
+  else if (e.key === ' ') { e.preventDefault(); speakWord(currentWords[currentIdx]?.en || ''); }
 });
 
-init();
+// ====== 初始化 ======
+renderBookList();
+showBookPage();
 </script>
 </body>
 </html>
